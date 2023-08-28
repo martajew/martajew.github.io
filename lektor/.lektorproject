@@ -1,5 +1,0 @@
-[project]
-name = www
-
-[servers.ghpages]
-target = ghpages://martajew/martajew.github.io?branch=main
