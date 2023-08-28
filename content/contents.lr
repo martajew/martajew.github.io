@@ -2,5 +2,4 @@ title: Welcome
 ---
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.
+This is a basic demo website that shows how to use Lektor for a basic website with some pages and a <a href="blog/index.html">blog</a>.
