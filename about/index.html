@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>{% block title %}Welcome{% endblock %} — Marianna Artajew</title>
+    <title>About this Website — Marianna Artajew</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="{{ '/css/main.css'|url }}" />
-    <noscript><link rel="stylesheet" href="{{ '/css/noscript.css'|url }}" /></noscript>
+    <link rel="stylesheet" href="../css/main.css" />
+    <noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 <!-- Wrapper -->
@@ -16,8 +16,8 @@
         <div class="inner">
 
             <!-- Logo -->
-            <a href="{{ '/index.html'|url }}" class="logo">
-                <span class="symbol"><img src="{{ '/images/logo.svg'|url }}" alt="" /></span><span class="title">Marianna</span>
+            <a href="../index.html" class="logo">
+                <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">Marianna</span>
             </a>
 
             <!-- Nav -->
@@ -34,17 +34,22 @@
     <nav id="menu">
         <h2>Menu</h2>
         <ul>
-            <li><a href="{{ '/index.html'|url }}">Home</a></li>
-            <li><a href="{{ '/blog/index.html'|url }}">Blog</a></li>
-            <li><a href="{{ '/projects/index.html'|url }}">Projects</a></li>
-            <li><a href="{{ '/about/index.html'|url }}">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="index.html">About</a></li>
         </ul>
     </nav>
 
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            {% block body %}{% endblock %}
+            
+  <h1>About this Website</h1>
+  <p>This is a website that was made with the Lektor quickstart.</p>
+<p>And it does not contain a lot of information.</p>
+
+
         </div>
     </div>
 
@@ -92,11 +97,11 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ '/js/jquery.min.js'|url }}"></script>
-<script src="{{ '/js/browser.min.js'|url }}"></script>
-<script src="{{ '/js/breakpoints.min.js'|url }}"></script>
-<script src="{{ '/js/util.js'|url }}"></script>
-<script src="{{ '/js/main.js'|url }}"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/browser.min.js"></script>
+<script src="../js/breakpoints.min.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>
