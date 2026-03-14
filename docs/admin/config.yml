@@ -1,25 +1,18 @@
-backend:
-  name: git-gateway
-  branch: main
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 
-publish_mode: simple
+backend:
+  name: github
+  repo: martajew/martajew.github.io
+
 media_folder: media
 public_folder: /media
 
 collections:
   - name: posts
     label: Posts
-    folder: content/posts
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    label_singular: Post
+    folder: /content/posts
     fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
-  - name: pages
-    label: Pages
-    folder: content/pages
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }
