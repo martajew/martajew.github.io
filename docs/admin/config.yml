@@ -4,6 +4,7 @@ backend:
   name: github
   repo: martajew/martajew.github.io
   branch: main
+  base_url: https://magnificent-kelpie-efd09f.netlify.app/.netlify/identity
 
 media_folder: /docs/media
 public_folder: /media
