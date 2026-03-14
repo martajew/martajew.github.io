@@ -2,9 +2,9 @@
 
 backend:
   name: github
-  repo: martajew/martajew.github.io
+  repo: user/repo
 
-media_folder: media
+media_folder: /docs/media
 public_folder: /media
 
 collections:
