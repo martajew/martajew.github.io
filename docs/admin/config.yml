@@ -2,6 +2,7 @@ backend:
   name: github
   branch: main
   repo: martajew/martajew.github.io
+  client_id: Ov23li6KGiWMX64WJxPL
 
 publish_mode: editorial_workflow
 media_folder: media
