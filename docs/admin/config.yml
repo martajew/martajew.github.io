@@ -4,8 +4,9 @@ backend:
   repo: martajew/martajew.github.io
 
 publish_mode: editorial_workflow
-media_folder: static/media
+media_folder: media
 public_folder: /media
+
 collections:
   - name: posts
     label: Posts
