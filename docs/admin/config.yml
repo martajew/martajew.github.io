@@ -3,6 +3,7 @@
 backend:
   name: github
   repo: martajew/martajew.github.io
+  branch: main
 
 media_folder: /docs/media
 public_folder: /media
