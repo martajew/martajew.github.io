@@ -1,0 +1,51 @@
+---
+// components
+import Container from "../elements/Container.astro";
+import Heading from "../elements/Heading.astro";
+import Text from "../elements/Text.astro";
+import Link from "../elements/Link.astro";
+
+// links
+const socials = [
+    { title: "Linkedin", href: "https://linkedin.com" },
+    { title: "Instagram", href: "https://instagram.com" },
+    { title: "Twiter", href: "https://twitter.com" },
+    { title: "Github", href: "https://github.com" }
+];
+
+const navigation = [
+    { title: "Home", href: "/" },
+    { title: "Works", href: "/works" },
+    { title: "About", href: "/about" },
+    { title: "Contact", href: "/contact" }
+]
+---
+
+<Container variant={'xl'} class="mt-32 pb-8">
+    <div class="flex flex-col gap-10 md:flex-row">
+        <div class="flex-1 md:text-left text-center">
+            <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">Socials</Heading>
+            <ul>
+                {
+                    socials.map((social) => (
+                        <li><Link variant={'nav'} href={social.href}>{social.title}</Link></li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="flex-1 md:text-right text-center">
+            <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">Navigation</Heading>
+            <ul>
+                {
+                    navigation.map((navLink) => (
+                        <li><Link variant={'nav'} href={navLink.href}>{navLink.title}</Link></li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="flex flex-col text-center">
+        <Text variant={'sm'} class="text-base-900">Peter Jones © 2025 All Rights Reserved</Text>
+        <Text variant={'sm'} class="text-base-900">Built with <Link variant={'inline'} href="https://astro.build">Astro</Link> by <Link variant={'inline'} href="https://jessgaspar.dev">Jess Gaspar</Link></Text>
+    </div>
+</Container>
