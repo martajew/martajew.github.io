@@ -6,9 +6,9 @@ category: Product Design
 services: Crochet
 year: '2026'
 featuredImage: /src/content/images/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-imageTwo: /src/content/images/fox_21_nov22193458-Main.jpg
-imageThree: /src/content/images/fox_21_nov22193458-Main.jpg
-imageFour: /src/content/images/fox_21_nov22193458-Main.jpg
+imageTwo: /src/content/images/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+imageThree: /src/content/images/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+imageFour: /src/content/images/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
 liveSite: https://google.com
 description: my skirt desc
 isFeatured: false
