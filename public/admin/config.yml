@@ -5,14 +5,32 @@ backend:
   repo: martajew/martajew.github.io
   base_url: https://sveltia-cms-auth.adam-artajew.workers.dev
 
-media_folder: /src/assets/media
-public_folder: /media
+media_folder: /src/content/images
 
 collections:
-  - name: products
-    label: Products
-    label_singular: Product
-    folder: /src/content/products
+  - name: works
+    label: Works
+    label_singular: Work
+    folder: /src/content
+    create: true
+    extension: md
+    format: frontmatter
     fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Body, name: body, widget: richtext }
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Client, name: client, widget: string }
+      - label: Category
+        name: category
+        widget: select
+        options: ["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]
+      - { label: Services, name: services, widget: string }
+      - { label: Year, name: year, widget: string }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Image Two, name: imageTwo, widget: image }
+      - { label: Image Three, name: imageThree, widget: image }
+      - { label: Image Four, name: imageFour, widget: image }
+      - { label: Live Site, name: liveSite, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Featured Work, name: isFeatured, widget: boolean, default: false }
+      - { label: Draft, name: isDraft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
