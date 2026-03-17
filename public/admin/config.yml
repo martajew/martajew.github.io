@@ -8,10 +8,10 @@ backend:
 media_folder: /src/content/images
 
 collections:
-  - name: works
-    label: Works
-    label_singular: Work
-    folder: /src/content
+  - name: designs
+    label: Designs
+    label_singular: Design
+    folder: /src/content/designs
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
@@ -28,6 +28,170 @@ collections:
       - { label: Image Four, name: imageFour, widget: image }
       - { label: Live Site, name: liveSite, widget: string }
       - { label: Description, name: description, widget: text }
-      - { label: Featured Work, name: isFeatured, widget: boolean, default: false }
+      - { label: Featured Design, name: isFeatured, widget: boolean, default: false }
       - { label: Draft, name: isDraft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown }
+  - name: pages
+    label: Pages
+    files:
+      - label: Home
+        name: home
+        file: /src/content/pages/home.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: home }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Intro Text, name: introText, widget: text }
+              - { label: CTA Label, name: ctaLabel, widget: string }
+              - { label: CTA Link, name: ctaHref, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image Alt, name: imageAlt, widget: string }
+          - label: Selected Designs
+            name: selectedDesigns
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Button Label, name: buttonLabel, widget: string }
+              - { label: Button Link, name: buttonHref, widget: string }
+          - label: Services
+            name: services
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+          - label: About Section
+            name: aboutSection
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead Text, name: lead, widget: text }
+              - { label: Body Text 1, name: bodyOne, widget: text }
+              - { label: Body Text 2, name: bodyTwo, widget: text }
+              - { label: Button Label, name: buttonLabel, widget: string }
+              - { label: Button Link, name: buttonHref, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image Alt, name: imageAlt, widget: string }
+          - label: FAQ
+            name: faq
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+      - label: About
+        name: about
+        file: /src/content/pages/about.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: about }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead Text, name: lead, widget: text }
+              - { label: Body Text, name: body, widget: text }
+              - { label: Image, name: image, widget: image }
+              - { label: Image Alt, name: imageAlt, widget: string }
+          - label: Experience
+            name: experience
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Place, name: place, widget: string }
+                  - { label: Period, name: period, widget: string }
+                  - { label: Text, name: text, widget: text }
+          - label: Education
+            name: education
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Place, name: place, widget: string }
+                  - { label: Period, name: period, widget: string }
+                  - { label: Text, name: text, widget: text }
+      - label: Contact
+        name: contact
+        file: /src/content/pages/contact.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: contact }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead Text, name: lead, widget: text }
+              - { label: Body Text 1, name: bodyOne, widget: text }
+              - { label: Body Text 2, name: bodyTwo, widget: text }
+          - label: Contact Details
+            name: contactDetails
+            widget: object
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Contact, name: contact, widget: string }
+      - label: Not Found Page
+        name: not-found
+        file: /src/content/pages/not-found.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: not-found }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Message, name: message, widget: text }
+          - { label: Button Label, name: buttonLabel, widget: string }
+          - { label: Button Link, name: buttonHref, widget: string }
+      - label: Site Settings
+        name: site
+        file: /src/content/pages/site.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: site }
+          - label: Navigation Links
+            name: navLinks
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: href, widget: string }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Socials Heading, name: socialsHeading, widget: string }
+              - { label: Navigation Heading, name: navigationHeading, widget: string }
+              - label: Social Links
+                name: socials
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: URL, name: href, widget: string }
+              - { label: Copyright, name: copyright, widget: string }
+              - { label: Credits Prefix, name: creditsPrefix, widget: string }
+              - { label: Built With Label, name: builtWithLabel, widget: string }
+              - { label: Built With URL, name: builtWithHref, widget: string }
+              - { label: Built By Label, name: builtByLabel, widget: string }
+              - { label: Built By URL, name: builtByHref, widget: string }

@@ -2,10 +2,17 @@
 // components
 import Container from "../../elements/Container.astro"
 import ContactItem from "./ContactItem.astro"
+
+interface ContactDetailItem {
+    title: string;
+    contact: string;
+}
+const { items } = Astro.props as { items: ContactDetailItem[] };
 ---
 <Container variant={'md'}>
     <div class="flex lg:flex-row flex-col gap-8 text-base-900">
-        <ContactItem title="Email" contact="peterjones@email.com" />
-        <ContactItem title="Phone" contact="(555) 123-4567" />
+        {items.map((item) => (
+            <ContactItem title={item.title} contact={item.contact} />
+        ))}
     </div>
 </Container>

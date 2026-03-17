@@ -5,22 +5,32 @@ import Text from "../../elements/Text.astro";
 import Container from "../../elements/Container.astro";
 import Link from "../../elements/Link.astro";
 import ImageContainer from "../../elements/ImageContainer.astro";
+import type { ImageMetadata } from "astro";
 
-// assets
-import peter2 from "../../../assets/images/peter2.jpg";
+interface AboutContent {
+    heading: string;
+    lead: string;
+    bodyOne: string;
+    bodyTwo: string;
+    buttonLabel: string;
+    buttonHref: string;
+    image: ImageMetadata;
+    imageAlt: string;
+}
+const { content } = Astro.props as { content: AboutContent };
 ---
 
 <Container variant={'xl'}>
-    <Heading tagName="h2" tagSize="h2" class="text-center">About</Heading>
+    <Heading tagName="h2" tagSize="h2" class="text-center">{content.heading}</Heading>
     <div class="flex lg:flex-row lg:gap-16 gap-10 flex-col">
         <div class="flex flex-col items-start gap-6 lg:pt-6 text-base-900 lg:flex-1">
-            <Text variant={'xl'}>I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.</Text>
-            <Text variant={'sm'}>With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.</Text>
-            <Text variant={'sm'}>When I'm not designing, you'll find me exploring coffee shops, experimenting with film photography, or diving into design books. I believe the best design comes from understanding people.</Text>
-            <Link variant={'button'} href="/about">More about me</Link>
+            <Text variant={'xl'}>{content.lead}</Text>
+            <Text variant={'sm'}>{content.bodyOne}</Text>
+            <Text variant={'sm'}>{content.bodyTwo}</Text>
+            <Link variant={'button'} href={content.buttonHref}>{content.buttonLabel}</Link>
         </div>
         <div class="w-full lg:h-[500px] h-auto lg:flex-1">
-            <ImageContainer src={peter2} alt="Peter Jones" />
+            <ImageContainer src={content.image} alt={content.imageAlt} />
         </div>
     </div>
 </Container>

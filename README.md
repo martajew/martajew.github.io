@@ -51,7 +51,7 @@ Inside of your template, you'll see the following folders and files:
 │   │   │   └── Text.astro
 │   │   │   └── Dropdown.astro
 │   │   │   └── ResumeDropdown.astro
-│   │   │   └── Work.astro
+│   │   │   └── Design.astro
 │   │   ├── global       # elements used on every page
 │   │   │   └── BaseHead.astro
 │   │   │   └── Footer.astro
@@ -70,7 +70,7 @@ Inside of your template, you'll see the following folders and files:
 │   │   │   │   └── About.astro 
 │   │   │   │   └── Faq.astro 
 │   │   │   │   └── Hero.astro 
-│   │   │   │   └── SelectedWorks.astro 
+│   │   │   │   └── SelectedDesigns.astro 
 │   │   │   │   └── Services.astro 
 │   │   │   ├── works
 │   │   │   │   └── Pagination.astro 

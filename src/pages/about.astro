@@ -6,10 +6,18 @@ import Layout from "../layouts/Layout.astro";
 import Intro from "../components/sections/about/Intro.astro";
 import Experience from "../components/sections/about/Experience.astro";
 import Education from "../components/sections/about/Education.astro";
+
+// content
+import { getCollection } from "astro:content";
+const pages = await getCollection("pages");
+const aboutPage = pages.find((entry) => entry.data.template === "about");
+if (!aboutPage) {
+    throw new Error("Missing or invalid pages/about.md entry.");
+}
 ---
 
-<Layout title="About">
-    <Intro />
-    <Experience />
-    <Education />
+<Layout title={aboutPage.data.pageTitle}>
+    <Intro content={aboutPage.data.intro} />
+    <Experience content={aboutPage.data.experience} />
+    <Education content={aboutPage.data.education} />
 </Layout>

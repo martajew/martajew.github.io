@@ -17,21 +17,21 @@ import type { GetStaticPaths } from "astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 export const getStaticPaths = (async () => {
-    const works = await getCollection("works", ({data}) => !data.isDraft)
-    return works.map((work) => ({
+    const designs = await getCollection("designs", ({data}) => !data.isDraft)
+    return designs.map((design) => ({
         params: {
-            page: work.data.slug,
+            page: design.data.slug,
         },
         props: {
-            work,
+            design,
         }
     }));
 }) satisfies GetStaticPaths;
 
 // props
-const { work } = Astro.props;
-const { Content } = await render(work);
-const { title, client, category, services, year, description, featuredImage, imageTwo, imageThree, imageFour, liveSite } = work.data;
+const { design } = Astro.props;
+const { Content } = await render(design);
+const { title, client, category, services, year, description, featuredImage, imageTwo, imageThree, imageFour, liveSite } = design.data;
 const details = [
     { heading: "Client", text: `${client}` },
     { heading: "Category", text: `${category}` },
@@ -40,8 +40,8 @@ const details = [
 ]
 ---
 
-<Layout title={`Work - ${title}`}>
-    <Container variant={'xl'} aria-label="Work Details" class="items-center">
+<Layout title={`Design - ${title}`}>
+    <Container variant={'xl'} aria-label="Design Details" class="items-center">
         <Heading tagName="h1" tagSize="h1" class="text-center">{title}</Heading>
         <div class="w-full md:h-[600px] h-[300px]">
             <ImageContainer src={featuredImage} alt={title} />
@@ -74,6 +74,6 @@ const details = [
         <div class="w-full md:h-[600px] h-[300px]">
             <ImageContainer src={imageFour} alt={title} />
         </div>
-        <Link variant={'button'} href="/works">All Works</Link>
+        <Link variant={'button'} href="/designs">All Designs</Link>
     </Container>
 </Layout>

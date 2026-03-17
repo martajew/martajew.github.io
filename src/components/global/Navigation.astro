@@ -2,13 +2,14 @@
 // components
 import Link from "../elements/Link.astro";
 
-// links
-const navLinks = [
-    { title: "Home", href: "/" },
-    { title: "Works", href: "/works" },
-    { title: "About", href: "/about" },
-    { title: "Contact", href: "/contact" }
-]
+// content
+import { getCollection } from "astro:content";
+const pages = await getCollection("pages");
+const sitePage = pages.find((entry) => entry.data.template === "site");
+if (!sitePage) {
+    throw new Error("Missing or invalid pages/site.md entry.");
+}
+const navLinks = sitePage.data.navLinks;
 ---
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50">

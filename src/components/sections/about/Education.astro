@@ -5,29 +5,19 @@ import Heading from "../../elements/Heading.astro";
 import ResumeDropdown from "../../elements/ResumeDropdown.astro";
 import ContainerBottom from "../../elements/ContainerBottom.astro";
 
-// content
-const education = [
-    { 
-        title: "Bachelor of Fine Arts in Graphic Design",
-        place: "California College of the Arts",
-        period: "2013 - 2017",
-        text: "Concentrated in visual communication and digital design with coursework in typography, color theory, user experience, and brand strategy."
-    },
-    { 
-        title: "UX Design Bootcamp Certificate",
-        place: "General Assembly",
-        period: "2018",
-        text: "Intensive 12-week program covering user research methodologies, information architecture, prototyping, and usability testing."
-    }
-]
+interface EducationContent {
+    heading: string;
+    items: Array<{ title: string; place: string; period: string; text: string }>;
+}
+const { content } = Astro.props as { content: EducationContent };
 ---
 
 <Container variant={'md'}>
-    <Heading tagName="h2" tagSize="h2" class="text-center">Education</Heading>
+    <Heading tagName="h2" tagSize="h2" class="text-center">{content.heading}</Heading>
     <div class="flex flex-col gap-4">
         <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
             {
-                education.map((i) => (
+                content.items.map((i) => (
                     <ResumeDropdown title={i.title} place={i.place} period={i.period} text={i.text} />
                 ))
             }
