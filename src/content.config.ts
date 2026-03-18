@@ -7,6 +7,7 @@ const designs = defineCollection({
     schema: ({image}) => z.object({
         title: z.string().max(50),
         slug: z.string(),
+        sortDate: z.coerce.date(),
         client: z.string().max(50),
         category: z.enum(["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]),
         services: z.string().max(65),

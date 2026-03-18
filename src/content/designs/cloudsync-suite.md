@@ -1,6 +1,7 @@
 ---
 title: Cloudsync Suite
 slug: cloudsync-suite
+sortDate: 2026-03-18
 client: Cloudsync Technologies
 category: UI/UX Design
 services: User Research, Interface Design, Design System Development

@@ -1,18 +1,19 @@
 ---
-title: "Coffee Roaster Brand"
-slug: "coffee-brand"
-client: "Artifact Coffee"
-category: "Branding"
-services: "Brand Strategy, Visual Identity, Packaging Design"
-year: "2023"
-featuredImage: "/src/content/images/designs/coffee-brand/1.jpg"
-imageTwo: "/src/content/images/designs/coffee-brand/2.jpg"
-imageThree: "/src/content/images/designs/coffee-brand/3.jpg"
-imageFour: "/src/content/images/designs/coffee-brand/4.jpg"
-paymentLink: "https://buy.stripe.com/00w6oH25u8el7An4oxbwk00"
-description: "Complete brand identity system for an artisanal coffee roastery focusing on direct-trade relationships and small-batch roasting. The identity reflects craftsmanship, sustainability, and the unique story behind each coffee bean's journey from farm to cup."
+title: Coffee Roaster Brand
+slug: coffee-brand
+sortDate: 2026-02-05
+client: Artifact Coffee
+category: Branding
+services: Brand Strategy, Visual Identity, Packaging Design
+year: '2023'
+featuredImage: /src/content/images/designs/coffee-brand/1.jpg
+imageTwo: /src/content/images/designs/coffee-brand/2.jpg
+imageThree: /src/content/images/designs/coffee-brand/3.jpg
+imageFour: /src/content/images/designs/coffee-brand/4.jpg
+paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
+description: Complete brand identity system for an artisanal coffee roastery focusing on direct-trade relationships and small-batch roasting. The identity reflects craftsmanship, sustainability, and the unique story behind each coffee bean's journey from farm to cup.
 isFeatured: false
-isDraft: false
+isDraft: true
 ---
 
 Artifact Coffee Roasters approached us as they transitioned from a small local operation to a regional brand with wholesale ambitions. Their challenge was communicating their commitment to ethical sourcing and artisanal quality while appealing to both coffee enthusiasts and casual drinkers. The brand needed to stand out in a crowded market dominated by both corporate giants and numerous indie roasters.

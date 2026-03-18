@@ -1,5 +1,5 @@
-import { getCollection, type CollectionEntry } from "astro:content";
-import type { PageDataByTemplate, SiteSettingsData } from "./content-types";
+import {type CollectionEntry, getCollection} from "astro:content";
+import type {PageDataByTemplate, SiteSettingsData} from "./content-types";
 
 type PageEntry = CollectionEntry<"pages">;
 type Template = PageEntry["data"]["template"];
@@ -58,5 +58,8 @@ export const getSiteSettings = async (): Promise<SiteSettingsData> => {
 };
 
 export const getPublishedDesigns = async (): Promise<CollectionEntry<"designs">[]> => {
-    return getCollection("designs", ({ data }) => !data.isDraft);
+    const publishedDesigns = await getCollection("designs", ({ data }) => !data.isDraft);
+    return publishedDesigns.sort((left, right) => {
+      return right.data.sortDate.getTime() - left.data.sortDate.getTime();
+    });
 };

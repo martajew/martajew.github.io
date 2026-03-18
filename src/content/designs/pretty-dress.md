@@ -1,6 +1,7 @@
 ---
 title: My Very Pretty Dress
 slug: pretty-dress
+sortDate: 2026-03-01
 client: ACME
 category: UI/UX Design
 services: Crochet

@@ -9,12 +9,25 @@ collections:
   - name: designs
     label: Designs
     label_singular: Design
+    description: "Dynamic collection for design projects."
     folder: /src/content/designs
     media_folder: '{{media_folder}}/designs'
     identifier_field: slug
+    summary: "{{sortDate | date('YYYY-MM-DD')}}: **{{title}}** ({{slug}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
+    sortable_fields:
+      fields: [sortDate, title]
+      default:
+        field: sortDate
+        direction: descending
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string }
+      - { label: Slug, name: slug, widget: string, comment: "Unique identifier used in the design's URL" }
+      - label: Sort Date
+        name: sortDate
+        widget: datetime
+        type: date
+        default: "{{now}}"
+        comment: "Used for display order only (newest first)."
       - { label: Client, name: client, widget: string }
       - label: Category
         name: category
@@ -28,12 +41,13 @@ collections:
       - { label: Image Four, name: imageFour, widget: image }
       - { label: Payment Link, name: paymentLink, widget: string }
       - { label: Description, name: description, widget: markdown }
-      - { label: Featured Design, name: isFeatured, widget: boolean, default: false }
-      - { label: Draft, name: isDraft, widget: boolean, default: false }
+      - { label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: "Show on home page" }
+      - { label: Draft, name: isDraft, widget: boolean, default: false, comment: "Hide design from public site" }
       - { label: Body, name: body, widget: markdown }
   - name: pages
     label: Pages
     media_folder: '{{media_folder}}/pages'
+    description: "Static pages for the website."
     files:
       - label: Home
         name: home
@@ -182,6 +196,7 @@ collections:
               - { label: Body Text, name: body, widget: markdown }
   - name: settings
     label: Settings
+    description: "Website-wide settings."
     files:
       - label: Designs
         name: designs

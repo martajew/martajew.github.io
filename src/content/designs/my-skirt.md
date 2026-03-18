@@ -1,6 +1,7 @@
 ---
 title: My Skirt
 slug: my-new-skirt
+sortDate: 2025-03-18
 client: ACME
 category: UI/UX Design
 services: Crochet

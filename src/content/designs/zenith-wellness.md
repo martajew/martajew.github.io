@@ -1,6 +1,7 @@
 ---
 title: "Zenith Wellness App"
 slug: "zenith-wellness"
+sortDate: 2026-01-01
 client: "Zenith Health Technologies"
 category: "UI/UX Design"
 services: "User Research, Prototyping, Visual Design"
