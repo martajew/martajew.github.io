@@ -167,39 +167,42 @@ collections:
           - { label: Message, name: message, widget: text }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
-  - name: site-settings
-    label: Site Settings
+  - name: settings
+    label: Settings
     files:
-      - label: Site Settings
-        name: site
-        file: /src/content/site-settings.md
+      - label: Designs
+        name: designs
+        file: /src/content/settings/designs.md
         fields:
-          - label: Designs
-            name: designs
-            widget: object
-            fields:
-              - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
+          - { label: Section, name: section, widget: hidden, default: designs }
+          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
+      - label: Navigation
+        name: navigation
+        file: /src/content/settings/navigation.md
+        fields:
+          - { label: Section, name: section, widget: hidden, default: navigation }
           - label: Navigation Links
             name: navLinks
             widget: list
             fields:
               - { label: Title, name: title, widget: string }
               - { label: URL, name: href, widget: string }
-          - label: Footer
-            name: footer
-            widget: object
+      - label: Footer
+        name: footer
+        file: /src/content/settings/footer.md
+        fields:
+          - { label: Section, name: section, widget: hidden, default: footer }
+          - { label: Socials Heading, name: socialsHeading, widget: string }
+          - { label: Navigation Heading, name: navigationHeading, widget: string }
+          - label: Social Links
+            name: socials
+            widget: list
             fields:
-              - { label: Socials Heading, name: socialsHeading, widget: string }
-              - { label: Navigation Heading, name: navigationHeading, widget: string }
-              - label: Social Links
-                name: socials
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: URL, name: href, widget: string }
-              - { label: Copyright, name: copyright, widget: string }
-              - { label: Credits Prefix, name: creditsPrefix, widget: string }
-              - { label: Built With Label, name: builtWithLabel, widget: string }
-              - { label: Built With URL, name: builtWithHref, widget: string }
-              - { label: Built By Label, name: builtByLabel, widget: string }
-              - { label: Built By URL, name: builtByHref, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: href, widget: string }
+          - { label: Copyright, name: copyright, widget: string }
+          - { label: Credits Prefix, name: creditsPrefix, widget: string }
+          - { label: Built With Label, name: builtWithLabel, widget: string }
+          - { label: Built With URL, name: builtWithHref, widget: string }
+          - { label: Built By Label, name: builtByLabel, widget: string }
+          - { label: Built By URL, name: builtByHref, widget: string }

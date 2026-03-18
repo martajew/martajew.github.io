@@ -25,12 +25,32 @@ export const getPageDataByTemplate = async <T extends Template>(template: T): Pr
 };
 
 export const getSiteSettings = async (): Promise<SiteSettingsData> => {
-    const settings = await getCollection("siteSettings");
-    const siteSettings = settings[0];
-    if (!siteSettings) {
-        throw new Error("Missing site settings content entry.");
+    const settings = await getCollection("settings");
+    const designsSettings = settings.find((entry) => entry.data.section === "designs");
+    const navigationSettings = settings.find((entry) => entry.data.section === "navigation");
+    const footerSettings = settings.find((entry) => entry.data.section === "footer");
+
+    if (!designsSettings || !navigationSettings || !footerSettings) {
+        throw new Error("Missing one or more required settings entries.");
     }
-    return siteSettings.data;
+
+    return {
+        designs: {
+            paginationPageSize: designsSettings.data.paginationPageSize
+        },
+        navLinks: navigationSettings.data.navLinks,
+        footer: {
+            socialsHeading: footerSettings.data.socialsHeading,
+            navigationHeading: footerSettings.data.navigationHeading,
+            socials: footerSettings.data.socials,
+            copyright: footerSettings.data.copyright,
+            creditsPrefix: footerSettings.data.creditsPrefix,
+            builtWithLabel: footerSettings.data.builtWithLabel,
+            builtWithHref: footerSettings.data.builtWithHref,
+            builtByLabel: footerSettings.data.builtByLabel,
+            builtByHref: footerSettings.data.builtByHref
+        }
+    };
 };
 
 export const getPublishedDesigns = async (): Promise<CollectionEntry<"designs">[]> => {

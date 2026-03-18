@@ -122,17 +122,22 @@ const pages = defineCollection({
     ])
 });
 
-const siteSettings = defineCollection({
-    loader: glob({ pattern: "src/content/site-settings.md" }),
-    schema: z.object({
-        designs: z.object({
+const settings = defineCollection({
+    loader: glob({ pattern: "src/content/settings/*.md" }),
+    schema: z.discriminatedUnion("section", [
+        z.object({
+            section: z.literal("designs"),
             paginationPageSize: z.number().int().min(1).max(50)
         }),
-        navLinks: z.array(z.object({
-            title: z.string(),
-            href: z.string()
-        })),
-        footer: z.object({
+        z.object({
+            section: z.literal("navigation"),
+            navLinks: z.array(z.object({
+                title: z.string(),
+                href: z.string()
+            }))
+        }),
+        z.object({
+            section: z.literal("footer"),
             socialsHeading: z.string(),
             navigationHeading: z.string(),
             socials: z.array(z.object({
@@ -146,7 +151,7 @@ const siteSettings = defineCollection({
             builtByLabel: z.string(),
             builtByHref: z.string()
         })
-    })
+    ])
 });
 
-export const collections = { designs, pages, siteSettings };
+export const collections = { designs, pages, settings };
