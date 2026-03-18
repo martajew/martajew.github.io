@@ -3,14 +3,9 @@
 import Heading from "../../elements/Heading.astro";
 import Container from "../../elements/Container.astro";
 import Text from "../../elements/Text.astro";
+import type { ContactIntroContent } from "../../../lib/content-types";
 
-interface IntroContent {
-    heading: string;
-    lead: string;
-    bodyOne: string;
-    bodyTwo: string;
-}
-const { content } = Astro.props as { content: IntroContent };
+const { content } = Astro.props as { content: ContactIntroContent };
 ---
 
 <Container variant={'xl'} class="text-center text-base-900 flex flex-col items-center">

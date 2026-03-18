@@ -2,10 +2,10 @@
 template: about
 pageTitle: About
 intro:
-  heading: Meet Peter
+  heading: Meet Mania
   lead: I'm a creative designer passionate about crafting experiences that connect brands with their audiences through thoughtful design and strategic thinking.
   body: For the past 8 years, I've been helping startups and established companies solve complex challenges through design. I believe great design isn't just about making things look beautiful-it's about understanding people, solving problems, and creating meaningful connections between brands and their customers.
-  image: ../images/pages/peter.jpg
+  image: /src/content/images/pages/mania-crochet-dress.jpg
   imageAlt: Peter
 experience:
   heading: Experience
@@ -35,6 +35,6 @@ education:
       text: Concentrated in visual communication and digital design with coursework in typography, color theory, user experience, and brand strategy.
     - title: UX Design Bootcamp Certificate
       place: General Assembly
-      period: "2018"
+      period: '2018'
       text: Intensive 12-week program covering user research methodologies, information architecture, prototyping, and usability testing.
 ---

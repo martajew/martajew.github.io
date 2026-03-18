@@ -1,28 +1,16 @@
 ---
 // components
-import Container from "../../elements/Container.astro";
-import ContainerBottom from "../../elements/ContainerBottom.astro";
-import Heading from "../../elements/Heading.astro";
 import Dropdown from "../../elements/Dropdown.astro";
+import SectionPanelList from "../../elements/SectionPanelList.astro";
+import type { FaqContent } from "../../../lib/content-types";
 
-interface FaqContent {
-    heading: string;
-    items: Array<{ title: string; text: string }>;
-}
 const { content } = Astro.props as { content: FaqContent };
 ---
 
-<Container variant={'md'}>
-    <Heading tagName="h2" tagSize="h2" class="text-center">{content.heading}</Heading>
-    <div class="flex flex-col gap-4">
-        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
-            {
-                content.items.map((q, index) => (
-                    <Dropdown title=`${index + 1}. ${q.title}`  text={q.text} />
-                ))
-            }
-        </Container>
-        <ContainerBottom />        
-    </div>
-    
-</Container>
+<SectionPanelList heading={content.heading}>
+    {
+        content.items.map((q, index) => (
+            <Dropdown title=`${index + 1}. ${q.title}`  text={q.text} />
+        ))
+    }
+</SectionPanelList>

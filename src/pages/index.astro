@@ -10,18 +10,14 @@ import About from '../components/sections/home/About.astro';
 import Faq from '../components/sections/home/Faq.astro';
 
 // content
-import { getCollection } from "astro:content";
-const pages = await getCollection("pages");
-const homePage = pages.find((entry) => entry.data.template === "home");
-if (!homePage) {
-    throw new Error("Missing or invalid pages/home.md entry.");
-}
+import { getPageDataByTemplate } from "../lib/content";
+const homePage = await getPageDataByTemplate("home");
 ---
 
-<Layout title={homePage.data.pageTitle}>
-    <Hero content={homePage.data.hero} />
-    <SelectedDesigns content={homePage.data.selectedDesigns} />
-    <Services content={homePage.data.services} />
-    <About content={homePage.data.aboutSection} />
-    <Faq content={homePage.data.faq} />
+<Layout title={homePage.pageTitle}>
+    <Hero content={homePage.hero} />
+    <SelectedDesigns content={homePage.selectedDesigns} />
+    <Services content={homePage.services} />
+    <About content={homePage.aboutSection} />
+    <Faq content={homePage.faq} />
 </Layout>

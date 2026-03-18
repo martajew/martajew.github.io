@@ -2,12 +2,9 @@
 // components
 import Container from "../../elements/Container.astro"
 import ContactItem from "./ContactItem.astro"
+import type { ContactDetailsItem } from "../../../lib/content-types";
 
-interface ContactDetailItem {
-    title: string;
-    contact: string;
-}
-const { items } = Astro.props as { items: ContactDetailItem[] };
+const { items } = Astro.props as { items: ContactDetailsItem[] };
 ---
 <Container variant={'md'}>
     <div class="flex lg:flex-row flex-col gap-8 text-base-900">

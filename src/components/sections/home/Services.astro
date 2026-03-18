@@ -1,28 +1,16 @@
 ---
 // components
-import Container from "../../elements/Container.astro";
-import Heading from "../../elements/Heading.astro";
 import Dropdown from "../../elements/Dropdown.astro";
-import ContainerBottom from "../../elements/ContainerBottom.astro";
+import SectionPanelList from "../../elements/SectionPanelList.astro";
+import type { ServicesContent } from "../../../lib/content-types";
 
-interface ServicesContent {
-    heading: string;
-    items: Array<{ title: string; text: string }>;
-}
 const { content } = Astro.props as { content: ServicesContent };
 ---
 
-<Container variant={'md'}>
-    <Heading tagName="h2" tagSize="h2" class="text-center">{content.heading}</Heading>
-    <div class="flex flex-col gap-4">
-        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
-            {
-                content.items.map((service, index) => (
-                    <Dropdown title=`${index + 1}. ${service.title}` text={service.text} />  
-                ))
-            }       
-        </Container>
-        <ContainerBottom />    
-    </div>
-
-</Container>
+<SectionPanelList heading={content.heading}>
+    {
+        content.items.map((service, index) => (
+            <Dropdown title=`${index + 1}. ${service.title}` text={service.text} />  
+        ))
+    }
+</SectionPanelList>

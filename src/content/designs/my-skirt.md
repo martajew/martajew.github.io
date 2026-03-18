@@ -5,10 +5,10 @@ client: ACME
 category: UI/UX Design
 services: Crochet
 year: '2026'
-featuredImage: ../images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-imageTwo: ../images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-imageThree: ../images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-imageFour: ../images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+featuredImage: /src/content/images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+imageTwo: /src/content/images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+imageThree: /src/content/images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+imageFour: /src/content/images/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
 liveSite: https://google.com
 description: my skirt desc
 isFeatured: false

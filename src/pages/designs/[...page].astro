@@ -10,9 +10,9 @@ import Pagination from "../../components/sections/designs/Pagination.astro";
 
 // routing
 import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
+import { getPublishedDesigns } from "../../lib/content";
 export const getStaticPaths = (async ({paginate}) => {
-    const designs = await getCollection("designs", ({data}) => !data.isDraft)
+    const designs = await getPublishedDesigns();
     return paginate(designs, {pageSize: 6});
 }) satisfies GetStaticPaths;
 

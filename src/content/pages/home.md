@@ -2,12 +2,12 @@
 template: home
 pageTitle: Home
 hero:
-  introText: Hey there! I specialize in crafting unique, eye-catching designs that help small businesses like yours stand out in a crowded market.
+  introText: Thank you for your interest in my page!! I love to crochet and want to share that passion with the world. You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. Happy crocheting <3
   ctaLabel: Available for work
   ctaHref: /contact
-  name: Peter Jones
-  image: ../images/pages/peter.jpg
-  imageAlt: Peter Jones
+  name: Mania Artajew
+  image: /src/content/images/pages/mania-main-photo.png
+  imageAlt: Mania Artajew
 selectedDesigns:
   heading: Featured Designs
   buttonLabel: All Designs
@@ -30,7 +30,7 @@ aboutSection:
   bodyTwo: When I'm not designing, you'll find me exploring coffee shops, experimenting with film photography, or diving into design books. I believe the best design comes from understanding people.
   buttonLabel: More about me
   buttonHref: /about
-  image: ../images/pages/peter2.jpg
+  image: /src/content/images/pages/mania-with-cat.jpeg
   imageAlt: Peter Jones
 faq:
   heading: FAQ

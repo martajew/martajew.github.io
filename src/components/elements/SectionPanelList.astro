@@ -1,0 +1,17 @@
+---
+import Container from "./Container.astro";
+import Heading from "./Heading.astro";
+import ContainerBottom from "./ContainerBottom.astro";
+
+const { heading } = Astro.props as { heading: string };
+---
+
+<Container variant={'md'}>
+    <Heading tagName="h2" tagSize="h2" class="text-center">{heading}</Heading>
+    <div class="flex flex-col gap-4">
+        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
+            <slot />
+        </Container>
+        <ContainerBottom />
+    </div>
+</Container>

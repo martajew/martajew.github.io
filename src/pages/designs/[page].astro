@@ -15,9 +15,9 @@ import Link from "../../components/elements/Link.astro";
 // Routing
 import type { GetStaticPaths } from "astro";
 import { render } from "astro:content";
-import { getCollection } from "astro:content";
+import { getPublishedDesigns } from "../../lib/content";
 export const getStaticPaths = (async () => {
-    const designs = await getCollection("designs", ({data}) => !data.isDraft)
+    const designs = await getPublishedDesigns();
     return designs.map((design) => ({
         params: {
             page: design.data.slug,

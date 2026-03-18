@@ -7,15 +7,11 @@ import Intro from "../components/sections/contact/Intro.astro"
 import ContactDetails from "../components/sections/contact/ContactDetails.astro"
 
 // content
-import { getCollection } from "astro:content";
-const pages = await getCollection("pages");
-const contactPage = pages.find((entry) => entry.data.template === "contact");
-if (!contactPage) {
-    throw new Error("Missing or invalid pages/contact.md entry.");
-}
+import { getPageDataByTemplate } from "../lib/content";
+const contactPage = await getPageDataByTemplate("contact");
 ---
 
-<Layout title={contactPage.data.pageTitle}>
-    <Intro content={contactPage.data.intro} />
-    <ContactDetails items={contactPage.data.contactDetails.items} />
+<Layout title={contactPage.pageTitle}>
+    <Intro content={contactPage.intro} />
+    <ContactDetails items={contactPage.contactDetails.items} />
 </Layout>

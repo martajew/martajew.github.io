@@ -9,21 +9,17 @@ import Text from "../components/elements/Text.astro";
 import Link from "../components/elements/Link.astro";
 
 // content
-import { getCollection } from "astro:content";
-const pages = await getCollection("pages");
-const notFoundPage = pages.find((entry) => entry.data.template === "not-found");
-if (!notFoundPage) {
-    throw new Error("Missing or invalid pages/not-found.md entry.");
-}
+import { getPageDataByTemplate } from "../lib/content";
+const notFoundPage = await getPageDataByTemplate("not-found");
 ---
 
-<Layout title={notFoundPage.data.pageTitle}>
+<Layout title={notFoundPage.pageTitle}>
     <Container variant={'xl'} class="text-center flex items-center">
         <div class="flex flex-col gap-4">
-            <Heading tagName="h1" tagSize="h1">{notFoundPage.data.heading}</Heading>
-            <Text variant={'xl'} class="text-base-900">{notFoundPage.data.message}</Text>    
+            <Heading tagName="h1" tagSize="h1">{notFoundPage.heading}</Heading>
+            <Text variant={'xl'} class="text-base-900">{notFoundPage.message}</Text>    
         </div>
         
-        <Link variant={'button'} href={notFoundPage.data.buttonHref}>{notFoundPage.data.buttonLabel}</Link>
+        <Link variant={'button'} href={notFoundPage.buttonHref}>{notFoundPage.buttonLabel}</Link>
     </Container>
 </Layout>

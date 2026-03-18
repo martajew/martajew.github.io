@@ -4,16 +4,8 @@ import Container from "../../elements/Container.astro";
 import Heading from "../../elements/Heading.astro";
 import Text from "../../elements/Text.astro";
 import ImageContainer from "../../elements/ImageContainer.astro";
-import type { ImageMetadata } from "astro";
-
-interface IntroContent {
-    heading: string;
-    lead: string;
-    body: string;
-    image: ImageMetadata;
-    imageAlt: string;
-}
-const { content } = Astro.props as { content: IntroContent };
+import type { AboutIntroContent } from "../../../lib/content-types";
+const { content } = Astro.props as { content: AboutIntroContent };
 ---
 
 <Container variant={'xl'}>

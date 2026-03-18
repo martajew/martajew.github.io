@@ -7,6 +7,7 @@ import BaseHead from "../components/global/BaseHead.astro";
 import Wrapper from "../components/global/Wrapper.astro";
 import NavBar from "../components/global/Navigation.astro";
 import Footer from "../components/global/Footer.astro";
+import { getSiteSettings } from "../lib/content";
 
 // assets
 import '@fontsource/road-rage';
@@ -17,6 +18,7 @@ const backgroundImage = await getImage({src: bg, format:'jpg'})
 
 // props
 const { title } = Astro.props;
+const siteSettings = await getSiteSettings();
 ---
 
 <!doctype html>
@@ -27,13 +29,12 @@ const { title } = Astro.props;
 		<div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
 		<!-- Wrapper component to make sure all content on the website is above the noise filter background -->
 		<Wrapper>
-			<NavBar />
+			<NavBar navLinks={siteSettings.navLinks} />
 			<main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
 				<slot />
 			</main>
-			<Footer />
+			<Footer navLinks={siteSettings.navLinks} footer={siteSettings.footer} />
 		</Wrapper>
 	</body>
 </html>
-
 

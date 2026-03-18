@@ -4,17 +4,12 @@ import Container from "../../elements/Container.astro";
 import Heading from "../../elements/Heading.astro";
 import Design from "../../elements/Design.astro";
 import Link from "../../elements/Link.astro";
+import type { SelectedDesignsContent } from "../../../lib/content-types";
 
 // content collections
-import { getCollection } from "astro:content";
-const designs = await getCollection("designs");
+import { getPublishedDesigns } from "../../../lib/content";
+const designs = await getPublishedDesigns();
 const featuredDesigns = designs.filter((design) => design.data.isFeatured === true);
-
-interface SelectedDesignsContent {
-    heading: string;
-    buttonLabel: string;
-    buttonHref: string;
-}
 const { content } = Astro.props as { content: SelectedDesignsContent };
 ---
 

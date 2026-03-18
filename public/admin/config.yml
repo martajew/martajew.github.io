@@ -12,6 +12,7 @@ collections:
     label: Designs
     label_singular: Design
     folder: /src/content/designs
+    media_folder: '{{media_folder}}/designs'
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
@@ -33,6 +34,7 @@ collections:
       - { label: Body, name: body, widget: markdown }
   - name: pages
     label: Pages
+    media_folder: '{{media_folder}}/pages'
     files:
       - label: Home
         name: home

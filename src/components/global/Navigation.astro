@@ -1,15 +1,9 @@
 ---
 // components
 import Link from "../elements/Link.astro";
+import type { SitePageData } from "../../lib/content-types";
 
-// content
-import { getCollection } from "astro:content";
-const pages = await getCollection("pages");
-const sitePage = pages.find((entry) => entry.data.template === "site");
-if (!sitePage) {
-    throw new Error("Missing or invalid pages/site.md entry.");
-}
-const navLinks = sitePage.data.navLinks;
+const { navLinks } = Astro.props as { navLinks: SitePageData["navLinks"] };
 ---
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50">
@@ -50,11 +44,13 @@ const navLinks = sitePage.data.navLinks;
     const openBtn = document.querySelector('#open-nav') as HTMLButtonElement;
     const closeBtn = document.querySelector('#close-nav') as HTMLButtonElement;
 
-    openBtn.addEventListener("click", () => {
-        mobileNav.classList.remove('hidden');
-    })
+    if (mobileNav && openBtn && closeBtn) {
+        openBtn.addEventListener("click", () => {
+            mobileNav.classList.remove('hidden');
+        })
 
-    closeBtn.addEventListener("click", () => {
-        mobileNav.classList.add('hidden');
-    })
+        closeBtn.addEventListener("click", () => {
+            mobileNav.classList.add('hidden');
+        })
+    }
 </script>

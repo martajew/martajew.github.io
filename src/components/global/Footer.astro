@@ -4,16 +4,12 @@ import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
+import type { SitePageData } from "../../lib/content-types";
 
-// content
-import { getCollection } from "astro:content";
-const pages = await getCollection("pages");
-const sitePage = pages.find((entry) => entry.data.template === "site");
-if (!sitePage) {
-    throw new Error("Missing or invalid pages/site.md entry.");
-}
-const navigation = sitePage.data.navLinks;
-const footer = sitePage.data.footer;
+const { navLinks, footer } = Astro.props as {
+    navLinks: SitePageData["navLinks"];
+    footer: SitePageData["footer"];
+};
 ---
 
 <Container variant={'xl'} class="mt-32 pb-8">
@@ -32,7 +28,7 @@ const footer = sitePage.data.footer;
             <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{footer.navigationHeading}</Heading>
             <ul>
                 {
-                    navigation.map((navLink) => (
+                    navLinks.map((navLink) => (
                         <li><Link variant={'nav'} href={navLink.href}>{navLink.title}</Link></li>
                     ))
                 }
