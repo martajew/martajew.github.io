@@ -1,6 +1,6 @@
 ---
 title: My Skirt
-slug: my-skirt
+slug: my-new-skirt
 client: ACME
 category: UI/UX Design
 services: Crochet
