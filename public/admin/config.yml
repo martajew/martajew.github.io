@@ -27,7 +27,7 @@ collections:
       - { label: Image Three, name: imageThree, widget: image }
       - { label: Image Four, name: imageFour, widget: image }
       - { label: Payment Link, name: paymentLink, widget: string }
-      - { label: Description, name: description, widget: text }
+      - { label: Description, name: description, widget: markdown }
       - { label: Featured Design, name: isFeatured, widget: boolean, default: false }
       - { label: Draft, name: isDraft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown }
@@ -45,7 +45,7 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: Intro Text, name: introText, widget: text }
+              - { label: Intro Text, name: introText, widget: markdown }
               - { label: CTA Label, name: ctaLabel, widget: string }
               - { label: CTA Link, name: ctaHref, widget: string }
               - { label: Name, name: name, widget: string }
@@ -68,15 +68,15 @@ collections:
                 widget: list
                 fields:
                   - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown }
           - label: About Section
             name: aboutSection
             widget: object
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: text }
-              - { label: Body Text 1, name: bodyOne, widget: text }
-              - { label: Body Text 2, name: bodyTwo, widget: text }
+              - { label: Lead Text, name: lead, widget: markdown }
+              - { label: Body Text 1, name: bodyOne, widget: markdown }
+              - { label: Body Text 2, name: bodyTwo, widget: markdown }
               - { label: Button Label, name: buttonLabel, widget: string }
               - { label: Button Link, name: buttonHref, widget: string }
               - { label: Image, name: image, widget: image }
@@ -91,7 +91,7 @@ collections:
                 widget: list
                 fields:
                   - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown }
       - label: About
         name: about
         file: /src/content/pages/about.md
@@ -103,8 +103,8 @@ collections:
             widget: object
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: text }
-              - { label: Body Text, name: body, widget: text }
+              - { label: Lead Text, name: lead, widget: markdown }
+              - { label: Body Text, name: body, widget: markdown }
               - { label: Image, name: image, widget: image }
               - { label: Image Alt, name: imageAlt, widget: string }
           - label: Experience
@@ -119,7 +119,7 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Place, name: place, widget: string }
                   - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown }
           - label: Education
             name: education
             widget: object
@@ -132,7 +132,7 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Place, name: place, widget: string }
                   - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown }
       - label: Contact
         name: contact
         file: /src/content/pages/contact.md
@@ -144,9 +144,9 @@ collections:
             widget: object
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: text }
-              - { label: Body Text 1, name: bodyOne, widget: text }
-              - { label: Body Text 2, name: bodyTwo, widget: text }
+              - { label: Lead Text, name: lead, widget: markdown }
+              - { label: Body Text 1, name: bodyOne, widget: markdown }
+              - { label: Body Text 2, name: bodyTwo, widget: markdown }
           - label: Contact Details
             name: contactDetails
             widget: object
@@ -164,7 +164,7 @@ collections:
           - { label: Template, name: template, widget: hidden, default: not-found }
           - { label: Page Title, name: pageTitle, widget: string }
           - { label: Heading, name: heading, widget: string }
-          - { label: Message, name: message, widget: text }
+          - { label: Message, name: message, widget: markdown }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
       - label: Thank You
@@ -178,8 +178,8 @@ collections:
             widget: object
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: text }
-              - { label: Body Text, name: body, widget: text }
+              - { label: Lead Text, name: lead, widget: markdown }
+              - { label: Body Text, name: body, widget: markdown }
   - name: settings
     label: Settings
     files:

@@ -2,7 +2,7 @@
 // components
 import Heading from "../../elements/Heading.astro";
 import Container from "../../elements/Container.astro";
-import Text from "../../elements/Text.astro";
+import RichText from "../../elements/RichText.astro";
 import type { ContactIntroContent } from "../../../lib/content-types";
 
 const { content } = Astro.props as { content: ContactIntroContent };
@@ -11,8 +11,8 @@ const { content } = Astro.props as { content: ContactIntroContent };
 <Container variant={'xl'} class="text-center text-base-900 flex flex-col items-center">
     <Heading tagName="h1" tagSize="h1">{content.heading}</Heading>
     <div class="max-w-3xl flex flex-col gap-4">
-        <Text variant={'xl'}>{content.lead}</Text>
-        <Text variant={'sm'}>{content.bodyOne}</Text>
-        <Text variant={'sm'}>{content.bodyTwo}</Text>
+        <RichText variant={'xl'} content={content.lead} />
+        <RichText variant={'sm'} content={content.bodyOne} />
+        <RichText variant={'sm'} content={content.bodyTwo} />
     </div>
 </Container>

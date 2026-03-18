@@ -2,7 +2,10 @@
 template: home
 pageTitle: Home
 hero:
-  introText: Thank you for your interest in my page!! I love to crochet and want to share that passion with the world. You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. Happy crocheting <3
+  introText: |-
+    Thank you for your interest in my page!!
+
+    I love to crochet and want to share that passion with the world. You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. Happy crocheting <3
   ctaLabel: Available for work
   ctaHref: /contact
   name: Mania Artajew
@@ -16,7 +19,10 @@ services:
   heading: Services
   items:
     - title: Web Design
-      text: I focus on creating digital experiences that engage users, communicate your brand story, and drive conversions across all devices.
+      text: |-
+        I focus on creating digital experiences that engage users, communicate your brand story, and drive conversions across all devices.
+
+        It's cool.
     - title: Product Design
       text: From initial sketches to manufacturing-ready prototypes, I balance form and function to create products that resonate with users and stand out in the market.
     - title: Branding
@@ -36,7 +42,9 @@ faq:
   heading: FAQ
   items:
     - title: What's your typical project timeline?
-      text: Project timelines vary depending on scope and complexity. A simple brand identity might take 3-4 weeks, while a comprehensive web design or app project typically ranges from 6-12 weeks.
+      text: |-
+        Project timelines vary depending on scope and complexity.
+        A simple brand identity might take 3-4 weeks, while a comprehensive web design or app project typically ranges from 6-12 weeks.
     - title: How do you structure your pricing?
       text: I offer both project-based and hourly pricing depending on the scope of work. Most clients prefer fixed project rates for predictable budgeting. I require a 50% deposit to begin work, with the remainder due upon completion.
     - title: What's included in your design process?
@@ -45,4 +53,6 @@ faq:
       text: Absolutely! I work with clients worldwide and have developed efficient remote collaboration processes. We'll use video calls for key meetings, and collaborative design platforms for feedback.
     - title: How many revisions are included?
       text: Most projects include 2-3 rounds of revisions to ensure we achieve the perfect result. I encourage consolidated feedback to make the most of each revision round.
+    - title: Am I cool?
+      text: Of course I am :)
 ---

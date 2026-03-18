@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { marked } from "marked";
+
+interface Props extends HTMLAttributes<"div"> {
+    content: string;
+    variant?: "xsm" | "sm" | "md" | "lg" | "xl";
+}
+
+const { content, variant = "sm", class: className, ...rest } = Astro.props as Props;
+
+const variantStyle = {
+    xsm: "text-12 font-mono",
+    sm: "text-16/8 font-mono",
+    md: "text-20 font-mono font-semibold uppercase text-base-700",
+    lg: "text-32/8 font-grunge",
+    xl: "text-40/10 font-grunge"
+};
+
+const html = await marked.parse(content ?? "", { breaks: true, gfm: true });
+---
+
+<div class:list={["rich-text", variantStyle[variant], className]} set:html={html} {...rest} />
+
+<style is:global>
+    .rich-text p {
+        margin: 0;
+    }
+
+    .rich-text p + p,
+    .rich-text ul + p,
+    .rich-text ol + p,
+    .rich-text p + ul,
+    .rich-text p + ol {
+        margin-top: 1rem;
+    }
+
+    .rich-text ul,
+    .rich-text ol {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+    
+    .rich-text a {
+        text-decoration: underline;
+    }
+</style>

@@ -1,7 +1,7 @@
 ---
 // components
 import Container from "../../elements/Container.astro"
-import Text from "../../elements/Text.astro"
+import RichText from "../../elements/RichText.astro"
 import Heading from "../../elements/Heading.astro"
 import ImageContainer from "../../elements/ImageContainer.astro"
 import Link from "../../elements/Link.astro"
@@ -10,7 +10,7 @@ const { content } = Astro.props as { content: HeroContent };
 ---
 
 <Container variant={"xl"} class="flex flex-col gap-8 min-h-screen">
-    <Text variant={'xl'} class="text-base-900 lg:max-w-1/3 md:max-w-1/2 w-full">{content.introText}</Text>
+    <RichText variant={'xl'} class="text-base-900 lg:max-w-1/3 md:max-w-1/2 w-full" content={content.introText} />
     <Container class="flex md:flex-row flex-col gap-8">
         <Container class="md:flex-2 flex flex-col items-start gap-4">
             <Link variant={'button'} href={content.ctaHref}>{content.ctaLabel}</Link>
