@@ -5,7 +5,7 @@ hero:
   introText: |-
     Thank you for your interest in my page!!
 
-    I love to crochet and want to share that passion with the world. You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. Happy crocheting <3
+    I love to _crochet_ and want to share that passion with the world. You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. Happy crocheting <3
   ctaLabel: Available for work
   ctaHref: /contact
   name: Mania Artajew
