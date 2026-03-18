@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/elements/Container.astro";
+import Heading from "../components/elements/Heading.astro";
+import Text from "../components/elements/Text.astro";
+import { getPageDataByTemplate } from "../lib/content";
+
+const thankYouPage = await getPageDataByTemplate("thank-you");
+---
+
+<Layout title={thankYouPage.pageTitle}>
+    <Container variant={'xl'} class="text-center flex items-center">
+        <div class="max-w-3xl flex flex-col gap-4">
+            <Heading tagName="h1" tagSize="h1">{thankYouPage.intro.heading}</Heading>
+            <Text variant={'xl'} class="text-base-900">{thankYouPage.intro.lead}</Text>
+            <Text variant={'sm'} class="text-base-900">{thankYouPage.intro.body}</Text>
+        </div>
+    </Container>
+</Layout>

@@ -11,6 +11,7 @@ export type SettingsDataBySection<S extends SettingsSection> = Extract<SettingsD
 export type HomePageData = PageDataByTemplate<"home">;
 export type AboutPageData = PageDataByTemplate<"about">;
 export type ContactPageData = PageDataByTemplate<"contact">;
+export type ThankYouPageData = PageDataByTemplate<"thank-you">;
 export type NotFoundPageData = PageDataByTemplate<"not-found">;
 export type SiteSettingsData = {
     designs: {

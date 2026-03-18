@@ -112,6 +112,15 @@ const pages = defineCollection({
             })
         }),
         z.object({
+            template: z.literal("thank-you"),
+            pageTitle: z.string(),
+            intro: z.object({
+                heading: z.string(),
+                lead: z.string(),
+                body: z.string()
+            })
+        }),
+        z.object({
             template: z.literal("not-found"),
             pageTitle: z.string(),
             heading: z.string(),

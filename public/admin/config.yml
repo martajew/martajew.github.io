@@ -167,6 +167,19 @@ collections:
           - { label: Message, name: message, widget: text }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
+      - label: Thank You
+        name: thank-you
+        file: /src/content/pages/thank-you.md
+        fields:
+          - { label: Template, name: template, widget: hidden, default: thank-you }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead Text, name: lead, widget: text }
+              - { label: Body Text, name: body, widget: text }
   - name: settings
     label: Settings
     files:
