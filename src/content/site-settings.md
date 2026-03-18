@@ -1,6 +1,6 @@
 ---
 designs:
-  paginationPageSize: 4
+  paginationPageSize: 6
 navLinks:
   - title: Home
     href: /
