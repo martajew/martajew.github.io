@@ -167,11 +167,13 @@ collections:
           - { label: Message, name: message, widget: text }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
+  - name: site-settings
+    label: Site Settings
+    files:
       - label: Site Settings
         name: site
-        file: /src/content/pages/site.md
+        file: /src/content/site-settings.md
         fields:
-          - { label: Template, name: template, widget: hidden, default: site }
           - label: Designs
             name: designs
             widget: object

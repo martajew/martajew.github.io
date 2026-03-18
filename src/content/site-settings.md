@@ -1,7 +1,6 @@
 ---
-template: site
 designs:
-  paginationPageSize: 3
+  paginationPageSize: 4
 navLinks:
   - title: Home
     href: /
@@ -23,10 +22,10 @@ footer:
       href: https://twitter.com
     - title: Github
       href: https://github.com
-  copyright: Peter Jones © 2025 All Rights Reserved
+  copyright: Mania Artajew © 2026 All Rights Reserved
   creditsPrefix: Built with
   builtWithLabel: Astro
   builtWithHref: https://astro.build
-  builtByLabel: Jess Gaspar
-  builtByHref: https://jessgaspar.dev
+  builtByLabel: Adam Artajew
+  builtByHref: https://github.com/aartajew
 ---

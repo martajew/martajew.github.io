@@ -9,7 +9,7 @@ export type HomePageData = PageDataByTemplate<"home">;
 export type AboutPageData = PageDataByTemplate<"about">;
 export type ContactPageData = PageDataByTemplate<"contact">;
 export type NotFoundPageData = PageDataByTemplate<"not-found">;
-export type SitePageData = PageDataByTemplate<"site">;
+export type SiteSettingsData = CollectionEntry<"siteSettings">["data"];
 
 export type HeroContent = HomePageData["hero"];
 export type SelectedDesignsContent = HomePageData["selectedDesigns"];

@@ -4,11 +4,11 @@ import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
-import type { SitePageData } from "../../lib/content-types";
+import type { SiteSettingsData } from "../../lib/content-types";
 
 const { navLinks, footer } = Astro.props as {
-    navLinks: SitePageData["navLinks"];
-    footer: SitePageData["footer"];
+    navLinks: SiteSettingsData["navLinks"];
+    footer: SiteSettingsData["footer"];
 };
 ---
 

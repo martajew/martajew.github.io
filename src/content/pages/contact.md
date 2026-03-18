@@ -9,7 +9,7 @@ intro:
 contactDetails:
   items:
     - title: Email
-      contact: peterjones@email.com
+      contact: mania.artajew@email.com
     - title: Phone
       contact: (555) 123-4567
 ---

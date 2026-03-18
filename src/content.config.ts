@@ -118,32 +118,35 @@ const pages = defineCollection({
             message: z.string(),
             buttonLabel: z.string(),
             buttonHref: z.string()
-        }),
-        z.object({
-            template: z.literal("site"),
-            designs: z.object({
-                paginationPageSize: z.number().int().min(1).max(50)
-            }),
-            navLinks: z.array(z.object({
-                title: z.string(),
-                href: z.string()
-            })),
-            footer: z.object({
-                socialsHeading: z.string(),
-                navigationHeading: z.string(),
-                socials: z.array(z.object({
-                    title: z.string(),
-                    href: z.string()
-                })),
-                copyright: z.string(),
-                creditsPrefix: z.string(),
-                builtWithLabel: z.string(),
-                builtWithHref: z.string(),
-                builtByLabel: z.string(),
-                builtByHref: z.string()
-            })
         })
     ])
 });
 
-export const collections = { designs, pages };
+const siteSettings = defineCollection({
+    loader: glob({ pattern: "src/content/site-settings.md" }),
+    schema: z.object({
+        designs: z.object({
+            paginationPageSize: z.number().int().min(1).max(50)
+        }),
+        navLinks: z.array(z.object({
+            title: z.string(),
+            href: z.string()
+        })),
+        footer: z.object({
+            socialsHeading: z.string(),
+            navigationHeading: z.string(),
+            socials: z.array(z.object({
+                title: z.string(),
+                href: z.string()
+            })),
+            copyright: z.string(),
+            creditsPrefix: z.string(),
+            builtWithLabel: z.string(),
+            builtWithHref: z.string(),
+            builtByLabel: z.string(),
+            builtByHref: z.string()
+        })
+    })
+});
+
+export const collections = { designs, pages, siteSettings };

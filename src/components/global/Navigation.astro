@@ -1,9 +1,9 @@
 ---
 // components
 import Link from "../elements/Link.astro";
-import type { SitePageData } from "../../lib/content-types";
+import type { SiteSettingsData } from "../../lib/content-types";
 
-const { navLinks } = Astro.props as { navLinks: SitePageData["navLinks"] };
+const { navLinks } = Astro.props as { navLinks: SiteSettingsData["navLinks"] };
 ---
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50">

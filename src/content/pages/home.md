@@ -31,7 +31,7 @@ aboutSection:
   buttonLabel: More about me
   buttonHref: /about
   image: /src/content/images/pages/mania-with-cat.jpeg
-  imageAlt: Peter Jones
+  imageAlt: Mania Artajew
 faq:
   heading: FAQ
   items:

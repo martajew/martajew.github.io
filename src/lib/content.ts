@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import type { PageDataByTemplate, SitePageData } from "./content-types";
+import type { PageDataByTemplate, SiteSettingsData } from "./content-types";
 
 type PageEntry = CollectionEntry<"pages">;
 type Template = PageEntry["data"]["template"];
@@ -24,8 +24,13 @@ export const getPageDataByTemplate = async <T extends Template>(template: T): Pr
     return page.data;
 };
 
-export const getSiteSettings = async (): Promise<SitePageData> => {
-    return getPageDataByTemplate("site");
+export const getSiteSettings = async (): Promise<SiteSettingsData> => {
+    const settings = await getCollection("siteSettings");
+    const siteSettings = settings[0];
+    if (!siteSettings) {
+        throw new Error("Missing site settings content entry.");
+    }
+    return siteSettings.data;
 };
 
 export const getPublishedDesigns = async (): Promise<CollectionEntry<"designs">[]> => {
