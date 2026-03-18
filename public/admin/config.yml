@@ -172,6 +172,11 @@ collections:
         file: /src/content/pages/site.md
         fields:
           - { label: Template, name: template, widget: hidden, default: site }
+          - label: Designs
+            name: designs
+            widget: object
+            fields:
+              - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
           - label: Navigation Links
             name: navLinks
             widget: list

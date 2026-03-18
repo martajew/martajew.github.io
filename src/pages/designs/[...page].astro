@@ -10,10 +10,11 @@ import Pagination from "../../components/sections/designs/Pagination.astro";
 
 // routing
 import type { GetStaticPaths } from "astro";
-import { getPublishedDesigns } from "../../lib/content";
+import { getPublishedDesigns, getSiteSettings } from "../../lib/content";
 export const getStaticPaths = (async ({paginate}) => {
     const designs = await getPublishedDesigns();
-    return paginate(designs, {pageSize: 6});
+    const siteSettings = await getSiteSettings();
+    return paginate(designs, { pageSize: siteSettings.designs.paginationPageSize });
 }) satisfies GetStaticPaths;
 
 // props

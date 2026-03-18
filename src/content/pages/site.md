@@ -1,5 +1,7 @@
 ---
 template: site
+designs:
+  paginationPageSize: 3
 navLinks:
   - title: Home
     href: /

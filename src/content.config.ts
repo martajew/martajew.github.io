@@ -121,6 +121,9 @@ const pages = defineCollection({
         }),
         z.object({
             template: z.literal("site"),
+            designs: z.object({
+                paginationPageSize: z.number().int().min(1).max(50)
+            }),
             navLinks: z.array(z.object({
                 title: z.string(),
                 href: z.string()
