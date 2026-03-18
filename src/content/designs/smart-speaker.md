@@ -9,7 +9,7 @@ featuredImage: "/src/content/images/designs/smart-speaker/1.jpg"
 imageTwo: "/src/content/images/designs/smart-speaker/2.jpg"
 imageThree: "/src/content/images/designs/smart-speaker/3.jpg"
 imageFour: "/src/content/images/designs/smart-speaker/4.jpg"
-liveSite: "https://astro.build"
+paymentLink: "https://buy.stripe.com/00w6oH25u8el7An4oxbwk00"
 description: "Premium smart speaker that seamlessly blends into modern living spaces. Emphasizes superior audio quality, privacy controls, and intuitive physical interactions. The design balances cutting-edge technology with warm, approachable aesthetics that complement rather than dominate interior spaces."
 isFeatured: true
 isDraft: false

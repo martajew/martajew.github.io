@@ -18,6 +18,7 @@ export type SiteSettingsData = {
     };
     navLinks: SettingsDataBySection<"navigation">["navLinks"];
     footer: Omit<SettingsDataBySection<"footer">, "section">;
+    orders: Omit<SettingsDataBySection<"orders">, "section">;
 };
 
 export type HeroContent = HomePageData["hero"];

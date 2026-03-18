@@ -1,5 +1,5 @@
 import { glob } from 'astro/loaders';
-import { defineCollection } from 'astro:content'; 
+import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod'
 
 const designs = defineCollection({
@@ -15,7 +15,7 @@ const designs = defineCollection({
         imageTwo: image(),
         imageThree: image(),
         imageFour: image(),
-        liveSite: z.url(),
+        paymentLink: z.url(),
         description: z.string().max(350),
         isFeatured: z.boolean(),
         isDraft: z.boolean()
@@ -150,6 +150,10 @@ const settings = defineCollection({
             builtWithHref: z.string(),
             builtByLabel: z.string(),
             builtByHref: z.string()
+        }),
+        z.object({
+            section: z.literal("orders"),
+            paymentButtonLabel: z.string()
         })
     ])
 });

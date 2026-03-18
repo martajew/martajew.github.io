@@ -9,7 +9,7 @@ featuredImage: "/src/content/images/designs/nourish/1.jpg"
 imageTwo: "/src/content/images/designs/nourish/2.jpg"
 imageThree: "/src/content/images/designs/nourish/3.jpg"
 imageFour: "/src/content/images/designs/nourish/4.jpg"
-liveSite: "https://astro.build"
+paymentLink: "https://buy.stripe.com/00w6oH25u8el7An4oxbwk00"
 description: "Comprehensive art direction and visual campaign for farm-to-table restaurant group expanding into three new cities. The campaign celebrates local ingredients, seasonal menus, and community connections through authentic photography, environmental graphics, and digital experiences that feel warm and inviting."
 isFeatured: true
 isDraft: false

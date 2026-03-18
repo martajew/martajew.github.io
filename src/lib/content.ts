@@ -29,8 +29,9 @@ export const getSiteSettings = async (): Promise<SiteSettingsData> => {
     const designsSettings = settings.find((entry) => entry.data.section === "designs");
     const navigationSettings = settings.find((entry) => entry.data.section === "navigation");
     const footerSettings = settings.find((entry) => entry.data.section === "footer");
+    const ordersSettings = settings.find((entry) => entry.data.section === "orders");
 
-    if (!designsSettings || !navigationSettings || !footerSettings) {
+    if (!designsSettings || !navigationSettings || !footerSettings || !ordersSettings) {
         throw new Error("Missing one or more required settings entries.");
     }
 
@@ -49,6 +50,9 @@ export const getSiteSettings = async (): Promise<SiteSettingsData> => {
             builtWithHref: footerSettings.data.builtWithHref,
             builtByLabel: footerSettings.data.builtByLabel,
             builtByHref: footerSettings.data.builtByHref
+        },
+        orders: {
+            paymentButtonLabel: ordersSettings.data.paymentButtonLabel
         }
     };
 };

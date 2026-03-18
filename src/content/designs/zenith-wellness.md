@@ -9,7 +9,7 @@ featuredImage: "/src/content/images/designs/zenith-wellness/1.jpg"
 imageTwo: "/src/content/images/designs/zenith-wellness/2.jpg"
 imageThree: "/src/content/images/designs/zenith-wellness/3.jpg"
 imageFour: "/src/content/images/designs/zenith-wellness/4.jpg"
-liveSite: "https://astro.build"
+paymentLink: "https://buy.stripe.com/00w6oH25u8el7An4oxbwk00"
 description: "A comprehensive wellness platform that combines meditation, fitness tracking, and mental health resources. The app features personalized wellness journeys, community support, and integration with wearable devices to create a holistic approach to personal well-being."
 isFeatured: false
 isDraft: false

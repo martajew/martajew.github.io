@@ -15,7 +15,7 @@ import Link from "../../components/elements/Link.astro";
 // Routing
 import type { GetStaticPaths } from "astro";
 import { render } from "astro:content";
-import { getPublishedDesigns } from "../../lib/content";
+import { getPublishedDesigns, getSiteSettings } from "../../lib/content";
 export const getStaticPaths = (async () => {
     const designs = await getPublishedDesigns();
     return designs.map((design) => ({
@@ -30,8 +30,9 @@ export const getStaticPaths = (async () => {
 
 // props
 const { design } = Astro.props;
+const siteSettings = await getSiteSettings();
 const { Content } = await render(design);
-const { title, client, category, services, year, description, featuredImage, imageTwo, imageThree, imageFour, liveSite } = design.data;
+const { title, client, category, services, year, description, featuredImage, imageTwo, imageThree, imageFour, paymentLink } = design.data;
 const details = [
     { heading: "Client", text: `${client}` },
     { heading: "Category", text: `${category}` },
@@ -56,7 +57,7 @@ const details = [
                 ))
             }
         </div>
-        <Link variant={'button'} href={liveSite}>Live Site</Link>
+        <Link variant={'button'} href={paymentLink}>{siteSettings.orders.paymentButtonLabel}</Link>
         <div class="md:max-w-3xl text-base-900">
             <Text variant={'xl'}>{description}</Text>
         </div>
