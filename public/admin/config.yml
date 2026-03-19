@@ -9,7 +9,7 @@ collections:
   - name: pages
     label: Pages
     media_folder: '{{media_folder}}/pages'
-    description: "Static pages for the website."
+    description: "Predefined pages for the website."
     icon: web
     files:
       - label: Home Page
@@ -166,7 +166,7 @@ collections:
   - name: designs
     label: Designs
     label_singular: Design
-    description: "Dynamic collection of designs."
+    description: "Managable collection of designs."
     folder: /src/content/designs
     media_folder: '{{media_folder}}/designs'
     icon: design_services
@@ -177,6 +177,10 @@ collections:
       default:
         field: sortDate
         direction: descending
+    view_groups:
+      - { field: category, label: Category }
+      - { field: isFeatured, label: Featured }
+      - { field: isDraft, label: Draft }
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Slug, name: slug, widget: string, comment: "Unique identifier used in the design's URL" }
@@ -250,7 +254,7 @@ collections:
         icon: design_services
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
-          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
+          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, default: 6 }
           - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
       - label: Orders
         name: orders

@@ -5,19 +5,19 @@ import { z } from 'astro/zod'
 const designs = defineCollection({
     loader: glob({pattern: "src/content/designs/*.md"}),
     schema: ({image}) => z.object({
-        title: z.string().max(50),
+        title: z.string(),
         slug: z.string(),
         sortDate: z.coerce.date(),
-        client: z.string().max(50),
-        category: z.enum(["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]),
-        services: z.string().max(65),
-        year: z.string().max(4),
+        client: z.string(),
+        category: z.string(),
+        services: z.string(),
+        year: z.string(),
         featuredImage: image(),
         imageTwo: image(),
         imageThree: image(),
         imageFour: image(),
         paymentLink: z.url(),
-        description: z.string().max(350),
+        description: z.string(),
         isFeatured: z.boolean(),
         isDraft: z.boolean()
     })
@@ -161,7 +161,7 @@ const settings = defineCollection({
         }),
         z.object({
             section: z.literal("designs"),
-            paginationPageSize: z.number().int().min(1).max(50)
+            paginationPageSize: z.number().int()
         }),
         z.object({
             section: z.literal("orders"),
