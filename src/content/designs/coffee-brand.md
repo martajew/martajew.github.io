@@ -5,7 +5,6 @@ sortDate: 2026-02-05
 client: Artifact Coffee
 category: Branding
 services: Brand Strategy, Visual Identity, Packaging Design
-year: '2023'
 featuredImage: /src/content/images/designs/coffee-brand/1.jpg
 imageTwo: /src/content/images/designs/coffee-brand/2.jpg
 imageThree: /src/content/images/designs/coffee-brand/3.jpg

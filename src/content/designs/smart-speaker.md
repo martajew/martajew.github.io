@@ -5,7 +5,6 @@ sortDate: 2026-01-15
 client: "Harmony Audio"
 category: "Product Design"
 services: "Industrial Design, Prototyping, Design for Manufacturing"
-year: "2024"
 featuredImage: "/src/content/images/designs/smart-speaker/1.jpg"
 imageTwo: "/src/content/images/designs/smart-speaker/2.jpg"
 imageThree: "/src/content/images/designs/smart-speaker/3.jpg"

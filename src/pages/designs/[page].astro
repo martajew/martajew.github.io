@@ -33,7 +33,8 @@ export const getStaticPaths = (async () => {
 const { design } = Astro.props;
 const siteSettings = await getSiteSettings();
 const { Content } = await render(design);
-const { title, client, category, services, year, description, featuredImage, imageTwo, imageThree, imageFour, paymentLink } = design.data;
+const { title, client, category, services, sortDate, description, featuredImage, imageTwo, imageThree, imageFour, paymentLink } = design.data;
+const year = sortDate.getFullYear();
 const details = [
     { heading: "Client", text: `${client}` },
     { heading: "Category", text: `${category}` },

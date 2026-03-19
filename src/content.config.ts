@@ -11,7 +11,6 @@ const designs = defineCollection({
         client: z.string(),
         category: z.string(),
         services: z.string(),
-        year: z.string(),
         featuredImage: image(),
         imageTwo: image(),
         imageThree: image(),

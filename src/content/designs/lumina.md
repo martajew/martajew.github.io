@@ -5,7 +5,6 @@ sortDate: 2025-12-17
 client: Lumina
 category: Web Design
 services: Web Design, CMS Integration, Performance Optimization
-year: '2024'
 featuredImage: /src/content/images/designs/lumina/1.jpg
 imageTwo: /src/content/images/designs/lumina/2.jpg
 imageThree: /src/content/images/designs/lumina/3.jpg

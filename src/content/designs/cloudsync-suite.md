@@ -5,7 +5,6 @@ sortDate: 2026-03-18
 client: Cloudsync Technologies
 category: Art Direction
 services: User Research, Interface Design, Design System Development
-year: '2025'
 featuredImage: /src/content/images/designs/cloudsync-suite/1.jpg
 imageTwo: /src/content/images/designs/cloudsync-suite/2.jpg
 imageThree: /src/content/images/designs/cloudsync-suite/3.jpg

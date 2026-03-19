@@ -5,7 +5,6 @@ sortDate: 2026-01-01
 client: "Zenith Health Technologies"
 category: "UI/UX Design"
 services: "User Research, Prototyping, Visual Design"
-year: "2023"
 featuredImage: "/src/content/images/designs/zenith-wellness/1.jpg"
 imageTwo: "/src/content/images/designs/zenith-wellness/2.jpg"
 imageThree: "/src/content/images/designs/zenith-wellness/3.jpg"

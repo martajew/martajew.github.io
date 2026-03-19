@@ -200,7 +200,6 @@ collections:
         value_field: "{{categories.*}}"
         display_fields: ["{{categories.*}}"]
       - { label: Services, name: services, widget: string }
-      - { label: Year, name: year, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Image Two, name: imageTwo, widget: image }
       - { label: Image Three, name: imageThree, widget: image }

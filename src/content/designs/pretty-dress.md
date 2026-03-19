@@ -5,7 +5,6 @@ sortDate: 2026-03-01
 client: ACME
 category: UI/UX Design
 services: Crochet
-year: '2026'
 featuredImage: /src/content/images/designs/crochet-dress.webp
 imageTwo: /src/content/images/designs/crochet-dress.webp
 imageThree: /src/content/images/designs/crochet-dress.webp
