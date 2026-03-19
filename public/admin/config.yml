@@ -52,6 +52,7 @@ collections:
       - label: Home
         name: home
         file: /src/content/pages/home.md
+        icon: home
         fields:
           - { label: Template, name: template, widget: hidden, default: home }
           - { label: Page Title, name: pageTitle, widget: string }
@@ -109,6 +110,7 @@ collections:
       - label: About
         name: about
         file: /src/content/pages/about.md
+        icon: info
         fields:
           - { label: Template, name: template, widget: hidden, default: about }
           - { label: Page Title, name: pageTitle, widget: string }
@@ -150,6 +152,7 @@ collections:
       - label: Contact
         name: contact
         file: /src/content/pages/contact.md
+        icon: mail
         fields:
           - { label: Template, name: template, widget: hidden, default: contact }
           - { label: Page Title, name: pageTitle, widget: string }
@@ -174,6 +177,7 @@ collections:
       - label: Not Found Page
         name: not-found
         file: /src/content/pages/not-found.md
+        icon: warning
         fields:
           - { label: Template, name: template, widget: hidden, default: not-found }
           - { label: Page Title, name: pageTitle, widget: string }
@@ -184,6 +188,7 @@ collections:
       - label: Thank You
         name: thank-you
         file: /src/content/pages/thank-you.md
+        icon: check
         fields:
           - { label: Template, name: template, widget: hidden, default: thank-you }
           - { label: Page Title, name: pageTitle, widget: string }
