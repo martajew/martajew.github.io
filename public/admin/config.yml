@@ -189,8 +189,12 @@ collections:
       - { label: Client, name: client, widget: string }
       - label: Category
         name: category
-        widget: select
-        options: ["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]
+        comment: "Manage available categories in [Settings > Designs](#/collections/settings/entries/designs)"
+        widget: relation
+        collection: settings
+        file: designs
+        value_field: "{{categories.*}}"
+        display_fields: ["{{categories.*}}"]
       - { label: Services, name: services, widget: string }
       - { label: Year, name: year, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
@@ -247,6 +251,7 @@ collections:
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
           - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
+          - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
       - label: Orders
         name: orders
         file: /src/content/settings/orders.md
