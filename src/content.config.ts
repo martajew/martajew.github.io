@@ -108,7 +108,8 @@ const pages = defineCollection({
             contactDetails: z.object({
                 items: z.array(z.object({
                     title: z.string(),
-                    contact: z.string()
+                    contact: z.string(),
+                    href: z.string()
                 }))
             })
         }),
@@ -136,30 +137,31 @@ const settings = defineCollection({
     loader: glob({ pattern: "src/content/settings/*.md" }),
     schema: z.discriminatedUnion("section", [
         z.object({
+          section: z.literal("layout"),
+          mainPageTitle: z.string(),
+          socialsHeading: z.string(),
+          navigationHeading: z.string(),
+          socials: z.array(z.object({
+            title: z.string(),
+            href: z.string()
+          })),
+          copyright: z.string(),
+          creditsPrefix: z.string(),
+          builtWithLabel: z.string(),
+          builtWithHref: z.string(),
+          builtByLabel: z.string(),
+          builtByHref: z.string()
+        }),
+        z.object({
+          section: z.literal("navigation"),
+          navLinks: z.array(z.object({
+            title: z.string(),
+            href: z.string()
+          }))
+        }),
+        z.object({
             section: z.literal("designs"),
             paginationPageSize: z.number().int().min(1).max(50)
-        }),
-        z.object({
-            section: z.literal("navigation"),
-            navLinks: z.array(z.object({
-                title: z.string(),
-                href: z.string()
-            }))
-        }),
-        z.object({
-            section: z.literal("footer"),
-            socialsHeading: z.string(),
-            navigationHeading: z.string(),
-            socials: z.array(z.object({
-                title: z.string(),
-                href: z.string()
-            })),
-            copyright: z.string(),
-            creditsPrefix: z.string(),
-            builtWithLabel: z.string(),
-            builtWithHref: z.string(),
-            builtByLabel: z.string(),
-            builtByHref: z.string()
         }),
         z.object({
             section: z.literal("orders"),

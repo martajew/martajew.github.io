@@ -19,11 +19,13 @@ const backgroundImage = await getImage({src: bg, format:'jpg'})
 // props
 const { title } = Astro.props;
 const siteSettings = await getSiteSettings();
+const isHomePage = Astro.url.pathname === "/";
+const browserPageTitle = isHomePage ? siteSettings.layout.mainPageTitle : `${siteSettings.layout.mainPageTitle} - ${title}`;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-	<BaseHead pageTitle={title}/>
+	<BaseHead pageTitle={browserPageTitle}/>
 	<body style=`background-image: url(${backgroundImage.src})` class="bg-cover bg-center bg-no-repeat bg-fixed  box-border">
 		<!-- Background noise effect -->
 		<div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
@@ -33,8 +35,7 @@ const siteSettings = await getSiteSettings();
 			<main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
 				<slot />
 			</main>
-			<Footer navLinks={siteSettings.navLinks} footer={siteSettings.footer} />
+			<Footer navLinks={siteSettings.navLinks} layout={siteSettings.layout} />
 		</Wrapper>
 	</body>
 </html>
-

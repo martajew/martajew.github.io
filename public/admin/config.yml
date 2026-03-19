@@ -6,48 +6,11 @@ backend:
 media_folder: /src/content/images
 
 collections:
-  - name: designs
-    label: Designs
-    label_singular: Design
-    description: "Dynamic collection for design projects."
-    folder: /src/content/designs
-    media_folder: '{{media_folder}}/designs'
-    identifier_field: slug
-    summary: "{{sortDate | date('YYYY-MM-DD')}}: **{{title}}** ({{slug}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
-    sortable_fields:
-      fields: [sortDate, title]
-      default:
-        field: sortDate
-        direction: descending
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string, comment: "Unique identifier used in the design's URL" }
-      - label: Sort Date
-        name: sortDate
-        widget: datetime
-        type: date
-        default: "{{now}}"
-        comment: "Used for display order only (newest first)."
-      - { label: Client, name: client, widget: string }
-      - label: Category
-        name: category
-        widget: select
-        options: ["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]
-      - { label: Services, name: services, widget: string }
-      - { label: Year, name: year, widget: string }
-      - { label: Featured Image, name: featuredImage, widget: image }
-      - { label: Image Two, name: imageTwo, widget: image }
-      - { label: Image Three, name: imageThree, widget: image }
-      - { label: Image Four, name: imageFour, widget: image }
-      - { label: Payment Link, name: paymentLink, widget: string }
-      - { label: Description, name: description, widget: markdown }
-      - { label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: "Show on home page" }
-      - { label: Draft, name: isDraft, widget: boolean, default: false, comment: "Hide design from public site" }
-      - { label: Body, name: body, widget: markdown }
   - name: pages
     label: Pages
     media_folder: '{{media_folder}}/pages'
     description: "Static pages for the website."
+    icon: web
     files:
       - label: Home Page
         name: home
@@ -174,6 +137,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Contact, name: contact, widget: string }
+                  - { label: URL, name: href, widget: string, required: false, comment: "Optional link for contact method (e.g. mailto: or tel:)" }
       - label: Thank You Page
         name: thank-you
         file: /src/content/pages/thank-you.md
@@ -199,32 +163,57 @@ collections:
           - { label: Message, name: message, widget: markdown }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
+  - name: designs
+    label: Designs
+    label_singular: Design
+    description: "Dynamic collection of designs."
+    folder: /src/content/designs
+    media_folder: '{{media_folder}}/designs'
+    icon: design_services
+    identifier_field: slug
+    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{isFeatured | ternary('**', '')}}{{title}}{{isFeatured | ternary('**', '')}} ({{slug}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
+    sortable_fields:
+      fields: [sortDate, title]
+      default:
+        field: sortDate
+        direction: descending
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string, comment: "Unique identifier used in the design's URL" }
+      - label: Sort Date
+        name: sortDate
+        widget: datetime
+        type: date
+        default: "{{now}}"
+        comment: "Used for display order only (newest first)."
+      - { label: Client, name: client, widget: string }
+      - label: Category
+        name: category
+        widget: select
+        options: ["UI/UX Design", "Web Design", "Art Direction", "Product Design", "Branding"]
+      - { label: Services, name: services, widget: string }
+      - { label: Year, name: year, widget: string }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Image Two, name: imageTwo, widget: image }
+      - { label: Image Three, name: imageThree, widget: image }
+      - { label: Image Four, name: imageFour, widget: image }
+      - { label: Payment Link, name: paymentLink, widget: string }
+      - { label: Description, name: description, widget: markdown }
+      - { label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: "Show on home page" }
+      - { label: Draft, name: isDraft, widget: boolean, default: false, comment: "Hide design from public site" }
+      - { label: Body, name: body, widget: markdown }
   - name: settings
     label: Settings
     description: "Website-wide settings."
+    icon: settings
     files:
-      - label: Designs
-        name: designs
-        file: /src/content/settings/designs.md
+      - label: Layout
+        name: layout
+        file: /src/content/settings/layout.md
+        icon: view_quilt
         fields:
-          - { label: Section, name: section, widget: hidden, default: designs }
-          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
-      - label: Navigation
-        name: navigation
-        file: /src/content/settings/navigation.md
-        fields:
-          - { label: Section, name: section, widget: hidden, default: navigation }
-          - label: Navigation Links
-            name: navLinks
-            widget: list
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: href, widget: string }
-      - label: Footer
-        name: footer
-        file: /src/content/settings/footer.md
-        fields:
-          - { label: Section, name: section, widget: hidden, default: footer }
+          - { label: Section, name: section, widget: hidden, default: layout }
+          - { label: Main Page Title, name: mainPageTitle, widget: string }
           - { label: Socials Heading, name: socialsHeading, widget: string }
           - { label: Navigation Heading, name: navigationHeading, widget: string }
           - label: Social Links
@@ -239,9 +228,29 @@ collections:
           - { label: Built With URL, name: builtWithHref, widget: string }
           - { label: Built By Label, name: builtByLabel, widget: string }
           - { label: Built By URL, name: builtByHref, widget: string }
+      - label: Navigation
+        name: navigation
+        file: /src/content/settings/navigation.md
+        icon: menu
+        fields:
+          - { label: Section, name: section, widget: hidden, default: navigation }
+          - label: Navigation Links
+            name: navLinks
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: href, widget: string }
+      - label: Designs
+        name: designs
+        file: /src/content/settings/designs.md
+        icon: design_services
+        fields:
+          - { label: Section, name: section, widget: hidden, default: designs }
+          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, min: 1, max: 50, default: 6 }
       - label: Orders
         name: orders
         file: /src/content/settings/orders.md
+        icon: shopping_cart
         fields:
           - { label: Section, name: section, widget: hidden, default: orders }
           - { label: Payment Button Label, name: paymentButtonLabel, widget: string, default: Order Now }

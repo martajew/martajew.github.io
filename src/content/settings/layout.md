@@ -1,5 +1,6 @@
 ---
-section: footer
+section: layout
+mainPageTitle: Mania's Shop
 socialsHeading: Socials
 navigationHeading: Navigation
 socials:

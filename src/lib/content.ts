@@ -26,30 +26,31 @@ export const getPageDataByTemplate = async <T extends Template>(template: T): Pr
 
 export const getSiteSettings = async (): Promise<SiteSettingsData> => {
     const settings = await getCollection("settings");
-    const designsSettings = settings.find((entry) => entry.data.section === "designs");
+    const layoutSettings = settings.find((entry) => entry.data.section === "layout");
     const navigationSettings = settings.find((entry) => entry.data.section === "navigation");
-    const footerSettings = settings.find((entry) => entry.data.section === "footer");
+    const designsSettings = settings.find((entry) => entry.data.section === "designs");
     const ordersSettings = settings.find((entry) => entry.data.section === "orders");
 
-    if (!designsSettings || !navigationSettings || !footerSettings || !ordersSettings) {
+    if (!designsSettings || !layoutSettings || !navigationSettings || !ordersSettings) {
         throw new Error("Missing one or more required settings entries.");
     }
 
     return {
-        designs: {
-            paginationPageSize: designsSettings.data.paginationPageSize
+        layout: {
+          mainPageTitle: layoutSettings.data.mainPageTitle,
+          socialsHeading: layoutSettings.data.socialsHeading,
+          navigationHeading: layoutSettings.data.navigationHeading,
+          socials: layoutSettings.data.socials,
+          copyright: layoutSettings.data.copyright,
+          creditsPrefix: layoutSettings.data.creditsPrefix,
+          builtWithLabel: layoutSettings.data.builtWithLabel,
+          builtWithHref: layoutSettings.data.builtWithHref,
+          builtByLabel: layoutSettings.data.builtByLabel,
+          builtByHref: layoutSettings.data.builtByHref
         },
         navLinks: navigationSettings.data.navLinks,
-        footer: {
-            socialsHeading: footerSettings.data.socialsHeading,
-            navigationHeading: footerSettings.data.navigationHeading,
-            socials: footerSettings.data.socials,
-            copyright: footerSettings.data.copyright,
-            creditsPrefix: footerSettings.data.creditsPrefix,
-            builtWithLabel: footerSettings.data.builtWithLabel,
-            builtWithHref: footerSettings.data.builtWithHref,
-            builtByLabel: footerSettings.data.builtByLabel,
-            builtByHref: footerSettings.data.builtByHref
+        designs: {
+            paginationPageSize: designsSettings.data.paginationPageSize
         },
         orders: {
             paymentButtonLabel: ordersSettings.data.paymentButtonLabel

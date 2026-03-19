@@ -14,11 +14,11 @@ export type ContactPageData = PageDataByTemplate<"contact">;
 export type ThankYouPageData = PageDataByTemplate<"thank-you">;
 export type NotFoundPageData = PageDataByTemplate<"not-found">;
 export type SiteSettingsData = {
+    layout: Omit<SettingsDataBySection<"layout">, "section">;
+    navLinks: SettingsDataBySection<"navigation">["navLinks"];
     designs: {
         paginationPageSize: SettingsDataBySection<"designs">["paginationPageSize"];
     };
-    navLinks: SettingsDataBySection<"navigation">["navLinks"];
-    footer: Omit<SettingsDataBySection<"footer">, "section">;
     orders: Omit<SettingsDataBySection<"orders">, "section">;
 };
 

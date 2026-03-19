@@ -10,8 +10,11 @@ contactDetails:
   items:
     - title: Email
       contact: mania.artajew@email.com
+      href: mailto:mania.artajew@email.com
     - title: Phone
       contact: (555) 123-4567
+      href: tel:(555) 123-4567
     - title: instagram
       contact: '@by_mania_artajew'
+      href: https://www.instagram.com/by_mania_artajew/
 ---

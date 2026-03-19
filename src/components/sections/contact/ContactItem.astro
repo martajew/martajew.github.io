@@ -5,9 +5,10 @@ import symbol from "../../../assets/ui/symbolWhite.svg";
 
 // components
 import Text from "../../elements/Text.astro";
+import Link from "../../elements/Link.astro";
 
 // props
-const { title, contact } = Astro.props;
+const { title, contact, href } = Astro.props;
 ---
 
 <div class="border-2 border-base-900 p-4 flex flex-col gap-4 w-full">
@@ -17,6 +18,12 @@ const { title, contact } = Astro.props;
     </div>
     <div class="h-px w-full border border-base-900"></div>
     <div>
-        <Text variant={'sm'}>{contact}</Text>
+        {
+            href ? (
+                <Link href={href} variant={'inline'}>{contact}</Link>
+            ) : (
+                <Text variant={'sm'}>{contact}</Text>
+            )
+        }
     </div>
 </div>
