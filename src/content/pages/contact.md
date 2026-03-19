@@ -9,8 +9,8 @@ intro:
 contactDetails:
   items:
     - title: Email
-      contact: mania.artajew@email.com
-      href: mailto:mania.artajew@email.com
+      contact: mania.artajew@gmail.com
+      href: mailto:mania.artajew@gmail.com
     - title: Phone
       contact: (555) 123-4567
       href: tel:(555) 123-4567
