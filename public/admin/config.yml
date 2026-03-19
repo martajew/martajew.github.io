@@ -49,7 +49,7 @@ collections:
     media_folder: '{{media_folder}}/pages'
     description: "Static pages for the website."
     files:
-      - label: Home
+      - label: Home Page
         name: home
         file: /src/content/pages/home.md
         icon: home
@@ -107,7 +107,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Text, name: text, widget: markdown }
-      - label: About
+      - label: About Page
         name: about
         file: /src/content/pages/about.md
         icon: info
@@ -149,7 +149,7 @@ collections:
                   - { label: Place, name: place, widget: string }
                   - { label: Period, name: period, widget: string }
                   - { label: Text, name: text, widget: markdown }
-      - label: Contact
+      - label: Contact Page
         name: contact
         file: /src/content/pages/contact.md
         icon: mail
@@ -174,18 +174,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Contact, name: contact, widget: string }
-      - label: Not Found Page
-        name: not-found
-        file: /src/content/pages/not-found.md
-        icon: warning
-        fields:
-          - { label: Template, name: template, widget: hidden, default: not-found }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Message, name: message, widget: markdown }
-          - { label: Button Label, name: buttonLabel, widget: string }
-          - { label: Button Link, name: buttonHref, widget: string }
-      - label: Thank You
+      - label: Thank You Page
         name: thank-you
         file: /src/content/pages/thank-you.md
         icon: check
@@ -199,6 +188,17 @@ collections:
               - { label: Heading, name: heading, widget: string }
               - { label: Lead Text, name: lead, widget: markdown }
               - { label: Body Text, name: body, widget: markdown }
+      - label: Not Found Page
+        name: not-found
+        file: /src/content/pages/not-found.md
+        icon: warning
+        fields:
+          - { label: Template, name: template, widget: hidden, default: not-found }
+          - { label: Page Title, name: pageTitle, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Message, name: message, widget: markdown }
+          - { label: Button Label, name: buttonLabel, widget: string }
+          - { label: Button Link, name: buttonHref, widget: string }
   - name: settings
     label: Settings
     description: "Website-wide settings."
