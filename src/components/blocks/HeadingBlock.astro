@@ -1,0 +1,14 @@
+---
+import type { HeadingBlock } from "../../lib/content-types";
+import Container from "../elements/Container.astro";
+import Heading from "../elements/Heading.astro";
+
+const { block } = Astro.props as { block: HeadingBlock };
+---
+
+<Container variant={"xl"} class="text-center">
+    <Heading tagName="h1" tagSize="h1">
+        {block.title}
+    </Heading>
+</Container>
+
