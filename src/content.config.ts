@@ -76,6 +76,16 @@ const pages = defineCollection({
             link: z.string()
         });
 
+        const allDesignsBlock = z.object({
+            type: z.literal("all_designs_block"),
+            heading: z.string(),
+        });
+
+      const designDetailsBlock = z.object({
+        type: z.literal("design_details_block"),
+        design: z.object(),
+      });
+
         return z.object({
             title: z.string(),
             slug: z.string(),
@@ -87,7 +97,9 @@ const pages = defineCollection({
                 accordionBlock,
                 numberedAccordionBlock,
                 contactsBlock,
-                featuredDesignsBlock
+                featuredDesignsBlock,
+                allDesignsBlock,
+                designDetailsBlock
             ]))
         });
     }
@@ -141,8 +153,7 @@ const settings = defineCollection({
         }),
         z.object({
             section: z.literal("designs"),
-            paginationPageSize: z.number(),
-          paymentButtonLabel: z.string()
+            paymentButtonLabel: z.string()
         }),
     ])
 });

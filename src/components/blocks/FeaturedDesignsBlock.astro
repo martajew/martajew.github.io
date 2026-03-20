@@ -12,13 +12,12 @@ const featuredDesigns = designs.filter((design) => design.data.isFeatured === tr
 ---
 
 <Container variant={"lg"} class="items-center">
-    <Heading tagName="h2" tagSize="h2" class="text-center">
-        {block.heading}
-    </Heading>
+    <Heading tagName="h2" tagSize="h2" class="text-center">{block.heading}</Heading>
     <Container class="grid lg:grid-cols-2 grid-cols-1 gap-16">
         {
             featuredDesigns.map((design) => (
                 <Design
+                    collection={design.collection}
                     slug={design.data.slug}
                     featuredImage={design.data.featuredImage}
                     title={design.data.title}
@@ -30,4 +29,3 @@ const featuredDesigns = designs.filter((design) => design.data.isFeatured === tr
     </Container>
     <Link variant={"button"} href={block.link}>{block.button}</Link>
 </Container>
-

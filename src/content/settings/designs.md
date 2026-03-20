@@ -1,6 +1,5 @@
 ---
 section: designs
-paginationPageSize: 4
 categories:
   - UI/UX Design
   - Web Design

@@ -93,6 +93,10 @@ collections:
               - { label: Heading, name: heading, widget: string }
               - { label: Button, name: button, widget: string }
               - { label: Link, name: link, widget: string }
+          - label: All Designs
+            name: all_designs_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
 
   - name: designs
     label: Designs
@@ -185,6 +189,5 @@ collections:
         icon: design_services
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
-          - { label: Pagination Page Size, name: paginationPageSize, widget: number }
           - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
           - { label: Payment Button Label, name: paymentButtonLabel, widget: string }

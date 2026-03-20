@@ -1,28 +1,37 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type {GetStaticPaths} from "astro";
 import Layout from "../layouts/Layout.astro";
 import PageBlocks from "../components/pages/PageBlocks.astro";
-import { getAllPages, getPageDataBySlug, mapPageSlugToPath } from "../lib/content";
+import {getAllPages, getPublishedDesigns, mapPageSlugToPath} from "../lib/content";
 
 export const getStaticPaths = (async () => {
-    const pages = await getAllPages();
-    return pages.map((entry) => {
-        const path = mapPageSlugToPath(entry.data.slug);
-        const slug = path === "/" ? undefined : path.replace(/^\//, "");
-
-        return {
-            params: {
-                slug,
-            },
-        };
-    });
+  const pages = await getAllPages();
+  const pageRoutes = pages.map((page) => {
+    const path = mapPageSlugToPath(page.data.slug);
+    const slug = path === "/" ? undefined : path.replace(/^\//, "");
+    return {params: {slug}, props: {data: page.data}};
+  });
+  const designs = await getPublishedDesigns();
+  const designRoutes = designs.map((design) => {
+    const slug = `${design.collection}/${design.data.slug}`;
+    return {
+      params: {slug},
+      props: {
+        data:
+          {
+            title: `Design - ${design.data.title}`,
+            slug: design.data.slug,
+            blocks: [{type: "design_details_block", design}]
+          }
+      },
+    };
+  });
+  return pageRoutes.concat(designRoutes as any);
 }) satisfies GetStaticPaths;
 
-const routeSlug = Astro.params.slug;
-const normalizedSlug = routeSlug ?? "home";
-const page = await getPageDataBySlug(normalizedSlug);
+const page = Astro.props.data;
 ---
 
 <Layout title={page.title}>
-    <PageBlocks blocks={page.blocks} />
+    <PageBlocks blocks={page.blocks}/>
 </Layout>

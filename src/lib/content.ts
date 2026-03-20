@@ -56,7 +56,6 @@ export const getSiteSettings = async (): Promise<SiteSettingsData> => {
         },
         navLinks: navigationSettings.data.navLinks,
         designs: {
-            paginationPageSize: designsSettings.data.paginationPageSize,
             paymentButtonLabel: designsSettings.data.paymentButtonLabel
         },
     };
