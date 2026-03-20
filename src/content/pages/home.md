@@ -14,6 +14,11 @@ blocks:
     heading: Featured Designs
     button: All Designs
     link: /designs
+  - type: numbered_accordion_block
+    heading: What I do
+    items:
+      - title: Crochet
+        text: Lorem ipsum donor.
   - type: callout_block
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
     body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.

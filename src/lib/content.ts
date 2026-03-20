@@ -1,11 +1,10 @@
-import { type CollectionEntry, getCollection } from "astro:content";
-import type { ComposablePageData, SiteSettingsData } from "./content-types";
+import {type CollectionEntry, getCollection} from "astro:content";
+import type {ComposablePageData, SiteSettingsData} from "./content-types";
 
 type PageEntry = CollectionEntry<"pages">;
 
 export const getAllPages = async (): Promise<PageEntry[]> => {
-    const pages = await getCollection("pages");
-    return pages;
+  return await getCollection("pages");
 };
 
 const normalizeSlug = (slug: string): string => {
