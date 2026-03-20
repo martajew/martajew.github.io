@@ -21,3 +21,4 @@ export type CalloutBlock = Extract<PageBlock, { type: "callout_block" }>;
 export type AccordionBlock = Extract<PageBlock, { type: "accordion_block" }>;
 export type NumberedAccordionBlock = Extract<PageBlock, { type: "numbered_accordion_block" }>;
 export type ContactsBlock = Extract<PageBlock, { type: "contacts_block" }>;
+export type FeaturedDesignsBlock = Extract<PageBlock, { type: "featured_designs_block" }>;

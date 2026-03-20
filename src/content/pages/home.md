@@ -3,19 +3,23 @@ title: Home
 slug: home
 blocks:
   - type: hero_block
-    intro: Thank you for your interest in my page!!
-    button: Available for work
-    link: /contact
-    name: Mania Artajew
     lead: I love to crochet and want to share that passion with the world.
     body: I design useful and joyful digital experiences.
+    button: Available for work
+    link: /contact
+    intro: Thank you for your interest in my page!!
+    name: Mania Artajew
     image: /src/content/images/pages/mania-main-photo.png
+  - type: featured_designs_block
+    heading: Featured Designs
+    button: All Designs
+    link: /designs
   - type: callout_block
-    name: About
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
     body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.
     button: More about me
     link: /about
+    name: About
     image: /src/content/images/pages/mania-with-cat.jpeg
   - type: numbered_accordion_block
     heading: FAQ

@@ -69,6 +69,13 @@ const pages = defineCollection({
             }))
         });
 
+        const featuredDesignsBlock = z.object({
+            type: z.literal("featured_designs_block"),
+            heading: z.string(),
+            button: z.string(),
+            link: z.string()
+        });
+
         return z.object({
             title: z.string(),
             slug: z.string(),
@@ -79,7 +86,8 @@ const pages = defineCollection({
                 calloutBlock,
                 accordionBlock,
                 numberedAccordionBlock,
-                contactsBlock
+                contactsBlock,
+                featuredDesignsBlock
             ]))
         });
     }
