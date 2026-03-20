@@ -163,6 +163,7 @@ collections:
           - { label: Message, name: message, widget: markdown }
           - { label: Button Label, name: buttonLabel, widget: string }
           - { label: Button Link, name: buttonHref, widget: string }
+
   - name: designs
     label: Designs
     label_singular: Design
@@ -209,6 +210,7 @@ collections:
       - { label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: "Show on home page" }
       - { label: Draft, name: isDraft, widget: boolean, default: false, comment: "Hide design from public site" }
       - { label: Body, name: body, widget: markdown }
+
   - name: settings
     label: Settings
     description: "Website-wide settings."
@@ -253,12 +255,6 @@ collections:
         icon: design_services
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
-          - { label: Pagination Page Size, name: paginationPageSize, widget: number, value_type: int, default: 6 }
+          - { label: Pagination Page Size, name: paginationPageSize, widget: number }
           - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
-      - label: Orders
-        name: orders
-        file: /src/content/settings/orders.md
-        icon: shopping_cart
-        fields:
-          - { label: Section, name: section, widget: hidden, default: orders }
-          - { label: Payment Button Label, name: paymentButtonLabel, widget: string, default: Order Now }
+          - { label: Payment Button Label, name: paymentButtonLabel, widget: string }

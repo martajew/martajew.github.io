@@ -160,12 +160,9 @@ const settings = defineCollection({
         }),
         z.object({
             section: z.literal("designs"),
-            paginationPageSize: z.number().int()
+            paginationPageSize: z.number(),
+          paymentButtonLabel: z.string()
         }),
-        z.object({
-            section: z.literal("orders"),
-            paymentButtonLabel: z.string()
-        })
     ])
 });
 

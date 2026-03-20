@@ -16,10 +16,7 @@ export type NotFoundPageData = PageDataByTemplate<"not-found">;
 export type SiteSettingsData = {
     layout: Omit<SettingsDataBySection<"layout">, "section">;
     navLinks: SettingsDataBySection<"navigation">["navLinks"];
-    designs: {
-        paginationPageSize: SettingsDataBySection<"designs">["paginationPageSize"];
-    };
-    orders: Omit<SettingsDataBySection<"orders">, "section">;
+    designs: Omit<SettingsDataBySection<"designs">, "section">;
 };
 
 export type HeroContent = HomePageData["hero"];
