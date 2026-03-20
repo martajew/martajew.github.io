@@ -2,135 +2,108 @@ import { glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod'
 
-const designs = defineCollection({
-    loader: glob({pattern: "src/content/designs/*.md"}),
-    schema: ({image}) => z.object({
-        title: z.string(),
-        slug: z.string(),
-        sortDate: z.coerce.date(),
-        client: z.string(),
-        category: z.string(),
-        services: z.string(),
-        featuredImage: image(),
-        imageTwo: image(),
-        imageThree: image(),
-        imageFour: image(),
-        paymentLink: z.url(),
-        description: z.string(),
-        isFeatured: z.boolean(),
-        isDraft: z.boolean()
-    })
-})
-
 const pages = defineCollection({
     loader: glob({ pattern: "src/content/pages/*.md" }),
-    schema: ({ image }) => z.discriminatedUnion("template", [
-        z.object({
-            template: z.literal("home"),
-            pageTitle: z.string(),
-            hero: z.object({
-                introText: z.string(),
-                ctaLabel: z.string(),
-                ctaHref: z.string(),
-                name: z.string(),
-                image: image(),
-                imageAlt: z.string()
-            }),
-            selectedDesigns: z.object({
-                heading: z.string(),
-                buttonLabel: z.string(),
-                buttonHref: z.string()
-            }),
-            services: z.object({
-                heading: z.string(),
-                items: z.array(z.object({
-                    title: z.string(),
-                    text: z.string()
-                }))
-            }),
-            aboutSection: z.object({
-                heading: z.string(),
-                lead: z.string(),
-                bodyOne: z.string(),
-                bodyTwo: z.string(),
-                buttonLabel: z.string(),
-                buttonHref: z.string(),
-                image: image(),
-                imageAlt: z.string()
-            }),
-            faq: z.object({
-                heading: z.string(),
-                items: z.array(z.object({
-                    title: z.string(),
-                    text: z.string()
-                }))
-            })
-        }),
-        z.object({
-            template: z.literal("about"),
-            pageTitle: z.string(),
-            intro: z.object({
-                heading: z.string(),
-                lead: z.string(),
-                body: z.string(),
-                image: image(),
-                imageAlt: z.string()
-            }),
-            experience: z.object({
-                heading: z.string(),
-                items: z.array(z.object({
-                    title: z.string(),
-                    place: z.string(),
-                    period: z.string(),
-                    text: z.string()
-                }))
-            }),
-            education: z.object({
-                heading: z.string(),
-                items: z.array(z.object({
-                    title: z.string(),
-                    place: z.string(),
-                    period: z.string(),
-                    text: z.string()
-                }))
-            })
-        }),
-        z.object({
-            template: z.literal("contact"),
-            pageTitle: z.string(),
-            intro: z.object({
-                heading: z.string(),
-                lead: z.string(),
-                bodyOne: z.string(),
-                bodyTwo: z.string()
-            }),
-            contactDetails: z.object({
-                items: z.array(z.object({
-                    title: z.string(),
-                    contact: z.string(),
-                    href: z.string()
-                }))
-            })
-        }),
-        z.object({
-            template: z.literal("thank-you"),
-            pageTitle: z.string(),
-            intro: z.object({
-                heading: z.string(),
-                lead: z.string(),
-                body: z.string()
-            })
-        }),
-        z.object({
-            template: z.literal("not-found"),
-            pageTitle: z.string(),
+    schema: ({ image }) => {
+        const headingBlock = z.object({
+            type: z.literal("heading_block"),
+            title: z.string()
+        });
+
+        const introBlock = z.object({
+            type: z.literal("intro_block"),
             heading: z.string(),
-            message: z.string(),
-            buttonLabel: z.string(),
-            buttonHref: z.string()
-        })
-    ])
+            lead: z.string(),
+            body: z.string(),
+            button: z.string().optional(),
+            link: z.string().optional()
+        });
+
+        const heroBlock = z.object({
+            type: z.literal("hero_block"),
+            intro: z.string(),
+            button: z.string(),
+            link: z.string(),
+            name: z.string(),
+            lead: z.string(),
+            body: z.string(),
+            image: image()
+        });
+
+        const calloutBlock = z.object({
+            type: z.literal("callout_block"),
+            name: z.string(),
+            lead: z.string(),
+            body: z.string(),
+            button: z.string(),
+            link: z.string(),
+            image: image()
+        });
+
+        const accordionBlock = z.object({
+            type: z.literal("accordion_block"),
+            heading: z.string(),
+            items: z.array(z.object({
+                title: z.string(),
+                first: z.string(),
+                second: z.string(),
+                text: z.string()
+            }))
+        });
+
+        const numberedAccordionBlock = z.object({
+            type: z.literal("numbered_accordion_block"),
+            heading: z.string(),
+            items: z.array(z.object({
+                title: z.string(),
+                text: z.string()
+            }))
+        });
+
+        const contactsBlock = z.object({
+            type: z.literal("contacts_block"),
+            items: z.array(z.object({
+                title: z.string(),
+                contact: z.string(),
+                href: z.string().optional()
+            }))
+        });
+
+        return z.object({
+            title: z.string(),
+            slug: z.string(),
+            blocks: z.array(z.discriminatedUnion("type", [
+                headingBlock,
+                introBlock,
+                heroBlock,
+                calloutBlock,
+                accordionBlock,
+                numberedAccordionBlock,
+                contactsBlock
+            ]))
+        });
+    }
 });
+
+const designs = defineCollection({
+  loader: glob({pattern: "src/content/designs/*.md"}),
+  schema: ({image}) => z.object({
+    title: z.string(),
+    slug: z.string(),
+    sortDate: z.coerce.date(),
+    client: z.string(),
+    category: z.string(),
+    services: z.string(),
+    featuredImage: image(),
+    imageTwo: image(),
+    imageThree: image(),
+    imageFour: image(),
+    paymentLink: z.url(),
+    description: z.string(),
+    isFeatured: z.boolean(),
+    isDraft: z.boolean()
+  })
+})
 
 const settings = defineCollection({
     loader: glob({ pattern: "src/content/settings/*.md" }),
@@ -166,4 +139,4 @@ const settings = defineCollection({
     ])
 });
 
-export const collections = { designs, pages, settings };
+export const collections = { pages, designs, settings };

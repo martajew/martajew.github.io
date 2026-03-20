@@ -1,26 +1,34 @@
-import {type CollectionEntry, getCollection} from "astro:content";
-import type {PageDataByTemplate, SiteSettingsData} from "./content-types";
+import { type CollectionEntry, getCollection } from "astro:content";
+import type { ComposablePageData, SiteSettingsData } from "./content-types";
 
 type PageEntry = CollectionEntry<"pages">;
-type Template = PageEntry["data"]["template"];
 
-const getPageEntryByTemplate = async <T extends Template>(
-    template: T
-): Promise<CollectionEntry<"pages"> & { data: PageDataByTemplate<T> }> => {
+export const getAllPages = async (): Promise<PageEntry[]> => {
     const pages = await getCollection("pages");
-    const page = pages.find((entry): entry is CollectionEntry<"pages"> & { data: PageDataByTemplate<T> } => {
-        return entry.data.template === template;
-    });
-
-    if (!page) {
-        throw new Error(`Missing or invalid pages entry for template: ${template}`);
-    }
-
-    return page;
+    return pages;
 };
 
-export const getPageDataByTemplate = async <T extends Template>(template: T): Promise<PageDataByTemplate<T>> => {
-    const page = await getPageEntryByTemplate(template);
+const normalizeSlug = (slug: string): string => {
+    if (slug === "/") {
+        return "home";
+    }
+
+    return slug.replace(/^\/+|\/+$/g, "").toLowerCase();
+};
+
+export const mapPageSlugToPath = (slug: string): string => {
+    return normalizeSlug(slug) === "home" ? "/" : `/${normalizeSlug(slug)}`;
+};
+
+export const getPageDataBySlug = async (slug: string): Promise<ComposablePageData> => {
+    const pages = await getAllPages();
+    const normalizedSlug = normalizeSlug(slug);
+    const page = pages.find((entry) => normalizeSlug(entry.data.slug) === normalizedSlug);
+
+    if (!page) {
+        throw new Error(`Missing or invalid pages entry for slug: ${slug}`);
+    }
+
     return page.data;
 };
 

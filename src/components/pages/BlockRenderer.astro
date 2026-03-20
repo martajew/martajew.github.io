@@ -1,0 +1,104 @@
+---
+import type { PageBlock } from "../../lib/content-types";
+import Container from "../elements/Container.astro";
+import Heading from "../elements/Heading.astro";
+import RichText from "../elements/RichText.astro";
+import Link from "../elements/Link.astro";
+import Hero from "../sections/home/Hero.astro";
+import About from "../sections/home/About.astro";
+import Faq from "../sections/home/Faq.astro";
+import ContactDetails from "../sections/contact/ContactDetails.astro";
+import Experience from "../sections/about/Experience.astro";
+
+const { block } = Astro.props as { block: PageBlock };
+---
+
+{
+    block.type === "hero_block" && (
+        <Hero
+            content={{
+                introText: block.intro,
+                ctaLabel: block.button,
+                ctaHref: block.link,
+                name: block.name,
+                image: block.image,
+                imageAlt: block.name,
+            }}
+        />
+    )
+}
+
+{
+    block.type === "callout_block" && (
+        <About
+            content={{
+                heading: block.name,
+                lead: block.lead,
+                bodyOne: block.body,
+                bodyTwo: "",
+                buttonLabel: block.button,
+                buttonHref: block.link,
+                image: block.image,
+                imageAlt: block.name,
+            }}
+        />
+    )
+}
+
+{
+    block.type === "accordion_block" && (
+        <Experience
+            content={{
+                heading: block.heading,
+                items: block.items.map((item) => ({
+                    title: item.title,
+                    place: item.first,
+                    period: item.second,
+                    text: item.text,
+                })),
+            }}
+        />
+    )
+}
+
+{
+    block.type === "numbered_accordion_block" && (
+        <Faq
+            content={{
+                heading: block.heading,
+                items: block.items,
+            }}
+        />
+    )
+}
+
+{
+    block.type === "contacts_block" && <ContactDetails items={block.items} />
+}
+
+{
+    block.type === "heading_block" && (
+        <Container variant={"xl"} class="text-center">
+            <Heading tagName="h1" tagSize="h1">
+                {block.title}
+            </Heading>
+        </Container>
+    )
+}
+
+{
+    block.type === "intro_block" && (
+        <Container variant={"xl"} class="text-center text-base-900 flex flex-col items-center">
+            <Heading tagName="h1" tagSize="h1">{block.heading}</Heading>
+            <div class="max-w-3xl flex flex-col gap-4">
+                <RichText variant={"xl"} content={block.lead} />
+                <RichText variant={"sm"} content={block.body} />
+            </div>
+            {block.button && block.link && (
+                <Link variant={"button"} href={block.link}>
+                    {block.button}
+                </Link>
+            )}
+        </Container>
+    )
+}

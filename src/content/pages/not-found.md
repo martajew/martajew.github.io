@@ -1,8 +1,11 @@
 ---
-template: not-found
-pageTitle: Page Not Found
-heading: Page Not Found
-message: Oops! It seems the page you are trying to access is broken or does not exist!
-buttonLabel: Go back to the homepage
-buttonHref: /
+title: Page Not Found
+slug: not-found
+blocks:
+  - type: intro_block
+    heading: Page Not Found
+    lead: Oops! It seems the page you are trying to access is broken or does not exist!
+    body: Please use the button below to go back to the homepage.
+    button: Go back to the homepage
+    link: /
 ---

@@ -6,17 +6,18 @@ backend:
 media_folder: /src/content/images
 
 collections:
-  - name: pages-blocks
-    label: Pages Blocks
-    label_singular: Page Block
-    folder: /src/content/pages-blocks
-    media_folder: '{{media_folder}}/pages-blocks'
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: /src/content/pages
+    media_folder: '{{media_folder}}/pages'
     identifier_field: slug
     summary: "{{title}} (/{{slug}})"
+    description: "Composable pages built from reusable blocks."
     icon: web
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL" }
+      - { label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL. Use 'home' for /." }
       - label: Blocks
         name: blocks
         label_singular: Block
@@ -24,7 +25,7 @@ collections:
         collapsed: true
         types:
           - label: Title
-            name: title_block
+            name: heading_block
             fields:
               - { label: Title, name: title, widget: string }
           - label: Intro
@@ -86,164 +87,6 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Contact, name: contact, widget: string }
                   - { label: URL, name: href, widget: string, required: false, comment: "Optional link (e.g. mailto: or tel:)" }
-
-  - name: pages
-    label: Pages
-    media_folder: '{{media_folder}}/pages'
-    description: "Predefined pages for the website."
-    icon: web
-    files:
-      - label: Home Page
-        name: home
-        file: /src/content/pages/home.md
-        icon: home
-        fields:
-          - { label: Template, name: template, widget: hidden, default: home }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Hero
-            name: hero
-            widget: object
-            fields:
-              - { label: Intro Text, name: introText, widget: markdown }
-              - { label: CTA Label, name: ctaLabel, widget: string }
-              - { label: CTA Link, name: ctaHref, widget: string }
-              - { label: Name, name: name, widget: string }
-              - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: Selected Designs
-            name: selectedDesigns
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Button Label, name: buttonLabel, widget: string }
-              - { label: Button Link, name: buttonHref, widget: string }
-          - label: Services
-            name: services
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-          - label: About Section
-            name: aboutSection
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text 1, name: bodyOne, widget: markdown }
-              - { label: Body Text 2, name: bodyTwo, widget: markdown }
-              - { label: Button Label, name: buttonLabel, widget: string }
-              - { label: Button Link, name: buttonHref, widget: string }
-              - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: FAQ
-            name: faq
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-      - label: About Page
-        name: about
-        file: /src/content/pages/about.md
-        icon: info
-        fields:
-          - { label: Template, name: template, widget: hidden, default: about }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text, name: body, widget: markdown }
-              - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: Experience
-            name: experience
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Place, name: place, widget: string }
-                  - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-          - label: Education
-            name: education
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Place, name: place, widget: string }
-                  - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-      - label: Contact Page
-        name: contact
-        file: /src/content/pages/contact.md
-        icon: mail
-        fields:
-          - { label: Template, name: template, widget: hidden, default: contact }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text 1, name: bodyOne, widget: markdown }
-              - { label: Body Text 2, name: bodyTwo, widget: markdown }
-          - label: Contact Details
-            name: contactDetails
-            widget: object
-            fields:
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Contact, name: contact, widget: string }
-                  - { label: URL, name: href, widget: string, required: false, comment: "Optional link for contact method (e.g. mailto: or tel:)" }
-      - label: Thank You Page
-        name: thank-you
-        file: /src/content/pages/thank-you.md
-        icon: check
-        fields:
-          - { label: Template, name: template, widget: hidden, default: thank-you }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text, name: body, widget: markdown }
-      - label: Not Found Page
-        name: not-found
-        file: /src/content/pages/not-found.md
-        icon: warning
-        fields:
-          - { label: Template, name: template, widget: hidden, default: not-found }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Message, name: message, widget: markdown }
-          - { label: Button Label, name: buttonLabel, widget: string }
-          - { label: Button Link, name: buttonHref, widget: string }
 
   - name: designs
     label: Designs

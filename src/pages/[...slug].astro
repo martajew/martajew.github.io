@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../layouts/Layout.astro";
+import PageBlocks from "../components/pages/PageBlocks.astro";
+import { getAllPages, getPageDataBySlug, mapPageSlugToPath } from "../lib/content";
+
+export const getStaticPaths = (async () => {
+    const pages = await getAllPages();
+    return pages.map((entry) => {
+        const path = mapPageSlugToPath(entry.data.slug);
+        const slug = path === "/" ? undefined : path.replace(/^\//, "");
+
+        return {
+            params: {
+                slug,
+            },
+        };
+    });
+}) satisfies GetStaticPaths;
+
+const routeSlug = Astro.params.slug;
+const normalizedSlug = routeSlug ?? "home";
+const page = await getPageDataBySlug(normalizedSlug);
+---
+
+<Layout title={page.title}>
+    <PageBlocks blocks={page.blocks} />
+</Layout>
