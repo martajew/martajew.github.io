@@ -6,6 +6,87 @@ backend:
 media_folder: /src/content/images
 
 collections:
+  - name: pages-blocks
+    label: Pages Blocks
+    label_singular: Page Block
+    folder: /src/content/pages-blocks
+    media_folder: '{{media_folder}}/pages-blocks'
+    identifier_field: slug
+    summary: "{{title}} (/{{slug}})"
+    icon: web
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL" }
+      - label: Blocks
+        name: blocks
+        label_singular: Block
+        widget: list
+        collapsed: true
+        types:
+          - label: Title
+            name: title_block
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: Intro
+            name: intro_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false }
+          - label: Hero
+            name: hero_block
+            fields:
+              - { label: Intro, name: intro, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - { label: Image, name: image, widget: image }
+          - label: Callout
+            name: callout_block
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Image, name: image, widget: image }
+          - label: Accordion
+            name: accordion_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: First, name: first, widget: string }
+                  - { label: Second, name: second, widget: string }
+                  - { label: Text, name: text, widget: markdown }
+          - label: Numbered Accordion
+            name: numbered_accordion_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: markdown }
+          - label: Contacts
+            name: contacts_block
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Contact, name: contact, widget: string }
+                  - { label: URL, name: href, widget: string, required: false, comment: "Optional link (e.g. mailto: or tel:)" }
+
   - name: pages
     label: Pages
     media_folder: '{{media_folder}}/pages'
