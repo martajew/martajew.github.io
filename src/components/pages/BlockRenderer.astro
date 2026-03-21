@@ -14,42 +14,27 @@ import DesignDetailsBlock from "../blocks/DesignDetailsBlock.astro";
 const { block } = Astro.props as { block: PageBlock };
 ---
 
-{
-    block.type === "hero_block" && <HeroBlock block={block} />
-}
-
-{
-    block.type === "callout_block" && <CalloutBlock block={block} />
-}
-
-{
-    block.type === "accordion_block" && <AccordionBlock block={block} />
-}
-
-{
-    block.type === "numbered_accordion_block" && <NumberedAccordionBlock block={block} />
-}
-
-{
-    block.type === "contacts_block" && <ContactsBlock block={block} />
-}
-
-{
-    block.type === "heading_block" && <HeadingBlock block={block} />
-}
-
-{
-    block.type === "intro_block" && <IntroBlock block={block} />
-}
-
-{
-    block.type === "featured_designs_block" && <FeaturedDesignsBlock block={block} />
-}
-
-{
-    block.type === "all_designs_block" && <AllDesignsBlock block={block} />
-}
-
-{
-    block.type === "design_details_block" && <DesignDetailsBlock block={block} />
-}
+{(() => {
+  switch (block.type) {
+    case "hero_block":
+      return <HeroBlock block={block} />;
+    case "callout_block":
+      return <CalloutBlock block={block} />;
+    case "accordion_block":
+      return <AccordionBlock block={block} />;
+    case "numbered_accordion_block":
+      return <NumberedAccordionBlock block={block} />;
+    case "contacts_block":
+      return <ContactsBlock block={block} />;
+    case "heading_block":
+      return <HeadingBlock block={block} />;
+    case "intro_block":
+      return <IntroBlock block={block} />;
+    case "featured_designs_block":
+      return <FeaturedDesignsBlock block={block} />;
+    case "all_designs_block":
+      return <AllDesignsBlock block={block} />;
+    case "design_details_block":
+      return <DesignDetailsBlock block={block} />;
+    }
+  })()}

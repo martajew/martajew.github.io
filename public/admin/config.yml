@@ -12,7 +12,7 @@ collections:
     folder: /src/content/pages
     media_folder: '{{media_folder}}/pages'
     identifier_field: slug
-    summary: "{{title}} ({{slug}})"
+    summary: "{{title}} ({{fields.slug}})"
     description: "Composable pages built from reusable blocks."
     icon: web
     fields:
@@ -22,6 +22,7 @@ collections:
         name: blocks
         label_singular: Block
         widget: list
+        required: false
         collapsed: true
         types:
           - label: Title

@@ -1,26 +1,15 @@
-import type { CollectionEntry } from "astro:content";
+import type {CollectionEntry} from "astro:content";
 
-type PageData = CollectionEntry<"pages">["data"];
-type SettingsData = CollectionEntry<"settings">["data"];
-type SettingsSection = SettingsData["section"];
+export type PageEntry = CollectionEntry<"pages">;
+export type PageData = PageEntry["data"];
+export type PageBlock = PageData["blocks"][number];
+export type PageBlockType = PageBlock["type"];
+export type PageBlocksMap = { [T in PageBlockType]: Extract<PageBlock, { type: T }> };
 
-export type SettingsDataBySection<S extends SettingsSection> = Extract<SettingsData, { section: S }>;
-export type SiteSettingsData = {
-    layout: Omit<SettingsDataBySection<"layout">, "section">;
-    navLinks: SettingsDataBySection<"navigation">["navLinks"];
-    designs: Omit<SettingsDataBySection<"designs">, "section">;
-};
+export type DesignEntry = CollectionEntry<"designs">;
+export type DesignData = DesignEntry["data"];
 
-export type ComposablePageData = PageData;
-export type PageBlock = ComposablePageData["blocks"][number];
-
-export type HeadingBlock = Extract<PageBlock, { type: "heading_block" }>;
-export type IntroBlock = Extract<PageBlock, { type: "intro_block" }>;
-export type HeroBlock = Extract<PageBlock, { type: "hero_block" }>;
-export type CalloutBlock = Extract<PageBlock, { type: "callout_block" }>;
-export type AccordionBlock = Extract<PageBlock, { type: "accordion_block" }>;
-export type NumberedAccordionBlock = Extract<PageBlock, { type: "numbered_accordion_block" }>;
-export type ContactsBlock = Extract<PageBlock, { type: "contacts_block" }>;
-export type FeaturedDesignsBlock = Extract<PageBlock, { type: "featured_designs_block" }>;
-export type AllDesignsBlock = Extract<PageBlock, { type: "all_designs_block" }>;
-export type DesignDetailsBlock = Extract<PageBlock, { type: "design_details_block" }>;
+export type SettingsEntry = CollectionEntry<"settings">;
+export type SettingsData = SettingsEntry["data"];
+export type SettingsSection = SettingsData["section"];
+export type SiteSettingsMap = { [S in SettingsSection]: Extract<SettingsData, { section: S }> };

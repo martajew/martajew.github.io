@@ -7,17 +7,17 @@ import BaseHead from "../components/global/BaseHead.astro";
 import Wrapper from "../components/global/Wrapper.astro";
 import NavBar from "../components/global/Navigation.astro";
 import Footer from "../components/global/Footer.astro";
-import { getSiteSettings } from "../lib/content";
+import {getSiteSettings} from "../lib/content";
 
 // assets
 import '@fontsource/road-rage';
 import '@fontsource-variable/jetbrains-mono';
 import bg from "../assets/images/bg.jpg";
-import { getImage } from "astro:assets";
-const backgroundImage = await getImage({src: bg, format:'jpg'})
+import {getImage} from "astro:assets";
+const backgroundImage = await getImage({src: bg, format: 'jpg'})
 
 // props
-const { title } = Astro.props;
+const {title} = Astro.props;
 const siteSettings = await getSiteSettings();
 const isHomePage = Astro.url.pathname === "/";
 const browserPageTitle = isHomePage ? siteSettings.layout.mainPageTitle : `${siteSettings.layout.mainPageTitle} - ${title}`;
@@ -25,17 +25,18 @@ const browserPageTitle = isHomePage ? siteSettings.layout.mainPageTitle : `${sit
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-	<BaseHead pageTitle={browserPageTitle}/>
-	<body style=`background-image: url(${backgroundImage.src})` class="bg-cover bg-center bg-no-repeat bg-fixed  box-border">
-		<!-- Background noise effect -->
-		<div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
-		<!-- Wrapper component to make sure all content on the website is above the noise filter background -->
-		<Wrapper>
-			<NavBar navLinks={siteSettings.navLinks} />
-			<main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
-				<slot />
-			</main>
-			<Footer navLinks={siteSettings.navLinks} layout={siteSettings.layout} />
-		</Wrapper>
-	</body>
+<BaseHead pageTitle={browserPageTitle}/>
+<body style=`background-image: url(${backgroundImage.src})`
+      class="bg-cover bg-center bg-no-repeat bg-fixed  box-border">
+<!-- Background noise effect -->
+<div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
+<!-- Wrapper component to make sure all content on the website is above the noise filter background -->
+<Wrapper>
+    <NavBar navLinks={siteSettings.navigation.navLinks}/>
+    <main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
+        <slot/>
+    </main>
+    <Footer navLinks={siteSettings.navigation.navLinks} layout={siteSettings.layout}/>
+</Wrapper>
+</body>
 </html>

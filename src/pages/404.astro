@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageBlocks from "../components/pages/PageBlocks.astro";
-import { getPageDataBySlug } from "../lib/content";
+import { getPageBySlug } from "../lib/content";
 
-const notFoundPage = await getPageDataBySlug("not-found");
+const notFoundPage = await getPageBySlug("not-found");
 ---
 
-<Layout title={notFoundPage.title}>
-    <PageBlocks blocks={notFoundPage.blocks} />
+<Layout title={notFoundPage.data.title}>
+    <PageBlocks blocks={notFoundPage.data.blocks} />
 </Layout>

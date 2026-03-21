@@ -1,25 +1,23 @@
 ---
-import type { IntroBlock } from "../../lib/content-types";
+import type {PageBlocksMap} from "../../lib/content-types";
 import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import RichText from "../elements/RichText.astro";
 import Link from "../elements/Link.astro";
 
-const { block } = Astro.props as { block: IntroBlock };
+const {block} = Astro.props as { block: PageBlocksMap["intro_block"] };
 ---
 
 <Container variant={"xl"} class="text-center text-base-900 flex flex-col items-center">
     <Heading tagName="h1" tagSize="h1">{block.heading}</Heading>
     <div class="max-w-3xl flex flex-col gap-4">
-        <RichText variant={"xl"} content={block.lead} />
-        <RichText variant={"sm"} content={block.body} />
+        <RichText variant={"xl"} content={block.lead}/>
+        <RichText variant={"sm"} content={block.body}/>
     </div>
-    {
-        block.button && block.link && (
-            <Link variant={"button"} href={block.link}>
-                {block.button}
-            </Link>
-        )
-    }
+  {
+    block.button && block.link && (
+                  <Link variant={"button"} href={block.link}>{block.button}</Link>
+    )
+  }
 </Container>
 

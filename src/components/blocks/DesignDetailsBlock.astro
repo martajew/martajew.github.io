@@ -1,28 +1,30 @@
 ---
-import type { DesignDetailsBlock } from "../../lib/content-types";
+import type {DesignData, DesignEntry, PageBlocksMap} from "../../lib/content-types";
 import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import ImageContainer from "../elements/ImageContainer.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
 import RichText from "../elements/RichText.astro";
-import { getSiteSettings } from "../../lib/content";
+import {getSiteSettings} from "../../lib/content";
 
-const { block } = Astro.props as { block: DesignDetailsBlock };
-const design = block.design;
+const {block} = Astro.props as { block: PageBlocksMap["design_details_block"] };
+const designEntry = block.design as DesignEntry;
+const design = designEntry.data;
+const body = designEntry.body;
 const siteSettings = await getSiteSettings();
 const details = [
-  { heading: "Client", text: `${design.data.client}` },
-  { heading: "Category", text: `${design.data.category}` },
-  { heading: "Services", text: `${design.data.services}` },
-  { heading: "Year", text: `${design.data.sortDate.getFullYear()}` }
+  {heading: "Client", text: `${design.client}`},
+  {heading: "Category", text: `${design.category}`},
+  {heading: "Services", text: `${design.services}`},
+  {heading: "Year", text: `${design.sortDate.getFullYear()}`}
 ];
 ---
 
 <Container variant={'xl'} aria-label="Design Details" class="items-center">
-    <Heading tagName="h1" tagSize="h1" class="text-center">{design.data.title}</Heading>
+    <Heading tagName="h1" tagSize="h1" class="text-center">{design.title}</Heading>
     <div class="w-full md:h-[600px] h-[300px]">
-        <ImageContainer src={design.data.featuredImage} alt={design.data.title} />
+        <ImageContainer src={design.featuredImage} alt={design.title}/>
     </div>
     <div class="flex flex-col gap-7 md:grid md:grid-cols-4">
       {
@@ -34,23 +36,23 @@ const details = [
         ))
       }
     </div>
-    <Link variant={'button'} href={design.data.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
+    <Link variant={'button'} href={design.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
     <div class="md:max-w-3xl text-base-900">
-        <RichText variant={'xl'} content={design.data.description} />
+        <RichText variant={'xl'} content={design.description}/>
     </div>
     <div class="flex md:flex-row flex-col gap-7">
         <div>
-            <ImageContainer src={design.data.imageTwo} alt={design.data.title} />
+            <ImageContainer src={design.imageTwo} alt={design.title}/>
         </div>
         <div>
-            <ImageContainer src={design.data.imageThree} alt={design.data.title} />
+            <ImageContainer src={design.imageThree} alt={design.title}/>
         </div>
     </div>
     <div class="md:max-w-3xl text-base-900">
-        <RichText variant={'xl'} content={design.body} />
+        <RichText variant={'xl'} content={body}/>
     </div>
     <div class="w-full md:h-[600px] h-[300px]">
-        <ImageContainer src={design.data.imageFour} alt={design.data.title} />
+        <ImageContainer src={design.imageFour} alt={design.title}/>
     </div>
-    <Link variant={'button'} href={design.data.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
+    <Link variant={'button'} href={design.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
 </Container>

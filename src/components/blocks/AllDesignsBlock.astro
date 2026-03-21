@@ -1,11 +1,11 @@
 ---
-import type { AllDesignsBlock } from "../../lib/content-types";
+import type {PageBlocksMap} from "../../lib/content-types";
 import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import Design from "../elements/Design.astro";
-import { getPublishedDesigns } from "../../lib/content";
+import {getPublishedDesigns} from "../../lib/content";
 
-const { block } = Astro.props as { block: AllDesignsBlock };
+const {block} = Astro.props as { block: PageBlocksMap["all_designs_block"] };
 const designs = await getPublishedDesigns();
 ---
 

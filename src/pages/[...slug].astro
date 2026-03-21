@@ -2,36 +2,30 @@
 import type {GetStaticPaths} from "astro";
 import Layout from "../layouts/Layout.astro";
 import PageBlocks from "../components/pages/PageBlocks.astro";
-import {getAllPages, getPublishedDesigns, mapPageSlugToPath} from "../lib/content";
+import {getAllPages, getPublishedDesigns, sanitizeSlug} from "../lib/content";
+import type {PageEntry} from "../lib/content-types.ts";
 
 export const getStaticPaths = (async () => {
   const pages = await getAllPages();
-  const pageRoutes = pages.map((page) => {
-    const path = mapPageSlugToPath(page.data.slug);
-    const slug = path === "/" ? undefined : path.replace(/^\//, "");
-    return {params: {slug}, props: {data: page.data}};
+  const pageRoutes = pages.map((entry) => {
+    const slug = sanitizeSlug(entry.data.slug);
+    return {params: {slug}, props: {entry}};
   });
   const designs = await getPublishedDesigns();
   const designRoutes = designs.map((design) => {
-    const slug = `${design.collection}/${design.data.slug}`;
-    return {
-      params: {slug},
-      props: {
-        data:
-          {
-            title: `Design - ${design.data.title}`,
-            slug: design.data.slug,
-            blocks: [{type: "design_details_block", design}]
-          }
-      },
-    };
+    const slug = `${design.collection}/${sanitizeSlug(design.data.slug)}`;
+    const entry = design as unknown as PageEntry;
+    entry.data["title"] = `Design - ${design.data.title}`;
+    entry.data["blocks"] = [{type: "design_details_block", design}];
+    return {params: {slug}, props: {entry}};
   });
-  return pageRoutes.concat(designRoutes as any);
+  return [...pageRoutes, ...designRoutes];
+
 }) satisfies GetStaticPaths;
 
-const page = Astro.props.data;
+const entry = Astro.props.entry as PageEntry;
 ---
 
-<Layout title={page.title}>
-    <PageBlocks blocks={page.blocks}/>
+<Layout title={entry.data.title}>
+    <PageBlocks blocks={entry.data.blocks}/>
 </Layout>

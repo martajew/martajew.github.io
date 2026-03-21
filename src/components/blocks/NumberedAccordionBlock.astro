@@ -1,16 +1,16 @@
 ---
-import type { NumberedAccordionBlock } from "../../lib/content-types";
+import type {PageBlocksMap} from "../../lib/content-types";
 import Dropdown from "../elements/Dropdown.astro";
 import SectionPanelList from "../elements/SectionPanelList.astro";
 
-const { block } = Astro.props as { block: NumberedAccordionBlock };
+const {block} = Astro.props as { block: PageBlocksMap["numbered_accordion_block"] };
 ---
 
 <SectionPanelList heading={block.heading}>
-    {
-        block.items.map((item, index) => (
-            <Dropdown title=`${index + 1}. ${item.title}` text={item.text} />
-        ))
-    }
+  {
+    block.items.map((item, index) => (
+            <Dropdown title=`${index + 1}. ${item.title}` text={item.text}/>
+    ))
+  }
 </SectionPanelList>
 

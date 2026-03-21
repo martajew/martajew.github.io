@@ -1,36 +1,36 @@
 ---
-import type { ContactsBlock } from "../../lib/content-types";
-import { Image } from "astro:assets";
+import type {PageBlocksMap} from "../../lib/content-types";
+import {Image} from "astro:assets";
 import symbol from "../../assets/ui/symbolWhite.svg";
 import Container from "../elements/Container.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
 
-const { block } = Astro.props as { block: ContactsBlock };
+const {block} = Astro.props as { block: PageBlocksMap["contacts_block"] };
 ---
 
 <Container variant={"md"}>
     <div class="flex lg:flex-row flex-col gap-8 text-base-900">
-        {
-            block.items.map((item) => (
+      {
+        block.items.map((item) => (
                 <div class="border-2 border-base-900 p-4 flex flex-col gap-4 w-full">
                     <div class="flex justify-between">
                         <Text variant={"lg"}>{item.title}</Text>
-                        <Image src={symbol} alt="UI Symbol" />
+                        <Image src={symbol} alt="UI Symbol"/>
                     </div>
                     <div class="h-px w-full border border-base-900"></div>
                     <div>
-                        {
-                            item.href ? (
+                      {
+                        item.href ? (
                                 <Link href={item.href} variant={"inline"}>{item.contact}</Link>
-                            ) : (
+                        ) : (
                                 <Text variant={"sm"}>{item.contact}</Text>
-                            )
-                        }
+                        )
+                      }
                     </div>
                 </div>
-            ))
-        }
+        ))
+      }
     </div>
 </Container>
 
