@@ -1,5 +1,25 @@
 import {getCollection} from "astro:content";
 import type {DesignEntry, PageEntry, SiteSettingsMap} from "./content-types";
+import type {GetStaticPaths} from "astro";
+
+export const getPagePaths = (async () => {
+  const pages = await getAllPages();
+  return pages.map((entry) => {
+    const slug = sanitizeSlug(entry.data.slug);
+    return {params: {slug}, props: {entry}};
+  });
+}) satisfies GetStaticPaths;
+
+export const getDesignPaths = (async () => {
+  const designs = await getPublishedDesigns();
+  return designs.map((design) => {
+    const slug = `${design.collection}/${sanitizeSlug(design.data.slug)}`;
+    const entry = design as unknown as PageEntry;
+    entry.data["title"] = `Design - ${design.data.title}`;
+    entry.data["blocks"] = [{type: "design_details_block", design}];
+    return {params: {slug}, props: {entry}};
+  });
+}) satisfies GetStaticPaths;
 
 export const sanitizeSlug = (slug: string): string | undefined => {
   const saneSlug = slug.replace(/\/+/g, "/").replace(/^\/|\/$/g, '');
