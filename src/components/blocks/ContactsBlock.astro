@@ -6,7 +6,7 @@ import Container from "../elements/Container.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
 
-const {block} = Astro.props as { block: PageBlocksMap["contacts_block"] };
+const block = Astro.props.block as PageBlocksMap["contacts_block"];
 ---
 
 <Container variant={"md"}>

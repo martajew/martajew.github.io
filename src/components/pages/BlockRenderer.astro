@@ -11,7 +11,7 @@ import FeaturedDesignsBlock from "../blocks/FeaturedDesignsBlock.astro";
 import AllDesignsBlock from "../blocks/AllDesignsBlock.astro";
 import DesignDetailsBlock from "../blocks/DesignDetailsBlock.astro";
 
-const { block } = Astro.props as { block: PageBlock };
+const block = Astro.props.block as PageBlock;
 ---
 
 {(() => {

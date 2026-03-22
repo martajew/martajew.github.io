@@ -4,20 +4,21 @@ import type {GetStaticPaths} from "astro";
 
 export const getPagePaths = (async () => {
   const pages = await getAllPages();
-  return pages.map((entry) => {
-    const slug = sanitizeSlug(entry.data.slug);
-    return {params: {slug}, props: {entry}};
+  return pages.map((page) => {
+    const slug = sanitizeSlug(page.data.slug);
+    const title = page.data.title;
+    return {params: {slug}, props: {page, title}};
   });
 }) satisfies GetStaticPaths;
 
 export const getDesignPaths = (async () => {
+  const pages = await getAllPages();
   const designs = await getPublishedDesigns();
   return designs.map((design) => {
-    const slug = `${design.collection}/${sanitizeSlug(design.data.slug)}`;
-    const entry = design as unknown as PageEntry;
-    entry.data["title"] = `Design - ${design.data.title}`;
-    entry.data["blocks"] = [{type: "design_details_block", design}];
-    return {params: {slug}, props: {entry}};
+    const page = getPageByFileId(pages, design.data.detailsPage.id);
+    const slug = `${sanitizeSlug(page.data.slug)}/${sanitizeSlug(design.data.slug)}`;
+    const title = `${page.data.title} - ${design.data.title}`;
+    return {params: {slug}, props: {page, title}};
   });
 }) satisfies GetStaticPaths;
 
@@ -30,13 +31,9 @@ export const getAllPages = async (): Promise<PageEntry[]> => {
   return await getCollection("pages");
 };
 
-export const getPageBySlug = async (slug: string): Promise<PageEntry> => {
-  const pages = await getAllPages();
-  const saneSlug = sanitizeSlug(slug);
-  const page = pages.find((entry) => sanitizeSlug(entry.data.slug) === saneSlug);
-
-  if (!page) throw new Error(`Missing or invalid pages entry for slug: ${slug} (${saneSlug})`);
-
+export const getPageByFileId = (pages: PageEntry[], fileId: string): PageEntry => {
+  const page = pages.find((page) => page.filePath?.endsWith(`${page.collection}/${fileId}.md`));
+  if (!page) throw new Error(`Missing or invalid pages entry for file ID: ${fileId}`);
   return page;
 };
 
@@ -46,7 +43,7 @@ export const getAllDesings = async (): Promise<DesignEntry[]> => {
 
 export const getPublishedDesigns = async (): Promise<DesignEntry[]> => {
   const designs = await getAllDesings();
-  const publishedDesigns = designs.filter((entry) => !entry.data.isDraft);
+  const publishedDesigns = designs.filter((design) => !design.data.isDraft);
   return publishedDesigns.sort((left, right) => {
     return right.data.sortDate.getTime() - left.data.sortDate.getTime();
   });
@@ -54,14 +51,24 @@ export const getPublishedDesigns = async (): Promise<DesignEntry[]> => {
 
 export const getFeaturedDesigns = async (): Promise<DesignEntry[]> => {
   const publishedDesigns = await getPublishedDesigns();
-  return publishedDesigns.filter((entry) => entry.data.isFeatured);
+  return publishedDesigns.filter((design) => design.data.isFeatured);
 };
+
+export const getDesignBySlug = async (slug: string | undefined): Promise<DesignEntry | undefined> => {
+  const pages = await getAllPages();
+  const publishedDesigns = await getPublishedDesigns();
+  return publishedDesigns.find((design) => {
+    const page = getPageByFileId(pages, design.data.detailsPage.id);
+    return `${sanitizeSlug(page.data.slug)}/${sanitizeSlug(design.data.slug)}` === slug;
+  });
+};
+
 
 export const getSiteSettings = async (): Promise<SiteSettingsMap> => {
   const settings = await getCollection("settings");
-  const layoutSettings = settings.find((entry) => entry.data.section === "layout");
-  const navigationSettings = settings.find((entry) => entry.data.section === "navigation");
-  const designsSettings = settings.find((entry) => entry.data.section === "designs");
+  const layoutSettings = settings.find((settings) => settings.data.section === "layout");
+  const navigationSettings = settings.find((settings) => settings.data.section === "navigation");
+  const designsSettings = settings.find((settings) => settings.data.section === "designs");
 
   if (!designsSettings || !layoutSettings || !navigationSettings) throw new Error("Missing one or more required settings entries.");
 

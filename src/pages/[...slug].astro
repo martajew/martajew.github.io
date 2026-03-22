@@ -2,8 +2,7 @@
 import type {GetStaticPaths} from "astro";
 import Layout from "../layouts/Layout.astro";
 import PageBlocks from "../components/pages/PageBlocks.astro";
-import {getPagePaths, getDesignPaths} from "../lib/content";
-import type {PageEntry} from "../lib/content-types.ts";
+import {getPagePaths, getDesignPaths, getDesignBySlug} from "../lib/content";
 
 export const getStaticPaths = (async () => {
   const pages = await getPagePaths();
@@ -12,9 +11,14 @@ export const getStaticPaths = (async () => {
 
 }) satisfies GetStaticPaths;
 
-const entry = Astro.props.entry as PageEntry;
+const {slug} = Astro.params;
+const {page, title} = Astro.props;
+
+if (page.data.blocks.some((block) => block.type === "design_details_block")) {
+  if (!(await getDesignBySlug(slug))) return Astro.redirect("/404.html"); // rewrite causes infinite loop
+}
 ---
 
-<Layout title={entry.data.title}>
-    <PageBlocks blocks={entry.data.blocks}/>
+<Layout title={title}>
+    <PageBlocks blocks={page.data.blocks}/>
 </Layout>

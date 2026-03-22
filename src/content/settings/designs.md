@@ -6,5 +6,4 @@ categories:
   - Art Direction
   - Product Design
   - Branding
-paymentButtonLabel: Order Now
 ---

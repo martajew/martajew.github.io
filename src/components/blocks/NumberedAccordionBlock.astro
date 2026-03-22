@@ -3,7 +3,7 @@ import type {PageBlocksMap} from "../../lib/content-types";
 import Dropdown from "../elements/Dropdown.astro";
 import SectionPanelList from "../elements/SectionPanelList.astro";
 
-const {block} = Astro.props as { block: PageBlocksMap["numbered_accordion_block"] };
+const block = Astro.props.block as PageBlocksMap["numbered_accordion_block"];
 ---
 
 <SectionPanelList heading={block.heading}>

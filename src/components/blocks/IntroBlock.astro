@@ -5,7 +5,7 @@ import Heading from "../elements/Heading.astro";
 import RichText from "../elements/RichText.astro";
 import Link from "../elements/Link.astro";
 
-const {block} = Astro.props as { block: PageBlocksMap["intro_block"] };
+const block = Astro.props.block as PageBlocksMap["intro_block"];
 ---
 
 <Container variant={"xl"} class="text-center text-base-900 flex flex-col items-center">

@@ -83,12 +83,13 @@ const pages = defineCollection({
 
     const designDetailsBlock = z.object({
       type: z.literal("design_details_block"),
-      design: reference("designs"),
+      paymentButtonLabel: z.string()
     });
 
     return z.object({
       title: z.string(),
       slug: z.string(),
+      comment: z.string().optional(),
       blocks: z.array(z.discriminatedUnion("type", [
         headingBlock,
         introBlock,
@@ -112,6 +113,7 @@ const designs = defineCollection({
     slug: z.string(),
     sortDate: z.coerce.date(),
     client: z.string(),
+    detailsPage: reference("pages"),
     category: z.string(),
     services: z.string(),
     featuredImage: image(),
@@ -153,7 +155,7 @@ const settings = defineCollection({
     }),
     z.object({
       section: z.literal("designs"),
-      paymentButtonLabel: z.string()
+      categories: z.array(z.string())
     }),
   ])
 });

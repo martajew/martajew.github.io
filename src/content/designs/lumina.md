@@ -2,6 +2,7 @@
 title: Lumina E-commerce
 slug: lumina
 sortDate: 2025-12-17
+detailsPage: design
 client: Lumina
 category: Web Design
 services: Web Design, CMS Integration, Performance Optimization

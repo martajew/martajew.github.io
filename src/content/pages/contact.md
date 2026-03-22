@@ -1,6 +1,7 @@
 ---
 title: Contact
 slug: contact
+comment: ''
 blocks:
   - type: intro_block
     heading: Contact
@@ -20,6 +21,6 @@ blocks:
         contact: (555) 123-4567
         href: tel:(555) 123-4567
       - title: Instagram
-        contact: "@by_mania_artajew"
+        contact: '@by_mania_artajew'
         href: https://www.instagram.com/by_mania_artajew/
 ---

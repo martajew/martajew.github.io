@@ -12,12 +12,13 @@ collections:
     folder: /src/content/pages
     media_folder: '{{media_folder}}/pages'
     identifier_field: slug
-    summary: "{{title}} ({{fields.slug}})"
+    summary: "{{title}} ({{fields.slug}}) {{comment | ternary('_', '')}}{{comment}}{{comment | ternary('_', '')}}"
     description: "Composable pages built from reusable blocks."
     icon: web
     fields:
       - { label: Title, name: title, widget: string, comment: "Used for browser title only." }
       - { label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL. Use 'home' for /." }
+      - { label: Comment, name: comment, widget: string, comment: "Optional page description.", required: false }
       - label: Blocks
         name: blocks
         label_singular: Block
@@ -98,6 +99,10 @@ collections:
             name: all_designs_block
             fields:
               - { label: Heading, name: heading, widget: string }
+          - label: Design Details
+            name: design_details_block
+            fields:
+              - { label: Payment Button Label, name: paymentButtonLabel, widget: string }
 
   - name: designs
     label: Designs
@@ -126,6 +131,12 @@ collections:
         type: date
         default: "{{now}}"
         comment: "Used for display order only (newest first)."
+      - label: Details Page
+        name: detailsPage
+        comment: "Choose existing page to use as the design's details page."
+        widget: relation
+        collection: pages
+        display_fields: ["{{title}} ({{fields.slug}})"]
       - { label: Client, name: client, widget: string }
       - label: Category
         name: category
@@ -191,4 +202,3 @@ collections:
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
           - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
-          - { label: Payment Button Label, name: paymentButtonLabel, widget: string }

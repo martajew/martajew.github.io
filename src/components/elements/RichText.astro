@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "astro/types";
 import { marked } from "marked";
 
 interface Props extends HTMLAttributes<"div"> {
-    content: string;
+    content: string | undefined;
     variant?: "xsm" | "sm" | "md" | "lg" | "xl";
 }
 
@@ -40,7 +40,7 @@ const html = await marked.parse(content ?? "", { breaks: true, gfm: true });
         margin: 0;
         padding-left: 1.25rem;
     }
-    
+
     .rich-text a {
         text-decoration: underline;
     }

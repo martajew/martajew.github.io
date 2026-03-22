@@ -3,7 +3,7 @@ import type {PageBlocksMap} from "../../lib/content-types";
 import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 
-const {block} = Astro.props as { block: PageBlocksMap["heading_block"] };
+const block = Astro.props.block as PageBlocksMap["heading_block"];
 ---
 
 <Container variant={"xl"} class="text-center">

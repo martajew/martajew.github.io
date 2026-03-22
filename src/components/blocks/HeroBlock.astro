@@ -6,7 +6,7 @@ import Heading from "../elements/Heading.astro";
 import ImageContainer from "../elements/ImageContainer.astro";
 import Link from "../elements/Link.astro";
 
-const {block} = Astro.props as { block: PageBlocksMap["hero_block"] };
+const block = Astro.props.block as PageBlocksMap["hero_block"];
 ---
 
 <Container variant={"xl"} class="flex flex-col gap-8 min-h-screen">
