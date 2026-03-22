@@ -57,13 +57,15 @@ export const getFeaturedDesigns = async (): Promise<DesignEntry[]> => {
   return publishedDesigns.filter((design) => design.data.isFeatured);
 };
 
-export const getDesignBySlug = async (slug: string | undefined): Promise<DesignEntry | undefined> => {
+export const getDesignBySlug = async (slug: string | undefined): Promise<DesignEntry> => {
   const pages = await getAllPages();
   const publishedDesigns = await getPublishedDesigns();
-  return publishedDesigns.find((design) => {
+  const design = publishedDesigns.find((design) => {
     const page = getPageByFileId(pages, design.data.detailsPage.id);
     return `${sanitizeSlug(page.data.slug)}/${sanitizeSlug(design.data.slug)}` === slug;
   });
+  if (!design) throw new Error(`Missing or invalid design entry for slug: ${slug}`);
+  return design;
 };
 
 

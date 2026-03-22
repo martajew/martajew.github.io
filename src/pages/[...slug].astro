@@ -2,7 +2,7 @@
 import type {GetStaticPaths} from "astro";
 import Layout from "../layouts/Layout.astro";
 import PageBlocks from "../components/pages/PageBlocks.astro";
-import {getPagePaths, getDesignPaths, getDesignBySlug} from "../lib/content";
+import {getPagePaths, getDesignPaths} from "../lib/content";
 
 export const getStaticPaths = (async () => {
   const pages = await getPagePaths();
