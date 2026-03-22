@@ -2,6 +2,7 @@
 title: Lumina E-commerce
 slug: lumina
 sortDate: 2025-12-17
+detailsPage: design
 client: Lumina
 category: Web Design
 services: Web Design, CMS Integration, Performance Optimization
@@ -12,7 +13,7 @@ imageFour: /src/content/images/designs/lumina/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: Next-generation e-commerce platform designed for emerging fashion brands. Features include advanced inventory management, social commerce integration, AR try-on capabilities, and sustainable shipping options to meet the needs of conscious consumers and digital-native brands.
 isFeatured: true
-isDraft: true
+isDraft: false
 ---
 
 Lumina Commerce needed a platform that could compete with e-commerce giants while serving smaller, sustainability-focused fashion brands. Their existing solution was outdated and couldn't support modern features like social media integration or AR experiences. The challenge was creating a system powerful enough for brands with complex needs yet accessible enough for emerging designers with limited technical resources.

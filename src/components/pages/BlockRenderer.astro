@@ -1,0 +1,40 @@
+---
+import type { PageBlock } from "../../lib/content-types";
+import HeroBlock from "../blocks/HeroBlock.astro";
+import CalloutBlock from "../blocks/CalloutBlock.astro";
+import AccordionBlock from "../blocks/AccordionBlock.astro";
+import NumberedAccordionBlock from "../blocks/NumberedAccordionBlock.astro";
+import ContactsBlock from "../blocks/ContactsBlock.astro";
+import HeadingBlock from "../blocks/HeadingBlock.astro";
+import IntroBlock from "../blocks/IntroBlock.astro";
+import FeaturedDesignsBlock from "../blocks/FeaturedDesignsBlock.astro";
+import AllDesignsBlock from "../blocks/AllDesignsBlock.astro";
+import DesignDetailsBlock from "../blocks/DesignDetailsBlock.astro";
+
+const block = Astro.props.block as PageBlock;
+---
+
+{(() => {
+  switch (block.type) {
+    case "hero_block":
+      return <HeroBlock block={block} />;
+    case "callout_block":
+      return <CalloutBlock block={block} />;
+    case "accordion_block":
+      return <AccordionBlock block={block} />;
+    case "numbered_accordion_block":
+      return <NumberedAccordionBlock block={block} />;
+    case "contacts_block":
+      return <ContactsBlock block={block} />;
+    case "heading_block":
+      return <HeadingBlock block={block} />;
+    case "intro_block":
+      return <IntroBlock block={block} />;
+    case "featured_designs_block":
+      return <FeaturedDesignsBlock block={block} />;
+    case "all_designs_block":
+      return <AllDesignsBlock block={block} />;
+    case "design_details_block":
+      return <DesignDetailsBlock block={block} />;
+    }
+  })()}

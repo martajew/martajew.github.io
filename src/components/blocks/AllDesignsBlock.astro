@@ -1,0 +1,20 @@
+---
+import type {PageBlocksMap} from "../../lib/content-types";
+import Container from "../elements/Container.astro";
+import Heading from "../elements/Heading.astro";
+import DesignTile from "../elements/DesignTile.astro";
+import {getPublishedDesigns} from "../../lib/content";
+
+const block = Astro.props.block as PageBlocksMap["all_designs_block"];
+const designs = await getPublishedDesigns();
+---
+
+<Heading tagName="h1" tagSize="h1" class="text-center">{block.heading}</Heading>
+<Container variant={'lg'}>
+    <Container class="grid lg:grid-cols-2 grid-cols-1 gap-24">
+      {
+        designs.map((design) =>
+                <DesignTile design={design}/>)
+      }
+    </Container>
+</Container>

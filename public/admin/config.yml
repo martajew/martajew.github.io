@@ -8,60 +8,69 @@ media_folder: /src/content/images
 collections:
   - name: pages
     label: Pages
+    label_singular: Page
+    folder: /src/content/pages
     media_folder: '{{media_folder}}/pages'
-    description: "Predefined pages for the website."
+    identifier_field: slug
+    summary: "{{title}} ({{fields.slug}}) {{comment | ternary('_', '')}}{{comment}}{{comment | ternary('_', '')}}"
+    description: "Composable pages built from reusable blocks."
     icon: web
-    files:
-      - label: Home Page
-        name: home
-        file: /src/content/pages/home.md
-        icon: home
-        fields:
-          - { label: Template, name: template, widget: hidden, default: home }
-          - { label: Page Title, name: pageTitle, widget: string }
+    fields:
+      - { label: Title, name: title, widget: string, comment: "Used for browser title only." }
+      - { label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL. Use 'home' for /." }
+      - { label: Comment, name: comment, widget: string, comment: "Optional page description.", required: false }
+      - label: Blocks
+        name: blocks
+        label_singular: Block
+        widget: list
+        required: false
+        collapsed: true
+        types:
+          - label: Title
+            name: heading_block
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: Intro
+            name: intro_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false }
           - label: Hero
-            name: hero
-            widget: object
+            name: hero_block
             fields:
-              - { label: Intro Text, name: introText, widget: markdown }
-              - { label: CTA Label, name: ctaLabel, widget: string }
-              - { label: CTA Link, name: ctaHref, widget: string }
+              - { label: Intro, name: intro, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string }
               - { label: Name, name: name, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
               - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: Selected Designs
-            name: selectedDesigns
-            widget: object
+          - label: Callout
+            name: callout_block
             fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Button Label, name: buttonLabel, widget: string }
-              - { label: Button Link, name: buttonHref, widget: string }
-          - label: Services
-            name: services
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-          - label: About Section
-            name: aboutSection
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text 1, name: bodyOne, widget: markdown }
-              - { label: Body Text 2, name: bodyTwo, widget: markdown }
-              - { label: Button Label, name: buttonLabel, widget: string }
-              - { label: Button Link, name: buttonHref, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Lead, name: lead, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string }
               - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: FAQ
-            name: faq
-            widget: object
+          - label: Accordion
+            name: accordion_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: First, name: first, widget: string }
+                  - { label: Second, name: second, widget: string }
+                  - { label: Text, name: text, widget: markdown }
+          - label: Numbered Accordion
+            name: numbered_accordion_block
             fields:
               - { label: Heading, name: heading, widget: string }
               - label: Items
@@ -70,66 +79,8 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Text, name: text, widget: markdown }
-      - label: About Page
-        name: about
-        file: /src/content/pages/about.md
-        icon: info
-        fields:
-          - { label: Template, name: template, widget: hidden, default: about }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text, name: body, widget: markdown }
-              - { label: Image, name: image, widget: image }
-              - { label: Image Alt, name: imageAlt, widget: string }
-          - label: Experience
-            name: experience
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Place, name: place, widget: string }
-                  - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-          - label: Education
-            name: education
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - label: Items
-                name: items
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Place, name: place, widget: string }
-                  - { label: Period, name: period, widget: string }
-                  - { label: Text, name: text, widget: markdown }
-      - label: Contact Page
-        name: contact
-        file: /src/content/pages/contact.md
-        icon: mail
-        fields:
-          - { label: Template, name: template, widget: hidden, default: contact }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text 1, name: bodyOne, widget: markdown }
-              - { label: Body Text 2, name: bodyTwo, widget: markdown }
-          - label: Contact Details
-            name: contactDetails
-            widget: object
+          - label: Contacts
+            name: contacts_block
             fields:
               - label: Items
                 name: items
@@ -137,32 +88,21 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Contact, name: contact, widget: string }
-                  - { label: URL, name: href, widget: string, required: false, comment: "Optional link for contact method (e.g. mailto: or tel:)" }
-      - label: Thank You Page
-        name: thank-you
-        file: /src/content/pages/thank-you.md
-        icon: check
-        fields:
-          - { label: Template, name: template, widget: hidden, default: thank-you }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - label: Intro
-            name: intro
-            widget: object
+                  - { label: URL, name: href, widget: string, required: false, comment: "Optional link (e.g. mailto: or tel:)" }
+          - label: Featured Designs
+            name: featured_designs_block
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Lead Text, name: lead, widget: markdown }
-              - { label: Body Text, name: body, widget: markdown }
-      - label: Not Found Page
-        name: not-found
-        file: /src/content/pages/not-found.md
-        icon: warning
-        fields:
-          - { label: Template, name: template, widget: hidden, default: not-found }
-          - { label: Page Title, name: pageTitle, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Message, name: message, widget: markdown }
-          - { label: Button Label, name: buttonLabel, widget: string }
-          - { label: Button Link, name: buttonHref, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string }
+          - label: All Designs
+            name: all_designs_block
+            fields:
+              - { label: Heading, name: heading, widget: string }
+          - label: Design Details
+            name: design_details_block
+            fields:
+              - { label: Payment Button Label, name: paymentButtonLabel, widget: string }
 
   - name: designs
     label: Designs
@@ -191,6 +131,12 @@ collections:
         type: date
         default: "{{now}}"
         comment: "Used for display order only (newest first)."
+      - label: Details Page
+        name: detailsPage
+        comment: "Choose existing page to use as the design's details page."
+        widget: relation
+        collection: pages
+        display_fields: ["{{title}} ({{fields.slug}})"]
       - { label: Client, name: client, widget: string }
       - label: Category
         name: category
@@ -255,6 +201,4 @@ collections:
         icon: design_services
         fields:
           - { label: Section, name: section, widget: hidden, default: designs }
-          - { label: Pagination Page Size, name: paginationPageSize, widget: number }
           - { label: Categories, name: categories, widget: list, comment: "Put one category per line." }
-          - { label: Payment Button Label, name: paymentButtonLabel, widget: string }

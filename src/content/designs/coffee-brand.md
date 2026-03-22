@@ -2,6 +2,7 @@
 title: Coffee Roaster Brand
 slug: coffee-brand
 sortDate: 2026-02-05
+detailsPage: design
 client: Artifact Coffee
 category: Branding
 services: Brand Strategy, Visual Identity, Packaging Design
