@@ -1,18 +1,17 @@
 ---
-import type {DesignData, DesignEntry, PageBlocksMap} from "../../lib/content-types";
+import type {PageBlocksMap} from "../../lib/content-types";
 import Container from "../elements/Container.astro";
 import Heading from "../elements/Heading.astro";
 import ImageContainer from "../elements/ImageContainer.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
 import RichText from "../elements/RichText.astro";
-import {getSiteSettings} from "../../lib/content";
+import {getDesignBySlug} from "../../lib/content.ts";
 
-const {block} = Astro.props as { block: PageBlocksMap["design_details_block"] };
-const designEntry = block.design as DesignEntry;
+const block = Astro.props.block as PageBlocksMap["design_details_block"];
+const designEntry = await getDesignBySlug(Astro.params.slug);
 const design = designEntry.data;
 const body = designEntry.body;
-const siteSettings = await getSiteSettings();
 const details = [
   {heading: "Client", text: `${design.client}`},
   {heading: "Category", text: `${design.category}`},
@@ -36,7 +35,7 @@ const details = [
         ))
       }
     </div>
-    <Link variant={'button'} href={design.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
+    <Link variant={'button'} href={design.paymentLink}>{block.paymentButtonLabel}</Link>
     <div class="md:max-w-3xl text-base-900">
         <RichText variant={'xl'} content={design.description}/>
     </div>
@@ -54,5 +53,5 @@ const details = [
     <div class="w-full md:h-[600px] h-[300px]">
         <ImageContainer src={design.imageFour} alt={design.title}/>
     </div>
-    <Link variant={'button'} href={design.paymentLink}>{siteSettings.designs.paymentButtonLabel}</Link>
+    <Link variant={'button'} href={design.paymentLink}>{block.paymentButtonLabel}</Link>
 </Container>
