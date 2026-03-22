@@ -11,12 +11,7 @@ export const getStaticPaths = (async () => {
 
 }) satisfies GetStaticPaths;
 
-const {slug} = Astro.params;
 const {page, title} = Astro.props;
-
-if (page.data.blocks.some((block) => block.type === "design_details_block")) {
-  if (!(await getDesignBySlug(slug))) return Astro.redirect("/404.html"); // rewrite causes infinite loop
-}
 ---
 
 <Layout title={title}>

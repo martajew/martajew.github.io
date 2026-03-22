@@ -1,14 +1,17 @@
 import {getCollection} from "astro:content";
-import type {DesignEntry, PageEntry, SiteSettingsMap} from "./content-types";
+import type {DesignEntry, PageBlockType, PageEntry, SiteSettingsMap} from "./content-types";
 import type {GetStaticPaths} from "astro";
 
 export const getPagePaths = (async () => {
   const pages = await getAllPages();
-  return pages.map((page) => {
-    const slug = sanitizeSlug(page.data.slug);
-    const title = page.data.title;
-    return {params: {slug}, props: {page, title}};
-  });
+  const skipBlocksTypes: PageBlockType[] = ["design_details_block"];
+  return pages
+    .filter((page) => !page.data.blocks.some((block) => skipBlocksTypes.includes(block.type)))
+    .map((page) => {
+      const slug = sanitizeSlug(page.data.slug);
+      const title = page.data.title;
+      return {params: {slug}, props: {page, title}};
+    });
 }) satisfies GetStaticPaths;
 
 export const getDesignPaths = (async () => {
