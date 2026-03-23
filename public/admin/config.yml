@@ -38,15 +38,16 @@ collections:
               - { label: Body, name: body, widget: markdown }
               - { label: Button, name: button, widget: string, required: false }
               - { label: Link, name: link, widget: string, required: false }
+              - { label: Alignment, name: alignment, widget: select, options: ["Left", "Center", "Right"] }
           - label: Hero
             name: hero_block
             fields:
-              - { label: Intro, name: intro, widget: string }
-              - { label: Button, name: button, widget: string }
-              - { label: Link, name: link, widget: string }
+              - { label: Intro, name: intro, widget: markdown, required: false }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false }
               - { label: Name, name: name, widget: string }
-              - { label: Lead, name: lead, widget: string }
-              - { label: Body, name: body, widget: markdown }
+              - { label: Lead, name: lead, widget: string, required: false }
+              - { label: Body, name: body, widget: markdown, required: false }
               - { label: Image, name: image, widget: image }
           - label: Callout
             name: callout_block
@@ -54,8 +55,8 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Lead, name: lead, widget: string }
               - { label: Body, name: body, widget: markdown }
-              - { label: Button, name: button, widget: string }
-              - { label: Link, name: link, widget: string }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false }
               - { label: Image, name: image, widget: image }
           - label: Accordion
             name: accordion_block

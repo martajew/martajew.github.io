@@ -1,6 +1,7 @@
 ---
 title: Page Not Found
 slug: not-found
+comment: ''
 blocks:
   - type: intro_block
     heading: Page Not Found
@@ -8,4 +9,5 @@ blocks:
     body: Please use the button below to go back to the homepage.
     button: Go back to the homepage
     link: /
+    alignment: Left
 ---

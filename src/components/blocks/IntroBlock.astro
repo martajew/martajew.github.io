@@ -6,9 +6,11 @@ import RichText from "../elements/RichText.astro";
 import Link from "../elements/Link.astro";
 
 const block = Astro.props.block as PageBlocksMap["intro_block"];
+const alignment = (block.alignment || "center").toString().toLowerCase();
+const container = `text-${alignment} text-base-900 flex flex-col items-center`;
 ---
 
-<Container variant={"xl"} class="text-center text-base-900 flex flex-col items-center">
+<Container variant={"xl"} class={container}>
     <Heading tagName="h1" tagSize="h1">{block.heading}</Heading>
     <div class="max-w-3xl flex flex-col gap-4">
         <RichText variant={"xl"} content={block.lead}/>

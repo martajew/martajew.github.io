@@ -10,8 +10,9 @@ blocks:
       Ready to bring your vision to life? I'd love to hear about your project and explore how we can work together to create meaningful design solutions that drive results.
 
       Currently accepting new projects for Q3 2025. Response time: 24-48 hours.
-    button: Browse Designs
-    link: /designs
+    button: ''
+    link: ''
+    alignment: Left
   - type: contacts_block
     items:
       - title: Email

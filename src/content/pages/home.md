@@ -1,12 +1,15 @@
 ---
 title: Home
 slug: home
+comment: Landing page
 blocks:
   - type: hero_block
     lead: I love to crochet and want to share that passion with the world.
-    body: I design useful and joyful digital experiences.
-    button: Available for work
-    link: /contact
+    body: |-
+      You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. 
+      Happy crocheting <3
+    button: See my designs
+    link: /designs
     intro: Thank you for your interest in my page!!
     name: Mania Artajew
     image: /src/content/images/pages/mania-main-photo.png
