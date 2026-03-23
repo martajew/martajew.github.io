@@ -1,7 +1,7 @@
 ---
 title: Page Not Found
 slug: not-found
-comment: ''
+comment: Display as 404 page
 blocks:
   - type: intro_block
     heading: Page Not Found

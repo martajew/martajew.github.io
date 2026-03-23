@@ -1,6 +1,7 @@
 ---
 title: Thank You
 slug: thank-you
+comment: Display after purchase
 blocks:
   - type: intro_block
     heading: Thank You
