@@ -6,7 +6,7 @@ blocks:
   - type: hero_block
     lead: I love to crochet and want to share that passion with the world.
     body: |-
-      You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns. 
+      You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns.
       Happy crocheting <3
     button: See my designs
     link: /designs

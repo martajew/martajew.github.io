@@ -1,51 +1,55 @@
 ---
 // components
-import Container from "../elements/Container.astro";
-import Heading from "../elements/Heading.astro";
-import Text from "../elements/Text.astro";
-import Link from "../elements/Link.astro";
-import type {SiteSettingsMap} from "../../lib/content-types";
+import Container from '../elements/Container.astro'
+import Heading from '../elements/Heading.astro'
+import Text from '../elements/Text.astro'
+import Link from '../elements/Link.astro'
+import type { SiteSettingsMap } from '../../lib/content-types'
 
-const {navLinks, layout} = Astro.props as {
-  navLinks: SiteSettingsMap["navigation"]["navLinks"],
-  layout: SiteSettingsMap["layout"]
-};
+const { navLinks, layout } = Astro.props as {
+  navLinks: SiteSettingsMap['navigation']['navLinks']
+  layout: SiteSettingsMap['layout']
+}
 ---
 
 <Container variant={'xl'} class="mt-32 pb-8">
-    <div class="flex flex-col gap-10 md:flex-row">
-        <div class="flex-1 md:text-left text-center">
-            <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.socialsHeading}</Heading>
-            <ul>
-              {
-                layout.socials.map((social) => (
-                        <li>
-                            <Link variant={'nav'} href={social.href}>{social.title}</Link>
-                        </li>
-                ))
-              }
-            </ul>
-        </div>
-        <div class="flex-1 md:text-right text-center">
-            <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.navigationHeading}</Heading>
-            <ul>
-              {
-                navLinks.map((navLink) => (
-                        <li>
-                            <Link variant={'nav'} href={navLink.href}>{navLink.title}</Link>
-                        </li>
-                ))
-              }
-            </ul>
-        </div>
+  <div class="flex flex-col gap-10 md:flex-row">
+    <div class="flex-1 md:text-left text-center">
+      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.socialsHeading}</Heading>
+      <ul>
+        {
+          layout.socials.map((social) => (
+            <li>
+              <Link variant={'nav'} href={social.href}>
+                {social.title}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
     </div>
-    <div class="flex flex-col text-center">
-        <Text variant={'sm'} class="text-base-900">{layout.copyright}</Text>
-        <Text variant={'sm'} class="text-base-900">
-          {layout.creditsPrefix}
-            <Link variant={'inline'} href={layout.builtWithHref}>{layout.builtWithLabel}</Link>
-            by
-            <Link variant={'inline'} href={layout.builtByHref}>{layout.builtByLabel}</Link>
-        </Text>
+    <div class="flex-1 md:text-right text-center">
+      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.navigationHeading}</Heading>
+      <ul>
+        {
+          navLinks.map((navLink) => (
+            <li>
+              <Link variant={'nav'} href={navLink.href}>
+                {navLink.title}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
     </div>
+  </div>
+  <div class="flex flex-col text-center">
+    <Text variant={'sm'} class="text-base-900">{layout.copyright}</Text>
+    <Text variant={'sm'} class="text-base-900">
+      {layout.creditsPrefix}
+      <Link variant={'inline'} href={layout.builtWithHref}>{layout.builtWithLabel}</Link>
+      by
+      <Link variant={'inline'} href={layout.builtByHref}>{layout.builtByLabel}</Link>
+    </Text>
+  </div>
 </Container>

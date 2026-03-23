@@ -1,11 +1,8 @@
 ---
-import type {PageBlock} from "../../lib/content-types";
-import BlockRenderer from "./BlockRenderer.astro";
+import type { PageBlock } from '../../lib/content-types'
+import BlockRenderer from './BlockRenderer.astro'
 
-const blocks = Astro.props.blocks as PageBlock[];
+const blocks = Astro.props.blocks as PageBlock[]
 ---
 
-{
-  blocks.map((block) =>
-  <BlockRenderer block={block}/>)
-  }
+{blocks.map((block) => <BlockRenderer block={block} />)}

@@ -1,19 +1,18 @@
 ---
-import type {GetStaticPaths} from "astro";
-import Layout from "../layouts/Layout.astro";
-import PageBlocks from "../components/pages/PageBlocks.astro";
-import {getPagePaths, getDesignPaths} from "../lib/content";
+import type { GetStaticPaths } from 'astro'
+import Layout from '../layouts/Layout.astro'
+import PageBlocks from '../components/pages/PageBlocks.astro'
+import { getPagePaths, getDesignPaths } from '../lib/content'
 
 export const getStaticPaths = (async () => {
-  const pages = await getPagePaths();
-  const designs = await getDesignPaths();
-  return [...pages, ...designs];
+  const pages = await getPagePaths()
+  const designs = await getDesignPaths()
+  return [...pages, ...designs]
+}) satisfies GetStaticPaths
 
-}) satisfies GetStaticPaths;
-
-const {page, title} = Astro.props;
+const { title, page } = Astro.props
 ---
 
 <Layout title={title}>
-    <PageBlocks blocks={page.data.blocks}/>
+  <PageBlocks blocks={page.data.blocks} />
 </Layout>

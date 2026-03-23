@@ -1,27 +1,30 @@
 ---
-import type {PageBlocksMap} from "../../lib/content-types";
-import Heading from "../elements/Heading.astro";
-import RichText from "../elements/RichText.astro";
-import Container from "../elements/Container.astro";
-import Link from "../elements/Link.astro";
-import ImageContainer from "../elements/ImageContainer.astro";
+import type { PageBlocksMap } from '../../lib/content-types'
+import Heading from '../elements/Heading.astro'
+import RichText from '../elements/RichText.astro'
+import Container from '../elements/Container.astro'
+import Link from '../elements/Link.astro'
+import ImageContainer from '../elements/ImageContainer.astro'
 
-const block = Astro.props.block as PageBlocksMap["callout_block"];
+const block = Astro.props.block as PageBlocksMap['callout_block']
 ---
 
-<Container variant={"xl"}>
-    <Heading tagName="h1" tagSize="h1" class="text-center">{block.name}</Heading>
-    <div class="flex lg:flex-row lg:gap-16 gap-10 flex-col">
-        <div class="flex flex-col items-start gap-6 lg:pt-6 text-base-900 lg:flex-1">
-            <RichText variant={"xl"} content={block.lead}/>
-            <RichText variant={"sm"} content={block.body}/>
-          {
-            block.button && block.link &&
-                  <Link variant={"button"} href={block.link}>{block.button}</Link>
-          }
-        </div>
-        <div class="w-full lg:h-[500px] h-auto lg:flex-1">
-            <ImageContainer src={block.image} alt={block.name}/>
-        </div>
+<Container variant={'xl'}>
+  <Heading tagName="h1" tagSize="h1" class="text-center">{block.name}</Heading>
+  <div class="flex lg:flex-row lg:gap-16 gap-10 flex-col">
+    <div class="flex flex-col items-start gap-6 lg:pt-6 text-base-900 lg:flex-1">
+      <RichText variant={'xl'} content={block.lead} />
+      <RichText variant={'sm'} content={block.body} />
+      {
+        block.button && block.link && (
+          <Link variant={'button'} href={block.link}>
+            {block.button}
+          </Link>
+        )
+      }
     </div>
+    <div class="w-full lg:h-[500px] h-auto lg:flex-1">
+      <ImageContainer src={block.image} alt={block.name} />
+    </div>
+  </div>
 </Container>
