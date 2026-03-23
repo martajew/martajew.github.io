@@ -15,5 +15,5 @@ const designs = await getFeaturedDesigns()
   <Container class="grid lg:grid-cols-2 grid-cols-1 gap-16">
     {designs.map((design) => <DesignTile design={design} />)}
   </Container>
-  <Link variant={'button'} href={block.link}>{block.button}</Link>
+  <Link variant={'button'} href={block.link ?? '#'}>{block.button}</Link>
 </Container>

@@ -16,7 +16,7 @@ const details = [
   { heading: 'Client', text: `${design.client}` },
   { heading: 'Category', text: `${design.category}` },
   { heading: 'Services', text: `${design.services}` },
-  { heading: 'Year', text: `${design.sortDate.getFullYear()}` },
+  { heading: 'Year', text: `${design.sortDate?.getFullYear()}` },
 ]
 ---
 
@@ -39,7 +39,7 @@ const details = [
       ))
     }
   </div>
-  <Link variant={'button'} href={design.paymentLink}>{block.paymentButtonLabel}</Link>
+  <Link variant={'button'} href={design.paymentLink ?? '#'}>{block.paymentButtonLabel}</Link>
   <div class="md:max-w-3xl text-base-900">
     <RichText variant={'xl'} content={design.description} />
   </div>
@@ -57,5 +57,5 @@ const details = [
   <div class="w-full md:h-[600px] h-[300px]">
     <ImageContainer src={design.imageFour} alt={design.title} />
   </div>
-  <Link variant={'button'} href={design.paymentLink}>{block.paymentButtonLabel}</Link>
+  <Link variant={'button'} href={design.paymentLink ?? '#'}>{block.paymentButtonLabel}</Link>
 </Container>

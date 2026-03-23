@@ -20,7 +20,7 @@ const { navLinks, layout } = Astro.props as {
         {
           layout.socials.map((social) => (
             <li>
-              <Link variant={'nav'} href={social.href}>
+              <Link variant={'nav'} href={social.href ?? '#'}>
                 {social.title}
               </Link>
             </li>
@@ -34,7 +34,7 @@ const { navLinks, layout } = Astro.props as {
         {
           navLinks.map((navLink) => (
             <li>
-              <Link variant={'nav'} href={navLink.href}>
+              <Link variant={'nav'} href={navLink.href ?? '#'}>
                 {navLink.title}
               </Link>
             </li>
@@ -47,9 +47,9 @@ const { navLinks, layout } = Astro.props as {
     <Text variant={'sm'} class="text-base-900">{layout.copyright}</Text>
     <Text variant={'sm'} class="text-base-900">
       {layout.creditsPrefix}
-      <Link variant={'inline'} href={layout.builtWithHref}>{layout.builtWithLabel}</Link>
+      <Link variant={'inline'} href={layout.builtWithHref ?? '#'}>{layout.builtWithLabel}</Link>
       by
-      <Link variant={'inline'} href={layout.builtByHref}>{layout.builtByLabel}</Link>
+      <Link variant={'inline'} href={layout.builtByHref ?? '#'}>{layout.builtByLabel}</Link>
     </Text>
   </div>
 </Container>

@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
+    "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.1",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource/road-rage": "^5.2.8",
@@ -27,6 +28,7 @@
     "marked": "^17.0.5",
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.2.2",
-    "tailwindcss-noise": "^1.0.6"
+    "tailwindcss-noise": "^1.0.6",
+    "typescript": "^5.9.3"
   }
 }

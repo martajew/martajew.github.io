@@ -12,7 +12,7 @@ const { navLinks } = Astro.props as { navLinks: SiteSettingsMap['navigation']['n
     {
       navLinks.map((link, index) => (
         <li>
-          <Link href={link.href} variant={'nav'}>
+          <Link href={link.href ?? '#'} variant={'nav'}>
             {index + 1}. {link.title}
           </Link>
         </li>
@@ -43,7 +43,7 @@ const { navLinks } = Astro.props as { navLinks: SiteSettingsMap['navigation']['n
           {
             navLinks.map((link) => (
               <li>
-                <Link href={link.href} variant={'nav'}>
+                <Link href={link.href ?? '#'} variant={'nav'}>
                   {link.title}
                 </Link>
               </li>
