@@ -12,7 +12,7 @@ blocks:
     link: /designs
     intro: Thank you for your interest in my page!!
     name: Mania Artajew
-    image: /src/content/images/pages/mania-main-photo.png
+    image: /content/images/pages/mania-main-photo.png
   - type: featured_designs_block
     heading: Featured Designs
     button: All Designs
@@ -28,7 +28,7 @@ blocks:
     button: More about me
     link: /about
     name: About
-    image: /src/content/images/pages/mania-with-cat.jpeg
+    image: /content/images/pages/mania-with-cat.jpeg
   - type: numbered_accordion_block
     heading: FAQ
     items:

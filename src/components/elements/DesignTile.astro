@@ -11,8 +11,8 @@ const vinylDisk = await getImage({ src: vinylD, format: 'png' })
 // components
 import Text from '../elements/Text.astro'
 import Heading from '../elements/Heading.astro'
-import type { DesignEntry } from '../../lib/content-types.ts'
-import { getAllPages, getPageByFileId, sanitizePermalink } from '../../lib/content.ts'
+import type { DesignEntry } from '../../lib/content'
+import { getAllPages, getPageByFileId, sanitizePermalink } from '../../lib/content'
 
 // props
 const design = Astro.props.design as DesignEntry

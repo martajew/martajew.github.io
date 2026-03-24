@@ -6,4 +6,5 @@ categories:
   - Art Direction
   - Product Design
   - Branding
+  - Fashion
 ---

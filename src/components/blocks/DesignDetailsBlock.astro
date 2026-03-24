@@ -1,12 +1,12 @@
 ---
-import type { PageBlocksMap } from '../../lib/content-types'
+import type { PageBlocksMap } from '../../lib/content'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import ImageContainer from '../elements/ImageContainer.astro'
 import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
 import RichText from '../elements/RichText.astro'
-import { getDesignByPermalink } from '../../lib/content.ts'
+import { getDesignByPermalink } from '../../lib/content'
 
 const block = Astro.props.block as PageBlocksMap['design_details_block']
 const designEntry = await getDesignByPermalink(Astro.params.permalink)

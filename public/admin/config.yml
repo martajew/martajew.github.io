@@ -3,13 +3,13 @@ backend:
   repo: martajew/martajew.github.io
   base_url: https://sveltia-cms-auth.adam-artajew.workers.dev
 
-media_folder: /src/content/images
+media_folder: /content/images
 
 collections:
   - name: pages
     label: Pages
     label_singular: Page
-    folder: /src/content/pages
+    folder: /content/pages
     media_folder: '{{media_folder}}/pages'
     summary: "{{title}} ({{permalink}}) {{comment | ternary('_', '')}}{{comment}}{{comment | ternary('_', '')}}"
     description: Composable pages built from reusable blocks.
@@ -108,7 +108,7 @@ collections:
     label: Designs
     label_singular: Design
     description: Managable collection of designs.
-    folder: /src/content/designs
+    folder: /content/designs
     media_folder: '{{media_folder}}/designs'
     icon: design_services
     summary: "{{sortDate | date('YYYY-MM-DD')}}: {{isFeatured | ternary('**', '')}}{{title}}{{isFeatured | ternary('**', '')}} ({{permalink}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
@@ -163,7 +163,7 @@ collections:
     files:
       - label: Layout
         name: layout
-        file: /src/content/settings/layout.md
+        file: /content/settings/layout.md
         icon: view_quilt
         fields:
           - {label: Section, name: section, widget: hidden, default: layout}
@@ -184,7 +184,7 @@ collections:
           - {label: Built By URL, name: builtByHref, widget: string}
       - label: Navigation
         name: navigation
-        file: /src/content/settings/navigation.md
+        file: /content/settings/navigation.md
         icon: menu
         fields:
           - {label: Section, name: section, widget: hidden, default: navigation}
@@ -196,7 +196,7 @@ collections:
               - {label: URL, name: href, widget: string}
       - label: Designs
         name: designs
-        file: /src/content/settings/designs.md
+        file: /content/settings/designs.md
         icon: design_services
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}

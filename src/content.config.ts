@@ -3,7 +3,7 @@ import { z } from 'astro/zod'
 import { defineCollection, reference } from 'astro:content'
 
 const pages = defineCollection({
-  loader: glob({ pattern: 'src/content/pages/*.md' }),
+  loader: glob({ pattern: 'content/pages/*.md' }),
   schema: ({ image }) => {
     const headingBlock = z.object({
       type: z.literal('heading_block'),
@@ -108,7 +108,7 @@ const pages = defineCollection({
 })
 
 const designs = defineCollection({
-  loader: glob({ pattern: 'src/content/designs/*.md' }),
+  loader: glob({ pattern: 'content/designs/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
     permalink: z.string().optional(),
@@ -129,9 +129,9 @@ const designs = defineCollection({
 })
 
 const settings = defineCollection({
-  loader: glob({ pattern: 'src/content/settings/*.md' }),
-  schema: z.discriminatedUnion('section', [
-    z.object({
+  loader: glob({ pattern: 'content/settings/*.md' }),
+  schema: () => {
+    const layout = z.object({
       section: z.literal('layout'),
       mainPageTitle: z.string().optional(),
       socialsHeading: z.string().optional(),
@@ -146,19 +146,27 @@ const settings = defineCollection({
       builtWithHref: z.string().optional(),
       builtByLabel: z.string().optional(),
       builtByHref: z.string().optional(),
-    }),
-    z.object({
+    })
+
+    const navigation = z.object({
       section: z.literal('navigation'),
       navLinks: z.array(z.object({
         title: z.string().optional(),
         href: z.string().optional(),
       })).default([]),
-    }),
-    z.object({
+    })
+
+    const designs = z.object({
       section: z.literal('designs'),
       categories: z.array(z.string()).default([]),
-    }),
-  ]),
+    })
+
+    return z.discriminatedUnion('section', [
+      layout,
+      navigation,
+      designs,
+    ])
+  },
 })
 
 export const collections = { pages, designs, settings }

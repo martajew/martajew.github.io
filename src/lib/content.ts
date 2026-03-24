@@ -1,6 +1,20 @@
 import type { GetStaticPaths } from 'astro'
-import type { DesignEntry, PageBlockType, PageEntry, SiteSettingsMap } from './content-types'
+import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
+
+export type PageEntry = CollectionEntry<'pages'>
+export type PageData = PageEntry['data']
+export type PageBlock = PageData['blocks'][number]
+export type PageBlockType = PageBlock['type']
+export type PageBlocksMap = { [T in PageBlockType]: Extract<PageBlock, { type: T }> }
+
+export type DesignEntry = CollectionEntry<'designs'>
+export type DesignData = DesignEntry['data']
+
+export type SettingsEntry = CollectionEntry<'settings'>
+export type SettingsData = SettingsEntry['data']
+export type SettingsSection = SettingsData['section']
+export type SiteSettingsMap = { [S in SettingsSection]: Extract<SettingsData, { section: S }> }
 
 const MULTI_SLASH_REGEX = /\/+/g
 const EDGE_SLASH_REGEX = /^\/|\/$/g
