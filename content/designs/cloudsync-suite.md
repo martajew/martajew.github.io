@@ -6,10 +6,10 @@ detailsPage: design-details
 client: Cloudsync Technologies
 category: Art Direction
 services: User Research, Interface Design, Design System Development
-featuredImage: /content/images/designs/cloudsync-suite/1.jpg
-imageTwo: /content/images/designs/cloudsync-suite/2.jpg
-imageThree: /content/images/designs/cloudsync-suite/3.jpg
-imageFour: /content/images/designs/cloudsync-suite/4.jpg
+featuredImage: /content/media/designs/cloudsync-suite/1.jpg
+imageTwo: /content/media/designs/cloudsync-suite/2.jpg
+imageThree: /content/media/designs/cloudsync-suite/3.jpg
+imageFour: /content/media/designs/cloudsync-suite/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: Enterprise-grade productivity platform that unifies project management, communication, and file sharing in one seamless experience. Designed for distributed teams, the interface prioritizes clarity, efficiency, and customization while reducing cognitive load for users managing complex workflows across multiple projects.
 isFeatured: false

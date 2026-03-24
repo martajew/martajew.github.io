@@ -3,7 +3,7 @@ backend:
   repo: martajew/martajew.github.io
   base_url: https://sveltia-cms-auth.adam-artajew.workers.dev
 
-media_folder: /content/images
+media_folder: /content/media
 
 collections:
   - name: pages

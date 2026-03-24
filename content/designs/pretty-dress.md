@@ -6,10 +6,10 @@ detailsPage: design-details
 client: ACME
 category: UI/UX Design
 services: Crochet
-featuredImage: /content/images/designs/crochet-dress.webp
-imageTwo: /content/images/designs/crochet-dress.webp
-imageThree: /content/images/designs/crochet-dress.webp
-imageFour: /content/images/designs/crochet-dress.webp
+featuredImage: /content/media/designs/crochet-dress.webp
+imageTwo: /content/media/designs/crochet-dress.webp
+imageThree: /content/media/designs/crochet-dress.webp
+imageFour: /content/media/designs/crochet-dress.webp
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: dress desc
 isFeatured: false

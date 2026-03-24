@@ -9,7 +9,7 @@ blocks:
     button: See my designs
     link: /designs
     name: Meet Mania
-    image: /content/images/pages/mania-crochet-dress.jpg
+    image: /content/media/pages/mania-crochet-dress.jpg
   - type: accordion_block
     heading: Experience
     items:

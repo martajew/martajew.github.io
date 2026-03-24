@@ -6,10 +6,10 @@ detailsPage: design-details
 client: Artifact Coffee
 category: Branding
 services: Brand Strategy, Visual Identity, Packaging Design
-featuredImage: /content/images/designs/coffee-brand/1.jpg
-imageTwo: /content/images/designs/coffee-brand/2.jpg
-imageThree: /content/images/designs/coffee-brand/3.jpg
-imageFour: /content/images/designs/coffee-brand/4.jpg
+featuredImage: /content/media/designs/coffee-brand/1.jpg
+imageTwo: /content/media/designs/coffee-brand/2.jpg
+imageThree: /content/media/designs/coffee-brand/3.jpg
+imageFour: /content/media/designs/coffee-brand/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: Complete brand identity system for an artisanal coffee roastery focusing on direct-trade relationships and small-batch roasting. The identity reflects craftsmanship, sustainability, and the unique story behind each coffee bean's journey from farm to cup.
 isFeatured: false
