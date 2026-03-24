@@ -134,28 +134,26 @@ const settings = defineCollection({
     const layout = z.object({
       section: z.literal('layout'),
       mainPageTitle: z.string().optional(),
+      primaryColor: z.string().optional(), // --color-base-900
+      secondaryColor: z.string().optional(), // --color-base-700
+      contrastColor: z.string().optional(), // --color-base-100
+      faviconImage: image().optional(),
       backgroundImage: image().optional(),
       designTileImage: image().optional(),
       decoratorImage: image().optional(),
-      symbolLightImage: image().optional(),
-      symbolDarkImage: image().optional(),
-      socialsHeading: z.string().optional(),
-      navigationHeading: z.string().optional(),
-      socials: z.array(z.object({
-        title: z.string().optional(),
-        href: z.string().optional(),
-      })).default([]),
+      symbolImage: image().optional(),
       copyright: z.string().optional(),
-      creditsPrefix: z.string().optional(),
-      builtWithLabel: z.string().optional(),
-      builtWithHref: z.string().optional(),
-      builtByLabel: z.string().optional(),
-      builtByHref: z.string().optional(),
     })
 
     const navigation = z.object({
       section: z.literal('navigation'),
-      navLinks: z.array(z.object({
+      navigationHeading: z.string().optional(),
+      navigationLinks: z.array(z.object({
+        title: z.string().optional(),
+        href: z.string().optional(),
+      })).default([]),
+      socialsHeading: z.string().optional(),
+      socialsLinks: z.array(z.object({
         title: z.string().optional(),
         href: z.string().optional(),
       })).default([]),

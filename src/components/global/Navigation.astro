@@ -1,16 +1,16 @@
 ---
 // components
 import Link from '../elements/Link.astro'
-import type { SiteSettingsMap } from '../../lib/content'
+import { getAllSettings } from '../../lib/content'
 
-const { navLinks } = Astro.props as { navLinks: SiteSettingsMap['navigation']['navLinks'] }
+const { navigation } = await getAllSettings()
 ---
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50">
   <!-- Desktop Nav -->
   <ul class="hidden md:flex gap-8">
     {
-      navLinks.map((link, index) => (
+      navigation.navigationLinks.map((link, index) => (
         <li>
           <Link href={link.href ?? '#'} variant={'nav'}>
             {index + 1}. {link.title}
@@ -41,7 +41,7 @@ const { navLinks } = Astro.props as { navLinks: SiteSettingsMap['navigation']['n
         </button>
         <ul class="flex flex-col p-6 gap-5 md:hidden text-center">
           {
-            navLinks.map((link) => (
+            navigation.navigationLinks.map((link) => (
               <li>
                 <Link href={link.href ?? '#'} variant={'nav'}>
                   {link.title}
@@ -64,7 +64,6 @@ const { navLinks } = Astro.props as { navLinks: SiteSettingsMap['navigation']['n
     openBtn.addEventListener('click', () => {
       mobileNav.classList.remove('hidden')
     })
-
     closeBtn.addEventListener('click', () => {
       mobileNav.classList.add('hidden')
     })

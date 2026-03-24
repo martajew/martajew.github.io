@@ -13,8 +13,8 @@ const variantStyle = {
   xsm: 'text-12 font-mono',
   sm: 'text-16/8 font-mono',
   md: 'text-20 font-mono font-semibold uppercase text-base-700',
-  lg: 'text-32/8 font-grunge',
-  xl: 'text-40/10 font-grunge',
+  lg: 'text-32/8 font-sans',
+  xl: 'text-40/10 font-sans',
 }
 
 const html = await marked.parse(content ?? '', { breaks: true, gfm: true })
@@ -43,5 +43,9 @@ const html = await marked.parse(content ?? '', { breaks: true, gfm: true })
 
   .rich-text a {
     text-decoration: underline;
+  }
+
+  .rich-text a:hover {
+    color: var(--color-base-700);
   }
 </style>

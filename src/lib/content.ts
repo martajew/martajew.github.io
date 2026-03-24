@@ -9,12 +9,11 @@ export type PageBlockType = PageBlock['type']
 export type PageBlocksMap = { [T in PageBlockType]: Extract<PageBlock, { type: T }> }
 
 export type DesignEntry = CollectionEntry<'designs'>
-export type DesignData = DesignEntry['data']
 
 export type SettingsEntry = CollectionEntry<'settings'>
 export type SettingsData = SettingsEntry['data']
 export type SettingsSection = SettingsData['section']
-export type SiteSettingsMap = { [S in SettingsSection]: Extract<SettingsData, { section: S }> }
+export type AllSettingsMap = { [S in SettingsSection]: Extract<SettingsData, { section: S }> }
 
 const MULTI_SLASH_REGEX = /\/+/g
 const EDGE_SLASH_REGEX = /^\/|\/$/g
@@ -85,7 +84,8 @@ export async function getDesignByPermalink(permalink: string | undefined): Promi
   return design
 }
 
-export async function getSiteSettings(): Promise<SiteSettingsMap> {
+// @fixme use discriminator instead
+export async function getAllSettings(): Promise<AllSettingsMap> {
   const settings = await getCollection('settings')
   const layoutSettings = settings.find(settings => settings.data.section === 'layout')
   const navigationSettings = settings.find(settings => settings.data.section === 'navigation')
@@ -95,8 +95,8 @@ export async function getSiteSettings(): Promise<SiteSettingsMap> {
     throw new Error('Missing one or more required settings entries.')
 
   return {
-    layout: layoutSettings.data as SiteSettingsMap['layout'],
-    navigation: navigationSettings.data as SiteSettingsMap['navigation'],
-    designs: designsSettings.data as SiteSettingsMap['designs'],
+    layout: layoutSettings.data as AllSettingsMap['layout'],
+    navigation: navigationSettings.data as AllSettingsMap['navigation'],
+    designs: designsSettings.data as AllSettingsMap['designs'],
   }
 }

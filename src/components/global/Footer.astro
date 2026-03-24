@@ -2,23 +2,20 @@
 // components
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
-import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
-import type { SiteSettingsMap } from '../../lib/content'
+import RichText from '../elements/RichText.astro'
+import { getAllSettings } from '../../lib/content'
 
-const { navLinks, layout } = Astro.props as {
-  navLinks: SiteSettingsMap['navigation']['navLinks']
-  layout: SiteSettingsMap['layout']
-}
+const { layout, navigation } = await getAllSettings()
 ---
 
 <Container variant={'xl'} class="mt-32 pb-8">
   <div class="flex flex-col gap-10 md:flex-row">
     <div class="flex-1 md:text-left text-center">
-      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.socialsHeading}</Heading>
+      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{navigation.socialsHeading}</Heading>
       <ul>
         {
-          layout.socials.map((social) => (
+          navigation.socialsLinks.map((social) => (
             <li>
               <Link variant={'nav'} href={social.href ?? '#'}>
                 {social.title}
@@ -29,10 +26,10 @@ const { navLinks, layout } = Astro.props as {
       </ul>
     </div>
     <div class="flex-1 md:text-right text-center">
-      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{layout.navigationHeading}</Heading>
+      <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{navigation.navigationHeading}</Heading>
       <ul>
         {
-          navLinks.map((navLink) => (
+          navigation.navigationLinks.map((navLink) => (
             <li>
               <Link variant={'nav'} href={navLink.href ?? '#'}>
                 {navLink.title}
@@ -44,12 +41,6 @@ const { navLinks, layout } = Astro.props as {
     </div>
   </div>
   <div class="flex flex-col text-center">
-    <Text variant={'sm'} class="text-base-900">{layout.copyright}</Text>
-    <Text variant={'sm'} class="text-base-900">
-      {layout.creditsPrefix}
-      <Link variant={'inline'} href={layout.builtWithHref ?? '#'}>{layout.builtWithLabel}</Link>
-      by
-      <Link variant={'inline'} href={layout.builtByHref ?? '#'}>{layout.builtByLabel}</Link>
-    </Text>
+    <RichText variant={'sm'} class="text-base-900" content={layout.copyright} />
   </div>
 </Container>

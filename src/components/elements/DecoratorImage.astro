@@ -1,8 +1,20 @@
 ---
-import { Image } from 'astro:assets'
-import { getSiteSettings } from '../../lib/content'
+import { getAllSettings } from '../../lib/content'
 
-const settings = await getSiteSettings()
+const { layout } = await getAllSettings()
+const { class: className } = Astro.props
 ---
 
-{settings.layout.decoratorImage && <Image src={settings.layout.decoratorImage} alt="Decorator" loading="eager" />}
+{
+  layout.decoratorImage && (
+    <span
+      class:list={['block shrink-0 h-11', className]}
+      style={`
+        aspect-ratio: ${layout.decoratorImage.width} / ${layout.decoratorImage.height};
+        -webkit-mask: url(${layout.decoratorImage.src}) center / contain no-repeat;
+        mask: url(${layout.decoratorImage.src}) center / contain no-repeat;
+      `}
+      aria-hidden="true"
+    />
+  )
+}

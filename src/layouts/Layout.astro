@@ -7,7 +7,7 @@ import BaseHead from '../components/global/BaseHead.astro'
 import Wrapper from '../components/global/Wrapper.astro'
 import NavBar from '../components/global/Navigation.astro'
 import Footer from '../components/global/Footer.astro'
-import { getSiteSettings } from '../lib/content'
+import { getAllSettings } from '../lib/content'
 
 // assets
 import '@fontsource/road-rage'
@@ -15,26 +15,31 @@ import '@fontsource-variable/jetbrains-mono'
 
 // props
 const { title } = Astro.props
-const settings = await getSiteSettings()
-const isHomePage = Astro.url.pathname === '/'
-const browserPageTitle = isHomePage ? settings.layout.mainPageTitle : `${settings.layout.mainPageTitle} - ${title}`
-const bgImage = settings.layout.backgroundImage
-const style = bgImage ? `background-image: url(${bgImage.src})` : undefined
+const { layout } = await getAllSettings()
+
+const styleRules = [
+  layout.backgroundImage ? `background-image: url(${layout.backgroundImage.src})` : undefined,
+  layout.primaryColor ? `--color-base-900: ${layout.primaryColor}` : undefined,
+  layout.secondaryColor ? `--color-base-700: ${layout.secondaryColor}` : undefined,
+  layout.contrastColor ? `--color-base-100: ${layout.contrastColor}` : undefined,
+]
+
+const style = styleRules.filter(Boolean).join('; ')
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <BaseHead pageTitle={browserPageTitle} />
+  <BaseHead title={title} />
   <body style={style} class="bg-cover bg-center bg-no-repeat bg-fixed box-border">
     <!-- Background noise effect -->
     <div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
     <!-- Wrapper component to make sure all content on the website is above the noise filter background -->
     <Wrapper>
-      <NavBar navLinks={settings.navigation.navLinks} />
+      <NavBar />
       <main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
         <slot />
       </main>
-      <Footer navLinks={settings.navigation.navLinks} layout={settings.layout} />
+      <Footer />
     </Wrapper>
   </body>
 </html>

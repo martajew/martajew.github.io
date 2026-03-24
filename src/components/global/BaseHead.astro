@@ -1,5 +1,15 @@
 ---
-const { pageTitle } = Astro.props
+import { getImage } from 'astro:assets'
+import { getAllSettings } from '../../lib/content.ts'
+
+const { title } = Astro.props
+const { layout } = await getAllSettings()
+const isHomePage = Astro.url.pathname === '/'
+const pageTitle = isHomePage ? layout.mainPageTitle : `${layout.mainPageTitle} - ${title}`
+
+const favicon = layout.faviconImage
+  ? await getImage({ src: layout.faviconImage, width: 180, height: 180, format: 'png' })
+  : undefined
 ---
 
 <head>
@@ -8,6 +18,7 @@ const { pageTitle } = Astro.props
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  {favicon && <link rel="icon" type="image/png" href={favicon.src} />}
+  {favicon && <link rel="apple-touch-icon" href={favicon.src} />}
   <title>{pageTitle}</title>
 </head>

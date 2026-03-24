@@ -1,19 +1,20 @@
 ---
-import { Image } from 'astro:assets'
-import { getSiteSettings } from '../../lib/content'
+import { getAllSettings } from '../../lib/content'
 
-const settings = await getSiteSettings()
-const variants = {
-  light: settings.layout.symbolLightImage,
-  dark: settings.layout.symbolDarkImage,
-}
-
-interface Props {
-  variant: keyof typeof variants
-}
-
-const { variant } = Astro.props
-const symbolImage = variants[variant]
+const { layout } = await getAllSettings()
+const { class: className } = Astro.props
 ---
 
-{symbolImage && <Image src={symbolImage} alt="Symbol" loading="eager" />}
+{
+  layout.symbolImage && (
+    <span
+      class:list={['block shrink-0 h-5 self-center', className]}
+      style={`
+        aspect-ratio: ${layout.symbolImage.width} / ${layout.symbolImage.height};
+        -webkit-mask: url(${layout.symbolImage.src}) center / contain no-repeat;
+        mask: url(${layout.symbolImage.src}) center / contain no-repeat;
+      `}
+      aria-hidden="true"
+    />
+  )
+}

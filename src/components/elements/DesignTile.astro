@@ -4,10 +4,10 @@ import Text from '../elements/Text.astro'
 import Heading from '../elements/Heading.astro'
 import SymbolImage from './SymbolImage.astro'
 import type { DesignEntry } from '../../lib/content'
-import { getAllPages, getPageByFileId, sanitizePermalink, getSiteSettings } from '../../lib/content'
+import { getAllPages, getPageByFileId, sanitizePermalink, getAllSettings } from '../../lib/content'
 
 // props
-const settings = await getSiteSettings()
+const { layout } = await getAllSettings()
 const design = Astro.props.design as DesignEntry
 const pages = await getAllPages()
 const page = getPageByFileId(pages, design.data.detailsPage?.id)
@@ -18,14 +18,14 @@ const page = getPageByFileId(pages, design.data.detailsPage?.id)
     <div
       class="relative xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[400px] md:h-[400px] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px] overflow-visible mb-4"
     >
-      <div class="absolute top-2 left-2 z-40 bg-base-900 border-2 border-base-100 px-4 flex gap-2">
-        <Text variant={'lg'} class="text-base-100">{design.data.category}</Text>
-        <SymbolImage variant={'dark'} />
+      <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
+        <Text variant={'lg'} class="text-base-900">{design.data.category}</Text>
+        <SymbolImage class="bg-base-900" />
       </div>
       {
-        settings.layout.designTileImage && (
+        layout.designTileImage && (
           <div
-            style={`background-image: url(${settings.layout.designTileImage.src})`}
+            style={`background-image: url(${layout.designTileImage.src})`}
             class="absolute inset-0 bg-cover opacity-40 z-30"
           />
         )
