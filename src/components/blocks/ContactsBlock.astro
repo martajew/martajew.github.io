@@ -1,10 +1,9 @@
 ---
 import type { PageBlocksMap } from '../../lib/content'
-import { Image } from 'astro:assets'
-import symbol from '../../assets/ui/symbolWhite.svg'
 import Container from '../elements/Container.astro'
 import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
+import SymbolImage from '../elements/SymbolImage.astro'
 
 const block = Astro.props.block as PageBlocksMap['contacts_block']
 ---
@@ -16,7 +15,7 @@ const block = Astro.props.block as PageBlocksMap['contacts_block']
         <div class="border-2 border-base-900 p-4 flex flex-col gap-4 w-full">
           <div class="flex justify-between">
             <Text variant={'lg'}>{item.title}</Text>
-            <Image src={symbol} alt="UI Symbol" />
+            <SymbolImage variant={'light'} />
           </div>
           <div class="h-px w-full border border-base-900" />
           <div>

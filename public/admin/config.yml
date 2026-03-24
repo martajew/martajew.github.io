@@ -160,6 +160,7 @@ collections:
     label: Settings
     description: Website-wide settings.
     icon: settings
+    media_folder: '{{media_folder}}/settings'
     files:
       - label: Layout
         name: layout
@@ -168,6 +169,11 @@ collections:
         fields:
           - {label: Section, name: section, widget: hidden, default: layout}
           - {label: Main Page Title, name: mainPageTitle, widget: string}
+          - {label: Background Image, name: backgroundImage, widget: image, required: false}
+          - {label: Design Tile Image, name: designTileImage, widget: image, required: false}
+          - {label: Decorator Image, name: decoratorImage, widget: image, required: false}
+          - {label: Symbol Light Image, name: symbolLightImage, widget: image, required: false}
+          - {label: Symbol Dark Image, name: symbolDarkImage, widget: image, required: false}
           - {label: Socials Heading, name: socialsHeading, widget: string}
           - {label: Navigation Heading, name: navigationHeading, widget: string}
           - label: Social Links

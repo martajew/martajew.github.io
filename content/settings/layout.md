@@ -1,6 +1,11 @@
 ---
 section: layout
 mainPageTitle: Mania's Shop
+backgroundImage: /content/media/settings/background.jpg
+designTileImage: /content/media/settings/designTile.jpg
+decoratorImage: /content/media/settings/decorator.svg
+symbolLightImage: /content/media/settings/symbolLight.svg
+symbolDarkImage: /content/media/settings/symbolDark.svg
 socialsHeading: Socials
 navigationHeading: Navigation
 socials:

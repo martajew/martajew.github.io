@@ -1,0 +1,8 @@
+---
+import { Image } from 'astro:assets'
+import { getSiteSettings } from '../../lib/content'
+
+const settings = await getSiteSettings()
+---
+
+{settings.layout.decoratorImage && <Image src={settings.layout.decoratorImage} alt="Decorator" loading="eager" />}

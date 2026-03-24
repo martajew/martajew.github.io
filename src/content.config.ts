@@ -130,10 +130,15 @@ const designs = defineCollection({
 
 const settings = defineCollection({
   loader: glob({ pattern: 'content/settings/*.md' }),
-  schema: () => {
+  schema: ({ image }) => {
     const layout = z.object({
       section: z.literal('layout'),
       mainPageTitle: z.string().optional(),
+      backgroundImage: image().optional(),
+      designTileImage: image().optional(),
+      decoratorImage: image().optional(),
+      symbolLightImage: image().optional(),
+      symbolDarkImage: image().optional(),
       socialsHeading: z.string().optional(),
       navigationHeading: z.string().optional(),
       socials: z.array(z.object({
