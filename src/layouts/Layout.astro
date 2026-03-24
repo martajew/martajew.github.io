@@ -1,6 +1,7 @@
 ---
 // stylesheet
 import '../styles/global.css'
+import { getGoogleFontConfig } from '../lib/fonts'
 
 // components
 import BaseHead from '../components/global/BaseHead.astro'
@@ -9,21 +10,19 @@ import NavBar from '../components/global/Navigation.astro'
 import Footer from '../components/global/Footer.astro'
 import { getAllSettings } from '../lib/content'
 
-// assets
-import '@fontsource/road-rage'
-import '@fontsource-variable/jetbrains-mono'
-
 // props
 const { title } = Astro.props
 const { layout } = await getAllSettings()
+const fonts = getGoogleFontConfig(layout)
 
 const styleRules = [
   layout.backgroundImage ? `background-image: url(${layout.backgroundImage.src})` : undefined,
+  fonts.sansVar ? `--font-sans: ${fonts.sansVar}` : undefined,
+  fonts.monoVar ? `--font-mono: ${fonts.monoVar}` : undefined,
   layout.primaryColor ? `--color-base-900: ${layout.primaryColor}` : undefined,
   layout.secondaryColor ? `--color-base-700: ${layout.secondaryColor}` : undefined,
   layout.contrastColor ? `--color-base-100: ${layout.contrastColor}` : undefined,
 ]
-
 const style = styleRules.filter(Boolean).join('; ')
 ---
 

@@ -1,6 +1,8 @@
 ---
 section: layout
 mainPageTitle: Mania's Shop
+fontSansFamily: Cinzel Decorative
+fontMonoFamily: Roboto
 primaryColor: '#1025c69c'
 secondaryColor: '#ff0000ad'
 contrastColor: '#ffffffcd'

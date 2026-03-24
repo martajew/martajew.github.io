@@ -134,6 +134,8 @@ const settings = defineCollection({
     const layout = z.object({
       section: z.literal('layout'),
       mainPageTitle: z.string().optional(),
+      fontSansFamily: z.string().optional(),
+      fontMonoFamily: z.string().optional(),
       primaryColor: z.string().optional(), // --color-base-900
       secondaryColor: z.string().optional(), // --color-base-700
       contrastColor: z.string().optional(), // --color-base-100

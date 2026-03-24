@@ -1,12 +1,13 @@
 ---
 import { getImage } from 'astro:assets'
 import { getAllSettings } from '../../lib/content.ts'
+import { getGoogleFontConfig } from '../../lib/fonts'
 
 const { title } = Astro.props
 const { layout } = await getAllSettings()
 const isHomePage = Astro.url.pathname === '/'
 const pageTitle = isHomePage ? layout.mainPageTitle : `${layout.mainPageTitle} - ${title}`
-
+const { href: googleFontsHref } = getGoogleFontConfig(layout)
 const favicon = layout.faviconImage
   ? await getImage({ src: layout.faviconImage, width: 180, height: 180, format: 'png' })
   : undefined
@@ -18,6 +19,9 @@ const favicon = layout.faviconImage
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href={googleFontsHref} />
   {favicon && <link rel="icon" type="image/png" href={favicon.src} />}
   {favicon && <link rel="apple-touch-icon" href={favicon.src} />}
   <title>{pageTitle}</title>
