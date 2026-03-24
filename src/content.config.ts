@@ -89,7 +89,7 @@ const pages = defineCollection({
 
     return z.object({
       title: z.string().optional(),
-      slug: z.string().optional(),
+      permalink: z.string().optional(),
       comment: z.string().optional(),
       blocks: z.array(z.discriminatedUnion('type', [
         headingBlock,
@@ -111,7 +111,7 @@ const designs = defineCollection({
   loader: glob({ pattern: 'src/content/designs/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
-    slug: z.string().optional(),
+    permalink: z.string().optional(),
     sortDate: z.coerce.date().optional(),
     client: z.string().optional(),
     detailsPage: reference('pages').optional(),

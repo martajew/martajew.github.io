@@ -11,13 +11,12 @@ collections:
     label_singular: Page
     folder: /src/content/pages
     media_folder: '{{media_folder}}/pages'
-    identifier_field: slug
-    summary: "{{title}} ({{fields.slug}}) {{comment | ternary('_', '')}}{{comment}}{{comment | ternary('_', '')}}"
+    summary: "{{title}} ({{permalink}}) {{comment | ternary('_', '')}}{{comment}}{{comment | ternary('_', '')}}"
     description: Composable pages built from reusable blocks.
     icon: web
     fields:
       - {label: Title, name: title, widget: string, comment: Used for browser title only.}
-      - {label: Slug, name: slug, widget: string, comment: "Unique page identifier used in URL. Use 'home' for /."}
+      - {label: Permalink, name: permalink, widget: string, comment: "Permanent static hyperlink to a page. Use 'home' for /."}
       - {label: Comment, name: comment, widget: string, comment: Optional page description., required: false}
       - label: Blocks
         name: blocks
@@ -89,7 +88,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Contact, name: contact, widget: string}
-                  - {label: URL, name: href, widget: string, required: false, comment: 'Optional link (e.g. mailto: or tel:)'}
+                  - {label: URL, name: href, widget: string, required: false, comment: 'Optional link (e.g. mailto: or tel:).'}
           - label: Featured Designs
             name: featured_designs_block
             fields:
@@ -112,8 +111,7 @@ collections:
     folder: /src/content/designs
     media_folder: '{{media_folder}}/designs'
     icon: design_services
-    identifier_field: slug
-    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{isFeatured | ternary('**', '')}}{{title}}{{isFeatured | ternary('**', '')}} ({{slug}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
+    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{isFeatured | ternary('**', '')}}{{title}}{{isFeatured | ternary('**', '')}} ({{permalink}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
     sortable_fields:
       fields: [sortDate, title]
       default:
@@ -125,23 +123,23 @@ collections:
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Slug, name: slug, widget: string, comment: "Unique identifier used in the design's URL"}
+      - {label: Permalink, name: permalink, widget: string, comment: Permanent static hyperlink to the design.}
       - label: Sort Date
         name: sortDate
         widget: datetime
         type: date
         default: '{{now}}'
-        comment: Used for display order only (newest first).
+        comment: Used for display order (newest first).
       - label: Details Page
         name: detailsPage
-        comment: "Choose existing page to use as the design's details page."
+        comment: "Choose existing page to use as the design's details page. Selected page should include the Design Details block."
         widget: relation
         collection: pages
-        display_fields: ['{{title}} ({{fields.slug}})']
+        display_fields: ['{{title}} ({{permalink}}) {{comment}}']
       - {label: Client, name: client, widget: string}
       - label: Category
         name: category
-        comment: 'Manage available categories in [Settings > Designs](#/collections/settings/entries/designs)'
+        comment: 'Manage available categories in [Settings > Designs](#/collections/settings/entries/designs).'
         widget: relation
         collection: settings
         file: designs
@@ -154,8 +152,8 @@ collections:
       - {label: Image Four, name: imageFour, widget: image}
       - {label: Payment Link, name: paymentLink, widget: string}
       - {label: Description, name: description, widget: markdown}
-      - {label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: Show on home page}
-      - {label: Draft, name: isDraft, widget: boolean, default: false, comment: Hide design from public site}
+      - {label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: Show on home page.}
+      - {label: Draft, name: isDraft, widget: boolean, default: false, comment: Hide design from public site.}
       - {label: Body, name: body, widget: markdown}
 
   - name: settings

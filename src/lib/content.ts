@@ -11,9 +11,9 @@ export const getPagePaths = (async () => {
   return pages
     .filter(page => !page.data.blocks.some(block => skipBlocksTypes.includes(block.type)))
     .map((page) => {
-      const slug = sanitizeSlug(page.data.slug)
+      const permalink = sanitizePermalink(page.data.permalink)
       const title = page.data.title
-      return { params: { slug }, props: { page, title } }
+      return { params: { permalink }, props: { page, title } }
     })
 }) satisfies GetStaticPaths
 
@@ -22,15 +22,15 @@ export const getDesignPaths = (async () => {
   const designs = await getPublishedDesigns()
   return designs.map((design) => {
     const page = getPageByFileId(pages, design.data.detailsPage?.id)
-    const slug = `${sanitizeSlug(page.data.slug)}/${sanitizeSlug(design.data.slug)}`
+    const permalink = `${sanitizePermalink(page.data.permalink)}/${sanitizePermalink(design.data.permalink)}`
     const title = `${page.data.title} - ${design.data.title}`
-    return { params: { slug }, props: { page, title } }
+    return { params: { permalink }, props: { page, title } }
   })
 }) satisfies GetStaticPaths
 
-export function sanitizeSlug(slug: string | undefined): string | undefined {
-  const saneSlug = slug?.replace(MULTI_SLASH_REGEX, '/').replace(EDGE_SLASH_REGEX, '')
-  return saneSlug === 'home' ? undefined : saneSlug
+export function sanitizePermalink(permalink: string | undefined): string | undefined {
+  const sane = permalink?.replace(MULTI_SLASH_REGEX, '/').replace(EDGE_SLASH_REGEX, '')
+  return sane === 'home' ? undefined : sane
 }
 
 export async function getAllPages(): Promise<PageEntry[]> {
@@ -59,15 +59,15 @@ export async function getFeaturedDesigns(): Promise<DesignEntry[]> {
   return publishedDesigns.filter(design => design.data.isFeatured)
 }
 
-export async function getDesignBySlug(slug: string | undefined): Promise<DesignEntry> {
+export async function getDesignByPermalink(permalink: string | undefined): Promise<DesignEntry> {
   const pages = await getAllPages()
   const publishedDesigns = await getPublishedDesigns()
   const design = publishedDesigns.find((design) => {
     const page = getPageByFileId(pages, design.data.detailsPage?.id)
-    return `${sanitizeSlug(page.data.slug)}/${sanitizeSlug(design.data.slug)}` === slug
+    return `${sanitizePermalink(page.data.permalink)}/${sanitizePermalink(design.data.permalink)}` === permalink
   })
   if (!design)
-    throw new Error(`Missing or invalid design entry for slug: ${slug}`)
+    throw new Error(`Missing or invalid design entry for permalink: ${permalink}`)
   return design
 }
 

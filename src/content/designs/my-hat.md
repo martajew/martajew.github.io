@@ -1,8 +1,8 @@
 ---
 title: My Hat
-slug: my-pretty-hat
+permalink: my-pretty-hat
 sortDate: 2026-02-10
-detailsPage: design
+detailsPage: design-details
 client: ACME
 category: UI/UX Design
 services: Crochet

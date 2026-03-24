@@ -1,6 +1,6 @@
 ---
 title: Contact
-slug: contact
+permalink: contact
 comment: ''
 blocks:
   - type: intro_block

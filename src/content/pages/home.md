@@ -1,6 +1,6 @@
 ---
 title: Home
-slug: home
+permalink: home
 comment: Landing page
 blocks:
   - type: hero_block

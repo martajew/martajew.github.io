@@ -1,6 +1,6 @@
 ---
 title: Design
-slug: design
+permalink: designs
 comment: Display selected design details
 blocks:
   - type: design_details_block

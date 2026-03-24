@@ -1,6 +1,6 @@
 ---
 title: Designs
-slug: designs
+permalink: designs
 comment: Browse all published designs
 blocks:
   - type: all_designs_block

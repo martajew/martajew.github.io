@@ -6,10 +6,10 @@ import ImageContainer from '../elements/ImageContainer.astro'
 import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
 import RichText from '../elements/RichText.astro'
-import { getDesignBySlug } from '../../lib/content.ts'
+import { getDesignByPermalink } from '../../lib/content.ts'
 
 const block = Astro.props.block as PageBlocksMap['design_details_block']
-const designEntry = await getDesignBySlug(Astro.params.slug)
+const designEntry = await getDesignByPermalink(Astro.params.permalink)
 const design = designEntry.data
 const body = designEntry.body
 const details = [

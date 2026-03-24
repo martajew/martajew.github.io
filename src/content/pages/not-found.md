@@ -1,6 +1,6 @@
 ---
 title: Page Not Found
-slug: not-found
+permalink: not-found
 comment: Display as 404 page
 blocks:
   - type: intro_block

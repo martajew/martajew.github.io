@@ -1,8 +1,8 @@
 ---
 title: Nourish Restaurant
-slug: nourish-restaurant
+permalink: nourish-restaurant
 sortDate: 2026-03-20
-detailsPage: design
+detailsPage: design-details
 client: Nourish Restaurant Group
 category: Art Direction
 services: Art Direction, Digital Campaign, Brand Activation

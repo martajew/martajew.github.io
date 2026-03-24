@@ -1,6 +1,6 @@
 ---
 title: About
-slug: about
+permalink: about
 comment: ''
 blocks:
   - type: callout_block

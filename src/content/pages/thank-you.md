@@ -1,6 +1,6 @@
 ---
 title: Thank You
-slug: thank-you
+permalink: thank-you
 comment: Display after purchase
 blocks:
   - type: intro_block
