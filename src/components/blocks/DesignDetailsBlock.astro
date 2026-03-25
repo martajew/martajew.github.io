@@ -39,10 +39,10 @@ const details = [
       ))
     }
   </div>
-  <Link variant={'button'} href={design.paymentLink ?? '#'}>{block.paymentButtonLabel}</Link>
   <div class="md:max-w-3xl text-base-900">
     <RichText variant={'xl'} content={design.description} />
   </div>
+  <Link variant={'button'} href={design.paymentLink ?? '#'}>{block.paymentButtonLabel}</Link>
   <div class="flex md:flex-row flex-col gap-7">
     <div>
       <ImageContainer src={design.imageTwo} alt={design.title} />
