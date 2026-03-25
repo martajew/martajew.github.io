@@ -30,7 +30,7 @@ const block = Astro.props.block as PageBlocksMap['hero_block']
         {block.body && <RichText variant={'sm'} content={block.body} />}
       </div>
     </Container>
-    <Container class="h-full md:h-[500px] flex-1">
+    <Container class="h-full md:h-125 flex-1">
       <ImageContainer src={block.image} alt={block.name} />
     </Container>
   </Container>

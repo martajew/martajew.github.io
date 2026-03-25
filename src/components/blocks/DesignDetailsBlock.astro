@@ -22,7 +22,7 @@ const details = [
 
 <Container variant={'xl'} aria-label="Design Details" class="items-center">
   <Heading tagName="h1" tagSize="h1" class="text-center">{design.title}</Heading>
-  <div class="w-full md:h-[600px] h-[300px]">
+  <div class="w-full md:h-150 h-75">
     <ImageContainer src={design.featuredImage} alt={design.title} />
   </div>
   <div class="flex flex-col gap-7 md:grid md:grid-cols-4">
@@ -54,7 +54,7 @@ const details = [
   <article class="md:max-w-3xl flex flex-col gap-4 text-base-900">
     <RichText variant={'sm'} content={body} />
   </article>
-  <div class="w-full md:h-[600px] h-[300px]">
+  <div class="w-full md:h-150 h-75">
     <ImageContainer src={design.imageFour} alt={design.title} />
   </div>
   <Link variant={'button'} href={design.paymentLink ?? '#'}>{block.paymentButtonLabel}</Link>
