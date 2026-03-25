@@ -112,7 +112,7 @@ const designs = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string().optional(),
     permalink: z.string().optional(),
-    sortDate: z.coerce.date().optional(),
+    sortDate: z.date().optional(),
     client: z.string().optional(),
     detailsPage: reference('pages').optional(),
     category: z.string().optional(),
@@ -135,7 +135,9 @@ const settings = defineCollection({
       section: z.literal('layout'),
       mainPageTitle: z.string().optional(),
       fontSansFamily: z.string().optional(),
+      fontSansScale: z.number().optional(),
       fontMonoFamily: z.string().optional(),
+      fontMonoScale: z.number().optional(),
       primaryColor: z.string().optional(), // --color-base-900
       secondaryColor: z.string().optional(), // --color-base-700
       contrastColor: z.string().optional(), // --color-base-100

@@ -1,8 +1,10 @@
 ---
 section: layout
 mainPageTitle: Mania's Shop
-fontSansFamily: Road Rage
-fontMonoFamily: JetBrains Mono
+fontSansFamily: Lobster
+fontSansScale: 0.7
+fontMonoFamily: Merriweather Sans
+fontMonoScale: 1.1
 primaryColor: '#1025c69c'
 secondaryColor: '#ff0000ad'
 contrastColor: '#ffffffcd'

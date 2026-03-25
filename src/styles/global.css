@@ -9,21 +9,37 @@
 
   /* FONTS */
   --font-sans: system-ui, sans-serif;
+  --font-sans-scale: 1;
   --font-mono: ui-monospace, monospace;
+  --font-mono-scale: 1;
 
-  /* TEXT SIZES */
-  --text-216: 13.5rem;
-  --text-128: 8rem;
-  --text-96: 6rem;
-  --text-80: 5rem;
-  --text-64: 4rem;
-  --text-48: 3rem;
-  --text-40: 2.5rem;
-  --text-32: 2rem;
-  --text-24: 1.5rem;
-  --text-20: 1.25rem;
-  --text-16: 1rem;
-  --text-12: 0.75rem;
+  /* TEXT SIZES (base) */
+  --text-216-base: 13.5rem;
+  --text-128-base: 8rem;
+  --text-96-base: 6rem;
+  --text-80-base: 5rem;
+  --text-64-base: 4rem;
+  --text-48-base: 3rem;
+  --text-40-base: 2.5rem;
+  --text-32-base: 2rem;
+  --text-24-base: 1.5rem;
+  --text-20-base: 1.25rem;
+  --text-16-base: 1rem;
+  --text-12-base: 0.75rem;
+
+  /* Default text tokens (no scaling at root) */
+  --text-216: var(--text-216-base);
+  --text-128: var(--text-128-base);
+  --text-96: var(--text-96-base);
+  --text-80: var(--text-80-base);
+  --text-64: var(--text-64-base);
+  --text-48: var(--text-48-base);
+  --text-40: var(--text-40-base);
+  --text-32: var(--text-32-base);
+  --text-24: var(--text-24-base);
+  --text-20: var(--text-20-base);
+  --text-16: var(--text-16-base);
+  --text-12: var(--text-12-base);
 
   /* BREAKPOINTS */
   --breakpoint-xsm: 320px;
@@ -31,4 +47,35 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1200px;
   --breakpoint-xl: 1440px;
+}
+
+/* Family-specific scaling: no component changes required */
+:where(.font-sans) {
+  --text-216: calc(var(--text-216-base) * var(--font-sans-scale, 1));
+  --text-128: calc(var(--text-128-base) * var(--font-sans-scale, 1));
+  --text-96: calc(var(--text-96-base) * var(--font-sans-scale, 1));
+  --text-80: calc(var(--text-80-base) * var(--font-sans-scale, 1));
+  --text-64: calc(var(--text-64-base) * var(--font-sans-scale, 1));
+  --text-48: calc(var(--text-48-base) * var(--font-sans-scale, 1));
+  --text-40: calc(var(--text-40-base) * var(--font-sans-scale, 1));
+  --text-32: calc(var(--text-32-base) * var(--font-sans-scale, 1));
+  --text-24: calc(var(--text-24-base) * var(--font-sans-scale, 1));
+  --text-20: calc(var(--text-20-base) * var(--font-sans-scale, 1));
+  --text-16: calc(var(--text-16-base) * var(--font-sans-scale, 1));
+  --text-12: calc(var(--text-12-base) * var(--font-sans-scale, 1));
+}
+
+:where(.font-mono) {
+  --text-216: calc(var(--text-216-base) * var(--font-mono-scale, 1));
+  --text-128: calc(var(--text-128-base) * var(--font-mono-scale, 1));
+  --text-96: calc(var(--text-96-base) * var(--font-mono-scale, 1));
+  --text-80: calc(var(--text-80-base) * var(--font-mono-scale, 1));
+  --text-64: calc(var(--text-64-base) * var(--font-mono-scale, 1));
+  --text-48: calc(var(--text-48-base) * var(--font-mono-scale, 1));
+  --text-40: calc(var(--text-40-base) * var(--font-mono-scale, 1));
+  --text-32: calc(var(--text-32-base) * var(--font-mono-scale, 1));
+  --text-24: calc(var(--text-24-base) * var(--font-mono-scale, 1));
+  --text-20: calc(var(--text-20-base) * var(--font-mono-scale, 1));
+  --text-16: calc(var(--text-16-base) * var(--font-mono-scale, 1));
+  --text-12: calc(var(--text-12-base) * var(--font-mono-scale, 1));
 }

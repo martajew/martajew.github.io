@@ -9,11 +9,18 @@ const MONO_WEIGHTS = [400, 600, 700] // fixed defaults
 const SANS_FALLBACK = 'system-ui, sans-serif'
 const MONO_FALLBACK = 'ui-monospace, monospace'
 
+const DEFAULT_FONT_SCALE = 1
 const NORMALIZE_REGEX = /\s+/g
 
 function sanitizeFamily(input: string | undefined, fallback: string): string {
   const value = input?.trim()
   return value && value.length > 0 ? value : fallback
+}
+
+function sanitizeScale(input: number | undefined): number {
+  if (typeof input !== 'number' || Number.isNaN(input))
+    return DEFAULT_FONT_SCALE
+  return input
 }
 
 function familyParam(family: string, weights: number[]): string {
@@ -33,7 +40,9 @@ export function getGoogleFontConfig(layout: AllSettingsMap['layout']) {
 
   return {
     href: `https://fonts.googleapis.com/css2?${familyParams}&display=swap`,
-    sansVar: `"${sansFamily}", ${SANS_FALLBACK}`,
-    monoVar: `"${monoFamily}", ${MONO_FALLBACK}`,
+    sansFamily: `"${sansFamily}", ${SANS_FALLBACK}`,
+    sansScale: sanitizeScale(layout.fontSansScale),
+    monoFamily: `"${monoFamily}", ${MONO_FALLBACK}`,
+    monoScale: sanitizeScale(layout.fontMonoScale),
   }
 }

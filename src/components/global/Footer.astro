@@ -13,7 +13,7 @@ const { layout, navigation } = await getAllSettings()
   <div class="flex flex-col gap-10 md:flex-row">
     <div class="flex-1 md:text-left text-center">
       <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{navigation.socialsHeading}</Heading>
-      <ul>
+      <ul class="space-y-2">
         {
           navigation.socialsLinks.map((social) => (
             <li>
@@ -27,7 +27,7 @@ const { layout, navigation } = await getAllSettings()
     </div>
     <div class="flex-1 md:text-right text-center">
       <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">{navigation.navigationHeading}</Heading>
-      <ul>
+      <ul class="space-y-2">
         {
           navigation.navigationLinks.map((navLink) => (
             <li>

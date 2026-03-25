@@ -170,7 +170,9 @@ collections:
           - {label: Section, name: section, widget: hidden, default: layout}
           - {label: Main Page Title, name: mainPageTitle, widget: string}
           - {label: Sans Font Family (Google), name: fontSansFamily, widget: string, required: false, comment: 'Example: Road Rage (search more on [Google Fonts](https://fonts.google.com/))'}
+          - {label: Sans Font Scale, name: fontSansScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, comment: '1 = unchanged. Lower shrinks, higher enlarges.'}
           - {label: Mono Font Family (Google), name: fontMonoFamily, widget: string, required: false, comment: 'Example: JetBrains Mono (search more on [Google Fonts](https://fonts.google.com/))'}
+          - {label: Mono Font Scale, name: fontMonoScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, comment: '1 = unchanged. Lower shrinks, higher enlarges.'}
           - {label: Primary Color, name: primaryColor, widget: color, enableAlpha: true, allowInput: true, comment: 'Primary text, headings, borders, strong dark UI'}
           - {label: Secondary Color, name: secondaryColor, widget: color, enableAlpha: true, allowInput: true, comment: Muted/metadata text and hover states}
           - {label: Contrast Color, name: contrastColor, widget: color, enableAlpha: true, allowInput: true, comment: Light contrast for text-on-dark and light surfaces}

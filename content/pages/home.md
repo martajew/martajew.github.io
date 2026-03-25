@@ -8,10 +8,10 @@ blocks:
     body: |-
       You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns.
       Happy crocheting <3
-    button: See my designs
-    link: /designs
-    intro: Thank you for your interest in my page!!
-    name: Mania Artajew
+    button: About me
+    link: /about
+    intro: Thank you for your interest in my page!
+    name: crochet patterns
     image: /content/media/pages/mania-main-photo.png
   - type: featured_designs_block
     heading: Featured Designs

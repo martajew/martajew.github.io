@@ -17,8 +17,10 @@ const fonts = getGoogleFontConfig(layout)
 
 const styleRules = [
   layout.backgroundImage ? `background-image: url(${layout.backgroundImage.src})` : undefined,
-  fonts.sansVar ? `--font-sans: ${fonts.sansVar}` : undefined,
-  fonts.monoVar ? `--font-mono: ${fonts.monoVar}` : undefined,
+  fonts.sansFamily ? `--font-sans: ${fonts.sansFamily}` : undefined,
+  fonts.sansScale ? `--font-sans-scale: ${fonts.sansScale}` : undefined,
+  fonts.monoFamily ? `--font-mono: ${fonts.monoFamily}` : undefined,
+  fonts.monoScale ? `--font-mono-scale: ${fonts.monoScale}` : undefined,
   layout.primaryColor ? `--color-base-900: ${layout.primaryColor}` : undefined,
   layout.secondaryColor ? `--color-base-700: ${layout.secondaryColor}` : undefined,
   layout.contrastColor ? `--color-base-100: ${layout.contrastColor}` : undefined,
