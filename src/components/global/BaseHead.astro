@@ -1,16 +1,16 @@
 ---
-import { getImage } from 'astro:assets'
 import { getAllSettings } from '../../lib/content.ts'
 import { getGoogleFontConfig } from '../../lib/fonts'
+import { optimizeImage } from '../../lib/images'
 
 const { title } = Astro.props
 const { layout } = await getAllSettings()
 const isHomePage = Astro.url.pathname === '/'
 const pageTitle = isHomePage ? layout.mainPageTitle : `${layout.mainPageTitle} - ${title}`
 const { href: googleFontsHref } = getGoogleFontConfig(layout)
-const favicon = layout.faviconImage
-  ? await getImage({ src: layout.faviconImage, width: 180, height: 180, format: 'png' })
-  : undefined
+const favicon16 = await optimizeImage(layout.faviconImage, { maxWidth: 16, format: 'png' })
+const favicon32 = await optimizeImage(layout.faviconImage, { maxWidth: 32, format: 'png' })
+const apple180 = await optimizeImage(layout.faviconImage, { maxWidth: 180, format: 'png' })
 ---
 
 <head>
@@ -22,7 +22,8 @@ const favicon = layout.faviconImage
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href={googleFontsHref} />
-  {favicon && <link rel="icon" type="image/png" href={favicon.src} />}
-  {favicon && <link rel="apple-touch-icon" href={favicon.src} />}
+  {favicon16 && <link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />}
+  {favicon32 && <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />}
+  {apple180 && <link rel="apple-touch-icon" sizes="180x180" href={apple180.src} />}
   <title>{pageTitle}</title>
 </head>

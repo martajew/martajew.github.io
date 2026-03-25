@@ -1,13 +1,16 @@
 ---
-import { Image } from 'astro:assets'
 import Text from '../elements/Text.astro'
 import Heading from '../elements/Heading.astro'
 import SymbolImage from './SymbolImage.astro'
+import OptimizedImage from './OptimizedImage.astro'
 import type { DesignEntry } from '../../lib/content'
 import { getAllPages, getPageByFileId, sanitizePermalink, getAllSettings } from '../../lib/content'
+import { optimizeImage } from '../../lib/images'
 
 // props
 const { layout } = await getAllSettings()
+const maxWidth = 400
+const designTileImage = await optimizeImage(layout.designTileImage, { maxWidth })
 const design = Astro.props.design as DesignEntry
 const pages = await getAllPages()
 const page = getPageByFileId(pages, design.data.detailsPage?.id)
@@ -23,21 +26,21 @@ const page = getPageByFileId(pages, design.data.detailsPage?.id)
         <SymbolImage class="bg-base-900" />
       </div>
       {
-        layout.designTileImage && (
+        designTileImage && (
           <div
-            style={`background-image: url(${layout.designTileImage.src})`}
+            style={`background-image: url(${designTileImage.src})`}
             class="absolute inset-0 bg-cover opacity-40 z-30"
           />
         )
       }
       {
         design.data.featuredImage && (
-          <Image
+          <OptimizedImage
             src={design.data.featuredImage}
             alt={design.data.title ?? 'Design'}
             class="relative w-full h-full object-cover z-20"
             loading="lazy"
-            width={400}
+            width={maxWidth}
           />
         )
       }

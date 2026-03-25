@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata, ImageOutputFormat, ImageQuality } from 'astro'
+import { CMS_IMAGE_PRESET, getResponsiveWidths } from '../../lib/images'
+
+type Props = {
+  src?: ImageMetadata
+  alt?: string
+  class?: string
+  loading?: 'eager' | 'lazy'
+  width?: number
+  height?: number
+  widths?: number[]
+  sizes?: string
+  format?: ImageOutputFormat
+  quality?: ImageQuality
+} & Record<string, unknown>
+
+const {
+  src,
+  alt = '',
+  widths,
+  sizes = CMS_IMAGE_PRESET.sizes,
+  format = CMS_IMAGE_PRESET.format,
+  quality = CMS_IMAGE_PRESET.quality,
+  ...props
+} = Astro.props as Props
+
+const responsiveWidths = widths ?? getResponsiveWidths(src)
+---
+
+{
+  src && (
+    <Image src={src} alt={alt} widths={responsiveWidths} sizes={sizes} format={format} quality={quality} {...props} />
+  )
+}

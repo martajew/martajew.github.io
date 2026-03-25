@@ -9,14 +9,16 @@ import Wrapper from '../components/global/Wrapper.astro'
 import NavBar from '../components/global/Navigation.astro'
 import Footer from '../components/global/Footer.astro'
 import { getAllSettings } from '../lib/content'
+import { optimizeImage } from '../lib/images'
 
 // props
 const { title } = Astro.props
 const { layout } = await getAllSettings()
+const backgroundImage = await optimizeImage(layout.backgroundImage)
 const fonts = getGoogleFontConfig(layout)
 
 const styleRules = [
-  layout.backgroundImage ? `background-image: url(${layout.backgroundImage.src})` : undefined,
+  backgroundImage ? `background-image: url(${backgroundImage.src})` : undefined,
   fonts.sansFamily ? `--font-sans: ${fonts.sansFamily}` : undefined,
   fonts.sansScale ? `--font-sans-scale: ${fonts.sansScale}` : undefined,
   fonts.monoFamily ? `--font-mono: ${fonts.monoFamily}` : undefined,

@@ -1,18 +1,20 @@
 ---
 import { getAllSettings } from '../../lib/content'
+import { optimizeImage } from '../../lib/images'
 
 const { layout } = await getAllSettings()
+const symbolImage = await optimizeImage(layout.symbolImage, { maxWidth: 128 })
 const { class: className } = Astro.props
 ---
 
 {
-  layout.symbolImage && (
+  symbolImage && (
     <span
       class:list={['block shrink-0 h-5 self-center', className]}
       style={`
-        aspect-ratio: ${layout.symbolImage.width} / ${layout.symbolImage.height};
-        -webkit-mask: url(${layout.symbolImage.src}) center / contain no-repeat;
-        mask: url(${layout.symbolImage.src}) center / contain no-repeat;
+        aspect-ratio: ${symbolImage.width} / ${symbolImage.height};
+        -webkit-mask: url(${symbolImage.src}) center / contain no-repeat;
+        mask: url(${symbolImage.src}) center / contain no-repeat;
       `}
       aria-hidden="true"
     />
