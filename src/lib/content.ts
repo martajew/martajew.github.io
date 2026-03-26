@@ -8,7 +8,10 @@ export type PageBlock = PageData['blocks'][number]
 export type PageBlockType = PageBlock['type']
 export type PageBlocksMap = { [T in PageBlockType]: Extract<PageBlock, { type: T }> }
 
-export type DesignEntry = CollectionEntry<'designs'>
+export type DesignEntry = CollectionEntry<'designs'> & {
+  getDetailsPage: () => PageEntry
+  getDetailsPermalink: () => string
+}
 
 export type SettingsEntry = CollectionEntry<'settings'>
 export type SettingsData = SettingsEntry['data']
@@ -19,10 +22,9 @@ const MULTI_SLASH_REGEX = /\/+/g
 const EDGE_SLASH_REGEX = /^\/|\/$/g
 
 export const getPagePaths = (async () => {
-  const pages = await getAllPages()
-  const skipBlocksTypes: PageBlockType[] = ['design_details_block']
-  return pages
-    .filter(page => !page.data.blocks.some(block => skipBlocksTypes.includes(block.type)))
+  const skipBlockTypes: PageBlockType[] = ['design_details_block']
+  return (await getAllPages())
+    .filter(page => !page.data.blocks.some(block => skipBlockTypes.includes(block.type)))
     .map((page) => {
       const permalink = sanitizePermalink(page.data.permalink)
       const title = page.data.title
@@ -31,11 +33,9 @@ export const getPagePaths = (async () => {
 }) satisfies GetStaticPaths
 
 export const getDesignPaths = (async () => {
-  const pages = await getAllPages()
-  const designs = await getPublishedDesigns()
-  return designs.map((design) => {
-    const page = getPageByFileId(pages, design.data.detailsPage?.id)
-    const permalink = `${sanitizePermalink(page.data.permalink)}/${sanitizePermalink(design.data.permalink)}`
+  return (await getPublishedDesigns()).map((design) => {
+    const page = design.getDetailsPage()
+    const permalink = design.getDetailsPermalink()
     const title = `${page.data.title} - ${design.data.title}`
     return { params: { permalink }, props: { page, title } }
   })
@@ -58,33 +58,34 @@ export function getPageByFileId(pages: PageEntry[], fileId: string | undefined):
 }
 
 export async function getAllDesings(): Promise<DesignEntry[]> {
-  return await getCollection('designs')
+  const pages = await getAllPages()
+  return (await getCollection('designs'))
+    .map((design) => {
+      const detailsPage = getPageByFileId(pages, design.data.detailsPage?.id)
+      return {
+        ...design,
+        getDetailsPage: () => detailsPage,
+        getDetailsPermalink: () => `${sanitizePermalink(detailsPage.data.permalink)}/${sanitizePermalink(design.data.permalink)}`,
+      }
+    })
 }
 
 export async function getPublishedDesigns(): Promise<DesignEntry[]> {
-  const designs = await getAllDesings()
-  return designs.filter(design => !design.data.isDraft)
-    .sort((a, b) => (b.data.sortDate?.getTime() ?? 0) - (a.data.sortDate?.getTime() ?? 0))
+  return (await getAllDesings()).filter(design => !design.data.isDraft).sort((a, b) => (b.data.sortDate?.getTime() ?? 0) - (a.data.sortDate?.getTime() ?? 0))
 }
 
 export async function getFeaturedDesigns(): Promise<DesignEntry[]> {
-  const publishedDesigns = await getPublishedDesigns()
-  return publishedDesigns.filter(design => design.data.isFeatured)
+  return (await getPublishedDesigns()).filter(design => design.data.isFeatured)
 }
 
 export async function getDesignByPermalink(permalink: string | undefined): Promise<DesignEntry> {
-  const pages = await getAllPages()
-  const publishedDesigns = await getPublishedDesigns()
-  const design = publishedDesigns.find((design) => {
-    const page = getPageByFileId(pages, design.data.detailsPage?.id)
-    return `${sanitizePermalink(page.data.permalink)}/${sanitizePermalink(design.data.permalink)}` === permalink
-  })
+  const design = (await getPublishedDesigns()).find(design => design.getDetailsPermalink() === permalink)
   if (!design)
-    throw new Error(`Missing or invalid design entry for permalink: ${permalink}`)
+    throw new Error(`Missing or invalid published design entry for permalink: ${permalink}`)
   return design
 }
 
-// @fixme use discriminator instead
+// @fixme use discriminator instead, or getEntry
 export async function getAllSettings(): Promise<AllSettingsMap> {
   const settings = await getCollection('settings')
   const layoutSettings = settings.find(settings => settings.data.section === 'layout')
