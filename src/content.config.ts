@@ -3,7 +3,7 @@ import { z } from 'astro/zod'
 import { defineCollection, reference } from 'astro:content'
 
 const pages = defineCollection({
-  loader: glob({ pattern: 'content/pages/*.md' }),
+  loader: glob({ base: './content/pages', pattern: '**/*.md' }),
   schema: ({ image }) => {
     const headingBlock = z.object({
       type: z.literal('heading_block'),
@@ -28,7 +28,7 @@ const pages = defineCollection({
       name: z.string().optional(),
       lead: z.string().optional(),
       body: z.string().optional(),
-      image: image().optional(),
+      image: z.optional(image()),
     })
 
     const calloutBlock = z.object({
@@ -38,7 +38,7 @@ const pages = defineCollection({
       body: z.string().optional(),
       button: z.string().optional(),
       link: z.string().optional(),
-      image: image().optional(),
+      image: z.optional(image()),
     })
 
     const accordionBlock = z.object({
@@ -108,7 +108,7 @@ const pages = defineCollection({
 })
 
 const designs = defineCollection({
-  loader: glob({ pattern: 'content/designs/*.md' }),
+  loader: glob({ base: './content/designs', pattern: '**/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
     permalink: z.string().optional(),
@@ -117,10 +117,10 @@ const designs = defineCollection({
     detailsPage: reference('pages').optional(),
     category: z.string().optional(),
     services: z.string().optional(),
-    featuredImage: image().optional(),
-    imageTwo: image().optional(),
-    imageThree: image().optional(),
-    imageFour: image().optional(),
+    featuredImage: z.optional(image()),
+    imageTwo: z.optional(image()),
+    imageThree: z.optional(image()),
+    imageFour: z.optional(image()),
     paymentLink: z.url().optional(),
     description: z.string().optional(),
     isFeatured: z.boolean().optional(),
@@ -129,7 +129,7 @@ const designs = defineCollection({
 })
 
 const settings = defineCollection({
-  loader: glob({ pattern: 'content/settings/*.md' }),
+  loader: glob({ base: './content/settings', pattern: '**/*.md' }),
   schema: ({ image }) => {
     const layout = z.object({
       section: z.literal('layout'),
@@ -141,11 +141,11 @@ const settings = defineCollection({
       primaryColor: z.string().optional(), // --color-base-900
       secondaryColor: z.string().optional(), // --color-base-700
       contrastColor: z.string().optional(), // --color-base-100
-      faviconImage: image().optional(),
-      backgroundImage: image().optional(),
-      designTileImage: image().optional(),
-      decoratorImage: image().optional(),
-      symbolImage: image().optional(),
+      faviconImage: z.optional(image()),
+      backgroundImage: z.optional(image()),
+      designTileImage: z.optional(image()),
+      decoratorImage: z.optional(image()),
+      symbolImage: z.optional(image()),
       copyright: z.string().optional(),
     })
 
