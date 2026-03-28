@@ -1,7 +1,6 @@
 ---
 // stylesheet
 import '../styles/global.css'
-import { getGoogleFontConfig } from '../lib/fonts'
 
 // components
 import BaseHead from '../components/global/BaseHead.astro'
@@ -15,14 +14,11 @@ import { optimizeImage } from '../lib/images'
 const { title } = Astro.props
 const { layout } = await getAllSettings()
 const backgroundImage = await optimizeImage(layout.backgroundImage)
-const fonts = getGoogleFontConfig(layout)
 
 const styleRules = [
   backgroundImage ? `background-image: url(${backgroundImage.src})` : undefined,
-  fonts.sansFamily ? `--font-sans: ${fonts.sansFamily}` : undefined,
-  fonts.sansScale ? `--font-sans-scale: ${fonts.sansScale}` : undefined,
-  fonts.monoFamily ? `--font-mono: ${fonts.monoFamily}` : undefined,
-  fonts.monoScale ? `--font-mono-scale: ${fonts.monoScale}` : undefined,
+  layout.fontSansScale ? `--font-sans-scale: ${layout.fontSansScale}` : undefined,
+  layout.fontMonoScale ? `--font-mono-scale: ${layout.fontMonoScale}` : undefined,
   layout.primaryColor ? `--color-base-900: ${layout.primaryColor}` : undefined,
   layout.secondaryColor ? `--color-base-700: ${layout.secondaryColor}` : undefined,
   layout.contrastColor ? `--color-base-100: ${layout.contrastColor}` : undefined,

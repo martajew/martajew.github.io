@@ -2,9 +2,9 @@
 section: layout
 mainPageTitle: Mania's Shop
 fontSansFamily: Lobster
-fontSansScale: 0.7
+fontSansScale: 0.4
 fontMonoFamily: Merriweather Sans
-fontMonoScale: 1.1
+fontMonoScale: 0.65
 primaryColor: '#1025c69c'
 secondaryColor: '#ff0000ad'
 contrastColor: '#ffffffcd'
