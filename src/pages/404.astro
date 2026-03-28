@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getAllSettings, getPageByReference, sanitizePermalink, normalizePermalink } from '../lib/content.ts'
+import { getAllSettings, getPageByReference } from '../lib/content.ts'
 import PageBlocks from '../components/pages/PageBlocks.astro'
 
 const { navigation } = await getAllSettings()
 const page = await getPageByReference(navigation.notFoundPage)
 
-if (page && sanitizePermalink(page.data.permalink)) {
-  const permalink = normalizePermalink(page.data.permalink)
+if (page?.getSanitizedPermalink()) {
+  const permalink = page.getNormalizedPermalink()
   if (permalink === undefined) return Astro.rewrite('/')
   return Astro.rewrite(permalink)
 }
