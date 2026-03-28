@@ -3,9 +3,10 @@ import process from 'node:process'
 import { fontProviders } from 'astro/config'
 import matter from 'gray-matter'
 
-export const DEFAULT_SANS_FAMILY = 'Road Rage'
-export const DEFAULT_MONO_FAMILY = 'JetBrains Mono'
-const LAYOUT_SETTINGS_PATH = path.join(process.cwd(), 'content/settings/layout.md')
+const DEFAULT_SANS_FAMILY = 'Road Rage'
+const DEFAULT_MONO_FAMILY = 'JetBrains Mono'
+const DEFAULT_WEIGHTS: [number, ...number[]] = [400, 700]
+const LAYOUT_SETTINGS_PATH = path.join(process.cwd(), 'content', 'settings', 'layout.md')
 
 function sanitizeFamily(input: string | undefined, fallback: string): string {
   const value = input?.trim()
@@ -37,12 +38,14 @@ export function getFonts() {
       provider: fontProviders.google(),
       name: families.sans,
       cssVariable: '--font-sans',
+      weights: DEFAULT_WEIGHTS,
       fallbacks: ['ui-sans-serif', 'sans-serif'],
     },
     {
       provider: fontProviders.google(),
       name: families.mono,
       cssVariable: '--font-mono',
+      weights: DEFAULT_WEIGHTS,
       fallbacks: ['ui-monospace', 'monospace'],
     },
   ]
