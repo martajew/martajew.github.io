@@ -1,5 +1,6 @@
 ---
 section: navigation
+notFoundPage: not-found
 navigationHeading: Navigation
 navigationLinks:
   - title: Home

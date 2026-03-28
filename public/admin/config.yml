@@ -188,6 +188,12 @@ collections:
         icon: menu
         fields:
           - {label: Section, name: section, widget: hidden, default: navigation}
+          - label: 404 Page
+            name: notFoundPage
+            widget: relation
+            collection: pages
+            display_fields: ['{{title}} ({{permalink}}) {{comment}}']
+            comment: Choose which existing page is used for 404 responses.
           - {label: Navigation Heading, name: navigationHeading, widget: string, comment: Used in page footer.}
           - label: Navigation Links
             name: navigationLinks

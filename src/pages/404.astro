@@ -1,3 +1,26 @@
 ---
-return Astro.rewrite('not-found')
+import Layout from '../layouts/Layout.astro'
+import { getAllSettings, getPageByReference, sanitizePermalink, normalizePermalink } from '../lib/content.ts'
+import PageBlocks from '../components/pages/PageBlocks.astro'
+
+const { navigation } = await getAllSettings()
+const page = await getPageByReference(navigation.notFoundPage)
+
+if (page && sanitizePermalink(page.data.permalink)) {
+  const permalink = normalizePermalink(page.data.permalink)
+  if (permalink === undefined) return Astro.rewrite('/')
+  return Astro.rewrite(permalink)
+}
+
+const block = {
+  type: 'intro_block',
+  heading: 'Page Not Found fall',
+  lead: 'Oops! It seems the page you are trying to access does not exist!',
+  button: 'Go back to the homepage',
+  link: '/',
+}
 ---
+
+<Layout title={block.heading}>
+  <PageBlocks blocks={[block]} />
+</Layout>

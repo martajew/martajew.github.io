@@ -23,6 +23,7 @@ const REGEX_MULTI_SLASH = /\/+/g
 const REGEX_EDGE_SLASH = /^\/|\/$/g
 
 export async function getPagePaths() {
+  // @fixme move to model/decorator
   const skipBlockTypes: PageBlockType[] = ['design_details_block']
   return (await getAllPages())
     .filter(page => !page.data.blocks.some(block => skipBlockTypes.includes(block.type)))
@@ -43,11 +44,13 @@ export async function getDesignPaths() {
     })
 }
 
-function sanitizePermalink(permalink: string | undefined): string | undefined {
+// @fixme move to model/decorator
+export function sanitizePermalink(permalink: string | undefined): string | undefined {
   return permalink?.replace(REGEX_MULTI_SLASH, '/').replace(REGEX_EDGE_SLASH, '')
 }
 
-function normalizePermalink(permalink: string | undefined): string | undefined {
+// @fixme move to model/decorator
+export function normalizePermalink(permalink: string | undefined): string | undefined {
   return sanitizePermalink(permalink) === PERMALINK_HOME ? undefined : sanitizePermalink(permalink)
 }
 
@@ -56,7 +59,7 @@ export async function getAllPages(): Promise<PageEntry[]> {
     .filter(page => !!sanitizePermalink(page.data.permalink))
 }
 
-async function getPageByReference(reference: PageReferenceEntry | undefined): Promise<PageEntry | undefined> {
+export async function getPageByReference(reference: PageReferenceEntry | undefined): Promise<PageEntry | undefined> {
   return reference ? await getEntry(reference) : undefined
 }
 
