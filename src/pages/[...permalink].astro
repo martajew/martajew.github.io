@@ -14,5 +14,5 @@ const { title, page } = Astro.props
 ---
 
 <Layout title={title}>
-  <PageBlocks blocks={page.data.blocks} />
+  <PageBlocks blocks={page.entry.data.blocks} />
 </Layout>

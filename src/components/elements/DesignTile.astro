@@ -3,7 +3,7 @@ import Text from '../elements/Text.astro'
 import Heading from '../elements/Heading.astro'
 import SymbolImage from './SymbolImage.astro'
 import OptimizedImage from './OptimizedImage.astro'
-import type { DesignEntry } from '../../lib/content'
+import type { DesignModel } from '../../lib/models'
 import { getAllSettings } from '../../lib/content'
 import { optimizeImage } from '../../lib/images'
 
@@ -11,7 +11,7 @@ import { optimizeImage } from '../../lib/images'
 const { layout } = await getAllSettings()
 const maxWidth = 400
 const designTileImage = await optimizeImage(layout.designTileImage, { maxWidth })
-const design = Astro.props.design as DesignEntry
+const design = Astro.props.design as DesignModel
 const detailsPermalink = design.getDetailsPermalink()
 ---
 
@@ -21,7 +21,7 @@ const detailsPermalink = design.getDetailsPermalink()
       class="relative xl:w-87.5 xl:h-87.5 lg:w-75 lg:h-75 md:w-100 md:h-100 sm:w-62.5 sm:h-62.5 w-50 h-50 overflow-visible mb-4"
     >
       <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
-        <Text variant={'lg'} class="text-base-900">{design.data.category}</Text>
+        <Text variant={'lg'} class="text-base-900">{design.entry.data.category}</Text>
         <SymbolImage class="bg-base-900" />
       </div>
       {
@@ -33,10 +33,10 @@ const detailsPermalink = design.getDetailsPermalink()
         )
       }
       {
-        design.data.featuredImage && (
+        design.entry.data.featuredImage && (
           <OptimizedImage
-            src={design.data.featuredImage}
-            alt={design.data.title ?? 'Design'}
+            src={design.entry.data.featuredImage}
+            alt={design.entry.data.title ?? 'Design'}
             class="relative w-full h-full object-cover z-20"
             loading="lazy"
             width={maxWidth}
@@ -45,6 +45,6 @@ const detailsPermalink = design.getDetailsPermalink()
       }
     </div>
   </a>
-  <Heading tagName="h3" tagSize="h4" class="group-hover:underline">{design.data.title}</Heading>
-  <Text variant={'md'}>{design.data.client}</Text>
+  <Heading tagName="h3" tagSize="h4" class="group-hover:underline">{design.entry.data.title}</Heading>
+  <Text variant={'md'}>{design.entry.data.client}</Text>
 </div>
