@@ -1,9 +1,9 @@
 ---
 // components
 import Link from '../elements/Link.astro'
-import { getAllSettings } from '../../lib/content'
+import { getSettings } from '../../lib/content'
 
-const { navigation } = await getAllSettings()
+const { navigation } = await getSettings()
 ---
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50">

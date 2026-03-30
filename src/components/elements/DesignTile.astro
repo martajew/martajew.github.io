@@ -4,11 +4,11 @@ import Heading from '../elements/Heading.astro'
 import SymbolImage from './SymbolImage.astro'
 import OptimizedImage from './OptimizedImage.astro'
 import type { DesignModel } from '../../lib/models'
-import { getAllSettings } from '../../lib/content'
+import { getSettings } from '../../lib/content'
 import { optimizeImage } from '../../lib/images'
 
 // props
-const { layout } = await getAllSettings()
+const { layout } = await getSettings()
 const maxWidth = 400
 const designTileImage = await optimizeImage(layout.designTileImage, { maxWidth })
 const design = Astro.props.design as DesignModel

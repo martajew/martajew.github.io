@@ -1,15 +1,8 @@
-import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
-import { DesignModel, PageModel } from './models'
-
-export type SettingsCollectionEntry = CollectionEntry<'settings'>
-export type SettingsEntry = SettingsCollectionEntry
-export type SettingsData = SettingsEntry['data']
-export type SettingsSection = SettingsData['section']
-export type AllSettingsMap = { [S in SettingsSection]: Extract<SettingsData, { section: S }> }
+import { DesignModel, PageModel, SettingsModel } from './models'
 
 export async function getPagePaths() {
-  return (await getAllPages())
+  return (await getPages())
     .filter(page => page.isRoutable())
     .map((page) => {
       const permalink = page.getNormalizedPermalink()
@@ -28,13 +21,13 @@ export async function getDesignPaths() {
     })
 }
 
-export async function getAllPages(): Promise<PageModel[]> {
+export async function getPages(): Promise<PageModel[]> {
   return (await getCollection('pages'))
     .map(PageModel.fromEntry)
     .filter(page => page !== undefined)
 }
 
-export async function getAllDesigns(): Promise<DesignModel[]> {
+export async function getDesigns(): Promise<DesignModel[]> {
   const designs = await getCollection('designs')
   const models = await Promise.all(designs.map(DesignModel.fromEntry))
   return models
@@ -43,7 +36,7 @@ export async function getAllDesigns(): Promise<DesignModel[]> {
 }
 
 export async function getPublishedDesigns(): Promise<DesignModel[]> {
-  return (await getAllDesigns()).filter(design => !design.entry.data.isDraft)
+  return (await getDesigns()).filter(design => !design.entry.data.isDraft)
 }
 
 export async function getFeaturedDesigns(): Promise<DesignModel[]> {
@@ -54,9 +47,7 @@ export async function getDesignByPermalink(permalink: string | undefined): Promi
   return (await getPublishedDesigns()).find(design => design.getDetailsPermalink() === permalink)
 }
 
-export async function getAllSettings(): Promise<AllSettingsMap> {
+export async function getSettings(): Promise<SettingsModel> {
   const settings = await getCollection('settings')
-  const bySection: Partial<Record<SettingsSection, SettingsData>> = {}
-  for (const { data } of settings) bySection[data.section] = data
-  return bySection as AllSettingsMap
+  return SettingsModel.fromEntries(settings)
 }

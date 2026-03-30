@@ -7,12 +7,12 @@ import BaseHead from '../components/global/BaseHead.astro'
 import Wrapper from '../components/global/Wrapper.astro'
 import NavBar from '../components/global/Navigation.astro'
 import Footer from '../components/global/Footer.astro'
-import { getAllSettings } from '../lib/content'
+import { getSettings } from '../lib/content'
 import { optimizeImage } from '../lib/images'
 
 // props
 const { title } = Astro.props
-const { layout } = await getAllSettings()
+const { layout } = await getSettings()
 const backgroundImage = await optimizeImage(layout.backgroundImage)
 
 const styleRules = [

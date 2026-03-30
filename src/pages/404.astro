@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getAllSettings } from '../lib/content.ts'
+import { getSettings } from '../lib/content.ts'
 import { PageModel } from '../lib/models'
 import PageBlocks from '../components/pages/PageBlocks.astro'
 
-const { navigation } = await getAllSettings()
+const { navigation } = await getSettings()
 const page = await PageModel.fromReference(navigation.notFoundPage)
 
 if (page?.getSanitizedPermalink()) {

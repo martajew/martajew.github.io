@@ -1,4 +1,5 @@
 export { DesignModel } from './design-model'
 export { PageModel } from './page-model'
-
 export type { PageBlock, PageBlocksMap } from './page-model'
+export { SettingsModel } from './settings-model'
+export type { SettingsMap } from './settings-model'

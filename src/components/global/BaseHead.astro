@@ -1,10 +1,10 @@
 ---
 import { Font } from 'astro:assets'
-import { getAllSettings } from '../../lib/content.ts'
+import { getSettings } from '../../lib/content.ts'
 import { optimizeImage } from '../../lib/images'
 
 const { title } = Astro.props
-const { layout } = await getAllSettings()
+const { layout } = await getSettings()
 const isHomePage = Astro.url.pathname === '/'
 const pageTitle = isHomePage ? layout.mainPageTitle : `${layout.mainPageTitle} - ${title}`
 const favicon16 = await optimizeImage(layout.faviconImage, { maxWidth: 16, format: 'png' })

@@ -4,9 +4,9 @@ import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import Link from '../elements/Link.astro'
 import RichText from '../elements/RichText.astro'
-import { getAllSettings } from '../../lib/content'
+import { getSettings } from '../../lib/content'
 
-const { layout, navigation } = await getAllSettings()
+const { layout, navigation } = await getSettings()
 ---
 
 <Container variant={'xl'} class="mt-32 pb-8">

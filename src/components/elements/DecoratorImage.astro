@@ -1,8 +1,8 @@
 ---
-import { getAllSettings } from '../../lib/content'
+import { getSettings } from '../../lib/content'
 import { optimizeImage } from '../../lib/images'
 
-const { layout } = await getAllSettings()
+const { layout } = await getSettings()
 const decoratorImage = await optimizeImage(layout.decoratorImage, { maxWidth: 128 })
 const { class: className } = Astro.props
 ---
