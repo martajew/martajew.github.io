@@ -1,5 +1,6 @@
 ---
 import type { PageBlocksMap } from '../../lib/models'
+import IntroBlock from './IntroBlock.astro'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import ImageContainer from '../elements/ImageContainer.astro'
@@ -66,13 +67,13 @@ const details = [
       </Link>
     </Container>
   ) : (
-    <Container variant={'xl'} class="items-center">
-      <Heading tagName="h1" tagSize="h1" class="text-center">
-        Not Found
-      </Heading>
-      <Text variant={'sm'} class="text-base-900">
-        Design details were not found for this URL.
-      </Text>
-    </Container>
+    <IntroBlock
+      block={{
+        heading: 'Design Not Found',
+        lead: 'Something went wrong!',
+        button: 'Go back to designs',
+        link: '/designs',
+      }}
+    />
   )
 }
