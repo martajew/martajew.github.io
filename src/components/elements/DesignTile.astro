@@ -7,11 +7,14 @@ import type { DesignModel } from '../../lib/models'
 import { getSettings } from '../../lib/content'
 import { optimizeImage } from '../../lib/images'
 
-// props
+interface Props {
+  design: DesignModel
+}
+
 const { layout } = await getSettings()
 const maxWidth = 400
 const designTileImage = await optimizeImage(layout.designTileImage, { maxWidth })
-const design = Astro.props.design as DesignModel
+const { design } = Astro.props
 const detailsPermalink = design.getDetailsPermalink()
 ---
 

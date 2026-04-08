@@ -5,7 +5,11 @@ import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
 import SymbolImage from '../elements/SymbolImage.astro'
 
-const block = Astro.props.block as PageBlocksMap['contacts_block']
+interface Props {
+  block: PageBlocksMap['contacts_block']
+}
+
+const { block } = Astro.props
 ---
 
 <Container variant={'md'}>

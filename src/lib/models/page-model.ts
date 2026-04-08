@@ -3,13 +3,15 @@ import { getEntry } from 'astro:content'
 
 const REGEX_MULTI_SLASH = /\/+/g
 const REGEX_EDGE_SLASH = /^\/|\/$/g
+const NON_ROUTABLE_BLOCKS: PageBlockType[] = ['design_details_block']
 
 export type PageCollectionEntry = CollectionEntry<'pages'>
 export type PageReferenceEntry = ReferenceDataEntry<'pages'>
 export type PageData = PageCollectionEntry['data']
 export type PageBlock = PageData['blocks'][number]
 export type PageBlockType = PageBlock['type']
-export type PageBlocksMap = { [T in PageBlockType]: Extract<PageBlock, { type: T }> }
+export type PageBlockOfType<T extends PageBlockType> = Extract<PageBlock, { type: T }>
+export type PageBlocksMap = { [T in PageBlockType]: Omit<PageBlockOfType<T>, 'type'> }
 
 export class PageModel {
   private constructor(public readonly entry: PageCollectionEntry) {}
@@ -35,11 +37,18 @@ export class PageModel {
   }
 
   getNormalizedPermalink(): string | undefined {
-    const sanitizedPermalink = this.getSanitizedPermalink()
-    return sanitizedPermalink === 'home' ? undefined : sanitizedPermalink
+    return this.getSanitizedPermalink() === 'home' ? undefined : this.getSanitizedPermalink()
   }
 
   isRoutable(): boolean {
-    return !this.entry.data.blocks.some(block => block.type === 'design_details_block')
+    return !this.getBlocks().some(block => NON_ROUTABLE_BLOCKS.includes(block.type))
+  }
+
+  getBlocks(): PageBlock[] {
+    return this.entry.data.blocks
+  }
+
+  getBlockByType<T extends PageBlockType>(type: T): PageBlockOfType<T> | undefined {
+    return this.getBlocks().find((block): block is PageBlockOfType<T> => block.type === type)
   }
 }

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro'
+import PageBlocks from '../components/pages/PageBlocks.astro'
+import { type Context as Props } from '../lib/content'
+
+export { getStaticPaths } from '../lib/content'
+
+const { page, title } = Astro.props
+---
+
+<Layout title={title}>
+  <PageBlocks blocks={page.getBlocks()} context={Astro.props} />
+</Layout>

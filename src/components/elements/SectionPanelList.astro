@@ -3,7 +3,11 @@ import Container from './Container.astro'
 import Heading from './Heading.astro'
 import ContainerBottom from './ContainerBottom.astro'
 
-const { heading } = Astro.props as { heading: string }
+interface Props {
+  heading: string | undefined
+}
+
+const { heading } = Astro.props
 ---
 
 <Container variant={'md'}>

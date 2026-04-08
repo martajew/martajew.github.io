@@ -2,6 +2,10 @@
 import { getSettings } from '../../lib/content'
 import { optimizeImage } from '../../lib/images'
 
+interface Props {
+  class?: string
+}
+
 const { layout } = await getSettings()
 const symbolImage = await optimizeImage(layout.symbolImage, { maxWidth: 128 })
 const { class: className } = Astro.props

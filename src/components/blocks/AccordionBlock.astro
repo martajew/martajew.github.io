@@ -3,7 +3,11 @@ import type { PageBlocksMap } from '../../lib/models'
 import ResumeDropdown from '../elements/ResumeDropdown.astro'
 import SectionPanelList from '../elements/SectionPanelList.astro'
 
-const block = Astro.props.block as PageBlocksMap['accordion_block']
+interface Props {
+  block: PageBlocksMap['accordion_block']
+}
+
+const { block } = Astro.props
 ---
 
 <SectionPanelList heading={block.heading}>

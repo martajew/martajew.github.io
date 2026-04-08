@@ -3,10 +3,13 @@ import { Font } from 'astro:assets'
 import { getSettings } from '../../lib/content.ts'
 import { optimizeImage } from '../../lib/images'
 
+interface Props {
+  title: string | undefined
+}
+
 const { title } = Astro.props
 const { layout } = await getSettings()
-const isHomePage = Astro.url.pathname === '/'
-const pageTitle = isHomePage ? layout.mainPageTitle : `${layout.mainPageTitle} - ${title}`
+const pageTitle = layout.mainPageTitle ? `${layout.mainPageTitle} - ${title}` : title
 const favicon16 = await optimizeImage(layout.faviconImage, { maxWidth: 16, format: 'png' })
 const favicon32 = await optimizeImage(layout.faviconImage, { maxWidth: 32, format: 'png' })
 const apple180 = await optimizeImage(layout.faviconImage, { maxWidth: 180, format: 'png' })

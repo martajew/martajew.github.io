@@ -1,8 +1,5 @@
 ---
-// stylesheet
 import '../styles/global.css'
-
-// components
 import BaseHead from '../components/global/BaseHead.astro'
 import Wrapper from '../components/global/Wrapper.astro'
 import NavBar from '../components/global/Navigation.astro'
@@ -10,7 +7,10 @@ import Footer from '../components/global/Footer.astro'
 import { getSettings } from '../lib/content'
 import { optimizeImage } from '../lib/images'
 
-// props
+interface Props {
+  title: string | undefined
+}
+
 const { title } = Astro.props
 const { layout } = await getSettings()
 const backgroundImage = await optimizeImage(layout.backgroundImage)

@@ -6,7 +6,11 @@ import DesignTile from '../elements/DesignTile.astro'
 import Link from '../elements/Link.astro'
 import { getFeaturedDesigns } from '../../lib/content'
 
-const block = Astro.props.block as PageBlocksMap['featured_designs_block']
+interface Props {
+  block: PageBlocksMap['featured_designs_block']
+}
+
+const { block } = Astro.props
 const designs = await getFeaturedDesigns()
 ---
 

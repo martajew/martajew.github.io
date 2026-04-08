@@ -80,6 +80,7 @@ const pages = defineCollection({
     const allDesignsBlock = z.object({
       type: z.literal('all_designs_block'),
       heading: z.string().optional(),
+      pageSize: z.number().optional(),
     })
 
     const designDetailsBlock = z.object({

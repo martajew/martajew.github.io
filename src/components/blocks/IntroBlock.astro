@@ -5,7 +5,11 @@ import Heading from '../elements/Heading.astro'
 import RichText from '../elements/RichText.astro'
 import Link from '../elements/Link.astro'
 
-const block = Astro.props.block as PageBlocksMap['intro_block']
+interface Props {
+  block: PageBlocksMap['intro_block']
+}
+
+const { block } = Astro.props
 const alignment = (block.alignment || 'center').toString().toLowerCase()
 ---
 

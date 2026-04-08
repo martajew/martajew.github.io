@@ -99,6 +99,7 @@ collections:
             name: all_designs_block
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Page Size, name: pageSize, widget: number}
           - label: Design Details
             name: design_details_block
             fields:

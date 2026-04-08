@@ -6,7 +6,11 @@ import Container from '../elements/Container.astro'
 import Link from '../elements/Link.astro'
 import ImageContainer from '../elements/ImageContainer.astro'
 
-const block = Astro.props.block as PageBlocksMap['callout_block']
+interface Props {
+  block: PageBlocksMap['callout_block']
+}
+
+const { block } = Astro.props
 ---
 
 <Container variant={'xl'}>

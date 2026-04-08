@@ -3,9 +3,9 @@ import { Image } from 'astro:assets'
 import type { ImageMetadata, ImageOutputFormat, ImageQuality } from 'astro'
 import { IMAGE_PRESET, getResponsiveSizes, getResponsiveWidths } from '../../lib/images'
 
-type Props = {
-  src?: ImageMetadata
-  alt?: string
+interface Props extends Record<string, unknown> {
+  src?: ImageMetadata | undefined
+  alt?: string | undefined
   class?: string
   loading?: 'eager' | 'lazy'
   width?: number
@@ -14,7 +14,7 @@ type Props = {
   sizes?: string
   format?: ImageOutputFormat
   quality?: ImageQuality
-} & Record<string, unknown>
+}
 
 const {
   src,
@@ -24,7 +24,7 @@ const {
   format = IMAGE_PRESET.format,
   quality = IMAGE_PRESET.quality,
   ...props
-} = Astro.props as Props
+} = Astro.props
 
 const responsiveWidths = widths ?? getResponsiveWidths(src)
 const responsiveSizes = sizes ?? getResponsiveSizes(src)

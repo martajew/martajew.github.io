@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import { getSettings } from '../lib/content.ts'
 import { PageModel } from '../lib/models'
-import PageBlocks from '../components/pages/PageBlocks.astro'
+import IntroBlock from '../components/blocks/IntroBlock.astro'
 
 const { navigation } = await getSettings()
 const page = await PageModel.fromReference(navigation.notFoundPage)
@@ -12,16 +12,15 @@ if (page?.getSanitizedPermalink()) {
   if (permalink === undefined) return Astro.rewrite('/')
   return Astro.rewrite(`/${permalink}`)
 }
-
-const block = {
-  type: 'intro_block',
-  heading: 'Page Not Found fall',
-  lead: 'Oops! It seems the page you are trying to access does not exist!',
-  button: 'Go back to the homepage',
-  link: '/',
-}
 ---
 
-<Layout title={block.heading}>
-  <PageBlocks blocks={[block]} />
+<Layout title="Page Not Found">
+  <IntroBlock
+    block={{
+      heading: 'Page Not Found',
+      lead: 'Oops! It seems the page you are trying to access does not exist!',
+      button: 'Go back to the homepage',
+      link: '/',
+    }}
+  />
 </Layout>

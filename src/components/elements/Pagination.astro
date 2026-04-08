@@ -1,0 +1,28 @@
+---
+import Link from './Link.astro'
+import Container from './Container.astro'
+
+interface Props {
+  prev?: string | undefined
+  next?: string | undefined
+}
+
+const { prev, next } = Astro.props
+---
+
+<Container variant={'lg'}>
+  {
+    prev && (
+      <Link variant={'button'} href={prev}>
+        Previous
+      </Link>
+    )
+  }
+  {
+    next && (
+      <Link variant={'button'} href={next}>
+        Next
+      </Link>
+    )
+  }
+</Container>

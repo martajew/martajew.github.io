@@ -3,10 +3,20 @@ import type { PageBlocksMap } from '../../lib/models'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import DesignTile from '../elements/DesignTile.astro'
-import { getPublishedDesigns } from '../../lib/content'
+import Pagination from '../elements/Pagination.astro'
+import type { Context } from '../../lib/content'
 
-const block = Astro.props.block as PageBlocksMap['all_designs_block']
-const designs = await getPublishedDesigns()
+interface Props {
+  block: PageBlocksMap['all_designs_block']
+  context: Context
+}
+
+const { block, context } = Astro.props
+const permalink = context.page.getNormalizedPermalink() ? `/${context.page.getNormalizedPermalink()}` : ''
+const designs = context.designs?.data || []
+const url = context.designs?.url
+const prevUrl = url?.prev ? `${permalink}${url.prev}` : undefined
+const nextUrl = url?.next ? `${permalink}${url.next}` : undefined
 ---
 
 <Heading tagName="h1" tagSize="h1" class="text-center">{block.heading}</Heading>
@@ -14,4 +24,8 @@ const designs = await getPublishedDesigns()
   <Container class="grid lg:grid-cols-2 grid-cols-1 gap-24">
     {designs.map((design) => <DesignTile design={design} />)}
   </Container>
+  <div class="flex flex-row gap-2">
+    <Pagination prev={prevUrl} />
+    <Pagination next={nextUrl} />
+  </div>
 </Container>
