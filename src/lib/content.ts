@@ -2,7 +2,7 @@ import type { Params as AstroParams, Props as AstroProps, GetStaticPaths, Page, 
 import { getCollection } from 'astro:content'
 import { DesignModel, PageModel, SettingsModel } from './models'
 
-export interface Context extends AstroProps {
+export interface PageContext extends AstroProps {
   page: PageModel
   title: string | undefined
   design?: DesignModel
@@ -11,7 +11,7 @@ export interface Context extends AstroProps {
 
 interface StaticPath {
   params: { page: string | undefined } & AstroParams
-  props: Context
+  props: PageContext
 }
 
 export const getStaticPaths = (async ({ paginate }) => {

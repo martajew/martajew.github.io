@@ -4,11 +4,11 @@ import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import DesignTile from '../elements/DesignTile.astro'
 import Pagination from '../elements/Pagination.astro'
-import type { Context } from '../../lib/content'
+import type { PageContext } from '../../lib/content'
 
 interface Props {
   block: PageBlocksMap['all_designs_block']
-  context: Context
+  context: PageContext
 }
 
 const { block, context } = Astro.props

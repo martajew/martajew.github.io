@@ -1,6 +1,6 @@
 ---
 import type { PageBlocksMap } from '../../lib/models'
-import type { Context } from '../../lib/content'
+import type { PageContext } from '../../lib/content'
 import IntroBlock from './IntroBlock.astro'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
@@ -11,7 +11,7 @@ import RichText from '../elements/RichText.astro'
 
 interface Props {
   block: PageBlocksMap['design_details_block']
-  context: Context
+  context: PageContext
 }
 
 const { block, context } = Astro.props

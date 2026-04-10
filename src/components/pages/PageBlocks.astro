@@ -1,11 +1,11 @@
 ---
 import BlockRenderer from './BlockRenderer.astro'
-import type { Context } from '../../lib/content'
+import type { PageContext } from '../../lib/content'
 import type { PageBlock } from '../../lib/models'
 
 interface Props {
   blocks: PageBlock[]
-  context: Context
+  context: PageContext
 }
 
 const { blocks, context } = Astro.props
