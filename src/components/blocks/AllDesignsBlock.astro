@@ -1,22 +1,19 @@
 ---
-import type { PageBlocksMap } from '../../lib/models'
+import { type PageBlocksMap, type DesignsPageModel } from '../../lib/models'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import DesignTile from '../elements/DesignTile.astro'
 import Pagination from '../elements/Pagination.astro'
-import type { PageContext } from '../../lib/content'
 
 interface Props {
   block: PageBlocksMap['all_designs_block']
-  context: PageContext
+  page: DesignsPageModel
 }
 
-const { block, context } = Astro.props
-const permalink = context.page.getNormalizedPermalink() ? `/${context.page.getNormalizedPermalink()}` : ''
-const designs = context.designs?.data || []
-const url = context.designs?.url
-const prevUrl = url?.prev ? `${permalink}${url.prev}` : undefined
-const nextUrl = url?.next ? `${permalink}${url.next}` : undefined
+const { block, page } = Astro.props
+const designs = page.getItems()
+const prevUrl = page.getPrevUrl()
+const nextUrl = page.getNextUrl()
 ---
 
 <Heading tagName="h1" tagSize="h1" class="text-center">{block.heading}</Heading>

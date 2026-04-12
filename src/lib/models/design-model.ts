@@ -7,8 +7,7 @@ export class DesignModel {
   private constructor(public readonly entry: DesignCollectionEntry, private readonly detailsPage: PageModel) {}
 
   static async fromEntry(entry: DesignCollectionEntry): Promise<DesignModel | undefined> {
-    const designPermalink = PageModel.sanitizePermalink(entry.data.permalink)
-    if (!designPermalink)
+    if (!PageModel.sanitizePermalink(entry.data.permalink))
       return undefined
 
     const detailsPage = await PageModel.fromReference(entry.data.detailsPage)
@@ -22,7 +21,7 @@ export class DesignModel {
     return this.detailsPage
   }
 
-  getDetailsPermalink(): string {
+  getStaticPath(): string {
     const detailsPermalink = this.detailsPage.getNormalizedPermalink()
     const designPermalink = PageModel.sanitizePermalink(this.entry.data.permalink)
     return `${detailsPermalink ? `${detailsPermalink}/` : ''}${designPermalink}`

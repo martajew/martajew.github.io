@@ -14,7 +14,7 @@ export type PageBlockOfType<T extends PageBlockType> = Extract<PageBlock, { type
 export type PageBlocksMap = { [T in PageBlockType]: Omit<PageBlockOfType<T>, 'type'> }
 
 export class PageModel {
-  private constructor(public readonly entry: PageCollectionEntry) {}
+  protected constructor(public readonly entry: PageCollectionEntry) {}
 
   static sanitizePermalink(permalink: string | undefined): string | undefined {
     return permalink
@@ -38,6 +38,30 @@ export class PageModel {
 
   getNormalizedPermalink(): string | undefined {
     return this.getSanitizedPermalink() === 'home' ? undefined : this.getSanitizedPermalink()
+  }
+
+  getTitle(): string | undefined {
+    return this.entry.data.title
+  }
+
+  getStaticPath(): string | undefined {
+    return this.getNormalizedPermalink()
+  }
+
+  getPrevUrl(): string | undefined {
+    return undefined
+  }
+
+  getNextUrl(): string | undefined {
+    return undefined
+  }
+
+  getItem(): unknown {
+    return undefined
+  }
+
+  getItems(): unknown[] {
+    return []
   }
 
   isRoutable(): boolean {

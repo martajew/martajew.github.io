@@ -1,18 +1,6 @@
-import type { Params as AstroParams, Props as AstroProps, GetStaticPaths, Page, PaginateFunction } from 'astro'
+import type { GetStaticPaths, PaginateFunction } from 'astro'
 import { getCollection } from 'astro:content'
-import { DesignModel, PageModel, SettingsModel } from './models'
-
-export interface PageContext extends AstroProps {
-  page: PageModel
-  title: string | undefined
-  design?: DesignModel
-  designs?: Page<DesignModel>
-}
-
-interface StaticPath {
-  params: { page: string | undefined } & AstroParams
-  props: PageContext
-}
+import { DesignModel, DesignPageModel, DesignsPageModel, PageModel, SettingsModel } from './models'
 
 export const getStaticPaths = (async ({ paginate }) => {
   const pages = await getRoutablePages()
@@ -23,40 +11,20 @@ export const getStaticPaths = (async ({ paginate }) => {
   ]
 }) satisfies GetStaticPaths
 
-function getPagePaths(paginate: PaginateFunction, pages: PageModel[], designs: DesignModel[]): StaticPath[] {
-  return pages.flatMap(page => mapPagePaths(page, paginate, designs))
+function getPagePaths(paginate: PaginateFunction, pages: PageModel[], designs: DesignModel[]) {
+  return pages
+    .flatMap(page => DesignsPageModel.paginate(page, paginate, designs))
+    .map(toStaticPath)
 }
 
-function mapPagePaths(page: PageModel, paginate: PaginateFunction, designs: DesignModel[]): StaticPath[] {
-  const allDesignsBlock = page.getBlockByType('all_designs_block')
-  if (allDesignsBlock) {
-    const pageSize = allDesignsBlock.pageSize ?? 3
-    const paths = paginate(designs, { pageSize })
-    return paths.map(path => mapDesignsPage(page, path.params.page, path.props.page))
-  }
-  else {
-    const permalink = page.getNormalizedPermalink()
-    const title = page.entry.data.title
-    return [{ params: { page: permalink }, props: { page, title } }]
-  }
-}
-
-function mapDesignsPage(page: PageModel, slug: string | undefined, designs: Page<DesignModel>): StaticPath {
-  const permalink = page.getNormalizedPermalink()
-  const title = page.entry.data.title
-  const pathPermalink = permalink ? `${permalink}${slug ? `/${slug}` : ''}` : slug // handle home page
-  const pathTitle = `${title}${slug ? ` - Page ${designs.currentPage}` : ''}`
-  return { params: { page: pathPermalink }, props: { page, title: pathTitle, designs } }
-}
-
-function getDesignPaths(designs: DesignModel[]): StaticPath[] {
+function getDesignPaths(designs: DesignModel[]) {
   return designs
-    .map((design) => {
-      const page = design.getDetailsPage()
-      const permalink = design.getDetailsPermalink()
-      const title = `${page.entry.data.title} - ${design.entry.data.title}`
-      return { params: { page: permalink }, props: { page, title, design } }
-    })
+    .map(design => DesignPageModel.fromDesign(design))
+    .map(toStaticPath)
+}
+
+function toStaticPath(page: PageModel) {
+  return { params: { page: page.getStaticPath() }, props: { page } }
 }
 
 async function getPages(): Promise<PageModel[]> {
@@ -70,9 +38,9 @@ async function getRoutablePages(): Promise<PageModel[]> {
 }
 
 async function getDesigns(): Promise<DesignModel[]> {
-  const designs = await getCollection('designs')
-  const models = await Promise.all(designs.map(DesignModel.fromEntry))
-  return models
+  const entries = await getCollection('designs')
+  const designs = await Promise.all(entries.map(DesignModel.fromEntry))
+  return designs
     .filter(design => design !== undefined)
     .sort((a, b) => (b.entry.data.sortDate?.getTime() ?? 0) - (a.entry.data.sortDate?.getTime() ?? 0))
 }

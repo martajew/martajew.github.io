@@ -13,13 +13,13 @@ interface Props {
 
 const { layout } = await getSettings()
 const maxWidth = 400
-const designTileImage = await optimizeImage(layout.designTileImage, { maxWidth })
+const image = await optimizeImage(layout.designTileImage, { maxWidth })
 const { design } = Astro.props
-const detailsPermalink = design.getDetailsPermalink()
+const href = design.getStaticPath()
 ---
 
 <div class="group lg:m-auto">
-  <a href={`/${detailsPermalink}`}>
+  <a href={`/${href}`}>
     <div
       class="relative xl:w-87.5 xl:h-87.5 lg:w-75 lg:h-75 md:w-100 md:h-100 sm:w-62.5 sm:h-62.5 w-50 h-50 overflow-visible mb-4"
     >
@@ -27,14 +27,7 @@ const detailsPermalink = design.getDetailsPermalink()
         <Text variant={'lg'} class="text-base-900">{design.entry.data.category}</Text>
         <SymbolImage class="bg-base-900" />
       </div>
-      {
-        designTileImage && (
-          <div
-            style={`background-image: url(${designTileImage.src})`}
-            class="absolute inset-0 bg-cover opacity-40 z-30"
-          />
-        )
-      }
+      {image && <div style={`background-image: url(${image.src})`} class="absolute inset-0 bg-cover opacity-40 z-30" />}
       {
         design.entry.data.featuredImage && (
           <OptimizedImage

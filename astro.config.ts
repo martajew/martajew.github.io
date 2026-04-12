@@ -1,7 +1,7 @@
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
-import { getFonts } from './src/lib/fonts.ts'
+import { getFonts } from './src/lib/fonts'
 
 // https://astro.build/config
 export default defineConfig({

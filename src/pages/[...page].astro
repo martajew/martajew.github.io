@@ -1,13 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import PageBlocks from '../components/pages/PageBlocks.astro'
-import { type PageContext as Props } from '../lib/content'
+import type { PageModel } from '../lib/models'
 
 export { getStaticPaths } from '../lib/content'
 
-const { page, title } = Astro.props
+interface Props {
+  page: PageModel
+}
+
+const { page } = Astro.props
 ---
 
-<Layout title={title}>
-  <PageBlocks blocks={page.getBlocks()} context={Astro.props} />
+<Layout title={page.getTitle()}>
+  <PageBlocks page={page} />
 </Layout>

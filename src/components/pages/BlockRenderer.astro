@@ -1,6 +1,5 @@
 ---
-import type { PageBlock } from '../../lib/models'
-import type { PageContext } from '../../lib/content'
+import { type PageModel, type PageBlock, DesignPageModel, DesignsPageModel } from '../../lib/models'
 import HeroBlock from '../blocks/HeroBlock.astro'
 import CalloutBlock from '../blocks/CalloutBlock.astro'
 import AccordionBlock from '../blocks/AccordionBlock.astro'
@@ -14,10 +13,10 @@ import DesignDetailsBlock from '../blocks/DesignDetailsBlock.astro'
 
 interface Props {
   block: PageBlock
-  context: PageContext
+  page: PageModel
 }
 
-const { block, context } = Astro.props
+const { block, page } = Astro.props
 ---
 
 {
@@ -40,9 +39,9 @@ const { block, context } = Astro.props
       case 'featured_designs_block':
         return <FeaturedDesignsBlock block={block} />
       case 'all_designs_block':
-        return <AllDesignsBlock block={block} context={context} />
+        return <AllDesignsBlock block={block} page={page as DesignsPageModel} />
       case 'design_details_block':
-        return <DesignDetailsBlock block={block} context={context} />
+        return <DesignDetailsBlock block={block} page={page as DesignPageModel} />
     }
   })()
 }
