@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin "tailwindcss-noise";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* COLORS */
@@ -11,15 +12,17 @@
   --font-sans-scale: from-font;
   --font-mono-scale: from-font;
 
-  /* TEXT SIZES (base) */
+  /* TEXT SIZES */
   --text-216: 13.5rem;
   --text-128: 8rem;
   --text-96: 6rem;
+  --text-80: 5rem;
   --text-64: 4rem;
   --text-48: 3rem;
   --text-40: 2.5rem;
   --text-32: 2rem;
   --text-24: 1.5rem;
+  --text-20: 1.25rem;
   --text-16: 1rem;
   --text-12: 0.75rem;
 

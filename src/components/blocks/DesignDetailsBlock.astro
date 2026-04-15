@@ -6,7 +6,7 @@ import Heading from '../elements/Heading.astro'
 import ImageContainer from '../elements/ImageContainer.astro'
 import Text from '../elements/Text.astro'
 import Link from '../elements/Link.astro'
-import RichText from '../elements/RichText.astro'
+import Markdown from '../elements/Markdown.astro'
 
 interface Props {
   block: PageBlocksMap['design_details_block']
@@ -46,7 +46,7 @@ const details = [
         ))}
       </div>
       <div class="md:max-w-3xl text-base-900">
-        <RichText variant={'xl'} content={design.description} />
+        <Markdown variant={'xl'} content={design.description} />
       </div>
       <Link variant={'button'} href={design.paymentLink ?? '#'}>
         {block.paymentButtonLabel}
@@ -59,8 +59,8 @@ const details = [
           <ImageContainer src={design.imageThree} alt={design.title} />
         </div>
       </div>
-      <article class="md:max-w-3xl flex flex-col gap-4 text-base-900">
-        <RichText variant={'sm'} content={body} />
+      <article class="md:max-w-3xl flex flex-col gap-4">
+        <Markdown variant={'sm'} content={body} />
       </article>
       <div class="w-full md:h-150 h-75">
         <ImageContainer src={design.imageFour} alt={design.title} />

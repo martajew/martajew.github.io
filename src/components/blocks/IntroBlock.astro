@@ -2,7 +2,7 @@
 import type { PageBlocksMap } from '../../lib/models'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
-import RichText from '../elements/RichText.astro'
+import Markdown from '../elements/Markdown.astro'
 import Link from '../elements/Link.astro'
 
 interface Props {
@@ -16,8 +16,8 @@ const alignment = (block.alignment || 'center').toString().toLowerCase()
 <Container variant={'xl'} class={`text-${alignment} text-base-900 flex flex-col items-center`}>
   <Heading tagName="h1" tagSize="h1">{block.heading}</Heading>
   <div class="max-w-3xl flex flex-col gap-4">
-    <RichText variant={'xl'} content={block.lead} />
-    <RichText variant={'sm'} content={block.body} />
+    <Markdown variant={'xl'} content={block.lead} />
+    <Markdown variant={'sm'} content={block.body} />
   </div>
   {
     block.button && block.link && (

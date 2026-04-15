@@ -3,7 +3,7 @@
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import Link from '../elements/Link.astro'
-import RichText from '../elements/RichText.astro'
+import Markdown from '../elements/Markdown.astro'
 import { getSettings } from '../../lib/content'
 
 const { layout, navigation } = await getSettings()
@@ -41,6 +41,6 @@ const { layout, navigation } = await getSettings()
     </div>
   </div>
   <div class="flex flex-col text-center">
-    <RichText variant={'sm'} class="text-base-900" content={layout.copyright} />
+    <Markdown variant={'xsm'} content={layout.copyright} />
   </div>
 </Container>

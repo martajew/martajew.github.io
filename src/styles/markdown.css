@@ -1,0 +1,78 @@
+.markdown-content {
+  --tw-prose-body: var(--color-base-900);
+  --tw-prose-headings: var(--color-base-900);
+  --tw-prose-links: var(--color-base-900);
+  --tw-prose-bold: var(--color-base-900);
+  --tw-prose-bullets: var(--color-base-700);
+  --tw-prose-counters: var(--color-base-700);
+  --tw-prose-quotes: var(--color-base-700);
+  --tw-prose-quote-borders: var(--color-base-700);
+  --tw-prose-code: var(--color-base-100);
+  --tw-prose-pre-code: var(--color-base-100);
+  --tw-prose-pre-bg: var(--color-base-900);
+  --tw-prose-hr: var(--color-base-700);
+  --tw-prose-captions: var(--color-base-700);
+  --tw-prose-th-borders: var(--color-base-700);
+  --tw-prose-td-borders: var(--color-base-700);
+}
+
+.markdown-content h1 {
+  font-size: var(--text-96);
+}
+.markdown-content h2 {
+  font-size: var(--text-64);
+}
+.markdown-content h3 {
+  font-size: var(--text-40);
+}
+.markdown-content h4 {
+  font-size: var(--text-32);
+}
+.markdown-content h5 {
+  font-size: var(--text-20);
+}
+.markdown-content h6 {
+  font-size: var(--text-16);
+}
+
+@media (min-width: 768px) {
+  .markdown-content h1 {
+    font-size: var(--text-128);
+  }
+  .markdown-content h2 {
+    font-size: var(--text-80);
+  }
+  .markdown-content h3 {
+    font-size: var(--text-48);
+  }
+  .markdown-content h4 {
+    font-size: var(--text-40);
+  }
+  .markdown-content h5 {
+    font-size: var(--text-24);
+  }
+  .markdown-content h6 {
+    font-size: var(--text-20);
+  }
+}
+
+@media (min-width: 1200px) {
+  .markdown-content h1 {
+    font-size: var(--text-216);
+  }
+  .markdown-content h2 {
+    font-size: var(--text-128);
+  }
+  .markdown-content h3 {
+    font-size: var(--text-80);
+  }
+  .markdown-content h4 {
+    font-size: var(--text-48);
+  }
+  .markdown-content h5 {
+    font-size: var(--text-32);
+  }
+  .markdown-content h6 {
+    font-size: var(--text-24);
+  }
+}

@@ -1,6 +1,6 @@
 ---
 import Text from '../elements/Text.astro'
-import RichText from '../elements/RichText.astro'
+import Markdown from '../elements/Markdown.astro'
 
 interface Props {
   title: string | undefined
@@ -30,7 +30,7 @@ const { title, place, period, text } = Astro.props
     <Text variant={'sm'} class="text-base-700">{period}</Text>
   </button>
   <div class="dropdown-content hidden overflow-hidden transition-all duration-200">
-    <RichText variant={'sm'} class="text-base-900" content={text} />
+    <Markdown variant={'sm'} content={text} />
   </div>
 </div>
 

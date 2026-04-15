@@ -33,7 +33,7 @@ collections:
             name: intro_block
             fields:
               - {label: Heading, name: heading, widget: string}
-              - {label: Lead, name: lead, widget: string}
+              - {label: Lead, name: lead, widget: markdown}
               - {label: Body, name: body, widget: markdown}
               - {label: Button, name: button, widget: string, required: false}
               - {label: Link, name: link, widget: string, required: false}
@@ -45,14 +45,14 @@ collections:
               - {label: Button, name: button, widget: string, required: false}
               - {label: Link, name: link, widget: string, required: false}
               - {label: Name, name: name, widget: string}
-              - {label: Lead, name: lead, widget: string, required: false}
+              - {label: Lead, name: lead, widget: markdown, required: false}
               - {label: Body, name: body, widget: markdown, required: false}
               - {label: Image, name: image, widget: image}
           - label: Callout
             name: callout_block
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Lead, name: lead, widget: string}
+              - {label: Lead, name: lead, widget: markdown}
               - {label: Body, name: body, widget: markdown}
               - {label: Button, name: button, widget: string, required: false}
               - {label: Link, name: link, widget: string, required: false}

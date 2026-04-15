@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
+import '../../styles/markdown.css'
 import { marked } from 'marked'
 
 interface Props extends HTMLAttributes<'div'> {
@@ -8,6 +9,9 @@ interface Props extends HTMLAttributes<'div'> {
 }
 
 const { content, variant = 'sm', class: className, ...rest } = Astro.props
+
+// common styling for all markdown variants
+const baseStyle = 'markdown-content prose max-w-none prose-a:hover:text-base-700 prose-headings:font-sans'
 
 const variantStyle = {
   xsm: 'text-12 font-mono',
@@ -20,32 +24,4 @@ const variantStyle = {
 const html = await marked.parse(content ?? '', { breaks: true, gfm: true })
 ---
 
-<div class:list={['rich-text', variantStyle[variant], className]} set:html={html} {...rest} />
-
-<style is:global>
-  .rich-text p {
-    margin: 0;
-  }
-
-  .rich-text p + p,
-  .rich-text ul + p,
-  .rich-text ol + p,
-  .rich-text p + ul,
-  .rich-text p + ol {
-    margin-top: 1rem;
-  }
-
-  .rich-text ul,
-  .rich-text ol {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-
-  .rich-text a {
-    text-decoration: underline;
-  }
-
-  .rich-text a:hover {
-    color: var(--color-base-700);
-  }
-</style>
+<div class:list={[baseStyle, variantStyle[variant], className]} set:html={html} {...rest} />
