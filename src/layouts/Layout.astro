@@ -30,9 +30,6 @@ const style = styleRules.filter(Boolean).join('; ')
 <html lang="en" class="scroll-smooth">
   <BaseHead title={title} />
   <body style={style} class="bg-cover bg-center bg-no-repeat bg-fixed box-border">
-    <!-- Background noise effect -->
-    <div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
-    <!-- Wrapper component to make sure all content on the website is above the noise filter background -->
     <Wrapper>
       <NavBar />
       <main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">

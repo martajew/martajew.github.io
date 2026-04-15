@@ -28,7 +28,6 @@
     "marked": "^17.0.5",
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.2.2",
-    "tailwindcss-noise": "^1.0.6",
     "typescript": "^5.9.3"
   },
   "overrides": {
