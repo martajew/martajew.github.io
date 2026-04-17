@@ -14,8 +14,8 @@ interface Props {
 }
 
 const { block, page } = Astro.props
-const design = page.getItem().entry.data
-const body = page.getItem().entry.body
+const design = page.getItem()?.entry.data
+const body = page.getItem()?.entry.body
 const details = [
   { heading: 'Client', text: `${design?.client}` },
   { heading: 'Category', text: `${design?.category}` },
@@ -72,8 +72,8 @@ const details = [
   ) : (
     <IntroBlock
       block={{
-        heading: 'Design Not Found',
-        lead: 'Something went wrong!',
+        heading: 'No Design',
+        lead: 'Please select a design to view its details.',
         button: 'Go back to designs',
         link: '/designs',
       }}

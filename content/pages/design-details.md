@@ -1,7 +1,7 @@
 ---
 title: Design
-permalink: designs
-comment: Display selected design details
+permalink: design
+comment: Design details
 blocks:
   - type: design_details_block
     paymentButtonLabel: Buy Now

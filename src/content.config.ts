@@ -34,6 +34,7 @@ const pages = defineCollection({
     const calloutBlock = z.object({
       type: z.literal('callout_block'),
       name: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       lead: z.string().optional(),
       body: z.string().optional(),
       button: z.string().optional(),
@@ -70,16 +71,10 @@ const pages = defineCollection({
       })).default([]),
     })
 
-    const featuredDesignsBlock = z.object({
-      type: z.literal('featured_designs_block'),
+    const sectionDesignsBlock = z.object({
+      type: z.literal('section_designs_block'),
       heading: z.string().optional(),
-      button: z.string().optional(),
-      link: z.string().optional(),
-    })
-
-    const allDesignsBlock = z.object({
-      type: z.literal('all_designs_block'),
-      heading: z.string().optional(),
+      section: z.string().optional(),
       pageSize: z.number().optional(),
     })
 
@@ -100,8 +95,7 @@ const pages = defineCollection({
         accordionBlock,
         numberedAccordionBlock,
         contactsBlock,
-        featuredDesignsBlock,
-        allDesignsBlock,
+        sectionDesignsBlock,
         designDetailsBlock,
       ])).default([]),
     })
@@ -116,6 +110,7 @@ const designs = defineCollection({
     sortDate: z.date().optional(),
     client: z.string().optional(),
     detailsPage: reference('pages').optional(),
+    section: z.string().optional(),
     category: z.string().optional(),
     services: z.string().optional(),
     featuredImage: z.optional(image()),
@@ -124,7 +119,6 @@ const designs = defineCollection({
     imageFour: z.optional(image()),
     paymentLink: z.url().optional(),
     description: z.string().optional(),
-    isFeatured: z.boolean().optional(),
     isDraft: z.boolean().optional(),
   }),
 })

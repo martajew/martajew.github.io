@@ -7,8 +7,7 @@ import NumberedAccordionBlock from '../blocks/NumberedAccordionBlock.astro'
 import ContactsBlock from '../blocks/ContactsBlock.astro'
 import HeadingBlock from '../blocks/HeadingBlock.astro'
 import IntroBlock from '../blocks/IntroBlock.astro'
-import FeaturedDesignsBlock from '../blocks/FeaturedDesignsBlock.astro'
-import AllDesignsBlock from '../blocks/AllDesignsBlock.astro'
+import SectionDesignsBlock from '../blocks/SectionDesignsBlock.astro'
 import DesignDetailsBlock from '../blocks/DesignDetailsBlock.astro'
 
 interface Props {
@@ -36,10 +35,8 @@ const { block, page } = Astro.props
         return <HeadingBlock block={block} />
       case 'intro_block':
         return <IntroBlock block={block} />
-      case 'featured_designs_block':
-        return <FeaturedDesignsBlock block={block} />
-      case 'all_designs_block':
-        return <AllDesignsBlock block={block} page={page as DesignsPageModel} />
+      case 'section_designs_block':
+        return <SectionDesignsBlock block={block} page={page as DesignsPageModel} />
       case 'design_details_block':
         return <DesignDetailsBlock block={block} page={page as DesignPageModel} />
     }

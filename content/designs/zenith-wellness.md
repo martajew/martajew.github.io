@@ -1,18 +1,18 @@
 ---
-title: "Zenith Wellness App"
-permalink: "zenith-wellness"
+title: Zenith Wellness App
+permalink: zenith-wellness
 sortDate: 2026-01-01
 detailsPage: design-details
-client: "Zenith Health Technologies"
-category: "UI/UX Design"
-services: "User Research, Prototyping, Visual Design"
-featuredImage: "/content/media/designs/zenith-wellness/1.jpg"
-imageTwo: "/content/media/designs/zenith-wellness/2.jpg"
-imageThree: "/content/media/designs/zenith-wellness/3.jpg"
-imageFour: "/content/media/designs/zenith-wellness/4.jpg"
-paymentLink: "https://buy.stripe.com/00w6oH25u8el7An4oxbwk00"
-description: "A comprehensive wellness platform that combines meditation, fitness tracking, and mental health resources. The app features personalized wellness journeys, community support, and integration with wearable devices to create a holistic approach to personal well-being."
-isFeatured: false
+section: Patterns
+client: Zenith Health Technologies
+category: UI/UX Design
+services: User Research, Prototyping, Visual Design
+featuredImage: /content/media/designs/zenith-wellness/1.jpg
+imageTwo: /content/media/designs/zenith-wellness/2.jpg
+imageThree: /content/media/designs/zenith-wellness/3.jpg
+imageFour: /content/media/designs/zenith-wellness/4.jpg
+paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
+description: A comprehensive wellness platform that combines meditation, fitness tracking, and mental health resources. The app features personalized wellness journeys, community support, and integration with wearable devices to create a holistic approach to personal well-being.
 isDraft: false
 ---
 

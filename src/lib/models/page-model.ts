@@ -3,7 +3,6 @@ import { getEntry } from 'astro:content'
 
 const REGEX_MULTI_SLASH = /\/+/g
 const REGEX_EDGE_SLASH = /^\/|\/$/g
-const NON_ROUTABLE_BLOCKS: PageBlockType[] = ['design_details_block']
 
 export type PageCollectionEntry = CollectionEntry<'pages'>
 export type PageReferenceEntry = ReferenceDataEntry<'pages'>
@@ -62,10 +61,6 @@ export class PageModel {
 
   getItems(): unknown[] {
     return []
-  }
-
-  isRoutable(): boolean {
-    return !this.getBlocks().some(block => NON_ROUTABLE_BLOCKS.includes(block.type))
   }
 
   getBlocks(): PageBlock[] {

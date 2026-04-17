@@ -52,6 +52,7 @@ collections:
             name: callout_block
             fields:
               - {label: Name, name: name, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - {label: Lead, name: lead, widget: markdown}
               - {label: Body, name: body, widget: markdown}
               - {label: Button, name: button, widget: string, required: false}
@@ -89,17 +90,19 @@ collections:
                   - {label: Title, name: title, widget: string}
                   - {label: Contact, name: contact, widget: string}
                   - {label: URL, name: href, widget: string, required: false, comment: 'Optional link (e.g. mailto: or tel:).'}
-          - label: Featured Designs
-            name: featured_designs_block
+          - label: Section Designs
+            name: section_designs_block
             fields:
               - {label: Heading, name: heading, widget: string}
-              - {label: Button, name: button, widget: string}
-              - {label: Link, name: link, widget: string}
-          - label: All Designs
-            name: all_designs_block
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Page Size, name: pageSize, widget: number}
+              - label: Section
+                name: section
+                comment: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
+                widget: relation
+                collection: settings
+                file: designs
+                value_field: '{{sections.*}}'
+                display_fields: ['{{sections.*}}']
+              - {label: Page Size, name: pageSize, widget: number, comment: Number of designs to show per page.}
           - label: Design Details
             name: design_details_block
             fields:
@@ -112,15 +115,15 @@ collections:
     folder: /content/designs
     media_folder: '{{media_folder}}/designs'
     icon: design_services
-    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{isFeatured | ternary('**', '')}}{{title}}{{isFeatured | ternary('**', '')}} ({{permalink}}) {{isFeatured | ternary('_#featured_', '')}} {{isDraft | ternary('_#draft_', '')}}"
+    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{title}} ({{section}} - {{category}}) {{isDraft | ternary('**_#draft_**', '')}}"
     sortable_fields:
       fields: [sortDate, title]
       default:
         field: sortDate
         direction: descending
     view_groups:
+      - {field: section, label: Section}
       - {field: category, label: Category}
-      - {field: isFeatured, label: Featured}
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
@@ -137,6 +140,14 @@ collections:
         widget: relation
         collection: pages
         display_fields: ['{{title}} ({{permalink}}) {{comment}}']
+      - label: Section
+        name: section
+        comment: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
+        widget: relation
+        collection: settings
+        file: designs
+        value_field: '{{sections.*}}'
+        display_fields: ['{{sections.*}}']
       - {label: Client, name: client, widget: string}
       - label: Category
         name: category
@@ -153,7 +164,6 @@ collections:
       - {label: Image Four, name: imageFour, widget: image}
       - {label: Payment Link, name: paymentLink, widget: string}
       - {label: Description, name: description, widget: markdown}
-      - {label: Featured Design, name: isFeatured, widget: boolean, default: false, comment: Show on home page.}
       - {label: Draft, name: isDraft, widget: boolean, default: false, comment: Hide design from public site.}
       - {label: Body, name: body, widget: markdown}
 
@@ -217,4 +227,5 @@ collections:
         icon: design_services
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}
+          - {label: Sections, name: sections, widget: list, comment: Put one section per line.}
           - {label: Categories, name: categories, widget: list, comment: Put one category per line.}

@@ -3,6 +3,7 @@ title: Coffee Roaster Brand
 permalink: coffee-brand
 sortDate: 2026-02-05
 detailsPage: design-details
+section: Commissions
 client: Artifact Coffee
 category: Branding
 services: Brand Strategy, Visual Identity, Packaging Design
@@ -12,7 +13,6 @@ imageThree: /content/media/designs/coffee-brand/3.jpg
 imageFour: /content/media/designs/coffee-brand/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: Complete brand identity system for an artisanal coffee roastery focusing on direct-trade relationships and small-batch roasting. The identity reflects craftsmanship, sustainability, and the unique story behind each coffee bean's journey from farm to cup.
-isFeatured: false
 isDraft: true
 ---
 

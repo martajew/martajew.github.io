@@ -8,9 +8,10 @@ export class DesignsPageModel extends PageModel {
   }
 
   static paginate(page: PageModel, paginate: PaginateFunction, designs: DesignModel[]): PageModel[] {
-    const block = page.getBlockByType('all_designs_block')
+    const block = page.getBlockByType('section_designs_block')
     if (block) {
-      return paginate(designs, { pageSize: block.pageSize ?? 10 })
+      const sectionDesigns = block.section ? designs.filter(d => d.entry.data.section === block.section) : designs
+      return paginate(sectionDesigns, { pageSize: block.pageSize ?? 10 })
         .map(pagination => new DesignsPageModel(page, pagination.params.page, pagination.props.page))
     }
     return [page]

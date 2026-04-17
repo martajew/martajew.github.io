@@ -3,6 +3,7 @@ title: Nourish Restaurant
 permalink: nourish-restaurant
 sortDate: 2026-03-20
 detailsPage: design-details
+section: Clothes
 client: Nourish Restaurant Group
 category: Art Direction
 services: Art Direction, Digital Campaign, Brand Activation
@@ -12,7 +13,6 @@ imageThree: /content/media/designs/nourish/3.jpg
 imageFour: /content/media/designs/nourish/4.jpg
 paymentLink: https://buy.stripe.com/dRm7sM9XN6h53L04SY2oE00
 description: Comprehensive art direction and visual campaign for farm-to-table restaurant group expanding into three new cities. The campaign celebrates local ingredients, seasonal menus, and community connections through authentic photography, environmental graphics, and digital experiences that feel warm and inviting.
-isFeatured: false
 isDraft: false
 ---
 

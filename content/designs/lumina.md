@@ -3,6 +3,7 @@ title: Lumina E-commerce
 permalink: lumina
 sortDate: 2025-12-17
 detailsPage: design-details
+section: Patterns
 client: Lumina
 category: Web Design
 services: Web Design, CMS Integration, Performance Optimization
@@ -12,7 +13,6 @@ imageThree: /content/media/designs/lumina/3.jpg
 imageFour: /content/media/designs/lumina/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: Next-generation e-commerce platform designed for emerging fashion brands. Features include advanced inventory management, social commerce integration, AR try-on capabilities, and sustainable shipping options to meet the needs of conscious consumers and digital-native brands.
-isFeatured: true
 isDraft: false
 ---
 
