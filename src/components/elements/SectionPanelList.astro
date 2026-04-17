@@ -5,13 +5,14 @@ import ContainerBottom from './ContainerBottom.astro'
 
 interface Props {
   heading: string | undefined
+  size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | undefined
 }
 
-const { heading } = Astro.props
+const { heading, size = 'h2' } = Astro.props
 ---
 
 <Container variant={'md'}>
-  <Heading tagName="h2" tagSize="h2" class="text-center">{heading}</Heading>
+  <Heading tagName={size} tagSize={size} class="text-center">{heading}</Heading>
   <div class="flex flex-col gap-4">
     <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
       <slot />

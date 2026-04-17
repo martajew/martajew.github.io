@@ -10,7 +10,7 @@ interface Props {
 const { block } = Astro.props
 ---
 
-<SectionPanelList heading={block.heading}>
+<SectionPanelList heading={block.heading} size={block.size}>
   {
     block.items.map((item) => (
       <ResumeDropdown title={item.title} place={item.first} period={item.second} text={item.text} />

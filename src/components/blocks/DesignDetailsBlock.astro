@@ -27,7 +27,7 @@ const details = [
 {
   design ? (
     <Container variant={'xl'} aria-label="Design Details" class="items-center">
-      <Heading tagName="h1" tagSize="h1" class="text-center">
+      <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'} class="text-center">
         {design.title}
       </Heading>
       <div class="w-full md:h-150 h-75">

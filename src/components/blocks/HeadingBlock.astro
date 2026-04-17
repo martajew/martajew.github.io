@@ -11,7 +11,7 @@ const { block } = Astro.props
 ---
 
 <Container variant={'xl'} class="text-center">
-  <Heading tagName="h1" tagSize="h1">
+  <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'}>
     {block.title}
   </Heading>
 </Container>

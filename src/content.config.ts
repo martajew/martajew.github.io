@@ -8,11 +8,13 @@ const pages = defineCollection({
     const headingBlock = z.object({
       type: z.literal('heading_block'),
       title: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
     })
 
     const introBlock = z.object({
       type: z.literal('intro_block'),
       heading: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       lead: z.string().optional(),
       body: z.string().optional(),
       button: z.string().optional(),
@@ -26,6 +28,7 @@ const pages = defineCollection({
       button: z.string().optional(),
       link: z.string().optional(),
       name: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       lead: z.string().optional(),
       body: z.string().optional(),
       image: z.optional(image()),
@@ -45,6 +48,7 @@ const pages = defineCollection({
     const accordionBlock = z.object({
       type: z.literal('accordion_block'),
       heading: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       items: z.array(z.object({
         title: z.string().optional(),
         first: z.string().optional(),
@@ -56,6 +60,7 @@ const pages = defineCollection({
     const numberedAccordionBlock = z.object({
       type: z.literal('numbered_accordion_block'),
       heading: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       items: z.array(z.object({
         title: z.string().optional(),
         text: z.string().optional(),
@@ -74,12 +79,14 @@ const pages = defineCollection({
     const sectionDesignsBlock = z.object({
       type: z.literal('section_designs_block'),
       heading: z.string().optional(),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       section: z.string().optional(),
       pageSize: z.number().optional(),
     })
 
     const designDetailsBlock = z.object({
       type: z.literal('design_details_block'),
+      size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
       paymentButtonLabel: z.string().optional(),
     })
 

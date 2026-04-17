@@ -29,10 +29,12 @@ collections:
             name: heading_block
             fields:
               - {label: Title, name: title, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
           - label: Intro
             name: intro_block
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - {label: Lead, name: lead, widget: markdown}
               - {label: Body, name: body, widget: markdown}
               - {label: Button, name: button, widget: string, required: false}
@@ -45,6 +47,7 @@ collections:
               - {label: Button, name: button, widget: string, required: false}
               - {label: Link, name: link, widget: string, required: false}
               - {label: Name, name: name, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - {label: Lead, name: lead, widget: markdown, required: false}
               - {label: Body, name: body, widget: markdown, required: false}
               - {label: Image, name: image, widget: image}
@@ -62,6 +65,7 @@ collections:
             name: accordion_block
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h2}
               - label: Items
                 name: items
                 widget: list
@@ -74,6 +78,7 @@ collections:
             name: numbered_accordion_block
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h2}
               - label: Items
                 name: items
                 widget: list
@@ -94,6 +99,7 @@ collections:
             name: section_designs_block
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - label: Section
                 name: section
                 comment: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
@@ -106,6 +112,7 @@ collections:
           - label: Design Details
             name: design_details_block
             fields:
+              - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - {label: Payment Button Label, name: paymentButtonLabel, widget: string}
 
   - name: designs

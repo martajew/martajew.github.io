@@ -14,7 +14,7 @@ const alignment = (block.alignment || 'center').toString().toLowerCase()
 ---
 
 <Container variant={'xl'} class={`text-${alignment} text-base-900 flex flex-col items-center`}>
-  <Heading tagName="h1" tagSize="h1">{block.heading}</Heading>
+  <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'}>{block.heading}</Heading>
   <div class="max-w-3xl flex flex-col gap-4">
     <Markdown variant={'xl'} content={block.lead} />
     <Markdown variant={'sm'} content={block.body} />

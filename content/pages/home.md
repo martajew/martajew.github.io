@@ -25,6 +25,7 @@ blocks:
     link: /about
     name: About
     image: /content/media/pages/mania-with-cat.jpeg
+    size: h2
   - type: numbered_accordion_block
     heading: FAQ
     items:
