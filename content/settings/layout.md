@@ -1,17 +1,17 @@
 ---
 section: layout
-mainPageTitle: Mania's Shop
-fontSansFamily: Lobster
+mainPageTitle: Acid Fairies
+fontSansFamily: Tapestry
 fontSansScale: 0.4
-fontMonoFamily: Merriweather Sans
+fontMonoFamily: Quantico
 fontMonoScale: 0.65
-primaryColor: '#1025c69c'
-secondaryColor: '#ff0000ad'
+primaryColor: '#000000f9'
+secondaryColor: '#a2576aad'
 contrastColor: '#ffffffcd'
-faviconImage: /content/media/settings/favicon.png
-backgroundImage: /content/media/settings/background.jpg
+faviconImage: /content/media/settings/Grafika_bez_nazwy.png
+backgroundImage: /content/media/settings/polish_save 19.jpg
 designTileImage: /content/media/settings/designTile.jpg
-decoratorImage: /content/media/settings/decorator.svg
+decoratorImage: /content/media/settings/Grafika_bez_nazwy 2.png
 symbolImage: /content/media/settings/symbol.svg
 copyright: |-
   **Mania Artajew** © 2026 All Rights Reserved
