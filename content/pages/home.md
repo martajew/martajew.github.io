@@ -5,9 +5,7 @@ comment: Landing page
 blocks:
   - type: hero_block
     lead: We are very excited to share our designs with you all!!
-    body: |-
-      You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns.
-      Happy crocheting <3
+    body: Feel free to visit our Instagram & TikTok <3
     button: shop
     link: /shop
     intro: '![](/content/media/pages/Grafika_bez_nazwy%202.jpg)'
@@ -41,4 +39,13 @@ blocks:
         text: Absolutely! I work with clients worldwide and have developed efficient remote collaboration processes. We'll use video calls for key meetings, and collaborative design platforms for feedback.
       - title: How many revisions are included?
         text: Most projects include 2-3 rounds of revisions to ensure we achieve the perfect result. I encourage consolidated feedback to make the most of each revision round.
+  - type: hero_block
+    size: h1
+    lead: hihihihihihihihihihihiih
+    body: ''
+    button: ebe ebe
+    link: ''
+    intro: ''
+    name: mania
+    image: /content/media/pages/IMG_0907.jpg
 ---
