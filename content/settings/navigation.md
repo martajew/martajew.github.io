@@ -9,16 +9,12 @@ navigationLinks:
     href: /designs
   - title: About
     href: /about
-  - title: Contact
-    href: /contact
 socialsHeading: Socials
 socialsLinks:
-  - title: Linkedin
-    href: https://linkedin.com
+  - title: Mail
+    href: acidfairies.co@gmail.com
   - title: Instagram
-    href: https://instagram.com
-  - title: Twiter
-    href: https://twitter.com
-  - title: Github
-    href: https://github.com
+    href: https://www.instagram.com/acidfairies_co?igsh=YWM3ZW9xNnNpNzg2
+  - title: TikTok
+    href: https://www.tiktok.com/@acidfairies_co?_r=1&_t=ZN-98Pd5ApJooQ
 ---
