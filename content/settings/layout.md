@@ -2,7 +2,7 @@
 section: layout
 mainPageTitle: Acid Fairies
 fontSansFamily: Tapestry
-fontSansScale: 0.1
+fontSansScale: 0.3
 fontMonoFamily: Quantico
 fontMonoScale: 0.65
 primaryColor: '#000000f9'
