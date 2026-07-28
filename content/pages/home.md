@@ -10,7 +10,7 @@ blocks:
       Happy crocheting <3
     button: shop
     link: /shop
-    intro: Thank you for your interest in my page!
+    intro: '![](/content/media/pages/IMG_0907.jpg)'
     name: Acid Fairies
     image: /content/media/pages/mania-main-photo.png
   - type: numbered_accordion_block
