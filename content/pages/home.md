@@ -4,14 +4,14 @@ permalink: home
 comment: Landing page
 blocks:
   - type: hero_block
-    lead: I love to crochet and want to share that passion with the world.
+    lead: We are very excited to share our designs with you all!!
     body: |-
       You can visit my Instagram, ko-fi and Ravelry profiles to see more and shop my patterns.
       Happy crocheting <3
-    button: My designs
-    link: /designs
+    button: shop
+    link: /shop
     intro: Thank you for your interest in my page!
-    name: My passion
+    name: Acid Fairies
     image: /content/media/pages/mania-main-photo.png
   - type: numbered_accordion_block
     heading: What I do
@@ -19,13 +19,13 @@ blocks:
       - title: Crochet
         text: Lorem ipsum donor.
   - type: callout_block
+    size: h2
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
     body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.
     button: More about me
     link: /about
     name: About
     image: /content/media/pages/mania-with-cat.jpeg
-    size: h2
   - type: numbered_accordion_block
     heading: FAQ
     items:
