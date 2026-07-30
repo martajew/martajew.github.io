@@ -1,9 +1,9 @@
 ---
 section: designs
 sections:
-  - Commissions
-  - Patterns
-  - Clothes
+  - Tops
+  - Bottoms
+  - Outherwear
 categories:
   - UI/UX Design
   - Web Design
