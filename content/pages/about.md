@@ -5,7 +5,7 @@ comment: ''
 blocks:
   - type: callout_block
     lead: Acid Fairies is an independent brand made by 3 friends who create for those who want to embrace their unique style!!
-    body: At Acid Fairies, fashion isn’t just about clothes—it’s a way to express your individuality, your personality and everything that makes you, you. We want to create a space where everyone is  comfortable in what they choose to wear. Our mission to empower people to express who they truly are without stereotypes or fear of judgment.
+    body: At Acid Fairies, fashion isn’t just about clothes—it’s a way to express your individuality, your personality and everything that makes you, you. We want to create a space where everyone is  comfortable in what they choose to wear. Our mission is to empower people to express who they truly are without stereotypes or fear of judgment.
     button: shop
     link: /shop
     name: Meet our team
