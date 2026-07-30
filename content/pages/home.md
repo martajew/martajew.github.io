@@ -10,7 +10,7 @@ blocks:
     link: /shop
     intro: '![](/content/media/pages/Grafika_bez_nazwy%202.jpg)'
     name: Acid Fairies
-    image: /content/media/pages/mania-main-photo.png
+    image: /content/media/pages/IMG_0907.jpg
   - type: numbered_accordion_block
     heading: Q&A
     items:
