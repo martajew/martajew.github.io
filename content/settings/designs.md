@@ -4,6 +4,7 @@ sections:
   - Tops
   - Bottoms
   - Outherwear
+  - Accessories
 categories:
   - UI/UX Design
   - Web Design
