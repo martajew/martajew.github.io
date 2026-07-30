@@ -1,10 +1,10 @@
 ---
-title: Clothes
-permalink: designs/clothes
+title: tops
+permalink: shop/tops
 comment: List clothes
 blocks:
   - type: section_designs_block
-    heading: Clothes
+    heading: Tops
     section: Clothes
-    pageSize: 2
+    pageSize: 100
 ---
