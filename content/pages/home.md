@@ -8,7 +8,7 @@ blocks:
     body: Feel free to visit our Instagram & TikTok <3
     button: shop
     link: /shop
-    intro: '![](/content/media/pages/Grafika_bez_nazwy%202.jpg)'
+    intro: Welcome to our page <3
     name: Acid Fairies
     image: /content/media/pages/IMG_0907.jpg
   - type: numbered_accordion_block
