@@ -4,34 +4,34 @@ permalink: /shop
 comment: Links to design sections
 blocks:
   - type: intro_block
-    heading: Designs
+    heading: shop
     lead: Which one do you like the most?
-    body: Just for you, I have three different sections to choose from. You can order a custom design, buy a pattern and make it yourself or just buy ready clothes.
+    body: Just for you, we have many items to choose from. Feel free to pick the ones which best suit your style and aesthetic!
     button: ''
     link: ''
     alignment: Center
   - type: callout_block
     size: h2
-    lead: Order your design!
-    body: I will make it just for you.
+    lead: Something fitted, loose or sculpting your beautiful body?
+    body: Choose a top that will make you feel special <3
     button: Browse
-    link: /designs/commissions
-    name: Commissions
+    link: /shop/tops
+    name: Tops
     image: /content/media/pages/mania-crochet-dress.jpg
   - type: callout_block
     size: h2
-    lead: DYI patters!
-    body: Order and make it yourself.
+    lead: Looking for a piece that will highlight kurwa nwm co
+    body: Which one kurwaaaaaaaaa
     button: Browse
-    link: /designs/patterns
-    name: Patterns
+    link: /shop/bottoms
+    name: bottoms
     image: /content/media/pages/mania-main-photo.png
   - type: callout_block
     size: h2
-    lead: Order ready clothes!
-    body: Already made, just wear it.
+    lead: nwm cos tu bedzie
+    body: mam dosc
     button: Browse
-    link: /designs/clothes
-    name: Clothes
+    link: /shop/outerwear
+    name: Outerwear
     image: /content/media/pages/mania-with-cat.jpeg
 ---
