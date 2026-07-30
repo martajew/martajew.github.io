@@ -3,7 +3,7 @@ section: designs
 sections:
   - Tops
   - Bottoms
-  - Outherwear
+  - Outerwear
   - Accessories
 categories:
   - UI/UX Design
