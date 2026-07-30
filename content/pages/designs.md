@@ -39,7 +39,7 @@ blocks:
     lead: akcesoriaaaa
     body: akcesoria opis i chuj
     button: browse
-    link: ''
+    link: /shop/accessories
     name: Accessories
     image: /content/media/pages/IMG_7276.jpg
 ---
