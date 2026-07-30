@@ -21,7 +21,7 @@ blocks:
   - type: callout_block
     size: h2
     lead: Looking for a piece that will highlight kurwa nwm co
-    body: Which one kurwaaaaaaaaa
+    body: Which one would you kurwaaaaaaaaa
     button: Browse
     link: /shop/bottoms
     name: bottoms
