@@ -6,7 +6,7 @@ fontSansScale: 0.3
 fontMonoFamily: Quantico
 fontMonoScale: 0.65
 primaryColor: '#000000f9'
-secondaryColor: '#a2576aad'
+secondaryColor: '#5c507cad'
 contrastColor: '#ffffffcd'
 faviconImage: /content/media/settings/Grafika_bez_nazwy 2.jpg
 backgroundImage: /content/media/settings/polish_save 19.jpg
