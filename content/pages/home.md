@@ -12,10 +12,10 @@ blocks:
     name: Acid Fairies
     image: /content/media/pages/mania-main-photo.png
   - type: numbered_accordion_block
-    heading: What I do
+    heading: Q&A
     items:
-      - title: Crochet
-        text: Lorem ipsum donor.
+      - title: Where do we create our items??
+        text: ble ble ble
   - type: callout_block
     size: h2
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
