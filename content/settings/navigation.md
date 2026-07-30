@@ -5,11 +5,11 @@ navigationHeading: Navigation
 navigationLinks:
   - title: Home
     href: /
-  - title: Designs
-    href: /designs
-  - title: About
+  - title: Shop
+    href: /shop
+  - title: About us
     href: /about
-socialsHeading: Socials
+socialsHeading: contact & socials
 socialsLinks:
   - title: Mail
     href: acidfairies.co@gmail.com
