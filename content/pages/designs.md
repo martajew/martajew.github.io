@@ -34,4 +34,12 @@ blocks:
     link: /shop/outerwear
     name: Outerwear
     image: /content/media/pages/mania-with-cat.jpeg
+  - type: callout_block
+    size: h1
+    lead: akcesoriaaaa
+    body: akcesoria opis i chuj
+    button: ''
+    link: ''
+    name: Accessories
+    image: /content/media/pages/IMG_7276.jpg
 ---
