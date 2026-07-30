@@ -38,7 +38,7 @@ blocks:
     size: h1
     lead: akcesoriaaaa
     body: akcesoria opis i chuj
-    button: ''
+    button: browse
     link: ''
     name: Accessories
     image: /content/media/pages/IMG_7276.jpg
