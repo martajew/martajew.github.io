@@ -20,7 +20,7 @@ blocks:
     size: h2
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
     body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.
-    button: More about me
+    button: More about us
     link: /about
     name: About
     image: /content/media/pages/mania-with-cat.jpeg
