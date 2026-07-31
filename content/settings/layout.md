@@ -11,7 +11,7 @@ contrastColor: '#ffffffcd'
 faviconImage: /content/media/settings/Grafika_bez_nazwy 2.jpg
 backgroundImage: /content/media/settings/polish_save 19.jpg
 designTileImage: /content/media/settings/designTile.jpg
-decoratorImage: /content/media/settings/Grafika_bez_nazwy 3.jpg
+decoratorImage: /content/media/settings/Grafika_bez_nazwy 6.png
 symbolImage: ''
 copyright: |-
   **Acid Fairies** © 2026 All Rights Reserved
