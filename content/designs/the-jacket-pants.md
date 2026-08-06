@@ -1,9 +1,9 @@
 ---
 title: The Jacket Pants
-permalink: /shop/thejacketpants
+permalink: the-jacket-pants
 sortDate: 2026-07-31
 detailsPage: design-details
-section: Bottoms
+section: Tops
 client: alt
 category: Fashion
 services: co to jest
