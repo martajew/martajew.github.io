@@ -3,7 +3,7 @@ title: Cloudsync Suite
 permalink: cloudsync-suite
 sortDate: 2026-03-18
 detailsPage: design-details
-section: Commissions
+section: Bottoms
 client: Cloudsync Technologies
 category: Art Direction
 services: User Research, Interface Design, Design System Development
