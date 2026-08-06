@@ -3,7 +3,7 @@ title: Harmony Smart Speaker
 permalink: smart-speaker
 sortDate: 2026-01-15
 detailsPage: design-details
-section: Patterns
+section: Accessories
 client: Harmony Audio
 category: Product Design
 services: Industrial Design, Prototyping, Design for Manufacturing
