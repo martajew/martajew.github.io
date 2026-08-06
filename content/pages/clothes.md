@@ -1,7 +1,7 @@
 ---
-title: tops
+title: Shop - Tops
 permalink: shop/tops
-comment: List clothes
+comment: List tops
 blocks:
   - type: section_designs_block
     heading: Tops
