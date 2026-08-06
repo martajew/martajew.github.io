@@ -3,7 +3,7 @@ title: Zenith Wellness App
 permalink: zenith-wellness
 sortDate: 2026-01-01
 detailsPage: design-details
-section: Patterns
+section: Bottoms
 client: Zenith Health Technologies
 category: UI/UX Design
 services: User Research, Prototyping, Visual Design
