@@ -3,7 +3,7 @@ title: My Very Pretty Dress
 permalink: pretty-dress
 sortDate: 2026-03-01
 detailsPage: design-details
-section: Patterns
+section: Outerwear
 client: ACME
 category: UI/UX Design
 services: Crochet
