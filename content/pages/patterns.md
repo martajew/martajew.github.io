@@ -1,10 +1,10 @@
 ---
-title: Patterns
-permalink: designs/patterns
-comment: List patterns
+title: Shop - Outerwear
+permalink: shop/outerwear
+comment: List outerwear
 blocks:
   - type: section_designs_block
-    heading: Patterns
-    section: Patterns
-    pageSize: 2
+    heading: Outerwear
+    section: Outerwear
+    pageSize: 100
 ---
