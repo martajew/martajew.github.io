@@ -1,6 +1,6 @@
 ---
 title: shop
-permalink: /shop
+permalink: shop
 comment: Design details
 blocks:
   - type: design_details_block
