@@ -3,7 +3,7 @@ title: My Skirt
 permalink: my-new-skirt
 sortDate: 2025-03-18
 detailsPage: design-details
-section: Clothes
+section: Tops
 client: ACME
 category: UI/UX Design
 services: Crochet
