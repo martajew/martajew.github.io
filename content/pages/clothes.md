@@ -5,6 +5,6 @@ comment: List clothes
 blocks:
   - type: section_designs_block
     heading: Tops
-    section: Clothes
+    section: Tops
     pageSize: 100
 ---
