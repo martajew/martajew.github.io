@@ -3,7 +3,7 @@ title: Lumina E-commerce
 permalink: lumina
 sortDate: 2025-12-17
 detailsPage: design-details
-section: Patterns
+section: Outerwear
 client: Lumina
 category: Web Design
 services: Web Design, CMS Integration, Performance Optimization
