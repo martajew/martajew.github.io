@@ -3,7 +3,7 @@ title: My Hat
 permalink: my-pretty-hat
 sortDate: 2026-02-10
 detailsPage: design-details
-section: Patterns
+section: Tops
 client: ACME
 category: Fashion
 services: Crochet
