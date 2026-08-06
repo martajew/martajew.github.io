@@ -1,5 +1,5 @@
 ---
-title: shop
+title: Shop
 permalink: shop
 comment: Design details
 blocks:
