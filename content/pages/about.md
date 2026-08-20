@@ -9,7 +9,7 @@ blocks:
     button: shop
     link: /shop
     name: Meet our team
-    image: /content/media/pages/473478d9fe25d91defeb45d950e11d29.JPEG
+    image: /content/media/pages/650776de4e4d20ae25ff32b5037e032e.jpg
   - type: callout_block
     size: h1
     lead: Our team designer and seamstress
@@ -17,7 +17,7 @@ blocks:
     button: ''
     link: ''
     name: Mania
-    image: /content/media/pages/IMG_6957.jpg
+    image: /content/media/pages/867e8430ff2c755655549876b6a718b6.jpg
   - type: callout_block
     size: h1
     lead: The lead designer
@@ -25,7 +25,7 @@ blocks:
     button: ''
     link: ''
     name: Ania
-    image: /content/media/pages/IMG_7425.jpg
+    image: /content/media/pages/9adf0807693920110fb352b662bedb82.jpg
   - type: callout_block
     size: h1
     lead: Our teams amazing photographer
