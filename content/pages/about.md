@@ -17,7 +17,7 @@ blocks:
     button: ''
     link: ''
     name: Mania
-    image: /content/media/pages/867e8430ff2c755655549876b6a718b6.jpg
+    image: /content/media/pages/MANIA SOLO ten sam filtr.jpeg
   - type: callout_block
     size: h1
     lead: The lead designer
@@ -33,7 +33,7 @@ blocks:
     button: ''
     link: ''
     name: Magda
-    image: /content/media/pages/060a7f2a2a127cdf31ec88a339db65b1.jpg
+    image: /content/media/pages/MAGDA SOLO.jpeg
   - type: callout_block
     size: h1
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
