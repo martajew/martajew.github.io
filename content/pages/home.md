@@ -11,11 +11,6 @@ blocks:
     intro: Welcome to our page <3
     name: Acid Fairies
     image: /content/media/pages/IMG_0907.jpg
-  - type: numbered_accordion_block
-    heading: Q&A
-    items:
-      - title: Where do we create our items??
-        text: ble ble ble
   - type: callout_block
     size: h2
     lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
@@ -25,7 +20,7 @@ blocks:
     name: About
     image: /content/media/pages/mania-with-cat.jpeg
   - type: numbered_accordion_block
-    heading: FAQ
+    heading: Q&A
     items:
       - title: What's your typical project timeline?
         text: |-
