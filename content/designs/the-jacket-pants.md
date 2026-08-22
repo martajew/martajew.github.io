@@ -3,7 +3,7 @@ title: The Jacket Pants
 permalink: the-jacket-pants
 sortDate: 2026-07-31
 detailsPage: design-details
-section: Tops
+section: Bottoms
 client: alt
 category: Fashion
 services: co to jest
