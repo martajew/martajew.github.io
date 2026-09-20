@@ -4,6 +4,7 @@ permalink: home
 comment: Landing page
 blocks:
   - type: hero_block
+    size: h1
     lead: We are very excited to share our designs with you all!!
     body: Feel free to visit our Instagram & TikTok <3
     button: shop
@@ -20,27 +21,23 @@ blocks:
     name: About
     image: /content/media/pages/mania-with-cat.jpeg
   - type: numbered_accordion_block
+    size: h2
     heading: Q&A
     items:
-      - title: What's your typical project timeline?
-        text: |-
-          Project timelines vary depending on scope and complexity.
-          A simple brand identity might take 3-4 weeks, while a comprehensive web design or app project typically ranges from 6-12 weeks.
-      - title: How do you structure your pricing?
-        text: I offer both project-based and hourly pricing depending on the scope of work. Most clients prefer fixed project rates for predictable budgeting. I require a 50% deposit to begin work, with the remainder due upon completion.
-      - title: What's included in your design process?
-        text: My process typically includes discovery and strategy, research and concept development, design exploration, revisions based on your feedback, and final delivery of all assets.
-      - title: Do you work with clients remotely?
-        text: Absolutely! I work with clients worldwide and have developed efficient remote collaboration processes. We'll use video calls for key meetings, and collaborative design platforms for feedback.
-      - title: How many revisions are included?
-        text: Most projects include 2-3 rounds of revisions to ensure we achieve the perfect result. I encourage consolidated feedback to make the most of each revision round.
-  - type: hero_block
-    size: h1
-    lead: hihihihihihihihihihihiih
-    body: ''
-    button: ebe ebe
-    link: ''
-    intro: ''
-    name: mania
-    image: /content/media/pages/IMG_0907.jpg
+      - title: How long does making of my order take?
+        text: Every order usually takes up to a week to finish, however if you order more pieces it can take a little longer. We'll notify you when your order is ready to be shipped.
+      - title: How much is shipping?
+        text: Shipping in Europe is ??. In the UK and US the price is ??. For all orders over $250 the shipping is free.
+      - title: How long will the delivery take?
+        text: Up to ?? days
+      - title: Can I cancel or modify my order?
+        text: You can't cancel or modify your order after it's been shipped.
+      - title: What’s your shipping policy?
+        text: ble ble ble
+      - title: How can I make a return?
+        text: you can't haha
+      - title: What payment methods do you accept?
+        text: Stripe
+      - title: How to take care of my clothes?
+        text: cdaoncjxncjknaidjpijf
 ---
