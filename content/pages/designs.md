@@ -4,6 +4,7 @@ permalink: shop
 comment: Links to design sections
 blocks:
   - type: intro_block
+    size: h1
     heading: shop
     lead: Which one do you like the most?
     body: Just for you, we have many items to choose from. Feel free to pick the ones which best suit your style and aesthetic!
@@ -42,4 +43,12 @@ blocks:
     link: /shop/accessories
     name: Accessories
     image: /content/media/pages/IMG_7276.jpg
+  - type: intro_block
+    size: h1
+    heading: Size guide
+    lead: '![](/content/media/pages/Screenshot%202026-09-20%20at%2021.37.19.png)'
+    body: ...
+    button: ''
+    link: ''
+    alignment: Left
 ---
