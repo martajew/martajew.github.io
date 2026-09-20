@@ -43,12 +43,12 @@ blocks:
     link: /shop/accessories
     name: Accessories
     image: /content/media/pages/IMG_7276.jpg
-  - type: intro_block
+  - type: callout_block
     size: h1
-    heading: Size guide
-    lead: '![](/content/media/pages/Screenshot%202026-09-20%20at%2021.37.19.png)'
+    lead: ???
     body: ...
     button: ''
     link: ''
-    alignment: Left
+    name: Size guide
+    image: /content/media/pages/Screenshot 2026-09-20 at 21.37.19.png
 ---
