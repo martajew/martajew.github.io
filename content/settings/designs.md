@@ -1,10 +1,7 @@
 ---
 section: designs
 sections:
-  - Tops
-  - Bottoms
-  - Outerwear
-  - Accessories
+  - shop
 categories:
   - Fashion
 ---
