@@ -1,5 +1,5 @@
 ---
-title: Harmony Smart Speaker
+title: Sweatpants
 permalink: smart-speaker
 sortDate: 2026-01-15
 detailsPage: design-details
