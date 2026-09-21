@@ -1,5 +1,5 @@
 ---
-title: Zenith Wellness App
+title: Thong
 permalink: zenith-wellness
 sortDate: 2026-01-01
 detailsPage: design-details
