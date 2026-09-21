@@ -11,4 +11,9 @@ blocks:
     button: ''
     link: ''
     alignment: Center
+  - type: section_designs_block
+    size: h1
+    heading: braletka
+    section: shop
+    pageSize: 100
 ---
