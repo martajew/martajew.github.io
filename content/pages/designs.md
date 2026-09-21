@@ -1,7 +1,7 @@
 ---
 title: Shop
 permalink: shop
-comment: Links to design sections
+comment: Links to designs
 blocks:
   - type: intro_block
     size: h1
@@ -13,10 +13,7 @@ blocks:
     alignment: Center
   - type: section_designs_block
     size: h1
-    heading: braletka
-    section: shop
+    heading: All Designs
+    section: ''
     pageSize: 100
-  - type: design_details_block
-    size: h1
-    paymentButtonLabel: ???
 ---

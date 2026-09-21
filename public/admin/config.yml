@@ -102,8 +102,9 @@ collections:
               - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - label: Section
                 name: section
-                comment: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
+                comment: 'Optional. Choose None to show all published designs, or filter by section defined in [Settings > Designs](#/collections/settings/entries/designs).'
                 widget: relation
+                required: false
                 collection: settings
                 file: designs
                 value_field: '{{sections.*}}'

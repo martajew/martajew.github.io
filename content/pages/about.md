@@ -38,7 +38,7 @@ blocks:
     size: h1
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
     body: |-
-      All our items are handmade in Poland. We prioritise quality, fair prizing and ethical production. 
+      All our items are handmade in Poland. We prioritise quality, fair prizing and ethical production.
 
       Our collections aren’t rushed. Months of refining go into every design - adjusting the fit, perfecting the details, and making sure it’s something you’ll actually want to wear over and over again.
 
