@@ -1,5 +1,5 @@
 ---
-title: Lumina E-commerce
+title: Bralette
 permalink: lumina
 sortDate: 2025-12-17
 detailsPage: design-details
