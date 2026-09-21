@@ -16,4 +16,7 @@ blocks:
     heading: braletka
     section: shop
     pageSize: 100
+  - type: design_details_block
+    size: h1
+    paymentButtonLabel: ???
 ---
