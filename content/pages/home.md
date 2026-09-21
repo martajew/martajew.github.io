@@ -31,7 +31,7 @@ blocks:
       - title: How long will the delivery take?
         text: Up to ?? days
       - title: Can I cancel or modify my order?
-        text: You can't cancel or modify your order after it's been shipped.
+        text: Since we make all our items on commission, you can't cancel or modify your order after you've received an email that we've began making your items. You can send us an email on DM us on Instagram before that and then you'll be able to modify your order or receive a refund.
       - title: What’s your shipping policy?
         text: ble ble ble
       - title: How can I make a return?
