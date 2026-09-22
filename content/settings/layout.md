@@ -10,7 +10,7 @@ secondaryColor: '#5c507cad'
 contrastColor: '#ffffffcd'
 faviconImage: /content/media/settings/Grafika_bez_nazwy 2.jpg
 backgroundImage: /content/media/settings/polish_save 19.jpg
-designTileImage: /content/media/settings/designTile.jpg
+designTileImage: ''
 decoratorImage: /content/media/settings/Grafika_bez_nazwy 7.PNG
 symbolImage: ''
 copyright: |-
