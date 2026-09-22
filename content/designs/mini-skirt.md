@@ -2,7 +2,7 @@
 title: Mini Skirt
 permalink: mini-skirt
 sortDate: 2026-09-21
-detailsPage: designs
+detailsPage: design-details
 section: shop
 client: '-'
 category: Fashion
