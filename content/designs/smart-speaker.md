@@ -29,6 +29,6 @@ isDraft: false
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we 'll do our best to make our pants fit you!! Measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we 'll do our best to make your pants fit you!! Measure yourself and write everything down while ordering if you have any concerns <3.
 
 ?? wears size ? and is ?/?” tall
