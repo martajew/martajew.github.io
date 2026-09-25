@@ -23,7 +23,7 @@ description: |-
 
   mid waist
 
-  80% cotton & 10% elastane fabric for your comfort
+  80% cotton & 20% elastane fabric for your comfort
 isDraft: false
 ---
 
