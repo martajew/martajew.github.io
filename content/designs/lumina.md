@@ -12,12 +12,19 @@ imageTwo: /content/media/designs/lumina/2.jpg
 imageThree: /content/media/designs/lumina/3.jpg
 imageFour: /content/media/designs/lumina/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
-description: Next-generation e-commerce platform designed for emerging fashion brands. Features include advanced inventory management, social commerce integration, AR try-on capabilities, and sustainable shipping options to meet the needs of conscious consumers and digital-native brands.
+description: |-
+  Description:
+
+  - lace fabric & special decorative for ✨whimsy✨
+  - adjustable straps and back closure
+  - beautiful lace so you’ll feel special everywhere
+  - 80% cotton & 20% elastane lining fabric for your skin comfort
+  - 90% nylon & 10% elastane fabric for beautiful overlay
 isDraft: false
 ---
 
-Lumina Commerce needed a platform that could compete with e-commerce giants while serving smaller, sustainability-focused fashion brands. Their existing solution was outdated and couldn't support modern features like social media integration or AR experiences. The challenge was creating a system powerful enough for brands with complex needs yet accessible enough for emerging designers with limited technical resources.
+Available sizes: 30 - 62
 
-We designed a modular platform architecture that allows brands to customize their storefronts while maintaining consistent performance and functionality. The interface prioritizes visual storytelling, with large image galleries and video integration that helps brands communicate their values and craftsmanship. We implemented innovative features like carbon footprint tracking for orders and a "try before you buy" program powered by AR technology.
+customization: Let us know what issues you usually have with buying clothes!! band too tight?? Not enough room for your boobs?? Anything and we 'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
-Post-launch metrics exceeded expectations, with brands reporting an average 45% increase in conversion rates and 30% reduction in returns due to the AR try-on feature. The platform now hosts over 200 fashion brands and processes millions in transactions monthly.
+?? wears size ? and is ?/?” tall
