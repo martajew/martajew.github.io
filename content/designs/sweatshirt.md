@@ -29,8 +29,8 @@ description: |-
 isDraft: false
 ---
 
-available sizes: 30 - 62
+Available sizes: 30 - 62
 
-customization: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we 'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
 
 ?? wears size ? and is ?/?” tall
