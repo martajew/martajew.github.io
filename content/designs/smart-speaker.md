@@ -12,12 +12,18 @@ imageTwo: /content/media/designs/smart-speaker/2.jpg
 imageThree: /content/media/designs/smart-speaker/3.jpg
 imageFour: /content/media/designs/smart-speaker/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
-description: Premium smart speaker that seamlessly blends into modern living spaces. Emphasizes superior audio quality, privacy controls, and intuitive physical interactions. The design balances cutting-edge technology with warm, approachable aesthetics that complement rather than dominate interior spaces.
+description: |-
+  - cotton & elastane fabric for your comfort
+  - big pockets for anything you need
+  - wide lace panels and bows for whimsy
+  - elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
+  - baggy wide legs
+  - mid waist
 isDraft: false
 ---
 
-Harmony Audio wanted to enter the competitive smart speaker market with a product that addressed growing privacy concerns while delivering exceptional audio quality. Unlike tech-focused competitors, they envisioned a device that would appeal to design-conscious consumers who value both form and function. The challenge was creating a speaker that looked beautiful when silent but came alive with intuitive interactions when needed.
+Available sizes: 30 - 62
 
-Our design process began with extensive material exploration and acoustic testing to achieve the optimal balance between visual appeal and sound performance. We developed a unique fabric wrap system that conceals the speaker grille while allowing clear audio transmission.
+Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we 'll do our best to make our pants fit you!! Measure yourself and write everything down while ordering if you have any concerns <3.
 
-The Harmony Speaker launched to critical acclaim, winning the Red Dot Design Award and selling out its initial production run within six weeks. Audio reviewers praised its warm, room-filling sound, while design publications highlighted its sophisticated aesthetic.
+?? wears size ? and is ?/?” tall
