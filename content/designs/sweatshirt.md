@@ -15,12 +15,17 @@ paymentLink: https://eu.mingalondon.com/products/off-radar-camo-cargo-jorts
 description: |-
   Description:
 
-  - big pockets for anything you need
-  - lace gathers and bows for ✨whimsy✨
-  - elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
-  - baggy wide sleeves
-  - dropped waist to accentuate your beautiful curves
-  - 80% cotton & 20% elastane fabric for your comfort
+  \~ big pockets for anything you need
+
+  \~ lace gathers and bows for ✨whimsy✨
+
+  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
+
+  \~ baggy wide sleeves
+
+  \~ dropped waist to accentuate your beautiful curves
+
+  \~ 80% cotton & 20% elastane fabric for your comfort
 isDraft: false
 ---
 
