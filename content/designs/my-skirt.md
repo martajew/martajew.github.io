@@ -15,16 +15,20 @@ paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
 
-  - lace fabric & special elastic for ✨whimsy✨
-  - elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
-  - wide sleeves
-  - tight elastic waist to accentuate your beautiful curves
-  - 90% nylon & 10% elastane fabric for your comfort
+  \~ lace fabric & special elastic for ✨whimsy✨
+
+  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
+
+  \~ wide sleeves
+
+  \~ tight elastic waist to accentuate your beautiful curves
+
+  \~ 90% nylon & 10% elastane fabric for your comfort
 isDraft: false
 ---
 
-available sizes: 30 - 62
+Available sizes: 30 - 62
 
-customization: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
 ?? wears size ? and is ?/?” tall
