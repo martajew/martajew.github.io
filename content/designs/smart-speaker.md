@@ -13,17 +13,19 @@ imageThree: /content/media/designs/smart-speaker/3.jpg
 imageFour: /content/media/designs/smart-speaker/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
-  big pockets for anything you need
+  Description
 
-  wide lace panels and bows for ✨whimsy✨
+  \~ big pockets for anything you need
 
-  elastic waist so you’ll feel comfortable when bloated (happens to all of us bbygirl)
+  \~ wide lace panels and bows for ✨whimsy✨
 
-  baggy wide legs (no one will see our crooked knees 😏)
+  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us bbygirl)
 
-  mid waist
+  \~ baggy wide legs (no one will see our crooked knees 😏)
 
-  80% cotton & 20% elastane fabric for your comfort
+  \~ mid waist
+
+  \~ 80% cotton & 20% elastane fabric for your comfort
 isDraft: false
 ---
 
