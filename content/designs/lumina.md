@@ -15,11 +15,15 @@ paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
 
-  - lace fabric & special decorative for ✨whimsy✨
-  - adjustable straps and back closure
-  - beautiful lace so you’ll feel special everywhere
-  - 80% cotton & 20% elastane lining fabric for your skin comfort
-  - 90% nylon & 10% elastane fabric for beautiful overlay
+  \~ lace fabric & special decorative for ✨whimsy✨
+
+  \~ adjustable straps and back closure
+
+  \~ beautiful lace so you’ll feel special everywhere
+
+  \~ 80% cotton & 20% elastane lining fabric for your skin comfort
+
+  \~ 90% nylon & 10% elastane fabric for beautiful overlay
 isDraft: false
 ---
 
