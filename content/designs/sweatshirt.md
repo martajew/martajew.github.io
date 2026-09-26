@@ -7,7 +7,7 @@ section: shop
 client: '-'
 category: '~'
 services: '-'
-featuredImage: /content/media/designs/IMG_8324.jpg
+featuredImage: /content/media/designs/IMG_1087.jpg
 imageTwo: /content/media/designs/IMG_8324.jpg
 imageThree: /content/media/designs/IMG_8324.jpg
 imageFour: /content/media/designs/IMG_8324.jpg
