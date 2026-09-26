@@ -5,8 +5,8 @@ sortDate: 2026-01-01
 detailsPage: design-details
 section: shop
 client: '-'
-category: UI/UX Design
-services: User Research, Prototyping, Visual Design
+category: '~'
+services: '-'
 featuredImage: /content/media/designs/zenith-wellness/1.jpg
 imageTwo: /content/media/designs/zenith-wellness/2.jpg
 imageThree: /content/media/designs/zenith-wellness/3.jpg
