@@ -8,8 +8,8 @@ client: '-'
 category: '~'
 services: '-'
 featuredImage: /content/media/designs/zenith-wellness/1.jpg
-imageTwo: /content/media/designs/zenith-wellness/2.jpg
-imageThree: /content/media/designs/zenith-wellness/3.jpg
+imageTwo: /content/media/designs/IMG_8352.PNG
+imageThree: /content/media/designs/IMG_8352.PNG
 imageFour: /content/media/designs/zenith-wellness/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
