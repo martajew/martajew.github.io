@@ -7,7 +7,7 @@ section: Accessories
 client: Harmony Audio
 category: Product Design
 services: Industrial Design, Prototyping, Design for Manufacturing
-featuredImage: /content/media/designs/IMG_8324.jpg
+featuredImage: /content/media/designs/IMG_1091.jpg
 imageTwo: /content/media/designs/smart-speaker/2.jpg
 imageThree: /content/media/designs/smart-speaker/3.jpg
 imageFour: /content/media/designs/smart-speaker/4.jpg
