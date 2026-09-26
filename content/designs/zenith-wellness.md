@@ -7,7 +7,7 @@ section: shop
 client: '-'
 category: '~'
 services: '-'
-featuredImage: /content/media/designs/zenith-wellness/1.jpg
+featuredImage: /content/media/designs/IMG_1089.jpg
 imageTwo: /content/media/designs/IMG_8352.PNG
 imageThree: /content/media/designs/IMG_8352.PNG
 imageFour: /content/media/designs/zenith-wellness/4.jpg
