@@ -3,10 +3,10 @@ title: Sweatpants
 permalink: smart-speaker
 sortDate: 2026-01-15
 detailsPage: design-details
-section: Accessories
-client: Harmony Audio
-category: Product Design
-services: Industrial Design, Prototyping, Design for Manufacturing
+section: shop
+client: '-'
+category: '~'
+services: '-'
 featuredImage: /content/media/designs/IMG_1091.jpg
 imageTwo: /content/media/designs/smart-speaker/2.jpg
 imageThree: /content/media/designs/smart-speaker/3.jpg
