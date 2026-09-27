@@ -33,7 +33,7 @@ blocks:
       - title: Can I cancel or modify my order?
         text: Since we make all our items on commission, you can't cancel or modify your order after you've received an email that we've began making your items. You can send us an email or DM us on Instagram before that and then you'll be able to modify your order or receive a refund.
       - title: What’s your shipping policy?
-        text: ble ble ble
+        text: ble ble ble ble
       - title: How can I make a return?
         text: you can't haha
       - title: What payment methods do you accept?
