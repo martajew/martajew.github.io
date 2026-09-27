@@ -1,12 +1,12 @@
 ---
-title: The Jacket Pants
-permalink: the-jacket-pants
+title: Jacket Pants
+permalink: jacket-pants
 sortDate: 2026-07-31
 detailsPage: design-details
-section: Bottoms
-client: alt
-category: Fashion
-services: co to jest
+section: shop
+client: '-'
+category: '~'
+services: '-'
 featuredImage: /content/media/designs/IMG_7158.PNG
 imageTwo: /content/media/designs/IMG_7157.PNG
 imageThree: /content/media/designs/IMG_7159.PNG
