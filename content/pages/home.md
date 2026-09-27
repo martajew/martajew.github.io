@@ -5,8 +5,8 @@ comment: Landing page
 blocks:
   - type: hero_block
     size: h1
-    lead: We are very excited to share our designs with you all!!
-    body: Feel free to visit our Instagram & TikTok <3
+    lead: We are very excited to share our designs with you all <3
+    body: Feel free to visit our Instagram & TikTok to see new designs first!!
     button: shop
     link: /shop
     intro: Welcome to our page <3
@@ -14,7 +14,7 @@ blocks:
     image: /content/media/pages/IMG_0907.jpg
   - type: callout_block
     size: h2
-    lead: I'm a creative problem-solver who thrives at the intersection of design, strategy, and human behavior.
+    lead: Acid Fairies is an independent brand born in Poznan, Poland in 2026. We create in hope to make you feel as amazing and beautiful as you are!!
     body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.
     button: More about us
     link: /about
