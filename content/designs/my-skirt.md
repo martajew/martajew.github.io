@@ -5,7 +5,7 @@ sortDate: 2025-03-18
 detailsPage: design-details
 section: Tops
 client: .
-category: Fashion
+category: '~'
 services: .
 featuredImage: /content/media/designs/IMG_1085.jpg
 imageTwo: /content/media/designs/IMG_8324.jpg
