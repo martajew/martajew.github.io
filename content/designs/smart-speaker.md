@@ -11,7 +11,7 @@ featuredImage: /content/media/designs/IMG_1091.jpg
 imageTwo: /content/media/designs/smart-speaker/2.jpg
 imageThree: /content/media/designs/smart-speaker/3.jpg
 imageFour: /content/media/designs/smart-speaker/4.jpg
-paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
+paymentLink: https://buy.stripe.com/test_8x25kFfFB2kf9jJcYhgbm00
 description: |-
   Description
 
