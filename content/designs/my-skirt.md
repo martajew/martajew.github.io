@@ -1,6 +1,6 @@
 ---
-title: Lace T-Top
-permalink: lace-t-top
+title: Hekate Top
+permalink: hekate-top
 sortDate: 2025-03-18
 detailsPage: design-details
 section: shop
