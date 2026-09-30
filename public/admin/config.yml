@@ -135,7 +135,7 @@ collections:
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Permalink, name: permalink, widget: string, hint: Permanent static hyperlink to the design.}
+      - {label: Permalink, name: permalink, widget: string, hint: Permanent static hyperlink to the design. A leading slash is optional.}
       - label: Sort Date
         name: sortDate
         widget: datetime

@@ -6,7 +6,7 @@ export const getStaticPaths = (async ({ paginate }) => {
   const pages = await getPages()
   const designs = await getDesigns()
   const routablePages = getRoutablePages(pages, designs)
-  const publishedDesigns = await getPublishedDesigns()
+  const publishedDesigns = designs.filter(design => !design.entry.data.isDraft)
   return [
     ...getPagePaths(paginate, routablePages, publishedDesigns),
     ...getDesignPaths(publishedDesigns),
@@ -46,14 +46,6 @@ async function getDesigns(): Promise<DesignModel[]> {
   return designs
     .filter(design => design !== undefined)
     .sort((a, b) => (b.entry.data.sortDate?.getTime() ?? 0) - (a.entry.data.sortDate?.getTime() ?? 0))
-}
-
-export async function getPublishedDesigns(): Promise<DesignModel[]> {
-  return (await getDesigns()).filter(design => !design.entry.data.isDraft)
-}
-
-export async function getSectionDesigns(section: string): Promise<DesignModel[]> {
-  return (await getPublishedDesigns()).filter(design => design.entry.data.section === section)
 }
 
 export async function getSettings(): Promise<SettingsModel> {
