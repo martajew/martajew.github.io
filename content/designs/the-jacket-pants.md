@@ -1,6 +1,6 @@
 ---
-title: Jacket Pants
-permalink: jacket-pants
+title: Thalia Jacket Pants
+permalink: thalia-jacket-pants
 sortDate: 2026-07-31
 detailsPage: design-details
 section: shop
