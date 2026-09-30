@@ -13,7 +13,7 @@ imageThree: /content/media/designs/IMG_7159.PNG
 imageFour: /content/media/designs/IMG_7156.PNG
 paymentLink: https://buy.stripe.com/6oU6oIc5V34T6Xc1GM2oE01
 description: |-
-  1. Description:
+  Description:
 
   \~unique design that turns pants into a jacket
 
