@@ -1,6 +1,6 @@
 ---
-title: Thong
-permalink: thong
+title: Hekate Thong
+permalink: hekate-thong
 sortDate: 2026-01-01
 detailsPage: design-details
 section: shop
