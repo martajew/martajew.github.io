@@ -1,6 +1,6 @@
 ---
-title: Sweatshirt
-permalink: /sweatshirt
+title: Hekate Sweatshirt
+permalink: hekate-sweatshirt
 sortDate: 2026-09-25
 detailsPage: design-details
 section: shop
