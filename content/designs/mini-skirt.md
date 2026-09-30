@@ -1,6 +1,6 @@
 ---
-title: Mini Skirt
-permalink: mini-skirt
+title: Hekate Mini Skirt
+permalink: hekate-mini-skirt
 sortDate: 2026-09-21
 detailsPage: design-details
 section: shop
