@@ -10,7 +10,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "eslint . --cache --fix --max-warnings=0 && astro check",
+    "lint": "eslint . --cache --fix --max-warnings=0 && actionlint && astro check",
     "upgrade": "ncu -u"
   },
   "devDependencies": {

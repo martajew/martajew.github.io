@@ -24,8 +24,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v7
+      - name: Read Node.js version
+        id: node-version
+        run: echo "version=$(awk -F '\"' '/^node = / { print $2 }' mise.toml)" >> "$GITHUB_OUTPUT"
       - name: Install, build, and upload your site
         uses: withastro/action@v6
+        with:
+          node-version: ${{ steps.node-version.outputs.version }}
 
   deploy:
     needs: build
