@@ -1,6 +1,6 @@
 ---
-title: Sweatpants
-permalink: smart-speaker
+title: Hekate Sweatpants
+permalink: hekate-sweatpants
 sortDate: 2026-01-15
 detailsPage: design-details
 section: shop
