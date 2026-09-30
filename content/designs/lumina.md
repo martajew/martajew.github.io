@@ -1,6 +1,6 @@
 ---
-title: Bralette
-permalink: lumina
+title: Hekate Bralette
+permalink: hekate-bralette
 sortDate: 2025-12-17
 detailsPage: design-details
 section: shop
