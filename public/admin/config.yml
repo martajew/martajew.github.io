@@ -15,9 +15,9 @@ collections:
     description: Composable pages built from reusable blocks.
     icon: web
     fields:
-      - {label: Title, name: title, widget: string, comment: Used for browser title only.}
-      - {label: Permalink, name: permalink, widget: string, comment: "Permanent static hyperlink to a page. Use 'home' for /."}
-      - {label: Comment, name: comment, widget: string, comment: Optional page description., required: false}
+      - {label: Title, name: title, widget: string, hint: Used for browser title only.}
+      - {label: Permalink, name: permalink, widget: string, hint: "Permanent static hyperlink to a page. A leading slash is optional. Use 'home' for /."}
+      - {label: Comment, name: comment, widget: string, hint: Optional page description., required: false}
       - label: Blocks
         name: blocks
         label_singular: Block
@@ -94,7 +94,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Contact, name: contact, widget: string}
-                  - {label: URL, name: href, widget: string, required: false, comment: 'Optional link (e.g. mailto: or tel:).'}
+                  - {label: URL, name: href, widget: string, required: false, hint: 'Optional link (e.g. mailto: or tel:).'}
           - label: Section Designs
             name: section_designs_block
             fields:
@@ -102,14 +102,14 @@ collections:
               - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
               - label: Section
                 name: section
-                comment: 'Optional. Choose None to show all published designs, or filter by section defined in [Settings > Designs](#/collections/settings/entries/designs).'
+                hint: 'Optional. Choose None to show all published designs, or filter by section defined in [Settings > Designs](#/collections/settings/entries/designs).'
                 widget: relation
                 required: false
                 collection: settings
                 file: designs
                 value_field: '{{sections.*}}'
                 display_fields: ['{{sections.*}}']
-              - {label: Page Size, name: pageSize, widget: number, comment: Number of designs to show per page.}
+              - {label: Page Size, name: pageSize, widget: number, hint: Number of designs to show per page.}
           - label: Design Details
             name: design_details_block
             fields:
@@ -135,22 +135,22 @@ collections:
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Permalink, name: permalink, widget: string, comment: Permanent static hyperlink to the design.}
+      - {label: Permalink, name: permalink, widget: string, hint: Permanent static hyperlink to the design.}
       - label: Sort Date
         name: sortDate
         widget: datetime
         type: date
         default: '{{now}}'
-        comment: Used for display order (newest first).
+        hint: Used for display order (newest first).
       - label: Details Page
         name: detailsPage
-        comment: "Choose existing page to use as the design's details page. Selected page should include the Design Details block."
+        hint: "Choose existing page to use as the design's details page. Selected page should include the Design Details block."
         widget: relation
         collection: pages
         display_fields: ['{{title}} ({{permalink}}) {{comment}}']
       - label: Section
         name: section
-        comment: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
+        hint: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
         widget: relation
         collection: settings
         file: designs
@@ -159,7 +159,7 @@ collections:
       - {label: Client, name: client, widget: string}
       - label: Category
         name: category
-        comment: 'Manage available categories in [Settings > Designs](#/collections/settings/entries/designs).'
+        hint: 'Manage available categories in [Settings > Designs](#/collections/settings/entries/designs).'
         widget: relation
         collection: settings
         file: designs
@@ -172,7 +172,7 @@ collections:
       - {label: Image Four, name: imageFour, widget: image}
       - {label: Payment Link, name: paymentLink, widget: string}
       - {label: Description, name: description, widget: markdown}
-      - {label: Draft, name: isDraft, widget: boolean, default: false, comment: Hide design from public site.}
+      - {label: Draft, name: isDraft, widget: boolean, default: false, hint: Hide design from public site.}
       - {label: Body, name: body, widget: markdown}
 
   - name: settings
@@ -188,19 +188,19 @@ collections:
         fields:
           - {label: Section, name: section, widget: hidden, default: layout}
           - {label: Main Page Title, name: mainPageTitle, widget: string}
-          - {label: Sans Font Family (Google), name: fontSansFamily, widget: string, required: false, comment: 'Example: Road Rage (search more on [Google Fonts](https://fonts.google.com/))'}
-          - {label: Sans Font Scale, name: fontSansScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, comment: '1 = unchanged. Lower shrinks, higher enlarges.'}
-          - {label: Mono Font Family (Google), name: fontMonoFamily, widget: string, required: false, comment: 'Example: JetBrains Mono (search more on [Google Fonts](https://fonts.google.com/))'}
-          - {label: Mono Font Scale, name: fontMonoScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, comment: '1 = unchanged. Lower shrinks, higher enlarges.'}
-          - {label: Primary Color, name: primaryColor, widget: color, enableAlpha: true, allowInput: true, comment: 'Primary text, headings, borders, strong dark UI'}
-          - {label: Secondary Color, name: secondaryColor, widget: color, enableAlpha: true, allowInput: true, comment: Muted/metadata text and hover states}
-          - {label: Contrast Color, name: contrastColor, widget: color, enableAlpha: true, allowInput: true, comment: Light contrast for text-on-dark and light surfaces}
-          - {label: Favicon Image, name: faviconImage, widget: image, required: false, comment: Favicon image used in browser tab.}
+          - {label: Sans Font Family (Google), name: fontSansFamily, widget: string, required: false, hint: 'Example: Road Rage (search more on [Google Fonts](https://fonts.google.com/))'}
+          - {label: Sans Font Scale, name: fontSansScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, hint: '1 = unchanged. Lower shrinks, higher enlarges.'}
+          - {label: Mono Font Family (Google), name: fontMonoFamily, widget: string, required: false, hint: 'Example: JetBrains Mono (search more on [Google Fonts](https://fonts.google.com/))'}
+          - {label: Mono Font Scale, name: fontMonoScale, widget: number, value_type: float, step: 0.1, required: false, default: 1, hint: '1 = unchanged. Lower shrinks, higher enlarges.'}
+          - {label: Primary Color, name: primaryColor, widget: color, enableAlpha: true, allowInput: true, hint: 'Primary text, headings, borders, strong dark UI'}
+          - {label: Secondary Color, name: secondaryColor, widget: color, enableAlpha: true, allowInput: true, hint: Muted/metadata text and hover states}
+          - {label: Contrast Color, name: contrastColor, widget: color, enableAlpha: true, allowInput: true, hint: Light contrast for text-on-dark and light surfaces}
+          - {label: Favicon Image, name: faviconImage, widget: image, required: false, hint: Favicon image used in browser tab.}
           - {label: Background Image, name: backgroundImage, widget: image, required: false}
           - {label: Design Tile Image, name: designTileImage, widget: image, required: false}
           - {label: Decorator Image, name: decoratorImage, widget: image, required: false}
           - {label: Symbol Image, name: symbolImage, widget: image, required: false}
-          - {label: Copyright, name: copyright, widget: markdown, required: false, comment: Copyright notice used in page footer.}
+          - {label: Copyright, name: copyright, widget: markdown, required: false, hint: Copyright notice used in page footer.}
       - label: Navigation
         name: navigation
         file: /content/settings/navigation.md
@@ -212,20 +212,20 @@ collections:
             widget: relation
             collection: pages
             display_fields: ['{{title}} ({{permalink}}) {{comment}}']
-            comment: Choose which existing page is used for 404 responses.
-          - {label: Navigation Heading, name: navigationHeading, widget: string, comment: Used in page footer.}
+            hint: Choose which existing page is used for 404 responses.
+          - {label: Navigation Heading, name: navigationHeading, widget: string, hint: Used in page footer.}
           - label: Navigation Links
             name: navigationLinks
             widget: list
-            comment: Used in page header and footer.
+            hint: Used in page header and footer.
             fields:
               - {label: Title, name: title, widget: string}
               - {label: URL, name: href, widget: string}
-          - {label: Socials Heading, name: socialsHeading, widget: string, comment: Used in footer.}
+          - {label: Socials Heading, name: socialsHeading, widget: string, hint: Used in footer.}
           - label: Social Links
             name: socialsLinks
             widget: list
-            comment: Used in page footer.
+            hint: Used in page footer.
             fields:
               - {label: Title, name: title, widget: string}
               - {label: URL, name: href, widget: string}
@@ -235,5 +235,5 @@ collections:
         icon: design_services
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}
-          - {label: Sections, name: sections, widget: list, comment: Put one section per line.}
-          - {label: Categories, name: categories, widget: list, comment: Put one category per line.}
+          - {label: Sections, name: sections, widget: list, hint: Put one section per line.}
+          - {label: Categories, name: categories, widget: list, hint: Put one category per line.}

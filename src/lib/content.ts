@@ -4,12 +4,19 @@ import { DesignModel, DesignPageModel, DesignsPageModel, PageModel, SettingsMode
 
 export const getStaticPaths = (async ({ paginate }) => {
   const pages = await getPages()
-  const designs = await getPublishedDesigns()
+  const designs = await getDesigns()
+  const routablePages = getRoutablePages(pages, designs)
+  const publishedDesigns = await getPublishedDesigns()
   return [
-    ...getPagePaths(paginate, pages, designs),
-    ...getDesignPaths(designs),
+    ...getPagePaths(paginate, routablePages, publishedDesigns),
+    ...getDesignPaths(publishedDesigns),
   ]
 }) satisfies GetStaticPaths
+
+function getRoutablePages(pages: PageModel[], designs: DesignModel[]): PageModel[] {
+  const templatePageIds = new Set(designs.map(design => design.getDetailsPage().entry.id))
+  return pages.filter(page => !templatePageIds.has(page.entry.id))
+}
 
 function getPagePaths(paginate: PaginateFunction, pages: PageModel[], designs: DesignModel[]) {
   return pages

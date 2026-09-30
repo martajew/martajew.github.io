@@ -1,6 +1,6 @@
 ---
 title: Our Models
-permalink: /ourmodels
+permalink: ourmodels
 comment: ''
 blocks: []
 ---
