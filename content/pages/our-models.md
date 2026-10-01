@@ -1,6 +1,6 @@
 ---
 title: Our Models
-permalink: ourmodels
+permalink: our-models
 comment: ''
 blocks:
   - type: heading_block
