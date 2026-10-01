@@ -63,6 +63,10 @@ export class PageModel {
     return []
   }
 
+  canRenderStandalone(): boolean {
+    return !this.getBlocks().some(block => 'requiresItem' in block && block.requiresItem)
+  }
+
   getBlocks(): PageBlock[] {
     return this.entry.data.blocks
   }

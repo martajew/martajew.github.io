@@ -1,6 +1,5 @@
 ---
 import { type PageBlocksMap, type DesignPageModel } from '../../lib/models'
-import IntroBlock from './IntroBlock.astro'
 import Container from '../elements/Container.astro'
 import Heading from '../elements/Heading.astro'
 import ImageContainer from '../elements/ImageContainer.astro'
@@ -14,69 +13,57 @@ interface Props {
 }
 
 const { block, page } = Astro.props
-const design = page.getItem()?.entry.data
-const body = page.getItem()?.entry.body
+const { data: design, body } = page.getItem().entry
 const details = [
-  { heading: 'Client', text: `${design?.client}` },
-  { heading: 'Category', text: `${design?.category}` },
-  { heading: 'Services', text: `${design?.services}` },
-  { heading: 'Year', text: `${design?.sortDate?.getFullYear()}` },
+  { heading: 'Client', text: `${design.client}` },
+  { heading: 'Category', text: `${design.category}` },
+  { heading: 'Services', text: `${design.services}` },
+  { heading: 'Year', text: `${design.sortDate?.getFullYear()}` },
 ]
 ---
 
-{
-  design ? (
-    <Container variant={'xl'} aria-label="Design Details" class="items-center">
-      <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'} class="text-center">
-        {design.title}
-      </Heading>
-      <div class="w-full md:h-150 h-75">
-        <ImageContainer src={design.featuredImage} alt={design.title} />
-      </div>
-      <div class="flex flex-col gap-7 md:grid md:grid-cols-4">
-        {details.map((detail) => (
-          <div class="text-center">
-            <Heading tagName="h2" tagSize="h4" class="mb-2">
-              {detail.heading}
-            </Heading>
-            <Text variant={'sm'} class="text-base-900">
-              {detail.text}
-            </Text>
-          </div>
-        ))}
-      </div>
-      <div class="md:max-w-3xl text-base-900">
-        <Markdown variant={'xl'} content={design.description} />
-      </div>
-      <Link variant={'button'} href={design.paymentLink ?? '#'}>
-        {block.paymentButtonLabel}
-      </Link>
-      <div class="flex md:flex-row flex-col gap-7">
-        <div>
-          <ImageContainer src={design.imageTwo} alt={design.title} />
+<Container variant={'xl'} aria-label="Design Details" class="items-center">
+  <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'} class="text-center">
+    {design.title}
+  </Heading>
+  <div class="w-full md:h-150 h-75">
+    <ImageContainer src={design.featuredImage} alt={design.title} />
+  </div>
+  <div class="flex flex-col gap-7 md:grid md:grid-cols-4">
+    {
+      details.map((detail) => (
+        <div class="text-center">
+          <Heading tagName="h2" tagSize="h4" class="mb-2">
+            {detail.heading}
+          </Heading>
+          <Text variant={'sm'} class="text-base-900">
+            {detail.text}
+          </Text>
         </div>
-        <div>
-          <ImageContainer src={design.imageThree} alt={design.title} />
-        </div>
-      </div>
-      <article class="md:max-w-3xl flex flex-col gap-4">
-        <Markdown variant={'sm'} content={body} />
-      </article>
-      <div class="w-full md:h-150 h-75">
-        <ImageContainer src={design.imageFour} alt={design.title} />
-      </div>
-      <Link variant={'button'} href={design.paymentLink ?? '#'}>
-        {block.paymentButtonLabel}
-      </Link>
-    </Container>
-  ) : (
-    <IntroBlock
-      block={{
-        heading: 'No Design',
-        lead: 'Please select a design to view its details.',
-        button: 'Go back to designs',
-        link: '/designs',
-      }}
-    />
-  )
-}
+      ))
+    }
+  </div>
+  <div class="md:max-w-3xl text-base-900">
+    <Markdown variant={'xl'} content={design.description} />
+  </div>
+  <Link variant={'button'} href={design.paymentLink ?? '#'}>
+    {block.paymentButtonLabel}
+  </Link>
+  <div class="flex md:flex-row flex-col gap-7">
+    <div>
+      <ImageContainer src={design.imageTwo} alt={design.title} />
+    </div>
+    <div>
+      <ImageContainer src={design.imageThree} alt={design.title} />
+    </div>
+  </div>
+  <article class="md:max-w-3xl flex flex-col gap-4">
+    <Markdown variant={'sm'} content={body} />
+  </article>
+  <div class="w-full md:h-150 h-75">
+    <ImageContainer src={design.imageFour} alt={design.title} />
+  </div>
+  <Link variant={'button'} href={design.paymentLink ?? '#'}>
+    {block.paymentButtonLabel}
+  </Link>
+</Container>

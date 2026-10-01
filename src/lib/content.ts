@@ -5,18 +5,13 @@ import { DesignModel, DesignPageModel, DesignsPageModel, PageModel, SettingsMode
 export const getStaticPaths = (async ({ paginate }) => {
   const pages = await getPages()
   const designs = await getDesigns()
-  const routablePages = getRoutablePages(pages, designs)
+  const standalonePages = pages.filter(page => page.canRenderStandalone())
   const publishedDesigns = designs.filter(design => !design.entry.data.isDraft)
   return [
-    ...getPagePaths(paginate, routablePages, publishedDesigns),
+    ...getPagePaths(paginate, standalonePages, publishedDesigns),
     ...getDesignPaths(publishedDesigns),
   ]
 }) satisfies GetStaticPaths
-
-function getRoutablePages(pages: PageModel[], designs: DesignModel[]): PageModel[] {
-  const templatePageIds = new Set(designs.map(design => design.getDetailsPage().entry.id))
-  return pages.filter(page => !templatePageIds.has(page.entry.id))
-}
 
 function getPagePaths(paginate: PaginateFunction, pages: PageModel[], designs: DesignModel[]) {
   return pages
