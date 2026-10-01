@@ -3,7 +3,7 @@ import type { DesignModel } from './design-model'
 import { PageModel } from './page-model'
 
 export class DesignsPageModel extends PageModel {
-  private constructor(page: PageModel, private readonly route: string | undefined, private readonly pagination: Page<DesignModel>) {
+  private constructor(private readonly page: PageModel, private readonly route: string | undefined, private readonly pagination: Page<DesignModel>) {
     super(page.entry)
   }
 
@@ -18,13 +18,17 @@ export class DesignsPageModel extends PageModel {
   }
 
   override getTitle(): string | undefined {
-    const baseTitle = this.entry.data.title
+    const baseTitle = this.page.getTitle()
     return this.route ? `${baseTitle} - Page ${this.pagination.currentPage}` : baseTitle
   }
 
   override getStaticPath(): string | undefined {
-    const permalink = this.getNormalizedPermalink()
-    return permalink ? `${permalink}${this.route ? `/${this.route}` : ''}` : this.route
+    const path = this.page.getStaticPath()
+    return path ? `${path}${this.route ? `/${this.route}` : ''}` : this.route
+  }
+
+  override getItem(): unknown {
+    return this.page.getItem()
   }
 
   override getItems(): DesignModel[] {
@@ -32,18 +36,17 @@ export class DesignsPageModel extends PageModel {
   }
 
   override getPrevUrl(): string | undefined {
-    const url = this.pagination.url.prev
-    if (!url)
-      return undefined
-    const permalink = this.getNormalizedPermalink()
-    return permalink ? `/${permalink}${url}` : url
+    return this.getPaginationUrl(this.pagination.url.prev)
   }
 
   override getNextUrl(): string | undefined {
-    const url = this.pagination.url.next
+    return this.getPaginationUrl(this.pagination.url.next)
+  }
+
+  private getPaginationUrl(url: string | undefined): string | undefined {
     if (!url)
       return undefined
-    const permalink = this.getNormalizedPermalink()
-    return permalink ? `/${permalink}${url}` : url
+    const path = this.page.getStaticPath()
+    return path ? `/${path}${url}` : url
   }
 }

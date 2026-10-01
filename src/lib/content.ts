@@ -3,25 +3,18 @@ import { getCollection } from 'astro:content'
 import { DesignModel, DesignPageModel, DesignsPageModel, PageModel, SettingsModel } from './models'
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const pages = await getPages()
-  const designs = await getDesigns()
-  const standalonePages = pages.filter(page => page.canRenderStandalone())
-  const publishedDesigns = designs.filter(design => !design.entry.data.isDraft)
-  return [
-    ...getPagePaths(paginate, standalonePages, publishedDesigns),
-    ...getDesignPaths(publishedDesigns),
+  const standalonePages = (await getPages()).filter(page => page.canRenderStandalone())
+  const publishedDesigns = (await getDesigns()).filter(design => !design.entry.data.isDraft)
+  const routablePages = [
+    ...standalonePages,
+    ...publishedDesigns.map(design => DesignPageModel.fromDesign(design)),
   ]
+  return getPagePaths(paginate, routablePages, publishedDesigns)
 }) satisfies GetStaticPaths
 
 function getPagePaths(paginate: PaginateFunction, pages: PageModel[], designs: DesignModel[]) {
   return pages
     .flatMap(page => DesignsPageModel.paginate(page, paginate, designs))
-    .map(toStaticPath)
-}
-
-function getDesignPaths(designs: DesignModel[]) {
-  return designs
-    .map(design => DesignPageModel.fromDesign(design))
     .map(toStaticPath)
 }
 
