@@ -16,13 +16,21 @@ const prevUrl = page.getPrevUrl()
 const nextUrl = page.getNextUrl()
 ---
 
-<Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'} class="text-center">{block.heading}</Heading>
-<Container variant={'lg'}>
-  <Container class="grid lg:grid-cols-2 grid-cols-1 gap-24">
+<section class="flex flex-col gap-12">
+  <Heading tagName={block.size ?? 'h1'} tagSize={block.size ?? 'h1'} class="text-center">{block.heading}</Heading>
+  <Container variant="lg">
+    <div class="flex flex-row gap-2">
+      <Pagination prev={prevUrl} />
+      <Pagination next={nextUrl} />
+    </div>
+  </Container>
+  <Container variant="lg" class="grid lg:grid-cols-2 grid-cols-1 gap-24">
     {designs.map((design) => <DesignTile design={design} />)}
   </Container>
-  <div class="flex flex-row gap-2">
-    <Pagination prev={prevUrl} />
-    <Pagination next={nextUrl} />
-  </div>
-</Container>
+  <Container variant="lg">
+    <div class="flex flex-row gap-2">
+      <Pagination prev={prevUrl} />
+      <Pagination next={nextUrl} />
+    </div>
+  </Container>
+</section>
