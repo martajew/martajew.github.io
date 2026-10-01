@@ -2,6 +2,7 @@ backend:
   name: github
   repo: martajew/martajew.github.io
   base_url: https://sveltia-cms-auth.adam-artajew.workers.dev
+  skip_ci: false
 
 media_folder: /content/media
 
