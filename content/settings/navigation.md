@@ -14,7 +14,7 @@ navigationLinks:
 socialsHeading: contact & socials
 socialsLinks:
   - title: Mail
-    href: mailto:acidfairies.co@gmail.com
+    href: acidfairies.co@gmail.com
   - title: Instagram
     href: https://www.instagram.com/acidfairies_co?igsh=YWM3ZW9xNnNpNzg2
   - title: TikTok
