@@ -10,7 +10,7 @@ navigationLinks:
   - title: About us
     href: /about
   - title: Our models
-    href: /ourmodels
+    href: /our-models
 socialsHeading: contact & socials
 socialsLinks:
   - title: Mail
