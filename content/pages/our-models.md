@@ -5,5 +5,5 @@ comment: ''
 blocks:
   - type: heading_block
     title: Our Models
-    size: h1
+    size: h2
 ---
