@@ -25,6 +25,6 @@ isDraft: true
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Too exposing?? See through fabric?? Anything and we 'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation: Let us know what issues you usually have with buying clothes!! Too exposing?? See through fabric?? Anything and we 'll do our best to make your bikini fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
 ?? wears size ? and is ?/?” tall
