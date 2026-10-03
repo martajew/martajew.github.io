@@ -22,11 +22,11 @@ description: |-
   \~ 3 different styles (bootcut, straight & flared) & colors (black/brown corduroy & blue denim) to suit your style best!!
 
   \~100% cotton lining fabric for your skin comfort
-isDraft: false
+isDraft: true
 ---
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Pants too long?? Not enough room for your hips?? Anything and we 'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation: Let us know what issues you usually have with buying clothes!! Pants too long?? Not enough room for your hips?? Anything and we 'll do our best to make your pants fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
 ?? wears size ? and is ?/?” tall
