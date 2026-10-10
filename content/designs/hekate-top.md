@@ -3,14 +3,12 @@ title: Hekate Top
 permalink: hekate-top
 sortDate: 2025-03-18
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1085.jpg
-imageTwo: /content/media/designs/IMG_8324.jpg
-imageThree: /content/media/designs/IMG_8324.jpg
-imageFour: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+additionalImages:
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:

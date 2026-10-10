@@ -114,17 +114,14 @@ const designs = defineCollection({
   loader: glob({ base: './content/designs', pattern: '**/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
+    subtitle: z.string().trim().optional(),
+    badge: z.string().trim().optional(),
     permalink: z.string().optional(),
     sortDate: z.date().optional(),
-    client: z.string().optional(),
     detailsPage: reference('pages').optional(),
     section: z.string().optional(),
-    category: z.string().optional(),
-    services: z.string().optional(),
-    featuredImage: z.optional(image()),
-    imageTwo: z.optional(image()),
-    imageThree: z.optional(image()),
-    imageFour: z.optional(image()),
+    featuredImage: image(),
+    additionalImages: z.array(z.object({ image: image() })).default([]),
     paymentLink: z.url().optional(),
     description: z.string().optional(),
     isDraft: z.boolean().optional(),
@@ -169,7 +166,6 @@ const settings = defineCollection({
 
     const designs = z.object({
       section: z.literal('designs'),
-      categories: z.array(z.string()).default([]),
     })
 
     return z.discriminatedUnion('section', [

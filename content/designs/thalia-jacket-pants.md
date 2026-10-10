@@ -3,14 +3,12 @@ title: Thalia Jacket Pants
 permalink: thalia-jacket-pants
 sortDate: 2026-07-31
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_7158.PNG
-imageTwo: /content/media/designs/IMG_7157.PNG
-imageThree: /content/media/designs/IMG_7159.PNG
-imageFour: /content/media/designs/IMG_7156.PNG
+additionalImages:
+  - image: /content/media/designs/IMG_7157.PNG
+  - image: /content/media/designs/IMG_7159.PNG
+  - image: /content/media/designs/IMG_7156.PNG
 paymentLink: https://buy.stripe.com/6oU6oIc5V34T6Xc1GM2oE01
 description: |-
   Description:

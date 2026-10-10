@@ -3,14 +3,12 @@ title: Hekate Sweatshirt
 permalink: hekate-sweatshirt
 sortDate: 2026-09-25
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1087.jpg
-imageTwo: /content/media/designs/IMG_8324.jpg
-imageThree: /content/media/designs/IMG_8324.jpg
-imageFour: /content/media/designs/IMG_1087.jpg
+additionalImages:
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/IMG_1087.jpg
 paymentLink: https://eu.mingalondon.com/products/off-radar-camo-cargo-jorts
 description: |-
   Description:

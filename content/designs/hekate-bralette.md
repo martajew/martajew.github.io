@@ -3,14 +3,12 @@ title: Hekate Bralette
 permalink: hekate-bralette
 sortDate: 2025-12-17
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1084.jpg
-imageTwo: /content/media/designs/IMG_8353.PNG
-imageThree: /content/media/designs/IMG_8353.PNG
-imageFour: /content/media/designs/lumina/4.jpg
+additionalImages:
+  - image: /content/media/designs/IMG_8353.PNG
+  - image: /content/media/designs/IMG_8353.PNG
+  - image: /content/media/designs/lumina/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:

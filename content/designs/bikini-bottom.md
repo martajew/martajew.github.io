@@ -3,14 +3,12 @@ title: Bikini Bottom
 permalink: bikini-bottom
 sortDate: 2026-09-27
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1090.jpg
-imageTwo: /content/media/designs/IMG_8324.jpg
-imageThree: /content/media/designs/IMG_8324.jpg
-imageFour: /content/media/designs/IMG_1090.jpg
+additionalImages:
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/IMG_8324.jpg
+  - image: /content/media/designs/IMG_1090.jpg
 paymentLink: https://martajew.github.io/
 description: |-
   Description:

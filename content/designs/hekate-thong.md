@@ -3,14 +3,12 @@ title: Hekate Thong
 permalink: hekate-thong
 sortDate: 2026-01-01
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1089.jpg
-imageTwo: /content/media/designs/IMG_8352.PNG
-imageThree: /content/media/designs/IMG_8352.PNG
-imageFour: /content/media/designs/zenith-wellness/4.jpg
+additionalImages:
+  - image: /content/media/designs/IMG_8352.PNG
+  - image: /content/media/designs/IMG_8352.PNG
+  - image: /content/media/designs/zenith-wellness/4.jpg
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:

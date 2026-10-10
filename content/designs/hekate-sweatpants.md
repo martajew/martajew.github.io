@@ -3,14 +3,12 @@ title: Hekate Sweatpants
 permalink: hekate-sweatpants
 sortDate: 2026-01-15
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/IMG_1091.jpg
-imageTwo: /content/media/designs/smart-speaker/2.jpg
-imageThree: /content/media/designs/smart-speaker/3.jpg
-imageFour: /content/media/designs/smart-speaker/4.jpg
+additionalImages:
+  - image: /content/media/designs/smart-speaker/2.jpg
+  - image: /content/media/designs/smart-speaker/3.jpg
+  - image: /content/media/designs/smart-speaker/4.jpg
 paymentLink: https://buy.stripe.com/test_8x25kFfFB2kf9jJcYhgbm00
 description: |-
   Description

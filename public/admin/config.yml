@@ -124,7 +124,7 @@ collections:
     folder: /content/designs
     media_folder: '{{media_folder}}/designs'
     icon: design_services
-    summary: "{{sortDate | date('YYYY-MM-DD')}}: {{title}} ({{section}} - {{category}}) {{isDraft | ternary('**_#draft_**', '')}}"
+    summary: "[{{sortDate | date('YYYY-MM-DD')}}] {{title}} ({{section}}) {{isDraft | ternary('**_#draft_**', '')}}"
     sortable_fields:
       fields: [sortDate, title]
       default:
@@ -132,10 +132,11 @@ collections:
         direction: descending
     view_groups:
       - {field: section, label: Section}
-      - {field: category, label: Category}
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string, required: false, hint: Optional text below the design title.}
+      - {label: Badge, name: badge, widget: string, required: false, hint: Optional label on product tile and featured image.}
       - {label: Permalink, name: permalink, widget: string, hint: Permanent static hyperlink to the design. A leading slash is optional.}
       - label: Sort Date
         name: sortDate
@@ -157,24 +158,26 @@ collections:
         file: designs
         value_field: '{{sections.*}}'
         display_fields: ['{{sections.*}}']
-      - {label: Client, name: client, widget: string}
-      - label: Category
-        name: category
-        hint: 'Manage available categories in [Settings > Designs](#/collections/settings/entries/designs).'
-        widget: relation
-        collection: settings
-        file: designs
-        value_field: '{{categories.*}}'
-        display_fields: ['{{categories.*}}']
-      - {label: Services, name: services, widget: string}
-      - {label: Featured Image, name: featuredImage, widget: image}
-      - {label: Image Two, name: imageTwo, widget: image}
-      - {label: Image Three, name: imageThree, widget: image}
-      - {label: Image Four, name: imageFour, widget: image}
+      - label: Featured Image
+        name: featuredImage
+        widget: image
+        required: true
+        hint: Used on product tiles and first in the gallery.
+      - label: Additional Images
+        name: additionalImages
+        label_singular: Image
+        widget: list
+        required: false
+        collapsed: true
+        allow_reorder: true
+        thumbnail: image
+        hint: Drag images to change their order. The first four appear in the fixed row; the rest in the lower carousel.
+        fields:
+          - {label: Image, name: image, widget: image}
       - {label: Payment Link, name: paymentLink, widget: string}
       - {label: Description, name: description, widget: markdown}
-      - {label: Draft, name: isDraft, widget: boolean, default: false, hint: Hide design from public site.}
       - {label: Body, name: body, widget: markdown}
+      - {label: Draft, name: isDraft, widget: boolean, default: false, hint: Hide design from public site.}
 
   - name: settings
     label: Settings
@@ -237,4 +240,3 @@ collections:
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}
           - {label: Sections, name: sections, widget: list, hint: Put one section per line.}
-          - {label: Categories, name: categories, widget: list, hint: Put one category per line.}

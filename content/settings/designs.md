@@ -1,7 +1,5 @@
 ---
 section: designs
 sections:
-  - shop
-categories:
-  - '~'
+  - Shop
 ---
