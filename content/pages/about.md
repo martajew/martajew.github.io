@@ -41,7 +41,7 @@ blocks:
     body: We want to include as many sizes as possible, so
     button: ''
     link: ''
-    name: our models
+    name: Our models
     image: /content/media/pages/473478d9fe25d91defeb45d950e11d29.JPEG
   - type: callout_block
     size: h1
