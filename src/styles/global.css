@@ -66,6 +66,11 @@
   }
 }
 
+.content-frame {
+  border: 2px solid var(--color-base-900);
+  padding: 1rem;
+}
+
 .overlay-surface {
   background: var(--color-base-100);
   color: var(--color-base-900);

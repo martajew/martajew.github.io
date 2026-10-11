@@ -36,7 +36,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
   <div class="design-header">
     <div class="design-main">
       <DecoratorImage class="bg-base-900 self-end" />
-      <div class="design-frame design-main-frame">
+      <div class="content-frame design-main-frame">
         {
           design.badge && (
             <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
@@ -141,7 +141,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
       <CloseIcon />
     </button>
     <div class="design-enlarged">
-      <img class="design-frame design-enlarged-image" alt="" />
+      <img class="content-frame design-enlarged-image" alt="" />
       <p class="design-image-status" role="status" hidden></p>
       {
         images.length > 1 && (

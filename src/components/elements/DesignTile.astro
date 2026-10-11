@@ -20,29 +20,35 @@ const href = design.getStaticPath()
 
 <div class="group mx-auto w-full md:w-100 lg:w-75 xl:w-87.5 text-center md:text-left">
   <a href={`/${href}`}>
-    <div class="relative mx-auto w-50 sm:w-62.5 md:w-full aspect-[9/16] overflow-visible mb-4">
-      {
-        design.entry.data.badge && (
-          <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
-            <Text variant={'lg'} class="text-base-900">
-              {design.entry.data.badge}
-            </Text>
-            <SymbolImage class="bg-base-900" />
-          </div>
-        )
-      }
-      {image && <div style={`background-image: url(${image.src})`} class="absolute inset-0 bg-cover opacity-40 z-30" />}
-      {
-        design.entry.data.featuredImage && (
-          <OptimizedImage
-            src={design.entry.data.featuredImage}
-            alt={design.entry.data.title ?? 'Design'}
-            class="relative w-full h-full object-cover z-20"
-            loading="lazy"
-            width={maxWidth}
-          />
-        )
-      }
+    <div class="content-frame mx-auto w-50 sm:w-62.5 md:w-full mb-4">
+      <div class="relative aspect-[9/16] overflow-visible">
+        {
+          design.entry.data.badge && (
+            <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
+              <Text variant={'lg'} class="text-base-900">
+                {design.entry.data.badge}
+              </Text>
+              <SymbolImage class="bg-base-900" />
+            </div>
+          )
+        }
+        {
+          image && (
+            <div style={`background-image: url(${image.src})`} class="absolute inset-0 bg-cover opacity-40 z-30" />
+          )
+        }
+        {
+          design.entry.data.featuredImage && (
+            <OptimizedImage
+              src={design.entry.data.featuredImage}
+              alt={design.entry.data.title ?? 'Design'}
+              class="relative w-full h-full object-cover z-20"
+              loading="lazy"
+              width={maxWidth}
+            />
+          )
+        }
+      </div>
     </div>
   </a>
   <Heading tagName="h3" tagSize="h4" class="group-hover:underline">

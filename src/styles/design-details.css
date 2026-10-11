@@ -13,10 +13,6 @@
   gap: 0.5rem;
   min-width: 0;
 }
-.design-gallery .design-frame {
-  border: 2px solid var(--color-base-900);
-  padding: 1rem;
-}
 .design-gallery .design-main-frame {
   position: relative;
   aspect-ratio: 9 / 16;
