@@ -1,4 +1,5 @@
 .design-gallery {
+  padding-top: 5rem;
   gap: 3rem;
 }
 .design-gallery .design-header {
@@ -33,7 +34,6 @@
   min-width: 0;
 }
 .design-gallery .design-summary .design-title {
-  font-size: clamp(3rem, 6vw, 6rem);
   overflow-wrap: anywhere;
 }
 .design-gallery .design-summary .markdown-content {
@@ -151,6 +151,9 @@
   .design-gallery .design-header {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
+  }
+  .design-gallery .design-summary {
+    padding-top: 3rem;
   }
   .design-gallery .design-thumbnails {
     grid-template-columns: repeat(4, minmax(0, 1fr));

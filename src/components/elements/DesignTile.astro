@@ -18,9 +18,9 @@ const { design } = Astro.props
 const href = design.getStaticPath()
 ---
 
-<div class="group lg:mx-auto">
+<div class="group mx-auto w-full md:w-100 lg:w-75 xl:w-87.5 text-center md:text-left">
   <a href={`/${href}`}>
-    <div class="relative xl:w-87.5 lg:w-75 md:w-100 sm:w-62.5 w-50 aspect-[9/16] overflow-visible mb-4">
+    <div class="relative mx-auto w-50 sm:w-62.5 md:w-full aspect-[9/16] overflow-visible mb-4">
       {
         design.entry.data.badge && (
           <div class="absolute top-2 left-2 z-40 bg-base-100 border-2 border-base-900 px-4 flex gap-2">
@@ -45,6 +45,8 @@ const href = design.getStaticPath()
       }
     </div>
   </a>
-  <Heading tagName="h3" tagSize="h4" class="group-hover:underline">{design.entry.data.title}</Heading>
+  <Heading tagName="h3" tagSize="h4" class="group-hover:underline">
+    <a href={`/${href}`} class="focus-visible:outline-2 focus-visible:outline-offset-4">{design.entry.data.title}</a>
+  </Heading>
   {design.entry.data.subtitle && <Text variant={'md'}>{design.entry.data.subtitle}</Text>}
 </div>

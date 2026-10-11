@@ -21,23 +21,43 @@ const { navigation } = await getSettings()
   </ul>
   <!-- Mobile Nav -->
   <div class="md:hidden">
-    <button id="open-nav" aria-label="Open Navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-        ><path
-          fill="#ffffff"
-          d="m9.5 16.5l7-4.5l-7-4.5v9ZM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"
-        ></path></svg
+    <button
+      id="open-nav"
+      aria-label="Open Navigation"
+      class="fixed top-8 right-6 flex size-10 items-center justify-center text-base-900"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
       >
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M7 8h10M7 12h10M7 16h10"></path>
+      </svg>
     </button>
     <div class="hidden fixed inset-0 bg-base-100 z-50" id="mobile-nav">
       <div class="flex flex-col items-center justify-center h-full">
-        <button id="close-nav" aria-label="Close Navigation" class="absolute top-6 right-6 text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-            ><path
-              fill="#ffffff"
-              d="M9 16h2V8H9v8Zm4 0h2V8h-2v8Zm-1 6q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"
-            ></path></svg
+        <button
+          id="close-nav"
+          aria-label="Close Navigation"
+          class="fixed top-8 right-6 flex size-10 items-center justify-center text-base-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
           >
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M8 8 16 16M8 16 16 8"></path>
+          </svg>
         </button>
         <ul class="flex flex-col p-6 gap-5 md:hidden text-center">
           {
@@ -63,9 +83,11 @@ const { navigation } = await getSettings()
   if (mobileNav && openBtn && closeBtn) {
     openBtn.addEventListener('click', () => {
       mobileNav.classList.remove('hidden')
+      openBtn.classList.add('hidden')
     })
     closeBtn.addEventListener('click', () => {
       mobileNav.classList.add('hidden')
+      openBtn.classList.remove('hidden')
     })
   }
 </script>

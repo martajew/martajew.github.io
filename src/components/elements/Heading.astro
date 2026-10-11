@@ -2,12 +2,12 @@
 import type { HTMLAttributes } from 'astro/types'
 
 const headingOptions = {
-  h1: 'lg:text-216 md:text-128 text-96',
-  h2: 'lg:text-128 md:text-80 text-64',
-  h3: 'lg:text-80 md:text-48 text-40',
-  h4: 'lg:text-48 md:text-40 text-32',
-  h5: 'lg:text-32 md:text-24 text-20',
-  h6: 'lg:text-24 md:text-20 text-16',
+  h1: 'text-[length:var(--heading-h1-size)]',
+  h2: 'text-[length:var(--heading-h2-size)]',
+  h3: 'text-[length:var(--heading-h3-size)]',
+  h4: 'text-[length:var(--heading-h4-size)]',
+  h5: 'text-[length:var(--heading-h5-size)]',
+  h6: 'text-[length:var(--heading-h6-size)]',
 }
 
 interface Props extends HTMLAttributes<'h1'> {
