@@ -7,7 +7,7 @@ section: shop
 client: '-'
 category: '~'
 services: '-'
-featuredImage: /content/media/designs/P10Z0840.JPEG
+featuredImage: /content/media/designs/P10Z0844.JPG
 imageTwo: /content/media/designs/P10Z0837.JPEG
 imageThree: /content/media/designs/IMG_8353.PNG
 imageFour: /content/media/designs/lumina/4.jpg
