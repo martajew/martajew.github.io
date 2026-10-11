@@ -10,6 +10,7 @@ import OptimizedImage from '../elements/OptimizedImage.astro'
 import Link from '../elements/Link.astro'
 import Markdown from '../elements/Markdown.astro'
 import DesignThumbnail from '../elements/DesignThumbnail.astro'
+import CloseIcon from '../elements/CloseIcon.astro'
 import '../../styles/design-details.css'
 
 interface Props {
@@ -135,10 +136,12 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
       )
     }
   </div>
-  <dialog class="design-dialog" aria-label={`${design.title} image gallery`}>
-    <button type="button" class="design-close" aria-label="Close image gallery" autofocus>×</button>
+  <dialog class="design-dialog overlay-surface" aria-label={`${design.title} image gallery`}>
+    <button type="button" class="design-close overlay-close" aria-label="Close image gallery" autofocus>
+      <CloseIcon />
+    </button>
     <div class="design-enlarged">
-      <img class="design-enlarged-image" alt="" />
+      <img class="design-frame design-enlarged-image" alt="" />
       <p class="design-image-status" role="status" hidden></p>
       {
         images.length > 1 && (

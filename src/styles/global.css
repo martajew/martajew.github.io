@@ -66,6 +66,27 @@
   }
 }
 
+.overlay-surface {
+  background: var(--color-base-100);
+  color: var(--color-base-900);
+}
+
+body:has(dialog.overlay-surface[open]) #open-nav {
+  visibility: hidden;
+}
+
+.overlay-close {
+  position: fixed;
+  top: 2rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-base-900);
+}
+
 :where(.font-sans) {
   font-size-adjust: var(--font-sans-scale);
 }

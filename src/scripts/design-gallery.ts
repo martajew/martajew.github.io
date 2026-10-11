@@ -98,14 +98,6 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
     }
   })
   dialog.querySelector('.design-close')!.addEventListener('click', () => dialog.close())
-  dialog.addEventListener('click', (event) => {
-    const bounds = dialog.getBoundingClientRect()
-    const outside = event.clientX < bounds.left || event.clientX > bounds.right
-      || event.clientY < bounds.top || event.clientY > bounds.bottom
-    if (event.target === dialog && outside) {
-      dialog.close()
-    }
-  })
   dialog.addEventListener('close', () => {
     if (dialog.open || !scrollLocked) {
       return

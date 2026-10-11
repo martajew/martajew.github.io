@@ -1,6 +1,8 @@
 ---
 // components
 import Link from '../elements/Link.astro'
+import CloseIcon from '../elements/CloseIcon.astro'
+import MenuIcon from '../elements/MenuIcon.astro'
 import { getSettings } from '../../lib/content'
 
 const { navigation } = await getSettings()
@@ -26,38 +28,12 @@ const { navigation } = await getSettings()
       aria-label="Open Navigation"
       class="fixed top-8 right-6 flex size-10 items-center justify-center text-base-900"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <circle cx="12" cy="12" r="9"></circle>
-        <path d="M7 8h10M7 12h10M7 16h10"></path>
-      </svg>
+      <MenuIcon />
     </button>
-    <div class="hidden fixed inset-0 bg-base-100 z-50" id="mobile-nav">
+    <div class="overlay-surface hidden fixed inset-0 z-50" id="mobile-nav">
       <div class="flex flex-col items-center justify-center h-full">
-        <button
-          id="close-nav"
-          aria-label="Close Navigation"
-          class="fixed top-8 right-6 flex size-10 items-center justify-center text-base-900"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M8 8 16 16M8 16 16 8"></path>
-          </svg>
+        <button id="close-nav" aria-label="Close Navigation" class="overlay-close">
+          <CloseIcon />
         </button>
         <ul class="flex flex-col p-6 gap-5 md:hidden text-center">
           {
