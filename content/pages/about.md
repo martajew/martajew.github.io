@@ -4,6 +4,7 @@ permalink: about
 comment: ''
 blocks:
   - type: callout_block
+    size: h1
     lead: Acid Fairies is an independent brand made by 3 friends who create for those who want to embrace their unique style!!
     body: At Acid Fairies, fashion isn’t just about clothes—it’s a way to express your individuality, your personality and everything that makes you, you. We want to create a space where everyone is  comfortable in what they choose to wear. Our mission is to empower people to express who they truly are without stereotypes or fear of judgment.
     button: shop
@@ -12,16 +13,16 @@ blocks:
     image: /content/media/pages/650776de4e4d20ae25ff32b5037e032e.jpg
   - type: callout_block
     size: h1
-    lead: Our team designer and seamstress
-    body: dupa dupa dupa
+    lead: Our team’s seamstress and designer. She creates the patterns and makes every piece herself.
+    body: I’m obsessed with alternative fashion styles and I love pattern making and sewing. I hope to create pieces that make you feel comfortable and beautiful and that fit your style perfectly!!
     button: ''
     link: ''
     name: Mania
     image: /content/media/pages/MANIA SOLO ten sam filtr.jpeg
   - type: callout_block
     size: h1
-    lead: The lead designer
-    body: ania wymysl cos
+    lead: The lead designer of our brand. She comes up with every design and makes sure that each one is as comfortable and inclusive as possible.
+    body: I love 60’s and 70’s fashion and fashion history. I’m always thinking of new cute designs with something a little extra .✨I hope that my designs make you feel like the main character (that you are babe 😏)
     button: ''
     link: ''
     name: Ania
@@ -34,6 +35,14 @@ blocks:
     link: ''
     name: Magda
     image: /content/media/pages/MAGDA SOLO.jpeg
+  - type: callout_block
+    size: h1
+    lead: Emilia & Dominika are our two gorgeous models.
+    body: We want to include as many sizes as possible, so
+    button: ''
+    link: ''
+    name: our models
+    image: /content/media/pages/473478d9fe25d91defeb45d950e11d29.JPEG
   - type: callout_block
     size: h1
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
