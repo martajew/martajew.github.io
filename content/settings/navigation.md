@@ -9,8 +9,6 @@ navigationLinks:
     href: /shop
   - title: About us
     href: /about
-  - title: Our models
-    href: /our-models
 socialsHeading: contact & socials
 socialsLinks:
   - title: Mail
