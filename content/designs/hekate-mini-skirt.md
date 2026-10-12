@@ -1,14 +1,13 @@
 ---
 title: Hekate Mini Skirt
+subtitle: ''
+badge: ''
 permalink: hekate-mini-skirt
 sortDate: 2026-09-21
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-additionalImages:
-  - image: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-  - image: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
-  - image: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+featuredImage: /content/media/designs/P10Z0992.JPG
+additionalImages: []
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
@@ -27,6 +26,12 @@ isDraft: false
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Band too tight?? Layers too short?? Anything and we 'll do our best to make your skirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Available colours: Black & Ecru
 
-?? wears size ? and is ?/?” tall
+Customisation: Let us know what issues you usually have with buying clothes!! Band too tight?? Layers too short?? Anything and we'll do our best to make your skirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+
+Magda wears size ? and is ?/?” tall
+
+Kinga wears size 30 and is ?/?” tall
+
+Dominika wears size 34 and is ?/?” tall
