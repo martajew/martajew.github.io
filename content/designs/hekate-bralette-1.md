@@ -5,7 +5,7 @@ badge: ''
 permalink: hekate-long-sleeve-top
 sortDate: 2025-12-17
 detailsPage: design-details
-section: shop
+section: Shop
 featuredImage: /content/media/designs/P10Z0844.JPG
 additionalImages: []
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
