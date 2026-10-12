@@ -1,21 +1,18 @@
 ---
 title: Hekate Bralette
+subtitle: ''
+badge: ''
 permalink: hekate-bralette
-sortDate: 2025-12-17
+sortDate: 2026-10-12
 detailsPage: design-details
-section: shop
-client: '-'
-category: '~'
-services: '-'
+section: Shop
 featuredImage: /content/media/designs/P10Z0844.JPG
-imageTwo: /content/media/designs/P10Z0837.JPEG
-imageThree: /content/media/designs/IMG_8353.PNG
-imageFour: /content/media/designs/lumina/4.jpg
+additionalImages: []
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
 
-  \~ lace fabric & special decorative for ✨whimsy✨
+  \~ lace fabric & decorative trim for ✨whimsy✨
 
   \~ adjustable straps and back closure
 
@@ -25,10 +22,28 @@ description: |-
 
   \~ 90% nylon & 10% elastane fabric for beautiful overlay
 isDraft: false
+category: '~'
+client: '-'
+imageFour: /content/media/designs/lumina/4.jpg
+imageThree: /content/media/designs/IMG_8353.PNG
+imageTwo: /content/media/designs/P10Z0837.JPEG
+services: '-'
 ---
 
 Available sizes: 30 - 62
 
+Available colours: Black & Ecru
+
 Customisation: Let us know what issues you usually have with buying clothes!! Band too tight?? Not enough room for your boobs?? Anything and we'll do our best to make your bralette fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
-?? wears size ? and is ?/?” tall
+Mania wears size 32 and is 165cm/5.5” tall
+
+Ania wears size 36 and is ?/?” tall
+
+Magda wears size ? and is ?/?” tall
+
+Kinga wears size 30 and is ?/?” tall
+
+Emilia wears size 36 and is 168/5.6” tall
+
+Dominika wears size 34 and is ?/?” tall
