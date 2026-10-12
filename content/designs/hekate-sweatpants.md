@@ -1,14 +1,13 @@
 ---
 title: Hekate Sweatpants
+subtitle: ''
+badge: ''
 permalink: hekate-sweatpants
 sortDate: 2026-01-15
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/IMG_1091.jpg
-additionalImages:
-  - image: /content/media/designs/smart-speaker/2.jpg
-  - image: /content/media/designs/smart-speaker/3.jpg
-  - image: /content/media/designs/smart-speaker/4.jpg
+featuredImage: /content/media/designs/P10Z0963.JPG
+additionalImages: []
 paymentLink: https://buy.stripe.com/test_8x25kFfFB2kf9jJcYhgbm00
 description: |-
   Description
@@ -29,6 +28,14 @@ isDraft: false
 
 Available sizes: 30 - 62
 
+Available colours: Black & Ecru
+
 Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we'll do our best to make your pants fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
-?? wears size ? and is ?/?” tall
+Mania wears size 32 and is 165cm/5.5” tall
+
+Ania wears size 36 and is 170cm/5.7” tall
+
+Emilia wears size 36 and is 168cm/5.6” tall
+
+Dominika wears size 34 and is 178cm/5.10” tall
