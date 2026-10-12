@@ -7,7 +7,8 @@ sortDate: 2026-01-01
 detailsPage: design-details
 section: shop
 featuredImage: /content/media/designs/P10Z0855 2.jpg
-additionalImages: []
+additionalImages:
+  - image: /content/media/designs/P10Z1028.JPG
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
