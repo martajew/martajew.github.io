@@ -35,8 +35,8 @@ Available sizes: 30 - 62
 
 Available colours: Black & Ecru
 
-Customisation:  Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your top fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Customisation:  Let us know what issues you usually have with buying clothes!! Waistband too low?? Not enough room for your boobs?? Anything and we'll do our best to make your top fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
 Mania wears size 32 and is 165cm/5.5” tall
 
-Ania wears size 36 and is ?/?” tall
+Ania wears size 36 and is 170cm/5.7” tall
