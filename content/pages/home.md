@@ -15,7 +15,7 @@ blocks:
   - type: callout_block
     size: h2
     lead: Acid Fairies is an independent brand born in Poznan, Poland in 2026. We create in hope to make you feel as amazing and beautiful as you are!!
-    body: With a passion for crafting intuitive and delightful experiences, I help brands and startups translate complex challenges into elegant solutions that create meaningful impact.
+    body: Fashion is a way to express your individuality, your personality and everything that makes you, you. We want to create a space where everyone is comfortable and feels beautiful in what they choose to wear. We hope to create products that last and will bring you joy for many years.
     button: More about us
     link: /about
     name: About
