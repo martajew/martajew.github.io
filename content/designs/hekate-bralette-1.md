@@ -10,6 +10,7 @@ featuredImage: /content/media/designs/P10Z0957.JPG
 additionalImages:
   - image: /content/media/designs/P10Z0750.JPG
   - image: /content/media/designs/P10Z0949.JPG
+  - image: /content/media/designs/P10Z0739.JPG
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
