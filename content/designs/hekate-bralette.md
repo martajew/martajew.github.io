@@ -38,12 +38,12 @@ Customisation: Let us know what issues you usually have with buying clothes!! Ba
 
 Mania wears size 32 and is 165cm/5.5” tall
 
-Ania wears size 36 and is ?/?” tall
+Ania wears size 36 and is 170cm/5.7” tall
 
-Magda wears size ? and is ?/?” tall
+Magda wears size ? and is 169cm/5.7” tall
 
-Kinga wears size 30 and is ?/?” tall
+Kinga wears size 30 and is 158cm/5.2” tall
 
-Emilia wears size 36 and is 168/5.6” tall
+Emilia wears size 36 and is 168cm/5.6” tall
 
-Dominika wears size 34 and is ?/?” tall
+Dominika wears size 34 and is 178cm/5.10” tall
