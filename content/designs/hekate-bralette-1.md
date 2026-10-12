@@ -1,5 +1,5 @@
 ---
-title: Hekate Bralette
+title: Hekate Long Sleeve Top
 subtitle: ''
 badge: ''
 permalink: hekate-long-sleeve-top
