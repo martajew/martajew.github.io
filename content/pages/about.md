@@ -29,8 +29,8 @@ blocks:
     image: /content/media/pages/9adf0807693920110fb352b662bedb82.jpg
   - type: callout_block
     size: h1
-    lead: Our teams amazing photographer
-    body: magda twoja kolej
+    lead: Our teams amazing photographer and set designer. She makes sure all are photos are the best quality and show our products as precisely as possible.
+    body: I got my first camera when I was five and I've refused to put it down ever since. Now I'm using new gear but with the same passion. To show you every single piece, each one made with YOU in mind ❤️
     button: ''
     link: ''
     name: Magda
@@ -43,6 +43,21 @@ blocks:
     link: ''
     name: Our Models
     image: /content/media/pages/473478d9fe25d91defeb45d950e11d29.JPEG
+  - type: callout_block
+    size: h1
+    lead: Here you can see what measurement you need to take to make sure your pieces fit perfectly. Keep in mind that those are measurements of your body, NOT the product itself.
+    body: |-
+      How to measure yourself:
+
+      1. Bust: measure around the widest part of your torso.
+      2. Waist: measure around the smaller part of your torso.
+      3. Hips: measure around the widest part of your hips.
+      4. Sleeve length: measure from your armpit to your wrist.
+      5. Leg length: measure from your crotch to your ankle.![](/content/media/pages/Screenshot%202026-10-12%20at%2021.42.06.png)
+    button: ''
+    link: ''
+    name: Size charts
+    image: /content/media/pages/Screenshot 2026-10-12 at 21.42.06.png
   - type: callout_block
     size: h1
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
