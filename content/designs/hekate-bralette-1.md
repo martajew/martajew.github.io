@@ -6,23 +6,21 @@ permalink: hekate-long-sleeve-top
 sortDate: 2025-12-17
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/P10Z0844.JPG
-additionalImages:
-  - image: /content/media/designs/P10Z0957.JPG
-  - image: /content/media/designs/P10Z0750.JPG
+featuredImage: /content/media/designs/P10Z0957.JPG
+additionalImages: []
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
 
-  \~ lace fabric & special decorative for ✨whimsy✨
+  \~ lace fabric & decorative elastic for ✨whimsy✨
 
-  \~ adjustable straps and back closure
+  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
 
-  \~ beautiful lace so you’ll feel special everywhere
+  \~ wide sleeves
 
-  \~ 80% cotton & 20% elastane lining fabric for your skin comfort
+  \~ tight elastic waist to accentuate your beautiful curves
 
-  \~ 90% nylon & 10% elastane fabric for beautiful overlay
+  \~ 90% nylon & 10% elastane fabric for your comfort
 isDraft: false
 category: '~'
 client: '-'
@@ -34,6 +32,10 @@ services: '-'
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Band too tight?? Not enough room for your boobs?? Anything and we'll do our best to make your bralette fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Available colours: Black & Ecru
 
-?? wears size ? and is ?/?” tall
+Customisation:  Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your top fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+
+Mania wears size 32 and is 165cm/5.5” tall
+
+Ania wears size 36 and is ?/?” tall
