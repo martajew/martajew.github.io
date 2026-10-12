@@ -1,14 +1,13 @@
 ---
 title: Hekate Top
+subtitle: ''
+badge: ''
 permalink: hekate-top
 sortDate: 2025-03-18
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/IMG_1085.jpg
-additionalImages:
-  - image: /content/media/designs/IMG_8324.jpg
-  - image: /content/media/designs/IMG_8324.jpg
-  - image: /content/media/designs/46240478-cc56-4021-824d-1838c2b4009f.594cf46740b90158fafcaea296371433.webp
+featuredImage: /content/media/designs/P10Z0780.JPG
+additionalImages: []
 paymentLink: https://buy.stripe.com/00w6oH25u8el7An4oxbwk00
 description: |-
   Description:
@@ -27,6 +26,18 @@ isDraft: false
 
 Available sizes: 30 - 62
 
-Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your top fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+Available colours: Black & Ecru
 
-?? wears size ? and is ?/?” tall
+Customisation: Let us know what issues you usually have with buying clothes!! Waist too low?? Not enough room for your boobs?? Anything and we'll do our best to make your top fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+
+Mania wears size 32 and is 165cm/5.5” tall
+
+Ania wears size 36 and is 170cm/5.7” tall
+
+Magda wears size ? and is 169cm/5.7” tall
+
+Kinga wears size 30 and is 158cm/5.2” tall
+
+Emilia wears size 36 and is 168cm/5.6” tall
+
+Dominika wears size 34 and is 178cm/5.10” tall
