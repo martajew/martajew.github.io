@@ -1,5 +1,6 @@
 ---
 section: navigation
+logoImage: /content/media/settings/favicon.png
 notFoundPage: not-found
 navigationHeading: Navigation
 navigationLinks:

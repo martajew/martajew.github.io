@@ -151,6 +151,7 @@ const settings = defineCollection({
 
     const navigation = z.object({
       section: z.literal('navigation'),
+      logoImage: z.optional(image()),
       notFoundPage: reference('pages').optional(),
       navigationHeading: z.string().optional(),
       navigationLinks: z.array(z.object({

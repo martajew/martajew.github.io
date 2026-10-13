@@ -211,6 +211,11 @@ collections:
         icon: menu
         fields:
           - {label: Section, name: section, widget: hidden, default: navigation}
+          - label: Logo Image
+            name: logoImage
+            widget: image
+            required: false
+            hint: Complete desktop header logo. Use an image cropped close to the artwork; original colors are preserved.
           - label: 404 Page
             name: notFoundPage
             widget: relation
