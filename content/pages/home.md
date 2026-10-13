@@ -25,19 +25,51 @@ blocks:
     heading: Q&A
     items:
       - title: How long does making of my order take?
-        text: Every order usually takes up to a week to finish, however if you order more pieces it can take a little longer. We'll notify you when your order is ready to be shipped.
+        text: Every order usually takes up to a week to finish, however if you order more pieces it can take a little longer, up to 3 weeks. We'll notify you when your order is ready to be shipped.
       - title: How much is shipping?
-        text: Shipping in Europe is ??. In the UK and US the price is ??. For all orders over $250 the shipping is free.
+        text: Shipping to the EU and UK is $21, to the US - $60. For all orders over $250 the shipping is free.
       - title: How long will the delivery take?
-        text: Up to ?? days
+        text: Delivery to the EU and UK shouldn't take longer than 3 days to arrive. To the US standard delivery can take up to a week.
       - title: Can I cancel or modify my order?
         text: Since we make all our items on commission, you can't cancel or modify your order after you've received an email that we've began making your items. You can send us an email or DM us on Instagram before that and then you'll be able to modify your order or receive a refund.
       - title: What’s your shipping policy?
         text: ble ble ble ble
       - title: How can I make a return?
-        text: you can't haha
+        text: |-
+          If you ordered a piece with customisations you can't return it. We value the satisfaction of our clients a lot, so please contact us on Instagram or via email and let us know about problems you had and we'll do our best to resolve the issue so you can be happy with your piece. 
+
+          To return a piece without any customisations, DM us on Instagram or email us and we'll get back to you and you'll be able to return the piece.
+
+          Due to hygiene reasons, underwear, such as bralettes, thongs and panties are non-returnable.
       - title: What payment methods do you accept?
         text: Stripe
       - title: How to take care of my clothes?
-        text: cdaoncjxncjknaidjpijf
+        text: |-
+          All the specific information about taking care of your pieces will be delivered with each one.
+
+          Here's a little reminder:
+
+          For sweatshirts, hoodies and sweatpants:
+
+          1\. Machine wash in cold temperatures.
+
+          2\. Use a gentle program.
+
+          3\. Dry flat.
+
+          4\. Do not bleach.
+
+          5\. Iron if necessary.
+
+          For underwear, tops and skirt:
+
+          1\. Machine wash in cold temperatures.
+
+          2\. Use a gentle program.
+
+          3\. Dry flat.
+
+          4\. Do not bleach.
+
+          5\. Do not iron.
 ---
