@@ -1,6 +1,6 @@
 ---
 section: navigation
-logoImage: /content/media/settings/favicon.png
+logoImage: /content/media/settings/Grafika_bez_nazwy 5.jpg
 notFoundPage: not-found
 navigationHeading: Navigation
 navigationLinks:
