@@ -26,7 +26,7 @@ description: |-
   \~ 80% cotton & 20% elastane lining fabric for your skin comfort
 
   \~ 90% nylon & 10% elastane fabric for beautiful overlay
-isDraft: false
+isDraft: true
 category: '~'
 client: '-'
 imageFour: /content/media/designs/zenith-wellness/4.jpg
