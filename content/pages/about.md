@@ -49,11 +49,11 @@ blocks:
     body: |-
       How to measure yourself:
 
-      1. Bust: measure around the widest part of your torso.
-      2. Waist: measure around the smaller part of your torso.
-      3. Hips: measure around the widest part of your hips.
-      4. Sleeve length: measure from your armpit to your wrist.
-      5. Leg length: measure from your crotch to your ankle.![](/content/media/pages/Screenshot%202026-10-12%20at%2021.42.06.png)
+      1\. Bust: measure around the widest part of your torso.
+      2\. Waist: measure around the smaller part of your torso.
+      3\. Hips: measure around the widest part of your hips.
+      4\. Sleeve length: measure from your armpit to your wrist.
+      5\. Leg length: measure from your crotch to your ankle.
     button: ''
     link: ''
     name: Size charts
