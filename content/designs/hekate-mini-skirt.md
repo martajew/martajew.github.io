@@ -21,7 +21,7 @@ description: |-
   \~ tight elastic waist to accentuate your beautiful curves
 
   \~ 90% nylon & 10% elastane fabric for your comfort
-isDraft: false
+isDraft: true
 ---
 
 Available sizes: 30 - 62
