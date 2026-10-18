@@ -8,4 +8,7 @@ blocks:
     heading: Shop
     section: ''
     pageSize: 100
+  - type: design_details_block
+    size: h1
+    paymentButtonLabel: Size Chart
 ---
