@@ -175,6 +175,7 @@ collections:
         fields:
           - {label: Image, name: image, widget: image}
       - {label: Payment Link, name: paymentLink, widget: string}
+      - {label: PayPal Product ID, name: paypalProductId, widget: string, required: false}
       - {label: Description, name: description, widget: markdown}
       - {label: Body, name: body, widget: markdown}
       - {label: Draft, name: isDraft, widget: boolean, default: false, hint: Hide design from public site.}
@@ -245,3 +246,10 @@ collections:
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}
           - {label: Sections, name: sections, widget: list, hint: Put one section per line.}
+      - label: Shop
+        name: shop
+        file: /content/settings/shop.md
+        icon: shopping_cart
+        fields:
+          - {label: Section, name: section, widget: hidden, default: shop}
+          - {label: PayPal Merchant ID, name: paypalMerchantId, widget: string, required: true}

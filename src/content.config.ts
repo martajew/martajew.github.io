@@ -123,6 +123,7 @@ const designs = defineCollection({
     featuredImage: image(),
     additionalImages: z.array(z.object({ image: image() })).default([]),
     paymentLink: z.url().optional(),
+    paypalProductId: z.string().trim().optional(),
     description: z.string().optional(),
     isDraft: z.boolean().optional(),
   }),
@@ -169,10 +170,16 @@ const settings = defineCollection({
       section: z.literal('designs'),
     })
 
+    const shop = z.object({
+      section: z.literal('shop'),
+      paypalMerchantId: z.string().trim().min(1),
+    })
+
     return z.discriminatedUnion('section', [
       layout,
       navigation,
       designs,
+      shop,
     ])
   },
 })

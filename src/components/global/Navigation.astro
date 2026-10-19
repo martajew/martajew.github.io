@@ -12,7 +12,7 @@ const logo = await optimizeImage(navigation.logoImage, { maxWidth: 480 })
 
 <nav class="flex justify-end py-8 fixed top-0 right-6 left-0 z-50 md:right-0 md:p-0">
   <!-- Desktop Nav -->
-  <div class="desktop-nav hidden md:flex h-22 w-full items-center justify-between gap-8 bg-base-900 px-8">
+  <div class="desktop-nav hidden md:flex! h-22 w-full items-center justify-between gap-8 bg-base-900 px-8">
     <a href="/" class="min-w-0 shrink-0 font-sans text-24" aria-label={layout.mainPageTitle}>
       {
         logo ? (
@@ -38,6 +38,10 @@ const logo = await optimizeImage(navigation.logoImage, { maxWidth: 480 })
           </li>
         ))
       }
+      <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+      <script is:inline>
+        cartPaypal.Cart({ id: 'pp-view-cart' })
+      </script>
     </ul>
   </div>
   <!-- Mobile Nav -->
@@ -64,6 +68,12 @@ const logo = await optimizeImage(navigation.logoImage, { maxWidth: 480 })
               </li>
             ))
           }
+          <li class="flex justify-center">
+            <paypal-cart-button data-id="pp-view-cart-mobile"></paypal-cart-button>
+            <script is:inline>
+              cartPaypal.Cart({ id: 'pp-view-cart-mobile' })
+            </script>
+          </li>
         </ul>
       </div>
     </div>

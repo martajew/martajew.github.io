@@ -25,4 +25,8 @@ export class SettingsModel {
   get designs(): SettingsMap['designs'] {
     return this.sections.designs
   }
+
+  get shop(): SettingsMap['shop'] {
+    return this.sections.shop
+  }
 }

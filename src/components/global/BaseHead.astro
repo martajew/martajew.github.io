@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title } = Astro.props
-const { layout } = await getSettings()
+const { layout, shop } = await getSettings()
 const pageTitle = layout.mainPageTitle ? `${layout.mainPageTitle} - ${title}` : title
 const favicon16 = await optimizeImage(layout.faviconImage, { maxWidth: 16, format: 'png' })
 const favicon32 = await optimizeImage(layout.faviconImage, { maxWidth: 32, format: 'png' })
@@ -27,4 +27,6 @@ const apple180 = await optimizeImage(layout.faviconImage, { maxWidth: 180, forma
   {favicon32 && <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />}
   {apple180 && <link rel="apple-touch-icon" sizes="180x180" href={apple180.src} />}
   <title>{pageTitle}</title>
+  <script is:inline src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id={shop.paypalMerchantId}
+  ></script>
 </head>

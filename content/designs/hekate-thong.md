@@ -19,7 +19,7 @@ description: |-
 
   \~ tight elastic waist to accentuate your beautiful curves
 
-  \~ adjustable straps 
+  \~ adjustable straps
 
   \~ beautiful lace so you’ll feel special everywhere
 

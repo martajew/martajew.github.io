@@ -136,6 +136,13 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
       )
     }
   </div>
+  {
+    design.paypalProductId && (
+      <div class="w-full max-w-sm mx-auto">
+        <paypal-add-to-cart-button data-id={design.paypalProductId} />
+      </div>
+    )
+  }
   <dialog class="design-dialog overlay-surface" aria-label={`${design.title} image gallery`}>
     <button type="button" class="design-close overlay-close" aria-label="Close image gallery" autofocus>
       <CloseIcon />
@@ -162,4 +169,10 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
 
 <script>
   import '../../scripts/design-gallery'
+</script>
+
+<script is:inline define:vars={{ paypalProductId: design.paypalProductId }}>
+  if (paypalProductId) {
+    cartPaypal.AddToCart({ id: paypalProductId })
+  }
 </script>

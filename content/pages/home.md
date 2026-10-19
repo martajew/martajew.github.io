@@ -36,7 +36,7 @@ blocks:
         text: ble ble ble ble
       - title: How can I make a return?
         text: |-
-          If you ordered a piece with customisations you can't return it. We value the satisfaction of our clients a lot, so please contact us on Instagram or via email and let us know about problems you had and we'll do our best to resolve the issue so you can be happy with your piece. 
+          If you ordered a piece with customisations you can't return it. We value the satisfaction of our clients a lot, so please contact us on Instagram or via email and let us know about problems you had and we'll do our best to resolve the issue so you can be happy with your piece.
 
           To return a piece without any customisations, DM us on Instagram or email us and we'll get back to you and you'll be able to return the piece.
 
