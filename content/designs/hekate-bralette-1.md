@@ -11,6 +11,8 @@ additionalImages:
   - image: /content/media/designs/P10Z0750.JPG
   - image: /content/media/designs/P10Z0949.JPG
   - image: /content/media/designs/P10Z0739.JPG
+paymentLink: https://pl.pinterest.com/
+paypalProductId: 5ZNSZPEH32LM8
 description: |-
   Description:
 
