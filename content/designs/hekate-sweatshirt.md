@@ -10,7 +10,7 @@ featuredImage: /content/media/designs/P10Z0821.JPEG
 additionalImages:
   - image: /content/media/designs/P10Z0924.JPG
 paypalProductId: ZVMFZ9YD924TS
-sizeChart: a992a8b1-006d-4e3c-9bff-ebab83b8b8b2
+sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Description:
 
