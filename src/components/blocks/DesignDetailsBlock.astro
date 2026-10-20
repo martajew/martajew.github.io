@@ -1,6 +1,7 @@
 ---
 import { type PageBlocksMap, type DesignPageModel } from '../../lib/models'
 import { optimizeImage } from '../../lib/images'
+import { getSettings } from '../../lib/content'
 import Container from '../elements/Container.astro'
 import DecoratorImage from '../elements/DecoratorImage.astro'
 import Heading from '../elements/Heading.astro'
@@ -19,6 +20,9 @@ interface Props {
 
 const { block, page } = Astro.props
 const { data: design, body } = page.getItem().entry
+const settings = await getSettings()
+const sizeChart = settings.designs.sizeCharts.find((chart) => chart.id === design.sizeChart)
+const sizeChartImage = await optimizeImage(sizeChart?.image, { maxWidth: 2000 })
 const images = [design.featuredImage, ...design.additionalImages.map((item) => item.image)]
 const enlargedImages = await Promise.all(images.map((image) => optimizeImage(image, { maxWidth: 2000 })))
 const additionalIndices = design.additionalImages.map((_, index) => index + 1)
@@ -100,7 +104,22 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
     }
   </div>
   <article class="md:max-w-3xl mx-auto w-full flex flex-col items-start gap-7">
-    <Markdown variant="sm" content={body} />
+    <div class="w-full flex flex-col items-start gap-3">
+      <Markdown variant="sm" content={body} />
+      {
+        sizeChartImage && sizeChart && (
+          <button
+            type="button"
+            class="wrap-anywhere text-left font-mono font-semibold underline underline-offset-3 hover:text-base-700"
+            data-size-chart-src={sizeChartImage.src}
+            data-size-chart-alt={`Size chart: ${sizeChart.name}`}
+            aria-haspopup="dialog"
+          >
+            {sizeChart.name}
+          </button>
+        )
+      }
+    </div>
     {
       design.paypalProductId && (
         <div class="design-order w-full font-mono">
@@ -137,7 +156,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
     }
   </div>
   <dialog class="design-dialog overlay-surface" aria-label={`${design.title} image gallery`}>
-    <button type="button" class="design-close overlay-close" aria-label="Close image gallery" autofocus>
+    <button type="button" class="design-close overlay-close" aria-label="Close image preview" autofocus>
       <CloseIcon />
     </button>
     <div class="design-enlarged">

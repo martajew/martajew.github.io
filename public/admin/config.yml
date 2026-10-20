@@ -154,6 +154,7 @@ collections:
         name: section
         hint: 'Manage available sections in [Settings > Designs](#/collections/settings/entries/designs).'
         widget: relation
+        required: false
         collection: settings
         file: designs
         value_field: '{{sections.*}}'
@@ -175,6 +176,17 @@ collections:
         fields:
           - {label: Image, name: image, widget: image}
       - {label: PayPal Product ID, name: paypalProductId, widget: string, required: false}
+      - label: Size Chart
+        name: sizeChart
+        hint: 'Manage available size charts in [Settings > Designs](#/collections/settings/entries/designs).'
+        widget: relation
+        dropdown_threshold: 0
+        required: false
+        collection: settings
+        file: designs
+        search_fields: ['sizeCharts.*.name']
+        value_field: '{{sizeCharts.*.id}}'
+        display_fields: ['{{sizeCharts.*.name}} ({{sizeCharts.*.id}})']
       - {label: Description, name: description, widget: markdown}
       - {label: Body, name: body, widget: markdown}
       - {label: Draft, name: isDraft, widget: boolean, default: false, hint: Hide design from public site.}
@@ -245,6 +257,16 @@ collections:
         fields:
           - {label: Section, name: section, widget: hidden, default: designs}
           - {label: Sections, name: sections, widget: list, hint: Put one section per line.}
+          - label: Size Charts
+            name: sizeCharts
+            widget: list
+            required: false
+            collapsed: true
+            thumbnail: image
+            fields:
+              - {label: ID, name: id, widget: uuid}
+              - {label: Name, name: name, widget: string, hint: Shown as the link text on product pages.}
+              - {label: Image, name: image, widget: image}
       - label: Shop
         name: shop
         file: /content/settings/shop.md

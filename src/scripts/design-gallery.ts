@@ -8,6 +8,16 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
   let opener: HTMLElement | undefined
   let previousOverflow = ''
   let scrollLocked = false
+  let showingSizeChart = false
+  const galleryLabel = dialog.getAttribute('aria-label')!
+
+  function setPreviewMode(sizeChart: boolean) {
+    showingSizeChart = sizeChart
+    dialog.setAttribute('aria-label', sizeChart ? 'Size chart' : galleryLabel)
+    dialog.querySelectorAll<HTMLElement>('[data-main-step], [data-modal-counter]').forEach((element) => {
+      element.hidden = sizeChart
+    })
+  }
 
   function trackImage(image: HTMLImageElement, surface: HTMLElement) {
     const status = surface.querySelector<HTMLElement>('.design-image-status')!
@@ -48,7 +58,7 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
     }
   }
 
-  function openImage(index: number, trigger: HTMLElement) {
+  function openDialog(trigger: HTMLElement) {
     opener = trigger
     if (!scrollLocked) {
       previousOverflow = document.documentElement.style.overflow
@@ -56,8 +66,22 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
       scrollLocked = true
     }
     dialog.showModal()
+  }
+
+  function openImage(index: number, trigger: HTMLElement) {
+    setPreviewMode(false)
+    openDialog(trigger)
     selectImage(index)
   }
+
+  const sizeChartButton = gallery.querySelector<HTMLButtonElement>('[data-size-chart-src]')
+  sizeChartButton?.addEventListener('click', () => {
+    setPreviewMode(true)
+    openDialog(sizeChartButton)
+    enlarged.src = sizeChartButton.dataset.sizeChartSrc!
+    enlarged.alt = sizeChartButton.dataset.sizeChartAlt!
+    updateEnlarged()
+  })
 
   slides.forEach((slide, index) => slide.addEventListener('click', () => openImage(index, slide)))
   gallery.querySelectorAll<HTMLButtonElement>('[data-image-index]').forEach((button) => {
@@ -78,6 +102,7 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
   gallery.addEventListener('keydown', (event) => {
     if (dialog.open && event.key === 'Tab') {
       const buttons = [...dialog.querySelectorAll<HTMLButtonElement>('button')]
+        .filter(button => !button.hidden)
       const first = buttons[0]!
       const last = buttons.at(-1)!
       if (event.shiftKey && document.activeElement === first) {
@@ -90,6 +115,9 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
       }
     }
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      if (showingSizeChart && dialog.open) {
+        return
+      }
       if (!dialog.open && !(event.target instanceof Element && event.target.closest('.design-main'))) {
         return
       }
@@ -130,7 +158,7 @@ document.querySelectorAll<HTMLElement>('.design-gallery').forEach((gallery) => {
         const origin = start
         start = undefined
         const end = [...event.changedTouches].find(touch => touch.identifier === origin?.identifier)
-        if (!origin || !end || event.touches.length) {
+        if (!origin || !end || event.touches.length || (showingSizeChart && dialog.open)) {
           return
         }
         const deltaX = end.clientX - origin.clientX

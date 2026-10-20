@@ -8,8 +8,8 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0963.JPG
 additionalImages: []
-paymentLink: https://pl.pinterest.com/
 paypalProductId: 6KECFZ8MEX2BW
+sizeChart: 7089c353-d623-4ad8-bbd8-ecc821f8254b
 description: |-
   Description
 

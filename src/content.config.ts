@@ -114,15 +114,16 @@ const designs = defineCollection({
   loader: glob({ base: './content/designs', pattern: '**/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
-    subtitle: z.string().trim().optional(),
-    badge: z.string().trim().optional(),
+    subtitle: z.string().optional(),
+    badge: z.string().optional(),
     permalink: z.string().optional(),
     sortDate: z.date().optional(),
     detailsPage: reference('pages').optional(),
     section: z.string().optional(),
     featuredImage: image(),
     additionalImages: z.array(z.object({ image: image() })).default([]),
-    paypalProductId: z.string().trim().optional(),
+    paypalProductId: z.string().optional(),
+    sizeChart: z.string().optional(),
     description: z.string().optional(),
     isDraft: z.boolean().optional(),
   }),
@@ -167,11 +168,16 @@ const settings = defineCollection({
 
     const designs = z.object({
       section: z.literal('designs'),
+      sizeCharts: z.array(z.object({
+        id: z.string().optional(),
+        name: z.string().optional(),
+        image: z.optional(image()),
+      })).default([]),
     })
 
     const shop = z.object({
       section: z.literal('shop'),
-      paypalMerchantId: z.string().trim().min(1),
+      paypalMerchantId: z.string().optional(),
     })
 
     return z.discriminatedUnion('section', [

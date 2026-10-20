@@ -8,7 +8,6 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z1004.JPG
 additionalImages: []
-paymentLink: https://martajew.github.io/
 paypalProductId: 3LAEJL38CLLWL
 description: |-
   Description:
