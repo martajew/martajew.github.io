@@ -9,7 +9,8 @@ section: shop
 featuredImage: /content/media/designs/P10Z0821.JPEG
 additionalImages:
   - image: /content/media/designs/P10Z0924.JPG
-paypalProductId: JZ9HZLXVQ7GFQ
+paymentLink: https://pl.pinterest.com/
+paypalProductId: ZVMFZ9YD924TS
 description: |-
   Description:
 
