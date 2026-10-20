@@ -38,10 +38,9 @@ const logo = await optimizeImage(navigation.logoImage, { maxWidth: 480 })
           </li>
         ))
       }
-      <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-      <script is:inline>
-        cartPaypal.Cart({ id: 'pp-view-cart' })
-      </script>
+      <li class="flex w-32 shrink-0 items-center justify-start">
+        <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+      </li>
     </ul>
   </div>
   <!-- Mobile Nav -->
@@ -69,16 +68,17 @@ const logo = await optimizeImage(navigation.logoImage, { maxWidth: 480 })
             ))
           }
           <li class="flex justify-center">
-            <paypal-cart-button data-id="pp-view-cart-mobile"></paypal-cart-button>
-            <script is:inline>
-              cartPaypal.Cart({ id: 'pp-view-cart-mobile' })
-            </script>
+            <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  cartPaypal.Cart({ id: 'pp-view-cart' })
+</script>
 
 <script>
   const mobileNav = document.querySelector('#mobile-nav') as HTMLUListElement
