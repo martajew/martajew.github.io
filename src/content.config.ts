@@ -88,6 +88,7 @@ const pages = defineCollection({
       type: z.literal('design_details_block'),
       requiresItem: z.literal(true).default(true),
       size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
+      orderFormLabel: z.string().optional(),
     })
 
     return z.object({

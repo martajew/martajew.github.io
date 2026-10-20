@@ -89,7 +89,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
         </Heading>
         {design.subtitle && <Text variant={'md'}>{design.subtitle}</Text>}
       </div>
-      <Markdown variant="xl" content={design.description} />
+      <Markdown variant="lg" content={design.description} />
     </div>
   </div>
   <div class="design-thumbnails" aria-label="Project images">
@@ -101,6 +101,14 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
   </div>
   <article class="md:max-w-3xl mx-auto w-full flex flex-col items-start gap-7">
     <Markdown variant="sm" content={body} />
+    {
+      design.paypalProductId && (
+        <div class="design-order w-full font-mono">
+          <Markdown variant="md" content={block.orderFormLabel} />
+          <paypal-add-to-cart-button data-id={design.paypalProductId} />
+        </div>
+      )
+    }
   </article>
   <div class="design-lower" aria-label="More project images">
     {
@@ -128,13 +136,6 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
       )
     }
   </div>
-  {
-    design.paypalProductId && (
-      <div class="w-full max-w-sm mx-auto">
-        <paypal-add-to-cart-button data-id={design.paypalProductId} />
-      </div>
-    )
-  }
   <dialog class="design-dialog overlay-surface" aria-label={`${design.title} image gallery`}>
     <button type="button" class="design-close overlay-close" aria-label="Close image gallery" autofocus>
       <CloseIcon />

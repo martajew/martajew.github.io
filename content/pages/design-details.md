@@ -5,4 +5,5 @@ comment: Design details
 blocks:
   - type: design_details_block
     size: h2
+    orderFormLabel: 'Order your piece:'
 ---
