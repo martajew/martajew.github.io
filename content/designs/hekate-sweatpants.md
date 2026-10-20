@@ -9,7 +9,7 @@ section: Shop
 featuredImage: /content/media/designs/P10Z0963.JPG
 additionalImages: []
 paypalProductId: 6KECFZ8MEX2BW
-sizeChart: 7089c353-d623-4ad8-bbd8-ecc821f8254b
+sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Description
 
