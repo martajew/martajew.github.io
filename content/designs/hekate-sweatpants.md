@@ -8,7 +8,6 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0963.JPG
 additionalImages: []
-paymentLink: https://buy.stripe.com/test_8x25kFfFB2kf9jJcYhgbm00
 description: |-
   Description
 

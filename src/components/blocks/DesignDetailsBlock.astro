@@ -7,7 +7,6 @@ import Heading from '../elements/Heading.astro'
 import Text from '../elements/Text.astro'
 import SymbolImage from '../elements/SymbolImage.astro'
 import OptimizedImage from '../elements/OptimizedImage.astro'
-import Link from '../elements/Link.astro'
 import Markdown from '../elements/Markdown.astro'
 import DesignThumbnail from '../elements/DesignThumbnail.astro'
 import CloseIcon from '../elements/CloseIcon.astro'
@@ -102,13 +101,6 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
   </div>
   <article class="md:max-w-3xl mx-auto w-full flex flex-col items-start gap-7">
     <Markdown variant="sm" content={body} />
-    {
-      design.paymentLink && (
-        <Link variant="button" href={design.paymentLink}>
-          {block.paymentButtonLabel}
-        </Link>
-      )
-    }
   </article>
   <div class="design-lower" aria-label="More project images">
     {

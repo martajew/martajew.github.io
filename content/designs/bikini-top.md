@@ -9,7 +9,6 @@ additionalImages:
   - image: /content/media/designs/IMG_8324.jpg
   - image: /content/media/designs/IMG_8324.jpg
   - image: /content/media/designs/IMG_1086.jpg
-paymentLink: https://martajew.github.io/shop/
 description: |-
   Description:
 

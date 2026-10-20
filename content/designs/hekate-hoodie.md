@@ -8,8 +8,7 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z1004.JPG
 additionalImages: []
-paymentLink: https://eu.mingalondon.com/products/off-radar-camo-cargo-jorts
-paypalProductId: QXE7JH89UGLRQ
+paypalProductId: JZ9HZLXVQ7GFQ
 description: |-
   Description:
 

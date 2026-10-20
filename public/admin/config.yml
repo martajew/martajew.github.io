@@ -115,7 +115,6 @@ collections:
             name: design_details_block
             fields:
               - {label: Size, name: size, widget: select, options: [h1, h2, h3, h4, h5, h6], default: h1}
-              - {label: Payment Button Label, name: paymentButtonLabel, widget: string}
 
   - name: designs
     label: Designs
@@ -174,7 +173,6 @@ collections:
         hint: Drag images to change their order. The first four appear in the fixed row; the rest in the lower carousel.
         fields:
           - {label: Image, name: image, widget: image}
-      - {label: Payment Link, name: paymentLink, widget: string}
       - {label: PayPal Product ID, name: paypalProductId, widget: string, required: false}
       - {label: Description, name: description, widget: markdown}
       - {label: Body, name: body, widget: markdown}

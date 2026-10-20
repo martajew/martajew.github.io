@@ -88,7 +88,6 @@ const pages = defineCollection({
       type: z.literal('design_details_block'),
       requiresItem: z.literal(true).default(true),
       size: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
-      paymentButtonLabel: z.string().optional(),
     })
 
     return z.object({
@@ -122,7 +121,6 @@ const designs = defineCollection({
     section: z.string().optional(),
     featuredImage: image(),
     additionalImages: z.array(z.object({ image: image() })).default([]),
-    paymentLink: z.url().optional(),
     paypalProductId: z.string().trim().optional(),
     description: z.string().optional(),
     isDraft: z.boolean().optional(),
