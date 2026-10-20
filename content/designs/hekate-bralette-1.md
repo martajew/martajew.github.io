@@ -12,7 +12,7 @@ additionalImages:
   - image: /content/media/designs/P10Z0949.JPG
   - image: /content/media/designs/P10Z0739.JPG
 paypalProductId: 5ZNSZPEH32LM8
-sizeChart: a992a8b1-006d-4e3c-9bff-ebab83b8b8b2
+sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Description:
 
