@@ -1,4 +1,4 @@
 ---
 section: shop
-paypalMerchantId: 8TCBRHSA4CLN2
+paypalMerchantId: SZ2LUWJ3VM64U
 ---
