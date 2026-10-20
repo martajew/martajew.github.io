@@ -9,6 +9,7 @@ section: Shop
 featuredImage: /content/media/designs/P10Z1004.JPG
 additionalImages: []
 paypalProductId: 3LAEJL38CLLWL
+sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Description:
 
