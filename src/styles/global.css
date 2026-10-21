@@ -66,12 +66,7 @@
   }
 }
 
-.design-order paypal-add-to-cart-button :is(.item-title, .carousel-container) {
-  display: none !important;
-}
-
-.button,
-.design-order .addToCartButtonContainer {
+.button {
   @apply font-sans! text-24! uppercase tracking-wide;
   @apply px-6! py-2! border-2! border-base-900! text-base-900!;
   @apply bg-transparent! rounded-none! h-auto!;

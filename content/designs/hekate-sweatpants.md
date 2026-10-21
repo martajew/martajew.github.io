@@ -1,6 +1,6 @@
 ---
 title: Hekate Sweatpants
-subtitle: ''
+subtitle: 'Baggy wide legs'
 badge: ''
 permalink: hekate-sweatpants
 sortDate: 2026-01-15

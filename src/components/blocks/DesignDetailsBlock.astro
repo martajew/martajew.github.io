@@ -5,11 +5,13 @@ import { getSettings } from '../../lib/content'
 import Container from '../elements/Container.astro'
 import DecoratorImage from '../elements/DecoratorImage.astro'
 import Heading from '../elements/Heading.astro'
+import Link from '../elements/Link.astro'
 import Text from '../elements/Text.astro'
 import SymbolImage from '../elements/SymbolImage.astro'
 import OptimizedImage from '../elements/OptimizedImage.astro'
 import Markdown from '../elements/Markdown.astro'
 import DesignThumbnail from '../elements/DesignThumbnail.astro'
+import DesignOrderPreview from '../elements/DesignOrderPreview.astro'
 import CloseIcon from '../elements/CloseIcon.astro'
 import '../../styles/design-details.css'
 
@@ -93,6 +95,20 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
         </Heading>
         {design.subtitle && <Text variant={'md'}>{design.subtitle}</Text>}
       </div>
+      {
+        sizeChartImage && sizeChart && (
+          <button
+            type="button"
+            class="text-16 font-mono underline underline-offset-3 hover:text-base-700"
+            data-size-chart-src={sizeChartImage.src}
+            data-size-chart-alt={sizeChart.name}
+            aria-haspopup="dialog"
+          >
+            {sizeChart.name}
+          </button>
+        )
+      }
+      <DesignOrderPreview productId={design.paypalProductId} />
       <Markdown variant="lg" content={design.description} />
     </div>
   </div>
@@ -106,28 +122,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
   <article class="md:max-w-3xl mx-auto w-full flex flex-col items-start gap-7">
     <div class="w-full flex flex-col items-start gap-3">
       <Markdown variant="sm" content={body} />
-      {
-        sizeChartImage && sizeChart && (
-          <button
-            type="button"
-            class="wrap-anywhere text-left font-mono font-semibold underline underline-offset-3 hover:text-base-700"
-            data-size-chart-src={sizeChartImage.src}
-            data-size-chart-alt={`Size chart: ${sizeChart.name}`}
-            aria-haspopup="dialog"
-          >
-            {sizeChart.name}
-          </button>
-        )
-      }
     </div>
-    {
-      design.paypalProductId && (
-        <div class="design-order w-full font-mono">
-          <Markdown variant="md" content={block.orderFormLabel} />
-          <paypal-add-to-cart-button data-id={design.paypalProductId} />
-        </div>
-      )
-    }
   </article>
   <div class="design-lower" aria-label="More project images">
     {
@@ -155,6 +150,11 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
       )
     }
   </div>
+
+  <div class="w-full flex justify-center">
+    <Link variant="button" href="/shop" onclick="window.history.back(); return false;"> Back to shop </Link>
+  </div>
+
   <dialog class="design-dialog overlay-surface" aria-label={`${design.title} image gallery`}>
     <button type="button" class="design-close overlay-close" aria-label="Close image preview" autofocus>
       <CloseIcon />
@@ -181,10 +181,4 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
 
 <script>
   import '../../scripts/design-gallery'
-</script>
-
-<script is:inline define:vars={{ paypalProductId: design.paypalProductId }}>
-  if (paypalProductId) {
-    cartPaypal.AddToCart({ id: paypalProductId })
-  }
 </script>

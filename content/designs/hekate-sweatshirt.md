@@ -1,6 +1,6 @@
 ---
 title: Hekate Sweatshirt
-subtitle: ''
+subtitle: 'Feel like a fairy'
 badge: ''
 permalink: hekate-sweatshirt
 sortDate: 2026-09-25

@@ -1,0 +1,39 @@
+---
+interface Props {
+  productId: string | undefined
+}
+
+const { productId } = Astro.props
+---
+
+{
+  productId && (
+    <div class="design-order w-full font-mono">
+      <paypal-add-to-cart-button data-id={productId} />
+    </div>
+  )
+}
+
+<script is:inline define:vars={{ productId }}>
+  if (productId) {
+    cartPaypal.AddToCart({ id: productId }).then(() => {
+      const form = document.querySelector('.design-order paypal-add-to-cart-button')
+      form.querySelector('.addToCartButtonContainer').classList.add('button')
+
+      const select = form.querySelector('select')
+      const memo = form.querySelector('textarea#memo')
+
+      if (select && memo) {
+        const height = getComputedStyle(select).height
+        memo.style.setProperty('height', height, 'important')
+        memo.style.setProperty('min-height', height, 'important')
+      }
+    })
+  }
+</script>
+
+<style is:global>
+  .design-order paypal-add-to-cart-button :is(.item-title, [id^='carousel-container-']) {
+    display: none !important;
+  }
+</style>

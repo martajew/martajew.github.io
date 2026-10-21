@@ -1,6 +1,6 @@
 ---
 title: Hekate Long Sleeve Top
-subtitle: ''
+subtitle: 'For your beautiful curves'
 badge: ''
 permalink: hekate-long-sleeve-top
 sortDate: 2025-12-17
