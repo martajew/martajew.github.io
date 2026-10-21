@@ -9,6 +9,8 @@ section: shop
 featuredImage: /content/media/designs/P10Z0855 2.jpg
 additionalImages:
   - image: /content/media/designs/P10Z1028.JPG
+paypalProductId: 3PCHAL3LP3WGU
+sizeChart: ''
 description: |-
   Description:
 
