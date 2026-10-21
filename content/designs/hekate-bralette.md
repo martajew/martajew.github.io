@@ -8,6 +8,8 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0844.JPG
 additionalImages: []
+paypalProductId: 42WZSDH3L5BEU
+sizeChart: ''
 description: |-
   Description:
 
