@@ -1,6 +1,6 @@
 ---
 title: Hekate Sweatshirt
-subtitle: 'Feel like a fairy'
+subtitle: Feel like a fairy
 badge: ''
 permalink: hekate-sweatshirt
 sortDate: 2026-09-25
@@ -12,21 +12,15 @@ additionalImages:
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
-  Description:
+  Available sizes: 30 - 62
 
-  \~ big pockets for anything you need
+  Available colours: Black & Ecru
 
-  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
+  Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
 
-  \~ huge hood so your hair won't get messed up
+  Mania wears size 32 and is 165cm/5.5” tall
 
-  \~ baggy wide sleeves
-
-  \~ see through details on the back so you can feel like a fairy
-
-  \~ dropped waist to accentuate your beautiful curves
-
-  \~ 80% cotton & 20% elastane fabric for your comfort
+  Ania wears size 36 and is 170cm/5.7” tall
 isDraft: false
 category: '~'
 client: '-'
@@ -36,12 +30,18 @@ imageTwo: /content/media/designs/IMG_8324.jpg
 services: '-'
 ---
 
-Available sizes: 30 - 62
+Description:
 
-Available colours: Black & Ecru
+\~ big pockets for anything you need
 
-Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
+\~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
 
-Mania wears size 32 and is 165cm/5.5” tall
+\~ huge hood so your hair won't get messed up
 
-Ania wears size 36 and is 170cm/5.7” tall
+\~ baggy wide sleeves
+
+\~ see through details on the back so you can feel like a fairy
+
+\~ dropped waist to accentuate your beautiful curves
+
+\~ 80% cotton & 20% elastane fabric for your comfort
