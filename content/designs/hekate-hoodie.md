@@ -1,6 +1,6 @@
 ---
 title: Hekate Hoodie
-subtitle: 'Big and baggy'
+subtitle: Big and baggy
 badge: ''
 permalink: hekate-hoodie
 sortDate: 2026-09-25
@@ -11,23 +11,15 @@ additionalImages: []
 paypalProductId: 3LAEJL38CLLWL
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
-  Description:
+  Available sizes: 30 - 62
 
-  \~ big pockets for anything you need
+  Available colours: Black & Ecru
 
-  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
+  Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
 
-  \~ huge hood so your hair won't get messed up
+  Magda wears size 38 and is 169cm/5.7” tall
 
-  \~ wide neck opening for comfortable wear
-
-  \~ baggy wide sleeves
-
-  \~ see through details on the back so you can feel like a fairy
-
-  \~ dropped waist to accentuate your beautiful curves
-
-  \~ 80% cotton & 20% elastane fabric for your comfort
+  Emilia wears size 36 and is 168cm/5.6” tall
 isDraft: false
 category: '~'
 client: '-'
@@ -37,12 +29,20 @@ imageTwo: /content/media/designs/IMG_8324.jpg
 services: '-'
 ---
 
-Available sizes: 30 - 62
+Description:
 
-Available colours: Black & Ecru
+\~ big pockets for anything you need
 
-Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
+\~ elastic waist so you’ll feel comfortable when bloated (happens to all of us girl)
 
-Magda wears size 38 and is 169cm/5.7” tall
+\~ huge hood so your hair won't get messed up
 
-Emilia wears size 36 and is 168cm/5.6” tall
+\~ wide neck opening for comfortable wear
+
+\~ baggy wide sleeves
+
+\~ see through details on the back so you can feel like a fairy
+
+\~ dropped waist to accentuate your beautiful curves
+
+\~ 80% cotton & 20% elastane fabric for your comfort
