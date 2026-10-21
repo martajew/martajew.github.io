@@ -1,6 +1,6 @@
 ---
 title: Hekate Sweatpants
-subtitle: 'Baggy wide legs'
+subtitle: Baggy wide legs
 badge: ''
 permalink: hekate-sweatpants
 sortDate: 2026-01-15
@@ -11,32 +11,32 @@ additionalImages: []
 paypalProductId: 6KECFZ8MEX2BW
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
-  Description
+  Available sizes: 30 - 62
 
-  \~ big pockets for anything you need
+  Available colours: Black & Ecru
 
-  \~ wide lace panels and bows for ✨whimsy✨
+  Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we'll do our best to make your pants fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
-  \~ elastic waist so you’ll feel comfortable when bloated (happens to all of us bbygirl)
+  Mania wears size 32 and is 165cm/5.5” tall
 
-  \~ baggy wide legs (no one will see our crooked knees 😏)
+  Ania wears size 36 and is 170cm/5.7” tall
 
-  \~ mid waist
+  Emilia wears size 36 and is 168cm/5.6” tall
 
-  \~ 80% cotton & 20% elastane fabric for your comfort
+  Dominika wears size 34 and is 178cm/5.10” tall
 isDraft: false
 ---
 
-Available sizes: 30 - 62
+Description
 
-Available colours: Black & Ecru
+\~ big pockets for anything you need
 
-Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we'll do our best to make your pants fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
+\~ wide lace panels and bows for ✨whimsy✨
 
-Mania wears size 32 and is 165cm/5.5” tall
+\~ elastic waist so you’ll feel comfortable when bloated (happens to all of us bbygirl)
 
-Ania wears size 36 and is 170cm/5.7” tall
+\~ baggy wide legs (no one will see our crooked knees 😏)
 
-Emilia wears size 36 and is 168cm/5.6” tall
+\~ mid waist
 
-Dominika wears size 34 and is 178cm/5.10” tall
+\~ 80% cotton & 20% elastane fabric for your comfort
