@@ -8,6 +8,8 @@ detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0992.JPG
 additionalImages: []
+paypalProductId: EXWM785HNNTDW
+sizeChart: ''
 description: |-
   Description:
 
