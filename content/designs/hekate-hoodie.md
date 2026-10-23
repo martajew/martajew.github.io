@@ -1,8 +1,9 @@
 ---
 title: Hekate Hoodie
-subtitle: Big and baggy
-badge: ''
 permalink: hekate-hoodie
+subtitle: Big and baggy
+intro: Make your sweatshirt fit you!
+badge: ''
 sortDate: 2026-09-25
 detailsPage: design-details
 section: Shop

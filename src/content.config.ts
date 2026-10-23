@@ -114,9 +114,10 @@ const designs = defineCollection({
   loader: glob({ base: './content/designs', pattern: '**/*.md' }),
   schema: ({ image }) => z.object({
     title: z.string().optional(),
-    subtitle: z.string().optional(),
-    badge: z.string().optional(),
     permalink: z.string().optional(),
+    subtitle: z.string().optional(),
+    intro: z.string().optional(),
+    badge: z.string().optional(),
     sortDate: z.date().optional(),
     detailsPage: reference('pages').optional(),
     section: z.string().optional(),

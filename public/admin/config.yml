@@ -135,9 +135,14 @@ collections:
       - {field: isDraft, label: Draft}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string, required: false, hint: Optional text below the design title.}
-      - {label: Badge, name: badge, widget: string, required: false, hint: Optional label on product tile and featured image.}
       - {label: Permalink, name: permalink, widget: string, hint: Permanent static hyperlink to the design. A leading slash is optional.}
+      - {label: Subtitle, name: subtitle, widget: string, required: false, hint: Optional text below the design title.}
+      - label: Intro
+        name: intro
+        widget: markdown
+        required: false
+        hint: Optional introduction below the title and subtitle, above the size chart and add-to-cart form.
+      - {label: Badge, name: badge, widget: string, required: false, hint: Optional label on product tile and featured image.}
       - label: Sort Date
         name: sortDate
         widget: datetime

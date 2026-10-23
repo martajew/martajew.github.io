@@ -95,6 +95,7 @@ const secondPages = Array.from({ length: pageCount }, (_, page) => {
         </Heading>
         {design.subtitle && <Text variant={'md'}>{design.subtitle}</Text>}
       </div>
+      {design.intro?.trim() && <Markdown variant="lg" content={design.intro} />}
       {
         sizeChartImage && sizeChart && (
           <button
