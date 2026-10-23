@@ -99,8 +99,7 @@
   cursor: pointer;
 }
 .design-gallery button:focus-visible {
-  outline: 3px solid var(--color-base-900);
-  outline-offset: 4px;
+  outline: none;
 }
 .design-gallery [hidden] {
   display: none !important;
