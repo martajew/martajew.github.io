@@ -6,10 +6,17 @@ permalink: hekate-sweatshirt
 sortDate: 2026-09-25
 detailsPage: design-details
 section: shop
-featuredImage: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD.jpg
+featuredImage: /content/media/designs/P10Z0826 - BLUZA ZAPIĘTA PRZÓD CZARNA MANIA.jpg
 additionalImages:
-  - image: /content/media/designs/P10Z0823 BLUZA MANIA PRZÓD CZARNA ZAPIĘTA.jpg
+  - image: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD.jpg
   - image: /content/media/designs/P10Z0821 - CZARNA BLUZA BOK MANIA.jpg
+  - image: /content/media/designs/P10Z0925 - BLUZA BIAŁA ANIA PRZÓD Z KAPTUREM.jpg
+  - image: /content/media/designs/P10Z0823 BLUZA MANIA PRZÓD CZARNA ZAPIĘTA.jpg
+  - image: /content/media/designs/P10Z0934 - BLUZA BIAŁA PRZÓD Z KAPTUREM.jpg
+  - image: /content/media/designs/P10Z0809 - CZARNA BLUZA MANIA + BRALET MANIA PRZÓD.jpg
+  - image: /content/media/designs/P10Z0930 - BLUZA BIAŁA TYŁ Z KAPTUREM.jpg
+  - image: /content/media/designs/P10Z0824 - ZAPIĘTA MANIA PRZÓD CZARNA.jpg
+  - image: /content/media/designs/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA.jpg
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
