@@ -47,8 +47,8 @@ blocks:
     size: h1
     lead: Here you can see what measurement you need to take to make sure your pieces fit perfectly. Keep in mind that those are measurements of your body, NOT the product itself.
     body: |-
+      For every product you can choose a different size, no matter how different your measurements are from “standard” sizes. We want to be as inclusive as possible, so if you have any concerns about the fit, feel free to let us know while choosing the size what you worry about. 
       How to measure yourself:
-
       1\. Bust: measure around the widest part of your torso.
       2\. Waist: measure around the smaller part of your torso.
       3\. Hips: measure around the widest part of your hips.
@@ -63,16 +63,11 @@ blocks:
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
     body: |-
       All our items are handmade in Poland. We prioritise quality, fair prizing and ethical production.
-
-      Our collections aren’t rushed. Months of refining go into every design - adjusting the fit, perfecting the details, and making sure it’s something you’ll actually want to wear over and over again.
-
-      Unlike mass production, our approach focuses on creating pieces that you'll be able and want to wear for the long term.
-
-      There is always room for improvement, and we are constantly exploring new ways to make responsible choices while ensuring that our garments remain accessible to as many people as possible, so our community can continue to support and enjoy what we create.
-
+      Our collections are very well thought through. Months of prototypes, trial wears and perfecting the fit go into every design. We are making sure it’s something you’ll actually want to wear over and over again.
+      Unlike fast fashion, we focus on creating pieces that you'll be able and want to wear for many years.
+      We are aware that there is always room for improvement, so we are constantly exploring how to make even more responsible choices while ensuring that our clothes remain accessible to as many people as possible, so our community can continue to enjoy what we create.
       We don’t mass produce - every order is made on commission so we can ensure as little waist as possible. We buy fabrics and materials in limited quantities, keeping things intentional and reducing waste from the start.
-
-      Our goal is to create fashion that lasts, not trends that fade.
+      We strive to create fashion that lasts, not trends that fade.
     button: shop
     link: /shop
     name: Sustainability
