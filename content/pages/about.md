@@ -42,7 +42,7 @@ blocks:
     button: ''
     link: ''
     name: Our Models
-    image: /content/media/pages/473478d9fe25d91defeb45d950e11d29.JPEG
+    image: /content/media/pages/DSCN0019.JPEG
   - type: callout_block
     size: h1
     lead: Here you can see what measurement you need to take to make sure your pieces fit perfectly. Keep in mind that those are measurements of your body, NOT the product itself.
@@ -71,5 +71,5 @@ blocks:
     button: shop
     link: /shop
     name: Sustainability
-    image: /content/media/pages/IMG_6898.JPG
+    image: /content/media/pages/att.Afol_IN3su85EyZlPI63sUz7fM5oa5M2ssDzzkSLB88.JPG
 ---
