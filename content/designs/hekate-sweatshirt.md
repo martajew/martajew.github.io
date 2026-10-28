@@ -6,7 +6,7 @@ permalink: hekate-sweatshirt
 sortDate: 2026-09-25
 detailsPage: design-details
 section: shop
-featuredImage: /content/media/designs/P10Z0821.JPEG
+featuredImage: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD.jpg
 additionalImages:
   - image: /content/media/designs/P10Z0924.JPG
 paypalProductId: ZVMFZ9YD924TS
@@ -14,7 +14,7 @@ sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Available sizes: 30 - 62
 
-  Available colours: Black, Ecru & Burgundy
+  Available colours: Black & Ecru
 
   Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
