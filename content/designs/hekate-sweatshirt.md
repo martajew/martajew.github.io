@@ -8,7 +8,7 @@ detailsPage: design-details
 section: shop
 featuredImage: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD.jpg
 additionalImages:
-  - image: /content/media/designs/P10Z0924.JPG
+  - image: /content/media/designs/P10Z0823 BLUZA MANIA PRZÓD CZARNA ZAPIĘTA.jpg
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
