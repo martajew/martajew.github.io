@@ -6,14 +6,22 @@ permalink: hekate-sweatpants
 sortDate: 2026-01-15
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/P10Z0963.JPG
-additionalImages: []
+featuredImage: /content/media/designs/P10Z0757 - CZARNE SPODNIE MANIA PRZÓD.jpeg
+additionalImages:
+  - image: /content/media/designs/P10Z0916 DRESY BIAŁE ANIA DETAL.jpeg
+  - image: /content/media/designs/P10Z0985 - DRESY + TOP EMKA BOK CZARNE.jpeg
+  - image: /content/media/designs/P10Z0899 BIAŁE DRESY + BIAŁY TOP ANIA PRZÓD.jpeg
+  - image: /content/media/designs/P10Z0726 - CZARNE DRESY MANIA PRZÓD.jpeg
+  - image: /content/media/designs/P10Z0963 - DRESY BIAŁE PRZÓD DOMINIKA.jpeg
+  - image: /content/media/designs/P10Z0983 -DRESY + TOP TYŁ EMKA.jpeg
+  - image: /content/media/designs/P10Z0968 DRESY BIAŁE DOMINIKA TYŁ.jpeg
+  - image: /content/media/designs/P10Z0759 - DRESY CZARNE MANIA BOK.jpeg
 paypalProductId: 6KECFZ8MEX2BW
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Available sizes: 30 - 62
 
-  Available colours: Black, Ecru & Burgundy
+  Available colours: Black & Ecru
 
   Customisation: Let us know what issues you usually have with buying clothes!! Pant legs too short?? Always too tight in your hips?? Anything and we'll do our best to make your pants fit you!! Feel free to measure yourself and write everything down while ordering if you have any concerns <3.
 
