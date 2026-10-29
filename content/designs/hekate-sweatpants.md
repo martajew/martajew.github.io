@@ -16,6 +16,7 @@ additionalImages:
   - image: /content/media/designs/P10Z0983 -DRESY + TOP TYŁ EMKA.jpeg
   - image: /content/media/designs/P10Z0968 DRESY BIAŁE DOMINIKA TYŁ.jpeg
   - image: /content/media/designs/P10Z0759 - DRESY CZARNE MANIA BOK.jpeg
+  - image: /content/media/designs/P10Z0961- TOP - DRESY BIAŁE PRZÓD DOMINIKA.jpeg
 paypalProductId: 6KECFZ8MEX2BW
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
