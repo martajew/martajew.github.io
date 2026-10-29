@@ -3,7 +3,7 @@ title: Hekate Long Sleeve Top
 subtitle: For your beautiful curves
 badge: ''
 permalink: hekate-long-sleeve-top
-sortDate: 2025-12-17
+sortDate: 2026-10-25
 detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0738 - CZARNY LONG SLEEVE TYŁ TOP.jpeg
