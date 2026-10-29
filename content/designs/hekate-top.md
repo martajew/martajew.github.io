@@ -3,7 +3,7 @@ title: Hekate Top
 subtitle: Lace fabric
 badge: ''
 permalink: hekate-top
-sortDate: 2025-03-18
+sortDate: 2026-10-26
 detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0988 top - spódnica biała bok i przód DOMINIKA.jpeg
