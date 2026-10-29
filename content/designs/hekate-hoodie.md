@@ -3,7 +3,7 @@ title: Hekate Hoodie
 subtitle: Big and baggy
 badge: ''
 permalink: hekate-hoodie
-sortDate: 2026-09-25
+sortDate: 2026-10-28
 detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z1005 - hoodie biała emka przód.jpeg
