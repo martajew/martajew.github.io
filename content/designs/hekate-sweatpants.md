@@ -3,7 +3,7 @@ title: Hekate Sweatpants
 subtitle: Baggy wide legs
 badge: ''
 permalink: hekate-sweatpants
-sortDate: 2026-01-15
+sortDate: 2026-10-27
 detailsPage: design-details
 section: Shop
 featuredImage: /content/media/designs/P10Z0757 - CZARNE SPODNIE MANIA PRZÓD.jpeg
