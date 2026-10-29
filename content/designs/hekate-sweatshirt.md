@@ -3,7 +3,7 @@ title: Hekate Sweatshirt
 subtitle: Feel like a fairy
 badge: ''
 permalink: hekate-sweatshirt
-sortDate: 2026-09-25
+sortDate: 2026-10-29
 detailsPage: design-details
 section: shop
 featuredImage: /content/media/designs/P10Z0826 - BLUZA ZAPIĘTA PRZÓD CZARNA MANIA.jpeg
