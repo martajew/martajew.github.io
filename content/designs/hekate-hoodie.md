@@ -6,20 +6,28 @@ permalink: hekate-hoodie
 sortDate: 2026-09-25
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/P10Z1004.JPG
-additionalImages: []
+featuredImage: /content/media/designs/P10Z1005 - hoodie biała emka przód.jpeg
+additionalImages:
+  - image: /content/media/designs/P10Z1097 - HOODIE CZARNA PRZÓD MAGDA.jpeg
+  - image: /content/media/designs/P10Z1006 - HOODIE BIAŁA EMKA DETAL KIESZEŃ.jpeg
+  - image: /content/media/designs/P10Z1094 - HOODIE CZARNA PRZÓD MAGDA.jpeg
+  - image: /content/media/designs/P10Z1008 - HOODIE BIAŁA EMKA PRZÓD.jpeg
+  - image: /content/media/designs/P10Z1088 - HOODIE CZARNA TYŁ MAGDA.jpeg
+  - image: /content/media/designs/P10Z1003 - HOODIE BIAŁA EMKA RĘKAW.jpeg
+  - image: /content/media/designs/P10Z1087 - CZARNA HOODIE MOTYLEK CLOSE.jpeg
+  - image: /content/media/designs/P10Z1001 - HOODIE BIAŁA EMKA PRZÓD.jpeg
 paypalProductId: 3LAEJL38CLLWL
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
   Available sizes: 30 - 62
 
-  Available colours: Black, Ecru & Burgundy
+  Available colours: Black & Ecru
 
   Customisation: Let us know what issues you usually have with buying clothes!! Sleeves too short?? Not enough room for your boobs?? Anything and we'll do our best to make your sweatshirt fit you!! Feel fre to measure yourself and write everything down while ordering if you have any concerns <3.
 
-  Magda wears size 38 and is 169cm/5.7” tall
+  Magda wears size 40 and is 169cm/5.7” tall
 
-  Emilia wears size 36 and is 168cm/5.6” tall
+  Emilia wears size 34 and is 168cm/5.6” tall
 isDraft: false
 category: '~'
 client: '-'
