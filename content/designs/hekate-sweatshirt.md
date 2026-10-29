@@ -6,14 +6,15 @@ permalink: hekate-sweatshirt
 sortDate: 2026-09-25
 detailsPage: design-details
 section: shop
-featuredImage: /content/media/designs/P10Z0809 - CZARNA BLUZA MANIA - BRALET MANIA PRZÓD (2).jpeg
+featuredImage: /content/media/designs/P10Z0826 - BLUZA ZAPIĘTA PRZÓD CZARNA MANIA.jpeg
 additionalImages:
-  - image: /content/media/designs/P10Z0925 - BLUZA BIAŁA ANIA PRZÓD Z KAPTUREM.jpeg
-  - image: /content/media/designs/P10Z0821 - CZARNA BLUZA BOK MANIA.jpeg
-  - image: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD.jpeg
-  - image: /content/media/designs/P10Z0824 - ZAPIĘTA MANIA PRZÓD CZARNA.jpeg
-  - image: /content/media/designs/P10Z0930 - BLUZA BIAŁA TYŁ Z KAPTUREM.jpeg
-  - image: /content/media/designs/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA.jpeg
+  - image: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD (1).jpeg
+  - image: /content/media/designs/P10Z0821 - CZARNA BLUZA BOK MANIA (1).jpeg
+  - image: /content/media/designs/P10Z0925 - BLUZA BIAŁA ANIA PRZÓD Z KAPTUREM (1).jpeg
+  - image: /content/media/designs/P10Z0809 - CZARNA BLUZA MANIA + BRALET MANIA PRZÓD (1).jpeg
+  - image: /content/media/designs/P10Z0823 BLUZA MANIA PRZÓD CZARNA ZAPIĘTA (1).jpeg
+  - image: /content/media/designs/P10Z0930 - BLUZA BIAŁA TYŁ Z KAPTUREM (1).jpeg
+  - image: /content/media/designs/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA (1).jpeg
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
@@ -25,7 +26,7 @@ description: |-
 
   Mania wears size 32 and is 165cm/5.5” tall
 
-  Ania wears size 36 and is 170cm/5.7” tall
+  Ania wears size 34 and is 170cm/5.7” tall
 isDraft: false
 category: '~'
 client: '-'
