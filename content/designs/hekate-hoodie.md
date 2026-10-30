@@ -1,6 +1,6 @@
 ---
 title: Hekate Hoodie
-subtitle: Big and baggy
+subtitle: PREORDER
 badge: ''
 permalink: hekate-hoodie
 sortDate: 2026-10-28
