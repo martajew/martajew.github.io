@@ -11,7 +11,7 @@ blocks:
     link: /shop
     intro: Welcome to our page <3
     name: Acid Fairies
-    image: /content/media/pages/IMG_8808.jpg
+    image: /content/media/pages/64f19aaeac540e9e27d22c62ab581ff2.JPEG
   - type: callout_block
     size: h2
     lead: Acid Fairies is an independent brand born in Poznan, Poland in 2026. We create in hope to make you feel as amazing and beautiful as you are!!
@@ -19,7 +19,7 @@ blocks:
     button: More about us
     link: /about
     name: About
-    image: /content/media/pages/IMG_7202.JPG
+    image: /content/media/pages/fe47a876bea5bd87e603385b1425b9e2.JPEG
   - type: numbered_accordion_block
     size: h2
     heading: Q&A
