@@ -57,7 +57,7 @@ blocks:
     button: ''
     link: ''
     name: Size charts
-    image: /content/media/pages/Screenshot 2026-10-12 at 21.42.06.png
+    image: /content/media/pages/IMG_8803.JPG
   - type: callout_block
     size: h1
     lead: As a small brand, we focus on making the pieces responsibly, in small batches and with attention to the environmental impact.
