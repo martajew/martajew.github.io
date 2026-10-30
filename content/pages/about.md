@@ -29,7 +29,7 @@ blocks:
     image: /content/media/pages/9adf0807693920110fb352b662bedb82.jpg
   - type: callout_block
     size: h1
-    lead: Our teams amazing photographer and set designer. She makes sure all are photos are the best quality and show our products as precisely as possible.
+    lead: Our teams amazing photographer and set designer. She makes sure all our photos are the best quality and show our products as precisely as possible.
     body: I got my first camera when I was five and I've refused to put it down ever since. Now I'm using new gear but with the same passion. To show you every single piece, each one made with YOU in mind ❤️
     button: ''
     link: ''
