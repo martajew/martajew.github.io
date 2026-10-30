@@ -6,15 +6,15 @@ permalink: hekate-hoodie
 sortDate: 2026-10-28
 detailsPage: design-details
 section: Shop
-featuredImage: /content/media/designs/P10Z1005 - hoodie biała emka przód.jpeg
+featuredImage: /content/media/designs/P10Z1087 - CZARNA HOODIE MOTYLEK CLOSE.jpeg
 additionalImages:
+  - image: /content/media/designs/P10Z1005 - hoodie biała emka przód.jpeg
   - image: /content/media/designs/P10Z1097 - HOODIE CZARNA PRZÓD MAGDA.jpeg
   - image: /content/media/designs/P10Z1006 - HOODIE BIAŁA EMKA DETAL KIESZEŃ.jpeg
   - image: /content/media/designs/P10Z1094 - HOODIE CZARNA PRZÓD MAGDA.jpeg
   - image: /content/media/designs/P10Z1008 - HOODIE BIAŁA EMKA PRZÓD.jpeg
   - image: /content/media/designs/P10Z1088 - HOODIE CZARNA TYŁ MAGDA.jpeg
   - image: /content/media/designs/P10Z1003 - HOODIE BIAŁA EMKA RĘKAW.jpeg
-  - image: /content/media/designs/P10Z1087 - CZARNA HOODIE MOTYLEK CLOSE.jpeg
   - image: /content/media/designs/P10Z1001 - HOODIE BIAŁA EMKA PRZÓD.jpeg
 paypalProductId: 3LAEJL38CLLWL
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
