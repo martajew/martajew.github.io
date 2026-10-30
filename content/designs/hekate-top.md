@@ -1,6 +1,6 @@
 ---
 title: Hekate Top
-subtitle: Lace fabric
+subtitle: PREORDER
 badge: ''
 permalink: hekate-top
 sortDate: 2026-10-26
