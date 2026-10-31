@@ -1,8 +1,9 @@
 ---
 title: Hekate Hoodie
-subtitle: PREORDER
-badge: ''
 permalink: hekate-hoodie
+subtitle: PREORDER
+intro: Check your bust and waist measurements and arm length in the size chart, to find out what size you are.
+badge: ''
 sortDate: 2026-10-28
 detailsPage: design-details
 section: Shop
@@ -34,7 +35,6 @@ client: '-'
 imageFour: /content/media/designs/IMG_1087.jpg
 imageThree: /content/media/designs/IMG_8324.jpg
 imageTwo: /content/media/designs/IMG_8324.jpg
-intro: Make your sweatshirt fit you!
 services: '-'
 ---
 
