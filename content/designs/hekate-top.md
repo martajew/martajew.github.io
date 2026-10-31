@@ -1,8 +1,9 @@
 ---
 title: Hekate Top
-subtitle: PREORDER
-badge: ''
 permalink: hekate-top
+subtitle: PREORDER
+intro: Check your bust and waist measurements in the size chart to find out what size you are.
+badge: ''
 sortDate: 2026-10-26
 detailsPage: design-details
 section: Shop
