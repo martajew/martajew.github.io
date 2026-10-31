@@ -11,7 +11,7 @@ blocks:
     link: /shop
     intro: Welcome to our page <3
     name: Acid Fairies
-    image: /content/media/pages/64f19aaeac540e9e27d22c62ab581ff2.JPEG
+    image: /content/media/pages/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA.jpg
   - type: callout_block
     size: h2
     lead: Acid Fairies is an independent brand born in Poznan, Poland in 2026. We create in hope to make you feel as amazing and beautiful as you are!!
@@ -32,8 +32,6 @@ blocks:
         text: Delivery to the EU and UK shouldn't take longer than 3 days to arrive. To the US standard delivery can take up to a week.
       - title: Can I cancel or modify my order?
         text: Since we make all our items on commission, you can't cancel or modify your order after you've received an email that we've began making your items. You can send us an email or DM us on Instagram before that and then you'll be able to modify your order or receive a refund.
-      - title: What’s your shipping policy?
-        text: ble ble ble ble
       - title: How can I make a return?
         text: |-
           If you ordered a piece with customisations you can't return it. We value the satisfaction of our clients a lot, so please contact us on Instagram or via email and let us know about problems you had and we'll do our best to resolve the issue so you can be happy with your piece.
@@ -42,7 +40,7 @@ blocks:
 
           Due to hygiene reasons, underwear, such as bralettes, thongs and panties are non-returnable.
       - title: What payment methods do you accept?
-        text: Stripe
+        text: We accept PayPal payments. After you add products to the cart and want to complete your order you'll be directed to PayPal.
       - title: How to take care of my clothes?
         text: |-
           All the specific information about taking care of your pieces will be delivered with each one.
@@ -61,7 +59,7 @@ blocks:
 
           5\. Iron if necessary.
 
-          For underwear, tops and skirt:
+          For underwear, tops and skirts:
 
           1\. Machine wash in cold temperatures.
 
