@@ -1,8 +1,9 @@
 ---
 title: Hekate Sweatpants
-subtitle: PREORDER
-badge: ''
 permalink: hekate-sweatpants
+subtitle: PREORDER
+intro: Check your waist measurement and leg length in the size chart to find out what size you are.
+badge: ''
 sortDate: 2026-10-27
 detailsPage: design-details
 section: Shop
