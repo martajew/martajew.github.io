@@ -1,11 +1,12 @@
 ---
 title: Hekate Sweatshirt
-subtitle: PREORDER
-badge: ''
 permalink: hekate-sweatshirt
+subtitle: PREORDER
+intro: Check your bust and waist measurements and arm length in the size chart to find out what size you are.
+badge: ''
 sortDate: 2026-10-29
 detailsPage: design-details
-section: shop
+section: Shop
 featuredImage: /content/media/designs/P10Z0826 - BLUZA ZAPIĘTA PRZÓD CZARNA MANIA.jpeg
 additionalImages:
   - image: /content/media/designs/P10Z0821 - CZARNA BLUZA BOK MANIA (1).jpeg
