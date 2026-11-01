@@ -27,7 +27,7 @@ blocks:
       - title: How long does making of my order take?
         text: Every order usually takes up to a week to finish, however if you order more pieces it can take a little longer, up to 3 weeks. We'll notify you when your order is ready to be shipped.
       - title: How much is shipping?
-        text: Shipping to the EU and UK is $21, to the US - $60. For all orders over $250 the shipping is free.
+        text: Standard shipping is $25. For all orders over $250 the shipping is free.
       - title: How long will the delivery take?
         text: Delivery to the EU and UK shouldn't take longer than 3 days to arrive. To the US standard delivery can take up to a week.
       - title: Can I cancel or modify my order?
