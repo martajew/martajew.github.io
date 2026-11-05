@@ -40,7 +40,7 @@ blocks:
 
           Due to hygiene reasons, underwear, such as bralettes, thongs and panties are non-returnable.
       - title: What payment methods do you accept?
-        text: We accept PayPal payments. After you add products to the cart and want to complete your order you'll be directed to PayPal.
+        text: We accept PayPal, Apple Pay and credit card payments. After you add products to the cart and want to complete your order you'll be directed to PayPal.
       - title: How to take care of my clothes?
         text: |-
           All the specific information about taking care of your pieces will be delivered with each one.
