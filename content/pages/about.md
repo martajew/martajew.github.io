@@ -40,7 +40,7 @@ blocks:
     lead: Kinga, Emilia & Dominika are our three gorgeous models.
     body: |-
       We want to be as inclusive as possible, so we try to show you our clothes on as many different bodies as we can <3 
-      In the description of every produkt you can see what size each model is wearing to get an idea about the fit.
+      In the description of every product you can see what size each model is wearing to get an idea about the fit.
     button: ''
     link: ''
     name: Models
