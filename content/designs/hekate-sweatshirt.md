@@ -17,6 +17,7 @@ additionalImages:
   - image: /content/media/designs/P10Z0930 - BLUZA BIAŁA TYŁ Z KAPTUREM (1).jpeg
   - image: /content/media/designs/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA (1).jpeg
   - image: /content/media/designs/P10Z0824 - ZAPIĘTA MANIA PRZÓD CZARNA (1).jpeg
+  - image: /content/media/designs/42182 (2).jpeg
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
