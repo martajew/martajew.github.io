@@ -11,13 +11,15 @@ featuredImage: /content/media/designs/P10Z0826 - BLUZA ZAPIĘTA PRZÓD CZARNA MA
 additionalImages:
   - image: /content/media/designs/P10Z0821 - CZARNA BLUZA BOK MANIA (1).jpeg
   - image: /content/media/designs/P10Z0918 BLUZA BIAŁA ANIA PRZÓD (1).jpeg
+  - image: /content/media/designs/42182 (2).jpeg
   - image: /content/media/designs/P10Z0823 BLUZA MANIA PRZÓD CZARNA ZAPIĘTA (1).jpeg
+  - image: /content/media/designs/42186 (2).jpeg
   - image: /content/media/designs/P10Z0925 - BLUZA BIAŁA ANIA PRZÓD Z KAPTUREM (1).jpeg
   - image: /content/media/designs/P10Z0809 - CZARNA BLUZA MANIA + BRALET MANIA PRZÓD (1).jpeg
+  - image: /content/media/designs/42184 (3).jpeg
   - image: /content/media/designs/P10Z0930 - BLUZA BIAŁA TYŁ Z KAPTUREM (1).jpeg
   - image: /content/media/designs/P10Z0819 - BLUZA CZARNA ROZPIĘTA TYŁ MANIA (1).jpeg
   - image: /content/media/designs/P10Z0824 - ZAPIĘTA MANIA PRZÓD CZARNA (1).jpeg
-  - image: /content/media/designs/42182 (2).jpeg
 paypalProductId: ZVMFZ9YD924TS
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
