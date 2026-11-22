@@ -11,8 +11,9 @@ featuredImage: /content/media/designs/P10Z0757 - CZARNE SPODNIE MANIA PRZÓD.jpe
 additionalImages:
   - image: /content/media/designs/P10Z0916 DRESY BIAŁE ANIA DETAL.jpeg
   - image: /content/media/designs/P10Z0985 - DRESY + TOP EMKA BOK CZARNE.jpeg
-  - image: /content/media/designs/P10Z0899 BIAŁE DRESY + BIAŁY TOP ANIA PRZÓD.jpeg
+  - image: /content/media/designs/P10Z0199.JPG
   - image: /content/media/designs/P10Z0726 - CZARNE DRESY MANIA PRZÓD.jpeg
+  - image: /content/media/designs/P10Z0218.JPG
   - image: /content/media/designs/P10Z0963 - DRESY BIAŁE PRZÓD DOMINIKA.jpeg
   - image: /content/media/designs/P10Z0983 -DRESY + TOP TYŁ EMKA.jpeg
   - image: /content/media/designs/P10Z0968 DRESY BIAŁE DOMINIKA TYŁ.jpeg
