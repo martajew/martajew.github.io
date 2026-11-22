@@ -17,6 +17,8 @@ additionalImages:
   - image: /content/media/designs/P10Z1088 - HOODIE CZARNA TYŁ MAGDA.jpeg
   - image: /content/media/designs/P10Z1003 - HOODIE BIAŁA EMKA RĘKAW.jpeg
   - image: /content/media/designs/P10Z1001 - HOODIE BIAŁA EMKA PRZÓD.jpeg
+  - image: /content/media/designs/42189 (1).jpeg
+  - image: /content/media/designs/42207.jpeg
 paypalProductId: 3LAEJL38CLLWL
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
