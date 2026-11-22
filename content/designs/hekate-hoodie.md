@@ -11,15 +11,15 @@ featuredImage: /content/media/designs/P10Z1087 - CZARNA HOODIE MOTYLEK CLOSE.jpe
 additionalImages:
   - image: /content/media/designs/P10Z1005 - hoodie biała emka przód.jpeg
   - image: /content/media/designs/P10Z1097 - HOODIE CZARNA PRZÓD MAGDA.jpeg
+  - image: /content/media/designs/42189 (1).jpeg
   - image: /content/media/designs/P10Z1006 - HOODIE BIAŁA EMKA DETAL KIESZEŃ.jpeg
   - image: /content/media/designs/P10Z1094 - HOODIE CZARNA PRZÓD MAGDA.jpeg
+  - image: /content/media/designs/42196 (1).jpeg
   - image: /content/media/designs/P10Z1008 - HOODIE BIAŁA EMKA PRZÓD.jpeg
   - image: /content/media/designs/P10Z1088 - HOODIE CZARNA TYŁ MAGDA.jpeg
+  - image: /content/media/designs/42207.jpeg
   - image: /content/media/designs/P10Z1003 - HOODIE BIAŁA EMKA RĘKAW.jpeg
   - image: /content/media/designs/P10Z1001 - HOODIE BIAŁA EMKA PRZÓD.jpeg
-  - image: /content/media/designs/42189 (1).jpeg
-  - image: /content/media/designs/42207.jpeg
-  - image: /content/media/designs/42196 (1).jpeg
 paypalProductId: 3LAEJL38CLLWL
 sizeChart: 931dab1c-0d2e-4081-b362-5f28b4041ce4
 description: |-
@@ -32,6 +32,8 @@ description: |-
   Magda wears size 40 and is 169cm/5.7” tall
 
   Emilia wears size 34 and is 168cm/5.6” tall
+
+  Mania wears size 32 and is 165cm/5.5” tall
 isDraft: false
 category: '~'
 client: '-'
